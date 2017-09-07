@@ -15,7 +15,7 @@ Partial Class Form3
     End Sub
 
     'Wird vom Windows Form-Designer benötigt.
-    'Private components As System.ComponentModel.IContainer
+    Private components As System.ComponentModel.IContainer
 
     ''Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     ''Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
@@ -36,8 +36,7 @@ Partial Class Form3
         '
         'Form3
         '
-        Me.AutoScal
-        eDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.Label1)
