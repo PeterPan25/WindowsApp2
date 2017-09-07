@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿
 Partial Class Form3
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -15,12 +15,12 @@ Partial Class Form3
     End Sub
 
     'Wird vom Windows Form-Designer benötigt.
-    'Private components As System.ComponentModel.IContainer
+    Private components As System.ComponentModel.IContainer
 
-    ''Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
-    ''Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
-    ''Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    '<System.Diagnostics.DebuggerStepThrough()>
+    'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
+    'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
+    'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -36,8 +36,7 @@ Partial Class Form3
         '
         'Form3
         '
-        Me.AutoScal
-        eDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.Label1)
@@ -47,5 +46,6 @@ Partial Class Form3
         Me.PerformLayout()
 
     End Sub
+
     Friend WithEvents Label1 As Label
 End Class
