@@ -220,8 +220,8 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1010, 603)
-        Me.Controls.Add(Me.B_öffnen)
         Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.B_öffnen)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LL_Hautarzt)
@@ -239,7 +239,7 @@ Partial Class Form1
         Me.Controls.Add(Me.LL_Psycho)
         Me.Controls.Add(Me.LL_Stammdaten)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Start"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
