@@ -38,7 +38,6 @@ Partial Class Form1
         Me.LL_Hautarzt = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.B_öffnen = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -199,14 +198,7 @@ Partial Class Form1
         Me.RichTextBox1.TabIndex = 2
         Me.RichTextBox1.Text = ""
         '
-        'B_öffnen
-        '
-        Me.B_öffnen.Location = New System.Drawing.Point(583, 79)
-        Me.B_öffnen.Name = "B_öffnen"
-        Me.B_öffnen.Size = New System.Drawing.Size(107, 48)
-        Me.B_öffnen.TabIndex = 4
-        Me.B_öffnen.Text = "Öffnen"
-        Me.B_öffnen.UseVisualStyleBackColor = True
+
         '
         'ComboBox1
         '
@@ -224,7 +216,6 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1010, 603)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.B_öffnen)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LL_Hautarzt)
@@ -265,6 +256,5 @@ Partial Class Form1
     Friend WithEvents LL_Hautarzt As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents B_öffnen As Button
     Friend WithEvents ComboBox1 As ComboBox
 End Class
