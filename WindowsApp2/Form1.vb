@@ -3,7 +3,6 @@
 
 
 
-
     ' Private Sub B_öffnen_Click(sender As Object, e As EventArgs) Handles B_öffnen.Click
 
     ' Funktioniert für Textbox
@@ -314,5 +313,13 @@
 
     Private Sub LinkLabel200_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel200.LinkClicked
         Label14.Text = "Hallo"
+
+
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        F_Aaliyah.Show()
+    End Sub
+
+
 End Class
