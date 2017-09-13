@@ -1382,7 +1382,8 @@ Partial Class Form1
         'SC_Jan.Panel2
         '
         Me.SC_Jan.Panel2.Controls.Add(Me.Label8)
-        Me.SC_Jan.Size = New System.Drawing.Size(150, 100)
+        Me.SC_Jan.Size = New System.Drawing.Size(1007, 458)
+        Me.SC_Jan.SplitterDistance = 335
         Me.SC_Jan.TabIndex = 0
         '
         'Panel9
@@ -1404,9 +1405,9 @@ Partial Class Form1
         Me.Panel9.Controls.Add(Me.LinkLabel124)
         Me.Panel9.Controls.Add(Me.LinkLabel125)
         Me.Panel9.Controls.Add(Me.LinkLabel126)
-        Me.Panel9.Location = New System.Drawing.Point(113, 120)
+        Me.Panel9.Location = New System.Drawing.Point(26, 20)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(0, 0)
+        Me.Panel9.Size = New System.Drawing.Size(194, 396)
         Me.Panel9.TabIndex = 7
         '
         'LinkLabel113
@@ -3413,7 +3414,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1010, 603)
+        Me.ClientSize = New System.Drawing.Size(1127, 650)
         Me.Controls.Add(Me.CB_name)
         Me.Controls.Add(Me.SC_Aaliyah)
         Me.Controls.Add(Me.SC_Fenya)

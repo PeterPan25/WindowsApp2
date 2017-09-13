@@ -311,4 +311,8 @@
 
         End If
     End Sub
+
+    Private Sub LinkLabel200_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel200.LinkClicked
+        Label14.Text = "Hallo"
+    End Sub
 End Class
