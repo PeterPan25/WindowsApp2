@@ -32,13 +32,38 @@ Partial Class Form1
         Me.LinkLabel202 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel203 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel204 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel205 = New System.Windows.Forms.LinkLabel()
+        Me.LL_Aaliyah_Hilfen = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel206 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel207 = New System.Windows.Forms.LinkLabel()
+        Me.LL_Aaliyah_Kontakte = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel208 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel209 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel210 = New System.Windows.Forms.LinkLabel()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LL_Aaliyah_Stammdaten = New System.Windows.Forms.LinkLabel()
+        Me.P_Aaliyah_Hautarzt = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Hautarzt = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Augenarzt = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Augenarzt = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_HNO = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_HNO = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Zahnarzt = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Zahnarzt = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Kinderarzt = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_KInderarzt = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Psycho = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Psycho = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Doku = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Doku = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Eltern = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Elternkontakte = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Krankenhaus = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Krankenhaus = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Stammdaten = New System.Windows.Forms.Panel()
+        Me.L_Stammdaten = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Kontakte = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Kontakte = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Hilfen = New System.Windows.Forms.Panel()
+        Me.L_Aaliyah_Hilfen = New System.Windows.Forms.Label()
+        Me.P_Aaliyah_Frauenarzt = New System.Windows.Forms.Panel()
+        Me.P_Aaliyah_Hobby = New System.Windows.Forms.Panel()
         Me.SC_Aleks = New System.Windows.Forms.SplitContainer()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.LinkLabel183 = New System.Windows.Forms.LinkLabel()
@@ -278,11 +303,27 @@ Partial Class Form1
         Me.LinkLabel28 = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CB_name = New System.Windows.Forms.ComboBox()
+        Me.L_Aaliyah_Frauenarzt = New System.Windows.Forms.Label()
+        Me.L_Aaliyah_Hobby = New System.Windows.Forms.Label()
         CType(Me.SC_Aaliyah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SC_Aaliyah.Panel1.SuspendLayout()
         Me.SC_Aaliyah.Panel2.SuspendLayout()
         Me.SC_Aaliyah.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.P_Aaliyah_Hautarzt.SuspendLayout()
+        Me.P_Aaliyah_Augenarzt.SuspendLayout()
+        Me.P_Aaliyah_HNO.SuspendLayout()
+        Me.P_Aaliyah_Zahnarzt.SuspendLayout()
+        Me.P_Aaliyah_Kinderarzt.SuspendLayout()
+        Me.P_Aaliyah_Psycho.SuspendLayout()
+        Me.P_Aaliyah_Doku.SuspendLayout()
+        Me.P_Aaliyah_Eltern.SuspendLayout()
+        Me.P_Aaliyah_Krankenhaus.SuspendLayout()
+        Me.P_Aaliyah_Stammdaten.SuspendLayout()
+        Me.P_Aaliyah_Kontakte.SuspendLayout()
+        Me.P_Aaliyah_Hilfen.SuspendLayout()
+        Me.P_Aaliyah_Frauenarzt.SuspendLayout()
+        Me.P_Aaliyah_Hobby.SuspendLayout()
         CType(Me.SC_Aleks, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SC_Aleks.Panel1.SuspendLayout()
         Me.SC_Aleks.Panel2.SuspendLayout()
@@ -357,7 +398,10 @@ Partial Class Form1
         '
         'SC_Aaliyah
         '
-        Me.SC_Aaliyah.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Aaliyah.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Aaliyah.Location = New System.Drawing.Point(0, 150)
         Me.SC_Aaliyah.Name = "SC_Aaliyah"
         '
         'SC_Aaliyah.Panel1
@@ -366,16 +410,27 @@ Partial Class Form1
         '
         'SC_Aaliyah.Panel2
         '
-        Me.SC_Aaliyah.Panel2.Controls.Add(Me.Label14)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hobby)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Frauenarzt)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hautarzt)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Augenarzt)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_HNO)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Zahnarzt)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kinderarzt)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Psycho)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Doku)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Eltern)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Krankenhaus)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Stammdaten)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kontakte)
+        Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hilfen)
         Me.SC_Aaliyah.Size = New System.Drawing.Size(1010, 453)
         Me.SC_Aaliyah.SplitterDistance = 246
         Me.SC_Aaliyah.TabIndex = 7
         '
         'Panel15
         '
-        Me.Panel15.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel15.BackColor = System.Drawing.SystemColors.Control
         Me.Panel15.Controls.Add(Me.LinkLabel197)
         Me.Panel15.Controls.Add(Me.LinkLabel198)
         Me.Panel15.Controls.Add(Me.LinkLabel199)
@@ -384,15 +439,16 @@ Partial Class Form1
         Me.Panel15.Controls.Add(Me.LinkLabel202)
         Me.Panel15.Controls.Add(Me.LinkLabel203)
         Me.Panel15.Controls.Add(Me.LinkLabel204)
-        Me.Panel15.Controls.Add(Me.LinkLabel205)
+        Me.Panel15.Controls.Add(Me.LL_Aaliyah_Hilfen)
         Me.Panel15.Controls.Add(Me.LinkLabel206)
-        Me.Panel15.Controls.Add(Me.LinkLabel207)
+        Me.Panel15.Controls.Add(Me.LL_Aaliyah_Kontakte)
         Me.Panel15.Controls.Add(Me.LinkLabel208)
         Me.Panel15.Controls.Add(Me.LinkLabel209)
-        Me.Panel15.Controls.Add(Me.LinkLabel210)
-        Me.Panel15.Location = New System.Drawing.Point(37, 18)
+        Me.Panel15.Controls.Add(Me.LL_Aaliyah_Stammdaten)
+        Me.Panel15.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel15.Location = New System.Drawing.Point(0, 0)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(173, 402)
+        Me.Panel15.Size = New System.Drawing.Size(246, 453)
         Me.Panel15.TabIndex = 7
         '
         'LinkLabel197
@@ -483,16 +539,16 @@ Partial Class Form1
         Me.LinkLabel204.TabStop = True
         Me.LinkLabel204.Text = "Zahnarzt"
         '
-        'LinkLabel205
+        'LL_Aaliyah_Hilfen
         '
-        Me.LinkLabel205.AutoSize = True
-        Me.LinkLabel205.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel205.Location = New System.Drawing.Point(13, 85)
-        Me.LinkLabel205.Name = "LinkLabel205"
-        Me.LinkLabel205.Size = New System.Drawing.Size(44, 17)
-        Me.LinkLabel205.TabIndex = 0
-        Me.LinkLabel205.TabStop = True
-        Me.LinkLabel205.Text = "Hilfen"
+        Me.LL_Aaliyah_Hilfen.AutoSize = True
+        Me.LL_Aaliyah_Hilfen.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LL_Aaliyah_Hilfen.Location = New System.Drawing.Point(13, 85)
+        Me.LL_Aaliyah_Hilfen.Name = "LL_Aaliyah_Hilfen"
+        Me.LL_Aaliyah_Hilfen.Size = New System.Drawing.Size(44, 17)
+        Me.LL_Aaliyah_Hilfen.TabIndex = 0
+        Me.LL_Aaliyah_Hilfen.TabStop = True
+        Me.LL_Aaliyah_Hilfen.Text = "Hilfen"
         '
         'LinkLabel206
         '
@@ -505,16 +561,16 @@ Partial Class Form1
         Me.LinkLabel206.TabStop = True
         Me.LinkLabel206.Text = "Kinderarzt"
         '
-        'LinkLabel207
+        'LL_Aaliyah_Kontakte
         '
-        Me.LinkLabel207.AutoSize = True
-        Me.LinkLabel207.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel207.Location = New System.Drawing.Point(13, 65)
-        Me.LinkLabel207.Name = "LinkLabel207"
-        Me.LinkLabel207.Size = New System.Drawing.Size(64, 17)
-        Me.LinkLabel207.TabIndex = 0
-        Me.LinkLabel207.TabStop = True
-        Me.LinkLabel207.Text = "Kontakte"
+        Me.LL_Aaliyah_Kontakte.AutoSize = True
+        Me.LL_Aaliyah_Kontakte.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LL_Aaliyah_Kontakte.Location = New System.Drawing.Point(13, 65)
+        Me.LL_Aaliyah_Kontakte.Name = "LL_Aaliyah_Kontakte"
+        Me.LL_Aaliyah_Kontakte.Size = New System.Drawing.Size(64, 17)
+        Me.LL_Aaliyah_Kontakte.TabIndex = 0
+        Me.LL_Aaliyah_Kontakte.TabStop = True
+        Me.LL_Aaliyah_Kontakte.Text = "Kontakte"
         '
         'LinkLabel208
         '
@@ -538,29 +594,271 @@ Partial Class Form1
         Me.LinkLabel209.TabStop = True
         Me.LinkLabel209.Text = "Psycho"
         '
-        'LinkLabel210
+        'LL_Aaliyah_Stammdaten
         '
-        Me.LinkLabel210.AutoSize = True
-        Me.LinkLabel210.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel210.Location = New System.Drawing.Point(13, 45)
-        Me.LinkLabel210.Name = "LinkLabel210"
-        Me.LinkLabel210.Size = New System.Drawing.Size(87, 17)
-        Me.LinkLabel210.TabIndex = 0
-        Me.LinkLabel210.TabStop = True
-        Me.LinkLabel210.Text = "Stammdaten"
+        Me.LL_Aaliyah_Stammdaten.AutoSize = True
+        Me.LL_Aaliyah_Stammdaten.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LL_Aaliyah_Stammdaten.Location = New System.Drawing.Point(13, 45)
+        Me.LL_Aaliyah_Stammdaten.Name = "LL_Aaliyah_Stammdaten"
+        Me.LL_Aaliyah_Stammdaten.Size = New System.Drawing.Size(87, 17)
+        Me.LL_Aaliyah_Stammdaten.TabIndex = 0
+        Me.LL_Aaliyah_Stammdaten.TabStop = True
+        Me.LL_Aaliyah_Stammdaten.Text = "Stammdaten"
         '
-        'Label14
+        'P_Aaliyah_Hautarzt
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(388, 295)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(41, 13)
-        Me.Label14.TabIndex = 6
-        Me.Label14.Text = "Aaliyah"
+        Me.P_Aaliyah_Hautarzt.Controls.Add(Me.L_Aaliyah_Hautarzt)
+        Me.P_Aaliyah_Hautarzt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Hautarzt.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Hautarzt.Name = "P_Aaliyah_Hautarzt"
+        Me.P_Aaliyah_Hautarzt.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Hautarzt.TabIndex = 3
+        '
+        'L_Aaliyah_Hautarzt
+        '
+        Me.L_Aaliyah_Hautarzt.AutoSize = True
+        Me.L_Aaliyah_Hautarzt.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Hautarzt.Location = New System.Drawing.Point(274, 10)
+        Me.L_Aaliyah_Hautarzt.Name = "L_Aaliyah_Hautarzt"
+        Me.L_Aaliyah_Hautarzt.Size = New System.Drawing.Size(82, 22)
+        Me.L_Aaliyah_Hautarzt.TabIndex = 0
+        Me.L_Aaliyah_Hautarzt.Text = "Hautarzt"
+        '
+        'P_Aaliyah_Augenarzt
+        '
+        Me.P_Aaliyah_Augenarzt.Controls.Add(Me.L_Aaliyah_Augenarzt)
+        Me.P_Aaliyah_Augenarzt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Augenarzt.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Augenarzt.Name = "P_Aaliyah_Augenarzt"
+        Me.P_Aaliyah_Augenarzt.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Augenarzt.TabIndex = 4
+        '
+        'L_Aaliyah_Augenarzt
+        '
+        Me.L_Aaliyah_Augenarzt.AutoSize = True
+        Me.L_Aaliyah_Augenarzt.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Augenarzt.Location = New System.Drawing.Point(251, 10)
+        Me.L_Aaliyah_Augenarzt.Name = "L_Aaliyah_Augenarzt"
+        Me.L_Aaliyah_Augenarzt.Size = New System.Drawing.Size(94, 22)
+        Me.L_Aaliyah_Augenarzt.TabIndex = 0
+        Me.L_Aaliyah_Augenarzt.Text = "Augenarzt"
+        '
+        'P_Aaliyah_HNO
+        '
+        Me.P_Aaliyah_HNO.Controls.Add(Me.L_Aaliyah_HNO)
+        Me.P_Aaliyah_HNO.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_HNO.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_HNO.Name = "P_Aaliyah_HNO"
+        Me.P_Aaliyah_HNO.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_HNO.TabIndex = 5
+        '
+        'L_Aaliyah_HNO
+        '
+        Me.L_Aaliyah_HNO.AutoSize = True
+        Me.L_Aaliyah_HNO.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_HNO.Location = New System.Drawing.Point(292, 8)
+        Me.L_Aaliyah_HNO.Name = "L_Aaliyah_HNO"
+        Me.L_Aaliyah_HNO.Size = New System.Drawing.Size(53, 22)
+        Me.L_Aaliyah_HNO.TabIndex = 0
+        Me.L_Aaliyah_HNO.Text = "HNO"
+        '
+        'P_Aaliyah_Zahnarzt
+        '
+        Me.P_Aaliyah_Zahnarzt.Controls.Add(Me.L_Aaliyah_Zahnarzt)
+        Me.P_Aaliyah_Zahnarzt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Zahnarzt.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Zahnarzt.Name = "P_Aaliyah_Zahnarzt"
+        Me.P_Aaliyah_Zahnarzt.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Zahnarzt.TabIndex = 6
+        '
+        'L_Aaliyah_Zahnarzt
+        '
+        Me.L_Aaliyah_Zahnarzt.AutoSize = True
+        Me.L_Aaliyah_Zahnarzt.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Zahnarzt.Location = New System.Drawing.Point(284, 10)
+        Me.L_Aaliyah_Zahnarzt.Name = "L_Aaliyah_Zahnarzt"
+        Me.L_Aaliyah_Zahnarzt.Size = New System.Drawing.Size(84, 22)
+        Me.L_Aaliyah_Zahnarzt.TabIndex = 9
+        Me.L_Aaliyah_Zahnarzt.Text = "Zahnarzt"
+        '
+        'P_Aaliyah_Kinderarzt
+        '
+        Me.P_Aaliyah_Kinderarzt.Controls.Add(Me.L_Aaliyah_KInderarzt)
+        Me.P_Aaliyah_Kinderarzt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Kinderarzt.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Kinderarzt.Name = "P_Aaliyah_Kinderarzt"
+        Me.P_Aaliyah_Kinderarzt.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Kinderarzt.TabIndex = 7
+        '
+        'L_Aaliyah_KInderarzt
+        '
+        Me.L_Aaliyah_KInderarzt.AutoSize = True
+        Me.L_Aaliyah_KInderarzt.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_KInderarzt.Location = New System.Drawing.Point(270, 10)
+        Me.L_Aaliyah_KInderarzt.Name = "L_Aaliyah_KInderarzt"
+        Me.L_Aaliyah_KInderarzt.Size = New System.Drawing.Size(98, 22)
+        Me.L_Aaliyah_KInderarzt.TabIndex = 0
+        Me.L_Aaliyah_KInderarzt.Text = "Kinderarzt"
+        '
+        'P_Aaliyah_Psycho
+        '
+        Me.P_Aaliyah_Psycho.Controls.Add(Me.L_Aaliyah_Psycho)
+        Me.P_Aaliyah_Psycho.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Psycho.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Psycho.Name = "P_Aaliyah_Psycho"
+        Me.P_Aaliyah_Psycho.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Psycho.TabIndex = 8
+        '
+        'L_Aaliyah_Psycho
+        '
+        Me.L_Aaliyah_Psycho.AutoSize = True
+        Me.L_Aaliyah_Psycho.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Psycho.Location = New System.Drawing.Point(288, 10)
+        Me.L_Aaliyah_Psycho.Name = "L_Aaliyah_Psycho"
+        Me.L_Aaliyah_Psycho.Size = New System.Drawing.Size(68, 22)
+        Me.L_Aaliyah_Psycho.TabIndex = 0
+        Me.L_Aaliyah_Psycho.Text = "Psycho"
+        '
+        'P_Aaliyah_Doku
+        '
+        Me.P_Aaliyah_Doku.Controls.Add(Me.L_Aaliyah_Doku)
+        Me.P_Aaliyah_Doku.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Doku.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Doku.Name = "P_Aaliyah_Doku"
+        Me.P_Aaliyah_Doku.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Doku.TabIndex = 9
+        '
+        'L_Aaliyah_Doku
+        '
+        Me.L_Aaliyah_Doku.AutoSize = True
+        Me.L_Aaliyah_Doku.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Doku.Location = New System.Drawing.Point(301, 10)
+        Me.L_Aaliyah_Doku.Name = "L_Aaliyah_Doku"
+        Me.L_Aaliyah_Doku.Size = New System.Drawing.Size(55, 22)
+        Me.L_Aaliyah_Doku.TabIndex = 0
+        Me.L_Aaliyah_Doku.Text = "Doku"
+        '
+        'P_Aaliyah_Eltern
+        '
+        Me.P_Aaliyah_Eltern.Controls.Add(Me.L_Aaliyah_Elternkontakte)
+        Me.P_Aaliyah_Eltern.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Eltern.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Eltern.Name = "P_Aaliyah_Eltern"
+        Me.P_Aaliyah_Eltern.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Eltern.TabIndex = 10
+        '
+        'L_Aaliyah_Elternkontakte
+        '
+        Me.L_Aaliyah_Elternkontakte.AutoSize = True
+        Me.L_Aaliyah_Elternkontakte.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Elternkontakte.Location = New System.Drawing.Point(234, 10)
+        Me.L_Aaliyah_Elternkontakte.Name = "L_Aaliyah_Elternkontakte"
+        Me.L_Aaliyah_Elternkontakte.Size = New System.Drawing.Size(134, 22)
+        Me.L_Aaliyah_Elternkontakte.TabIndex = 0
+        Me.L_Aaliyah_Elternkontakte.Text = "Elternkontakte"
+        '
+        'P_Aaliyah_Krankenhaus
+        '
+        Me.P_Aaliyah_Krankenhaus.Controls.Add(Me.L_Aaliyah_Krankenhaus)
+        Me.P_Aaliyah_Krankenhaus.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Krankenhaus.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Krankenhaus.Name = "P_Aaliyah_Krankenhaus"
+        Me.P_Aaliyah_Krankenhaus.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Krankenhaus.TabIndex = 2
+        '
+        'L_Aaliyah_Krankenhaus
+        '
+        Me.L_Aaliyah_Krankenhaus.AutoSize = True
+        Me.L_Aaliyah_Krankenhaus.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Krankenhaus.Location = New System.Drawing.Point(248, 10)
+        Me.L_Aaliyah_Krankenhaus.Name = "L_Aaliyah_Krankenhaus"
+        Me.L_Aaliyah_Krankenhaus.Size = New System.Drawing.Size(120, 22)
+        Me.L_Aaliyah_Krankenhaus.TabIndex = 0
+        Me.L_Aaliyah_Krankenhaus.Text = "Krankenhaus"
+        '
+        'P_Aaliyah_Stammdaten
+        '
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.L_Stammdaten)
+        Me.P_Aaliyah_Stammdaten.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Stammdaten.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Stammdaten.Name = "P_Aaliyah_Stammdaten"
+        Me.P_Aaliyah_Stammdaten.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Stammdaten.TabIndex = 13
+        '
+        'L_Stammdaten
+        '
+        Me.L_Stammdaten.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.L_Stammdaten.AutoSize = True
+        Me.L_Stammdaten.Font = New System.Drawing.Font("Times New Roman", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Stammdaten.Location = New System.Drawing.Point(256, 10)
+        Me.L_Stammdaten.Name = "L_Stammdaten"
+        Me.L_Stammdaten.Size = New System.Drawing.Size(112, 22)
+        Me.L_Stammdaten.TabIndex = 0
+        Me.L_Stammdaten.Text = "Stammdaten"
+        '
+        'P_Aaliyah_Kontakte
+        '
+        Me.P_Aaliyah_Kontakte.Controls.Add(Me.L_Aaliyah_Kontakte)
+        Me.P_Aaliyah_Kontakte.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Kontakte.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Kontakte.Name = "P_Aaliyah_Kontakte"
+        Me.P_Aaliyah_Kontakte.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Kontakte.TabIndex = 12
+        '
+        'L_Aaliyah_Kontakte
+        '
+        Me.L_Aaliyah_Kontakte.AutoSize = True
+        Me.L_Aaliyah_Kontakte.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Kontakte.Location = New System.Drawing.Point(270, 10)
+        Me.L_Aaliyah_Kontakte.Name = "L_Aaliyah_Kontakte"
+        Me.L_Aaliyah_Kontakte.Size = New System.Drawing.Size(86, 22)
+        Me.L_Aaliyah_Kontakte.TabIndex = 0
+        Me.L_Aaliyah_Kontakte.Text = "Kontakte"
+        '
+        'P_Aaliyah_Hilfen
+        '
+        Me.P_Aaliyah_Hilfen.Controls.Add(Me.L_Aaliyah_Hilfen)
+        Me.P_Aaliyah_Hilfen.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Hilfen.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Hilfen.Name = "P_Aaliyah_Hilfen"
+        Me.P_Aaliyah_Hilfen.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Hilfen.TabIndex = 11
+        '
+        'L_Aaliyah_Hilfen
+        '
+        Me.L_Aaliyah_Hilfen.AutoSize = True
+        Me.L_Aaliyah_Hilfen.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Hilfen.Location = New System.Drawing.Point(272, 8)
+        Me.L_Aaliyah_Hilfen.Name = "L_Aaliyah_Hilfen"
+        Me.L_Aaliyah_Hilfen.Size = New System.Drawing.Size(59, 22)
+        Me.L_Aaliyah_Hilfen.TabIndex = 0
+        Me.L_Aaliyah_Hilfen.Text = "Hilfen"
+        '
+        'P_Aaliyah_Frauenarzt
+        '
+        Me.P_Aaliyah_Frauenarzt.Controls.Add(Me.L_Aaliyah_Frauenarzt)
+        Me.P_Aaliyah_Frauenarzt.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Frauenarzt.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Frauenarzt.Name = "P_Aaliyah_Frauenarzt"
+        Me.P_Aaliyah_Frauenarzt.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Frauenarzt.TabIndex = 1
+        '
+        'P_Aaliyah_Hobby
+        '
+        Me.P_Aaliyah_Hobby.Controls.Add(Me.L_Aaliyah_Hobby)
+        Me.P_Aaliyah_Hobby.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Hobby.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Hobby.Name = "P_Aaliyah_Hobby"
+        Me.P_Aaliyah_Hobby.Size = New System.Drawing.Size(760, 453)
+        Me.P_Aaliyah_Hobby.TabIndex = 0
         '
         'SC_Aleks
         '
-        Me.SC_Aleks.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Aleks.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Aleks.Location = New System.Drawing.Point(0, 150)
         Me.SC_Aleks.Name = "SC_Aleks"
         '
         'SC_Aleks.Panel1
@@ -593,9 +891,9 @@ Partial Class Form1
         Me.Panel14.Controls.Add(Me.LinkLabel194)
         Me.Panel14.Controls.Add(Me.LinkLabel195)
         Me.Panel14.Controls.Add(Me.LinkLabel196)
-        Me.Panel14.Location = New System.Drawing.Point(32, 17)
+        Me.Panel14.Location = New System.Drawing.Point(20, 10)
         Me.Panel14.Name = "Panel14"
-        Me.Panel14.Size = New System.Drawing.Size(102, 392)
+        Me.Panel14.Size = New System.Drawing.Size(150, 350)
         Me.Panel14.TabIndex = 7
         '
         'LinkLabel183
@@ -763,7 +1061,10 @@ Partial Class Form1
         '
         'SC_David
         '
-        Me.SC_David.Location = New System.Drawing.Point(0, 153)
+        Me.SC_David.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_David.Location = New System.Drawing.Point(0, 150)
         Me.SC_David.Name = "SC_David"
         '
         'SC_David.Panel1
@@ -796,9 +1097,9 @@ Partial Class Form1
         Me.Panel13.Controls.Add(Me.LinkLabel180)
         Me.Panel13.Controls.Add(Me.LinkLabel181)
         Me.Panel13.Controls.Add(Me.LinkLabel182)
-        Me.Panel13.Location = New System.Drawing.Point(63, 87)
+        Me.Panel13.Location = New System.Drawing.Point(20, 10)
         Me.Panel13.Name = "Panel13"
-        Me.Panel13.Size = New System.Drawing.Size(140, 342)
+        Me.Panel13.Size = New System.Drawing.Size(150, 350)
         Me.Panel13.TabIndex = 7
         '
         'LinkLabel169
@@ -966,7 +1267,10 @@ Partial Class Form1
         '
         'SC_Dominik
         '
-        Me.SC_Dominik.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Dominik.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Dominik.Location = New System.Drawing.Point(0, 150)
         Me.SC_Dominik.Name = "SC_Dominik"
         '
         'SC_Dominik.Panel1
@@ -999,9 +1303,9 @@ Partial Class Form1
         Me.Panel12.Controls.Add(Me.LinkLabel166)
         Me.Panel12.Controls.Add(Me.LinkLabel167)
         Me.Panel12.Controls.Add(Me.LinkLabel168)
-        Me.Panel12.Location = New System.Drawing.Point(26, 42)
+        Me.Panel12.Location = New System.Drawing.Point(20, 10)
         Me.Panel12.Name = "Panel12"
-        Me.Panel12.Size = New System.Drawing.Size(149, 381)
+        Me.Panel12.Size = New System.Drawing.Size(150, 350)
         Me.Panel12.TabIndex = 7
         '
         'LinkLabel155
@@ -1169,7 +1473,10 @@ Partial Class Form1
         '
         'SC_Fenya
         '
-        Me.SC_Fenya.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Fenya.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Fenya.Location = New System.Drawing.Point(0, 150)
         Me.SC_Fenya.Name = "SC_Fenya"
         '
         'SC_Fenya.Panel1
@@ -1202,9 +1509,9 @@ Partial Class Form1
         Me.Panel8.Controls.Add(Me.LinkLabel110)
         Me.Panel8.Controls.Add(Me.LinkLabel111)
         Me.Panel8.Controls.Add(Me.LinkLabel112)
-        Me.Panel8.Location = New System.Drawing.Point(42, 31)
+        Me.Panel8.Location = New System.Drawing.Point(20, 10)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(93, 369)
+        Me.Panel8.Size = New System.Drawing.Size(150, 350)
         Me.Panel8.TabIndex = 7
         '
         'LinkLabel99
@@ -1372,7 +1679,10 @@ Partial Class Form1
         '
         'SC_Jan
         '
-        Me.SC_Jan.Location = New System.Drawing.Point(0, 154)
+        Me.SC_Jan.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Jan.Location = New System.Drawing.Point(0, 150)
         Me.SC_Jan.Name = "SC_Jan"
         '
         'SC_Jan.Panel1
@@ -1382,7 +1692,8 @@ Partial Class Form1
         'SC_Jan.Panel2
         '
         Me.SC_Jan.Panel2.Controls.Add(Me.Label8)
-        Me.SC_Jan.Size = New System.Drawing.Size(150, 100)
+        Me.SC_Jan.Size = New System.Drawing.Size(1010, 453)
+        Me.SC_Jan.SplitterDistance = 336
         Me.SC_Jan.TabIndex = 0
         '
         'Panel9
@@ -1404,9 +1715,9 @@ Partial Class Form1
         Me.Panel9.Controls.Add(Me.LinkLabel124)
         Me.Panel9.Controls.Add(Me.LinkLabel125)
         Me.Panel9.Controls.Add(Me.LinkLabel126)
-        Me.Panel9.Location = New System.Drawing.Point(113, 120)
+        Me.Panel9.Location = New System.Drawing.Point(20, 10)
         Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(0, 0)
+        Me.Panel9.Size = New System.Drawing.Size(436, 703)
         Me.Panel9.TabIndex = 7
         '
         'LinkLabel113
@@ -1574,7 +1885,10 @@ Partial Class Form1
         '
         'SC_Jeremy
         '
-        Me.SC_Jeremy.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Jeremy.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Jeremy.Location = New System.Drawing.Point(0, 150)
         Me.SC_Jeremy.Name = "SC_Jeremy"
         '
         'SC_Jeremy.Panel1
@@ -1607,9 +1921,9 @@ Partial Class Form1
         Me.Panel10.Controls.Add(Me.LinkLabel138)
         Me.Panel10.Controls.Add(Me.LinkLabel139)
         Me.Panel10.Controls.Add(Me.LinkLabel140)
-        Me.Panel10.Location = New System.Drawing.Point(26, 6)
+        Me.Panel10.Location = New System.Drawing.Point(20, 10)
         Me.Panel10.Name = "Panel10"
-        Me.Panel10.Size = New System.Drawing.Size(104, 331)
+        Me.Panel10.Size = New System.Drawing.Size(150, 350)
         Me.Panel10.TabIndex = 7
         '
         'LinkLabel127
@@ -1777,7 +2091,10 @@ Partial Class Form1
         '
         'SC_Leon
         '
-        Me.SC_Leon.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Leon.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Leon.Location = New System.Drawing.Point(0, 150)
         Me.SC_Leon.Name = "SC_Leon"
         '
         'SC_Leon.Panel1
@@ -1810,9 +2127,9 @@ Partial Class Form1
         Me.Panel11.Controls.Add(Me.LinkLabel152)
         Me.Panel11.Controls.Add(Me.LinkLabel153)
         Me.Panel11.Controls.Add(Me.LinkLabel154)
-        Me.Panel11.Location = New System.Drawing.Point(26, 45)
+        Me.Panel11.Location = New System.Drawing.Point(20, 10)
         Me.Panel11.Name = "Panel11"
-        Me.Panel11.Size = New System.Drawing.Size(106, 355)
+        Me.Panel11.Size = New System.Drawing.Size(150, 350)
         Me.Panel11.TabIndex = 7
         '
         'LinkLabel141
@@ -1980,7 +2297,10 @@ Partial Class Form1
         '
         'SC_Louis
         '
-        Me.SC_Louis.Location = New System.Drawing.Point(-30, 153)
+        Me.SC_Louis.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Louis.Location = New System.Drawing.Point(0, 150)
         Me.SC_Louis.Name = "SC_Louis"
         '
         'SC_Louis.Panel1
@@ -2013,9 +2333,9 @@ Partial Class Form1
         Me.Panel7.Controls.Add(Me.LinkLabel96)
         Me.Panel7.Controls.Add(Me.LinkLabel97)
         Me.Panel7.Controls.Add(Me.LinkLabel98)
-        Me.Panel7.Location = New System.Drawing.Point(56, 31)
+        Me.Panel7.Location = New System.Drawing.Point(20, 10)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(106, 372)
+        Me.Panel7.Size = New System.Drawing.Size(150, 350)
         Me.Panel7.TabIndex = 7
         '
         'LinkLabel85
@@ -2183,7 +2503,10 @@ Partial Class Form1
         '
         'SC_Maurice
         '
-        Me.SC_Maurice.Location = New System.Drawing.Point(0, 156)
+        Me.SC_Maurice.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Maurice.Location = New System.Drawing.Point(0, 150)
         Me.SC_Maurice.Name = "SC_Maurice"
         '
         'SC_Maurice.Panel1
@@ -2216,9 +2539,9 @@ Partial Class Form1
         Me.Panel4.Controls.Add(Me.LinkLabel54)
         Me.Panel4.Controls.Add(Me.LinkLabel55)
         Me.Panel4.Controls.Add(Me.LinkLabel56)
-        Me.Panel4.Location = New System.Drawing.Point(42, 32)
+        Me.Panel4.Location = New System.Drawing.Point(20, 10)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(118, 368)
+        Me.Panel4.Size = New System.Drawing.Size(150, 350)
         Me.Panel4.TabIndex = 7
         '
         'LinkLabel43
@@ -2386,7 +2709,10 @@ Partial Class Form1
         '
         'SC_Michelle
         '
-        Me.SC_Michelle.Location = New System.Drawing.Point(0, 156)
+        Me.SC_Michelle.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Michelle.Location = New System.Drawing.Point(0, 150)
         Me.SC_Michelle.Name = "SC_Michelle"
         '
         'SC_Michelle.Panel1
@@ -2419,9 +2745,9 @@ Partial Class Form1
         Me.Panel5.Controls.Add(Me.LinkLabel68)
         Me.Panel5.Controls.Add(Me.LinkLabel69)
         Me.Panel5.Controls.Add(Me.LinkLabel70)
-        Me.Panel5.Location = New System.Drawing.Point(42, 39)
+        Me.Panel5.Location = New System.Drawing.Point(20, 10)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(123, 390)
+        Me.Panel5.Size = New System.Drawing.Size(150, 350)
         Me.Panel5.TabIndex = 7
         '
         'LinkLabel57
@@ -2589,7 +2915,10 @@ Partial Class Form1
         '
         'SC_Natalie
         '
-        Me.SC_Natalie.Location = New System.Drawing.Point(0, 153)
+        Me.SC_Natalie.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Natalie.Location = New System.Drawing.Point(0, 150)
         Me.SC_Natalie.Name = "SC_Natalie"
         '
         'SC_Natalie.Panel1
@@ -2622,9 +2951,9 @@ Partial Class Form1
         Me.Panel6.Controls.Add(Me.LinkLabel82)
         Me.Panel6.Controls.Add(Me.LinkLabel83)
         Me.Panel6.Controls.Add(Me.LinkLabel84)
-        Me.Panel6.Location = New System.Drawing.Point(29, 53)
+        Me.Panel6.Location = New System.Drawing.Point(20, 10)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(108, 397)
+        Me.Panel6.Size = New System.Drawing.Size(150, 350)
         Me.Panel6.TabIndex = 7
         '
         'LinkLabel71
@@ -2792,7 +3121,10 @@ Partial Class Form1
         '
         'SC_Noah
         '
-        Me.SC_Noah.Location = New System.Drawing.Point(3, 153)
+        Me.SC_Noah.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Noah.Location = New System.Drawing.Point(0, 150)
         Me.SC_Noah.Name = "SC_Noah"
         '
         'SC_Noah.Panel1
@@ -2825,9 +3157,9 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.LinkLabel12)
         Me.Panel1.Controls.Add(Me.LinkLabel13)
         Me.Panel1.Controls.Add(Me.LinkLabel14)
-        Me.Panel1.Location = New System.Drawing.Point(23, 45)
+        Me.Panel1.Location = New System.Drawing.Point(20, 10)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(103, 344)
+        Me.Panel1.Size = New System.Drawing.Size(150, 350)
         Me.Panel1.TabIndex = 7
         '
         'LinkLabel1
@@ -2995,7 +3327,10 @@ Partial Class Form1
         '
         'SC_Paul
         '
-        Me.SC_Paul.Location = New System.Drawing.Point(0, 156)
+        Me.SC_Paul.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Paul.Location = New System.Drawing.Point(0, 150)
         Me.SC_Paul.Name = "SC_Paul"
         '
         'SC_Paul.Panel1
@@ -3028,9 +3363,9 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.LinkLabel40)
         Me.Panel3.Controls.Add(Me.LinkLabel41)
         Me.Panel3.Controls.Add(Me.LinkLabel42)
-        Me.Panel3.Location = New System.Drawing.Point(26, 49)
+        Me.Panel3.Location = New System.Drawing.Point(20, 10)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(119, 383)
+        Me.Panel3.Size = New System.Drawing.Size(150, 350)
         Me.Panel3.TabIndex = 7
         '
         'LinkLabel29
@@ -3198,7 +3533,10 @@ Partial Class Form1
         '
         'SC_Raphael
         '
-        Me.SC_Raphael.Location = New System.Drawing.Point(0, 185)
+        Me.SC_Raphael.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.SC_Raphael.Location = New System.Drawing.Point(0, 150)
         Me.SC_Raphael.Name = "SC_Raphael"
         '
         'SC_Raphael.Panel1
@@ -3231,9 +3569,9 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.LinkLabel26)
         Me.Panel2.Controls.Add(Me.LinkLabel27)
         Me.Panel2.Controls.Add(Me.LinkLabel28)
-        Me.Panel2.Location = New System.Drawing.Point(60, 20)
+        Me.Panel2.Location = New System.Drawing.Point(20, 10)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(143, 386)
+        Me.Panel2.Size = New System.Drawing.Size(150, 350)
         Me.Panel2.TabIndex = 7
         '
         'LinkLabel15
@@ -3401,13 +3739,36 @@ Partial Class Form1
         '
         'CB_name
         '
+        Me.CB_name.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_name.FormattingEnabled = True
         Me.CB_name.Items.AddRange(New Object() {"Aaliyah", "Aleks", "David", "Dominik", "Fenya", "Jan", "Jeremy", "Leon", "Louis", "Maurice", "Michelle", "Natalie", "Noah", "Paul", "Raphael"})
-        Me.CB_name.Location = New System.Drawing.Point(416, 52)
+        Me.CB_name.Location = New System.Drawing.Point(415, 65)
         Me.CB_name.Name = "CB_name"
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
         Me.CB_name.TabIndex = 8
+        '
+        'L_Aaliyah_Frauenarzt
+        '
+        Me.L_Aaliyah_Frauenarzt.AutoSize = True
+        Me.L_Aaliyah_Frauenarzt.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Frauenarzt.Location = New System.Drawing.Point(251, 8)
+        Me.L_Aaliyah_Frauenarzt.Name = "L_Aaliyah_Frauenarzt"
+        Me.L_Aaliyah_Frauenarzt.Size = New System.Drawing.Size(101, 22)
+        Me.L_Aaliyah_Frauenarzt.TabIndex = 0
+        Me.L_Aaliyah_Frauenarzt.Text = "Frauenarzt"
+        '
+        'L_Aaliyah_Hobby
+        '
+        Me.L_Aaliyah_Hobby.AutoSize = True
+        Me.L_Aaliyah_Hobby.Font = New System.Drawing.Font("Times New Roman", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Aaliyah_Hobby.Location = New System.Drawing.Point(271, 10)
+        Me.L_Aaliyah_Hobby.Name = "L_Aaliyah_Hobby"
+        Me.L_Aaliyah_Hobby.Size = New System.Drawing.Size(63, 22)
+        Me.L_Aaliyah_Hobby.TabIndex = 0
+        Me.L_Aaliyah_Hobby.Text = "Hobby"
         '
         'Form1
         '
@@ -3434,11 +3795,38 @@ Partial Class Form1
         Me.Text = "Start"
         Me.SC_Aaliyah.Panel1.ResumeLayout(False)
         Me.SC_Aaliyah.Panel2.ResumeLayout(False)
-        Me.SC_Aaliyah.Panel2.PerformLayout()
         CType(Me.SC_Aaliyah, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SC_Aaliyah.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel15.PerformLayout()
+        Me.P_Aaliyah_Hautarzt.ResumeLayout(False)
+        Me.P_Aaliyah_Hautarzt.PerformLayout()
+        Me.P_Aaliyah_Augenarzt.ResumeLayout(False)
+        Me.P_Aaliyah_Augenarzt.PerformLayout()
+        Me.P_Aaliyah_HNO.ResumeLayout(False)
+        Me.P_Aaliyah_HNO.PerformLayout()
+        Me.P_Aaliyah_Zahnarzt.ResumeLayout(False)
+        Me.P_Aaliyah_Zahnarzt.PerformLayout()
+        Me.P_Aaliyah_Kinderarzt.ResumeLayout(False)
+        Me.P_Aaliyah_Kinderarzt.PerformLayout()
+        Me.P_Aaliyah_Psycho.ResumeLayout(False)
+        Me.P_Aaliyah_Psycho.PerformLayout()
+        Me.P_Aaliyah_Doku.ResumeLayout(False)
+        Me.P_Aaliyah_Doku.PerformLayout()
+        Me.P_Aaliyah_Eltern.ResumeLayout(False)
+        Me.P_Aaliyah_Eltern.PerformLayout()
+        Me.P_Aaliyah_Krankenhaus.ResumeLayout(False)
+        Me.P_Aaliyah_Krankenhaus.PerformLayout()
+        Me.P_Aaliyah_Stammdaten.ResumeLayout(False)
+        Me.P_Aaliyah_Stammdaten.PerformLayout()
+        Me.P_Aaliyah_Kontakte.ResumeLayout(False)
+        Me.P_Aaliyah_Kontakte.PerformLayout()
+        Me.P_Aaliyah_Hilfen.ResumeLayout(False)
+        Me.P_Aaliyah_Hilfen.PerformLayout()
+        Me.P_Aaliyah_Frauenarzt.ResumeLayout(False)
+        Me.P_Aaliyah_Frauenarzt.PerformLayout()
+        Me.P_Aaliyah_Hobby.ResumeLayout(False)
+        Me.P_Aaliyah_Hobby.PerformLayout()
         Me.SC_Aleks.Panel1.ResumeLayout(False)
         Me.SC_Aleks.Panel2.ResumeLayout(False)
         Me.SC_Aleks.Panel2.PerformLayout()
@@ -3550,12 +3938,12 @@ Partial Class Form1
     Friend WithEvents LinkLabel202 As LinkLabel
     Friend WithEvents LinkLabel203 As LinkLabel
     Friend WithEvents LinkLabel204 As LinkLabel
-    Friend WithEvents LinkLabel205 As LinkLabel
+    Friend WithEvents LL_Aaliyah_Hilfen As LinkLabel
     Friend WithEvents LinkLabel206 As LinkLabel
-    Friend WithEvents LinkLabel207 As LinkLabel
+    Friend WithEvents LL_Aaliyah_Kontakte As LinkLabel
     Friend WithEvents LinkLabel208 As LinkLabel
     Friend WithEvents LinkLabel209 As LinkLabel
-    Friend WithEvents LinkLabel210 As LinkLabel
+    Friend WithEvents LL_Aaliyah_Stammdaten As LinkLabel
     Friend WithEvents SC_Aleks As SplitContainer
     Friend WithEvents Panel14 As Panel
     Friend WithEvents LinkLabel183 As LinkLabel
@@ -3780,7 +4168,6 @@ Partial Class Form1
     Friend WithEvents LinkLabel26 As LinkLabel
     Friend WithEvents LinkLabel27 As LinkLabel
     Friend WithEvents LinkLabel28 As LinkLabel
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label11 As Label
@@ -3796,4 +4183,32 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CB_name As ComboBox
+    Friend WithEvents P_Aaliyah_Stammdaten As Panel
+    Friend WithEvents L_Stammdaten As Label
+    Friend WithEvents P_Aaliyah_Kontakte As Panel
+    Friend WithEvents P_Aaliyah_Hilfen As Panel
+    Friend WithEvents P_Aaliyah_Eltern As Panel
+    Friend WithEvents P_Aaliyah_Doku As Panel
+    Friend WithEvents P_Aaliyah_Psycho As Panel
+    Friend WithEvents P_Aaliyah_Kinderarzt As Panel
+    Friend WithEvents P_Aaliyah_Zahnarzt As Panel
+    Friend WithEvents P_Aaliyah_HNO As Panel
+    Friend WithEvents P_Aaliyah_Augenarzt As Panel
+    Friend WithEvents P_Aaliyah_Hautarzt As Panel
+    Friend WithEvents P_Aaliyah_Krankenhaus As Panel
+    Friend WithEvents P_Aaliyah_Frauenarzt As Panel
+    Friend WithEvents P_Aaliyah_Hobby As Panel
+    Friend WithEvents L_Aaliyah_Kontakte As Label
+    Friend WithEvents L_Aaliyah_Hilfen As Label
+    Friend WithEvents L_Aaliyah_Hautarzt As Label
+    Friend WithEvents L_Aaliyah_Augenarzt As Label
+    Friend WithEvents L_Aaliyah_HNO As Label
+    Friend WithEvents L_Aaliyah_Zahnarzt As Label
+    Friend WithEvents L_Aaliyah_KInderarzt As Label
+    Friend WithEvents L_Aaliyah_Psycho As Label
+    Friend WithEvents L_Aaliyah_Doku As Label
+    Friend WithEvents L_Aaliyah_Elternkontakte As Label
+    Friend WithEvents L_Aaliyah_Krankenhaus As Label
+    Friend WithEvents L_Aaliyah_Hobby As Label
+    Friend WithEvents L_Aaliyah_Frauenarzt As Label
 End Class
