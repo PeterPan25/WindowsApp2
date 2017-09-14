@@ -368,33 +368,33 @@
         P_Aaliyah_Stammdaten.Visible = False
         P_Aaliyah_Hilfen.Visible = True
 
-    '    Dim themes(14) As Panel
-    '    Dim i As Integer
-    '    Dim name As String
+        '    Dim themes(14) As Panel
+        '    Dim i As Integer
+        '    Dim name As String
 
 
-    '    name = "L_Aaliyah" +
-    '    For i = 0 To 13
+        '    name = "L_Aaliyah" +
+        '    For i = 0 To 13
 
-    '        themes(0) = P_Aaliyah_Stammdaten
-    '    themes(1) = P_Aaliyah_Kontakte
-    '    themes(2) = P_Aaliyah_Hilfen
-    '    themes(3) = P_Aaliyah_Psycho
-    '    themes(4) = P_Aaliyah_Eltern
-    '    themes(5) = P_Aaliyah_Doku
-    '    themes(6) = P_Aaliyah_Kinderarzt
-    '    themes(7) = P_Aaliyah_Hautarzt
-    '    themes(8) = P_Aaliyah_Augenarzt
-    '    themes(9) = P_Aaliyah_HNO
-    '    themes(10) = P_Aaliyah_Zahnarzt
-    '    themes(11) = P_Aaliyah_Krankenhaus
-    '    themes(12) = P_Aaliyah_Frauenarzt
-    '    themes(13) = P_Aaliyah_Hobby
+        '        themes(0) = P_Aaliyah_Stammdaten
+        '    themes(1) = P_Aaliyah_Kontakte
+        '    themes(2) = P_Aaliyah_Hilfen
+        '    themes(3) = P_Aaliyah_Psycho
+        '    themes(4) = P_Aaliyah_Eltern
+        '    themes(5) = P_Aaliyah_Doku
+        '    themes(6) = P_Aaliyah_Kinderarzt
+        '    themes(7) = P_Aaliyah_Hautarzt
+        '    themes(8) = P_Aaliyah_Augenarzt
+        '    themes(9) = P_Aaliyah_HNO
+        '    themes(10) = P_Aaliyah_Zahnarzt
+        '    themes(11) = P_Aaliyah_Krankenhaus
+        '    themes(12) = P_Aaliyah_Frauenarzt
+        '    themes(13) = P_Aaliyah_Hobby
 
-    '        If 
+        '        If 
 
 
-    'End Sub
+    End Sub
 
 
 End Class

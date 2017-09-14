@@ -303,8 +303,13 @@ Partial Class Form1
         Me.LinkLabel28 = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CB_name = New System.Windows.Forms.ComboBox()
+
         Me.L_Aaliyah_Frauenarzt = New System.Windows.Forms.Label()
         Me.L_Aaliyah_Hobby = New System.Windows.Forms.Label()
+
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+
         CType(Me.SC_Aaliyah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SC_Aaliyah.Panel1.SuspendLayout()
         Me.SC_Aaliyah.Panel2.SuspendLayout()
@@ -410,6 +415,7 @@ Partial Class Form1
         '
         'SC_Aaliyah.Panel2
         '
+
         Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hobby)
         Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Frauenarzt)
         Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hautarzt)
@@ -424,6 +430,8 @@ Partial Class Form1
         Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Stammdaten)
         Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kontakte)
         Me.SC_Aaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hilfen)
+
+
         Me.SC_Aaliyah.Size = New System.Drawing.Size(1010, 453)
         Me.SC_Aaliyah.SplitterDistance = 246
         Me.SC_Aaliyah.TabIndex = 7
@@ -1692,8 +1700,13 @@ Partial Class Form1
         'SC_Jan.Panel2
         '
         Me.SC_Jan.Panel2.Controls.Add(Me.Label8)
+
         Me.SC_Jan.Size = New System.Drawing.Size(1010, 453)
         Me.SC_Jan.SplitterDistance = 336
+
+        Me.SC_Jan.Size = New System.Drawing.Size(1007, 458)
+        Me.SC_Jan.SplitterDistance = 335
+
         Me.SC_Jan.TabIndex = 0
         '
         'Panel9
@@ -1715,9 +1728,15 @@ Partial Class Form1
         Me.Panel9.Controls.Add(Me.LinkLabel124)
         Me.Panel9.Controls.Add(Me.LinkLabel125)
         Me.Panel9.Controls.Add(Me.LinkLabel126)
+
         Me.Panel9.Location = New System.Drawing.Point(20, 10)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(436, 703)
+
+        Me.Panel9.Location = New System.Drawing.Point(26, 20)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(194, 396)
+
         Me.Panel9.TabIndex = 7
         '
         'LinkLabel113
@@ -3750,6 +3769,7 @@ Partial Class Form1
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
         Me.CB_name.TabIndex = 8
         '
+
         'L_Aaliyah_Frauenarzt
         '
         Me.L_Aaliyah_Frauenarzt.AutoSize = True
@@ -3769,12 +3789,31 @@ Partial Class Form1
         Me.L_Aaliyah_Hobby.Size = New System.Drawing.Size(63, 22)
         Me.L_Aaliyah_Hobby.TabIndex = 0
         Me.L_Aaliyah_Hobby.Text = "Hobby"
+
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1040, 391)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(534, 358)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 7
+        Me.Label16.Text = "Label16"
+
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1010, 603)
+        Me.ClientSize = New System.Drawing.Size(1127, 650)
         Me.Controls.Add(Me.CB_name)
         Me.Controls.Add(Me.SC_Aaliyah)
         Me.Controls.Add(Me.SC_Fenya)
@@ -4183,6 +4222,7 @@ Partial Class Form1
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CB_name As ComboBox
+
     Friend WithEvents P_Aaliyah_Stammdaten As Panel
     Friend WithEvents L_Stammdaten As Label
     Friend WithEvents P_Aaliyah_Kontakte As Panel
@@ -4211,4 +4251,8 @@ Partial Class Form1
     Friend WithEvents L_Aaliyah_Krankenhaus As Label
     Friend WithEvents L_Aaliyah_Hobby As Label
     Friend WithEvents L_Aaliyah_Frauenarzt As Label
+
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Button1 As Button
+
 End Class
