@@ -30,28 +30,57 @@ Partial Class Form1
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6, TreeNode7})
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8})
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode11, TreeNode12})
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho/SPZ")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinderarzt")
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hautarzt")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Augenarzt")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Zahnarzt")
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("HNO")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
-        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
-        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode19, TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25})
-        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8, TreeNode9})
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
+        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho/SPZ")
+        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
+        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinderarzt")
+        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hautarzt")
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Augenarzt")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Zahnarzt")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("HNO")
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26})
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
         Me.Splitcontaineraaliyah = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.P_Aaliyah_Stammdaten = New System.Windows.Forms.Panel()
+        Me.TextBox33 = New System.Windows.Forms.TextBox()
+        Me.TextBox32 = New System.Windows.Forms.TextBox()
+        Me.TextBox27 = New System.Windows.Forms.TextBox()
+        Me.TextBox31 = New System.Windows.Forms.TextBox()
+        Me.TextBox26 = New System.Windows.Forms.TextBox()
+        Me.TextBox30 = New System.Windows.Forms.TextBox()
+        Me.TextBox25 = New System.Windows.Forms.TextBox()
+        Me.TextBox29 = New System.Windows.Forms.TextBox()
+        Me.TextBox24 = New System.Windows.Forms.TextBox()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.TextBox28 = New System.Windows.Forms.TextBox()
+        Me.TextBox23 = New System.Windows.Forms.TextBox()
+        Me.TextBox22 = New System.Windows.Forms.TextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.L_Stammdaten = New System.Windows.Forms.Label()
         Me.P_Aaliyah_Kontakte = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -71,21 +100,6 @@ Partial Class Form1
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.L_Aaliyah_Elternkontakte = New System.Windows.Forms.Label()
-        Me.P_Aaliyah_Stammdaten = New System.Windows.Forms.Panel()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label38 = New System.Windows.Forms.Label()
-        Me.Label39 = New System.Windows.Forms.Label()
-        Me.Label37 = New System.Windows.Forms.Label()
-        Me.Label36 = New System.Windows.Forms.Label()
-        Me.Label35 = New System.Windows.Forms.Label()
-        Me.Label34 = New System.Windows.Forms.Label()
-        Me.Label33 = New System.Windows.Forms.Label()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.L_Stammdaten = New System.Windows.Forms.Label()
         Me.P_Aaliyah_Schule = New System.Windows.Forms.Panel()
         Me.RichTextBox25 = New System.Windows.Forms.RichTextBox()
         Me.RichTextBox24 = New System.Windows.Forms.RichTextBox()
@@ -183,28 +197,15 @@ Partial Class Form1
         Me.CB_name = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBox22 = New System.Windows.Forms.TextBox()
-        Me.TextBox23 = New System.Windows.Forms.TextBox()
-        Me.TextBox24 = New System.Windows.Forms.TextBox()
-        Me.TextBox25 = New System.Windows.Forms.TextBox()
-        Me.TextBox26 = New System.Windows.Forms.TextBox()
-        Me.TextBox27 = New System.Windows.Forms.TextBox()
-        Me.TextBox28 = New System.Windows.Forms.TextBox()
-        Me.TextBox29 = New System.Windows.Forms.TextBox()
-        Me.TextBox30 = New System.Windows.Forms.TextBox()
-        Me.TextBox31 = New System.Windows.Forms.TextBox()
-        Me.TextBox32 = New System.Windows.Forms.TextBox()
-        Me.TextBox33 = New System.Windows.Forms.TextBox()
-        Me.TextBox34 = New System.Windows.Forms.TextBox()
         CType(Me.Splitcontaineraaliyah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontaineraaliyah.Panel1.SuspendLayout()
         Me.Splitcontaineraaliyah.Panel2.SuspendLayout()
         Me.Splitcontaineraaliyah.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.P_Aaliyah_Stammdaten.SuspendLayout()
         Me.P_Aaliyah_Kontakte.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.P_Aaliyah_Eltern.SuspendLayout()
-        Me.P_Aaliyah_Stammdaten.SuspendLayout()
         Me.P_Aaliyah_Schule.SuspendLayout()
         Me.P_Aaliyah_Hilfen.SuspendLayout()
         Me.P_Aaliyah_Krankenhaus.SuspendLayout()
@@ -234,21 +235,21 @@ Partial Class Form1
         '
         'Splitcontaineraaliyah.Panel2
         '
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Stammdaten)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kontakte)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Eltern)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Schule)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hilfen)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Krankenhaus)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Psycho)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kinderarzt)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Doku)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hobby)
         Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Zahnarzt)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kinderarzt)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Psycho)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Krankenhaus)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Schule)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Eltern)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Kontakte)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hilfen)
+        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Stammdaten)
         Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_HNO)
         Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Augenarzt)
         Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hautarzt)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Hobby)
         Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Frauenarzt)
-        Me.Splitcontaineraaliyah.Panel2.Controls.Add(Me.P_Aaliyah_Doku)
         Me.Splitcontaineraaliyah.Size = New System.Drawing.Size(1098, 476)
         Me.Splitcontaineraaliyah.SplitterDistance = 267
         Me.Splitcontaineraaliyah.TabIndex = 7
@@ -284,47 +285,343 @@ Partial Class Form1
         TreeNode7.Text = "entfernen"
         TreeNode8.Name = "Knoten30"
         TreeNode8.Text = "Benutzer"
-        TreeNode9.Name = "Knoten27"
-        TreeNode9.Text = "admin"
-        TreeNode10.Name = "Knoten28"
-        TreeNode10.Text = "Tagesbericht"
-        TreeNode11.Name = "Knoten10"
-        TreeNode11.Text = "Stammdaten"
-        TreeNode12.Name = "Knoten11"
-        TreeNode12.Text = "Kontakte"
-        TreeNode13.Name = "Knoten9"
-        TreeNode13.Text = "allgemeine Daten"
-        TreeNode14.Name = "Knoten2"
-        TreeNode14.Text = "Hilfen"
-        TreeNode15.Name = "Knoten6"
-        TreeNode15.Text = "Doku"
-        TreeNode16.Name = "Knoten3"
-        TreeNode16.Text = "Schule"
-        TreeNode17.Name = "Knoten4"
-        TreeNode17.Text = "Psycho/SPZ"
-        TreeNode18.Name = "Knoten5"
-        TreeNode18.Text = "Eltern"
-        TreeNode19.Name = "Knoten12"
-        TreeNode19.Text = "Kinderarzt"
-        TreeNode20.Name = "Knoten13"
-        TreeNode20.Text = "Hautarzt"
-        TreeNode21.Name = "Knoten14"
-        TreeNode21.Text = "Augenarzt"
-        TreeNode22.Name = "Knoten15"
-        TreeNode22.Text = "Zahnarzt"
-        TreeNode23.Name = "Knoten16"
-        TreeNode23.Text = "HNO"
-        TreeNode24.Name = "Knoten19"
-        TreeNode24.Text = "Krankenhaus"
-        TreeNode25.Name = "Knoten20"
-        TreeNode25.Text = "Frauenarzt"
-        TreeNode26.Name = "Knoten8"
-        TreeNode26.Text = "Ärzte"
-        TreeNode27.Name = "Knoten7"
-        TreeNode27.Text = "Hobby"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode10, TreeNode13, TreeNode14, TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode26, TreeNode27})
+        TreeNode9.Name = "Knoten1"
+        TreeNode9.Text = "Mitarbeiter"
+        TreeNode10.Name = "Knoten27"
+        TreeNode10.Text = "admin"
+        TreeNode11.Name = "Knoten28"
+        TreeNode11.Text = "Tagesbericht"
+        TreeNode12.Name = "Knoten10"
+        TreeNode12.Text = "Stammdaten"
+        TreeNode13.Name = "Knoten11"
+        TreeNode13.Text = "Kontakte"
+        TreeNode14.Name = "Knoten9"
+        TreeNode14.Text = "allgemeine Daten"
+        TreeNode15.Name = "Knoten2"
+        TreeNode15.Text = "Hilfen"
+        TreeNode16.Name = "Knoten6"
+        TreeNode16.Text = "Doku"
+        TreeNode17.Name = "Knoten3"
+        TreeNode17.Text = "Schule"
+        TreeNode18.Name = "Knoten4"
+        TreeNode18.Text = "Psycho/SPZ"
+        TreeNode19.Name = "Knoten5"
+        TreeNode19.Text = "Eltern"
+        TreeNode20.Name = "Knoten12"
+        TreeNode20.Text = "Kinderarzt"
+        TreeNode21.Name = "Knoten13"
+        TreeNode21.Text = "Hautarzt"
+        TreeNode22.Name = "Knoten14"
+        TreeNode22.Text = "Augenarzt"
+        TreeNode23.Name = "Knoten15"
+        TreeNode23.Text = "Zahnarzt"
+        TreeNode24.Name = "Knoten16"
+        TreeNode24.Text = "HNO"
+        TreeNode25.Name = "Knoten19"
+        TreeNode25.Text = "Krankenhaus"
+        TreeNode26.Name = "Knoten20"
+        TreeNode26.Text = "Frauenarzt"
+        TreeNode27.Name = "Knoten8"
+        TreeNode27.Text = "Ärzte"
+        TreeNode28.Name = "Knoten7"
+        TreeNode28.Text = "Hobby"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode14, TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode27, TreeNode28})
         Me.TreeView1.Size = New System.Drawing.Size(267, 476)
         Me.TreeView1.TabIndex = 1
+        '
+        'P_Aaliyah_Stammdaten
+        '
+        Me.P_Aaliyah_Stammdaten.BackColor = System.Drawing.SystemColors.Control
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox33)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox32)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox27)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox31)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox26)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox30)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox25)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox29)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox24)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox34)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox28)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox23)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox22)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label44)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label42)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label40)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label43)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label41)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label38)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label39)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label37)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label36)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label35)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label34)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label33)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label32)
+        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.L_Stammdaten)
+        Me.P_Aaliyah_Stammdaten.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.P_Aaliyah_Stammdaten.Location = New System.Drawing.Point(0, 0)
+        Me.P_Aaliyah_Stammdaten.Name = "P_Aaliyah_Stammdaten"
+        Me.P_Aaliyah_Stammdaten.Size = New System.Drawing.Size(827, 476)
+        Me.P_Aaliyah_Stammdaten.TabIndex = 13
+        '
+        'TextBox33
+        '
+        Me.TextBox33.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox33.Location = New System.Drawing.Point(182, 71)
+        Me.TextBox33.Name = "TextBox33"
+        Me.TextBox33.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox33.TabIndex = 5
+        '
+        'TextBox32
+        '
+        Me.TextBox32.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox32.Location = New System.Drawing.Point(182, 106)
+        Me.TextBox32.Name = "TextBox32"
+        Me.TextBox32.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox32.TabIndex = 5
+        '
+        'TextBox27
+        '
+        Me.TextBox27.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox27.Location = New System.Drawing.Point(409, 71)
+        Me.TextBox27.Name = "TextBox27"
+        Me.TextBox27.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox27.TabIndex = 5
+        '
+        'TextBox31
+        '
+        Me.TextBox31.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox31.Location = New System.Drawing.Point(182, 141)
+        Me.TextBox31.Name = "TextBox31"
+        Me.TextBox31.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox31.TabIndex = 5
+        '
+        'TextBox26
+        '
+        Me.TextBox26.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox26.Location = New System.Drawing.Point(409, 106)
+        Me.TextBox26.Name = "TextBox26"
+        Me.TextBox26.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox26.TabIndex = 5
+        '
+        'TextBox30
+        '
+        Me.TextBox30.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox30.Location = New System.Drawing.Point(182, 176)
+        Me.TextBox30.Name = "TextBox30"
+        Me.TextBox30.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox30.TabIndex = 5
+        '
+        'TextBox25
+        '
+        Me.TextBox25.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox25.Location = New System.Drawing.Point(409, 141)
+        Me.TextBox25.Name = "TextBox25"
+        Me.TextBox25.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox25.TabIndex = 5
+        '
+        'TextBox29
+        '
+        Me.TextBox29.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox29.Location = New System.Drawing.Point(182, 211)
+        Me.TextBox29.Name = "TextBox29"
+        Me.TextBox29.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox29.TabIndex = 5
+        '
+        'TextBox24
+        '
+        Me.TextBox24.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox24.Location = New System.Drawing.Point(409, 176)
+        Me.TextBox24.Name = "TextBox24"
+        Me.TextBox24.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox24.TabIndex = 5
+        '
+        'TextBox34
+        '
+        Me.TextBox34.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox34.Location = New System.Drawing.Point(181, 281)
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox34.TabIndex = 5
+        '
+        'TextBox28
+        '
+        Me.TextBox28.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox28.Location = New System.Drawing.Point(182, 246)
+        Me.TextBox28.Name = "TextBox28"
+        Me.TextBox28.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox28.TabIndex = 5
+        '
+        'TextBox23
+        '
+        Me.TextBox23.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox23.Location = New System.Drawing.Point(409, 211)
+        Me.TextBox23.Name = "TextBox23"
+        Me.TextBox23.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox23.TabIndex = 5
+        '
+        'TextBox22
+        '
+        Me.TextBox22.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.TextBox22.Location = New System.Drawing.Point(409, 246)
+        Me.TextBox22.Name = "TextBox22"
+        Me.TextBox22.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox22.TabIndex = 5
+        '
+        'Label44
+        '
+        Me.Label44.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label44.AutoSize = True
+        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(342, 246)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(58, 20)
+        Me.Label44.TabIndex = 4
+        Me.Label44.Text = "Schule"
+        '
+        'Label42
+        '
+        Me.Label42.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label42.AutoSize = True
+        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(17, 246)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(158, 20)
+        Me.Label42.TabIndex = 4
+        Me.Label42.Text = "Krankenversicherung"
+        '
+        'Label40
+        '
+        Me.Label40.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label40.AutoSize = True
+        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label40.Location = New System.Drawing.Point(315, 141)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(88, 20)
+        Me.Label40.TabIndex = 4
+        Me.Label40.Text = "Konfession"
+        '
+        'Label43
+        '
+        Me.Label43.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label43.AutoSize = True
+        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(324, 176)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(80, 20)
+        Me.Label43.TabIndex = 4
+        Me.Label43.Text = "Hilfe nach"
+        '
+        'Label41
+        '
+        Me.Label41.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label41.AutoSize = True
+        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(53, 281)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(122, 20)
+        Me.Label41.TabIndex = 4
+        Me.Label41.Text = "Besonderheiten"
+        '
+        'Label38
+        '
+        Me.Label38.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(311, 211)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(89, 20)
+        Me.Label38.TabIndex = 4
+        Me.Label38.Text = "Jugendamt"
+        '
+        'Label39
+        '
+        Me.Label39.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(318, 106)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(86, 20)
+        Me.Label39.TabIndex = 4
+        Me.Label39.Text = "Geburtsort"
+        '
+        'Label37
+        '
+        Me.Label37.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(35, 211)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(140, 20)
+        Me.Label37.TabIndex = 4
+        Me.Label37.Text = "Sorgerechtsstatus"
+        '
+        'Label36
+        '
+        Me.Label36.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label36.AutoSize = True
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(47, 176)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(128, 20)
+        Me.Label36.TabIndex = 4
+        Me.Label36.Text = "Aufnahmedatum"
+        '
+        'Label35
+        '
+        Me.Label35.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(88, 141)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(89, 20)
+        Me.Label35.TabIndex = 4
+        Me.Label35.Text = "Nationalität"
+        '
+        'Label34
+        '
+        Me.Label34.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(103, 71)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(74, 20)
+        Me.Label34.TabIndex = 3
+        Me.Label34.Text = "Vorname"
+        '
+        'Label33
+        '
+        Me.Label33.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(65, 106)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(112, 20)
+        Me.Label33.TabIndex = 2
+        Me.Label33.Text = "Geburtsdatum"
+        '
+        'Label32
+        '
+        Me.Label32.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(352, 71)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(51, 20)
+        Me.Label32.TabIndex = 1
+        Me.Label32.Text = "Name"
+        '
+        'L_Stammdaten
+        '
+        Me.L_Stammdaten.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.L_Stammdaten.AutoSize = True
+        Me.L_Stammdaten.Font = New System.Drawing.Font("Times New Roman", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.L_Stammdaten.Location = New System.Drawing.Point(256, 10)
+        Me.L_Stammdaten.Name = "L_Stammdaten"
+        Me.L_Stammdaten.Size = New System.Drawing.Size(112, 22)
+        Me.L_Stammdaten.TabIndex = 0
+        Me.L_Stammdaten.Text = "Stammdaten"
         '
         'P_Aaliyah_Kontakte
         '
@@ -531,196 +828,6 @@ Partial Class Form1
         Me.L_Aaliyah_Elternkontakte.Size = New System.Drawing.Size(134, 22)
         Me.L_Aaliyah_Elternkontakte.TabIndex = 0
         Me.L_Aaliyah_Elternkontakte.Text = "Elternkontakte"
-        '
-        'P_Aaliyah_Stammdaten
-        '
-        Me.P_Aaliyah_Stammdaten.BackColor = System.Drawing.SystemColors.Control
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox33)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox32)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox27)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox31)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox26)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox30)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox25)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox29)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox24)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox34)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox28)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox23)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.TextBox22)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label44)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label42)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label40)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label43)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label41)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label38)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label39)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label37)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label36)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label35)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label34)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label33)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.Label32)
-        Me.P_Aaliyah_Stammdaten.Controls.Add(Me.L_Stammdaten)
-        Me.P_Aaliyah_Stammdaten.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.P_Aaliyah_Stammdaten.Location = New System.Drawing.Point(0, 0)
-        Me.P_Aaliyah_Stammdaten.Name = "P_Aaliyah_Stammdaten"
-        Me.P_Aaliyah_Stammdaten.Size = New System.Drawing.Size(827, 476)
-        Me.P_Aaliyah_Stammdaten.TabIndex = 13
-        '
-        'Label44
-        '
-        Me.Label44.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label44.AutoSize = True
-        Me.Label44.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label44.Location = New System.Drawing.Point(342, 246)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(58, 20)
-        Me.Label44.TabIndex = 4
-        Me.Label44.Text = "Schule"
-        '
-        'Label42
-        '
-        Me.Label42.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label42.AutoSize = True
-        Me.Label42.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label42.Location = New System.Drawing.Point(17, 246)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(158, 20)
-        Me.Label42.TabIndex = 4
-        Me.Label42.Text = "Krankenversicherung"
-        '
-        'Label40
-        '
-        Me.Label40.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label40.AutoSize = True
-        Me.Label40.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(315, 141)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(88, 20)
-        Me.Label40.TabIndex = 4
-        Me.Label40.Text = "Konfession"
-        '
-        'Label43
-        '
-        Me.Label43.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label43.AutoSize = True
-        Me.Label43.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label43.Location = New System.Drawing.Point(324, 176)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(80, 20)
-        Me.Label43.TabIndex = 4
-        Me.Label43.Text = "Hilfe nach"
-        '
-        'Label41
-        '
-        Me.Label41.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label41.AutoSize = True
-        Me.Label41.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(53, 281)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(122, 20)
-        Me.Label41.TabIndex = 4
-        Me.Label41.Text = "Besonderheiten"
-        '
-        'Label38
-        '
-        Me.Label38.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label38.AutoSize = True
-        Me.Label38.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(311, 211)
-        Me.Label38.Name = "Label38"
-        Me.Label38.Size = New System.Drawing.Size(89, 20)
-        Me.Label38.TabIndex = 4
-        Me.Label38.Text = "Jugendamt"
-        '
-        'Label39
-        '
-        Me.Label39.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label39.AutoSize = True
-        Me.Label39.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(318, 106)
-        Me.Label39.Name = "Label39"
-        Me.Label39.Size = New System.Drawing.Size(86, 20)
-        Me.Label39.TabIndex = 4
-        Me.Label39.Text = "Geburtsort"
-        '
-        'Label37
-        '
-        Me.Label37.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label37.AutoSize = True
-        Me.Label37.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(35, 211)
-        Me.Label37.Name = "Label37"
-        Me.Label37.Size = New System.Drawing.Size(140, 20)
-        Me.Label37.TabIndex = 4
-        Me.Label37.Text = "Sorgerechtsstatus"
-        '
-        'Label36
-        '
-        Me.Label36.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(47, 176)
-        Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(128, 20)
-        Me.Label36.TabIndex = 4
-        Me.Label36.Text = "Aufnahmedatum"
-        '
-        'Label35
-        '
-        Me.Label35.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label35.AutoSize = True
-        Me.Label35.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(88, 141)
-        Me.Label35.Name = "Label35"
-        Me.Label35.Size = New System.Drawing.Size(89, 20)
-        Me.Label35.TabIndex = 4
-        Me.Label35.Text = "Nationalität"
-        '
-        'Label34
-        '
-        Me.Label34.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label34.AutoSize = True
-        Me.Label34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(103, 71)
-        Me.Label34.Name = "Label34"
-        Me.Label34.Size = New System.Drawing.Size(74, 20)
-        Me.Label34.TabIndex = 3
-        Me.Label34.Text = "Vorname"
-        '
-        'Label33
-        '
-        Me.Label33.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(65, 106)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(112, 20)
-        Me.Label33.TabIndex = 2
-        Me.Label33.Text = "Geburtsdatum"
-        '
-        'Label32
-        '
-        Me.Label32.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(352, 71)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(51, 20)
-        Me.Label32.TabIndex = 1
-        Me.Label32.Text = "Name"
-        '
-        'L_Stammdaten
-        '
-        Me.L_Stammdaten.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.L_Stammdaten.AutoSize = True
-        Me.L_Stammdaten.Font = New System.Drawing.Font("Times New Roman", 14.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.L_Stammdaten.Location = New System.Drawing.Point(256, 10)
-        Me.L_Stammdaten.Name = "L_Stammdaten"
-        Me.L_Stammdaten.Size = New System.Drawing.Size(112, 22)
-        Me.L_Stammdaten.TabIndex = 0
-        Me.L_Stammdaten.Text = "Stammdaten"
         '
         'P_Aaliyah_Schule
         '
@@ -1771,110 +1878,6 @@ Partial Class Form1
         Me.Label16.TabIndex = 7
         Me.Label16.Text = "Label16"
         '
-        'TextBox22
-        '
-        Me.TextBox22.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox22.Location = New System.Drawing.Point(409, 246)
-        Me.TextBox22.Name = "TextBox22"
-        Me.TextBox22.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox22.TabIndex = 5
-        '
-        'TextBox23
-        '
-        Me.TextBox23.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox23.Location = New System.Drawing.Point(409, 211)
-        Me.TextBox23.Name = "TextBox23"
-        Me.TextBox23.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox23.TabIndex = 5
-        '
-        'TextBox24
-        '
-        Me.TextBox24.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox24.Location = New System.Drawing.Point(409, 176)
-        Me.TextBox24.Name = "TextBox24"
-        Me.TextBox24.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox24.TabIndex = 5
-        '
-        'TextBox25
-        '
-        Me.TextBox25.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox25.Location = New System.Drawing.Point(409, 141)
-        Me.TextBox25.Name = "TextBox25"
-        Me.TextBox25.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox25.TabIndex = 5
-        '
-        'TextBox26
-        '
-        Me.TextBox26.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox26.Location = New System.Drawing.Point(409, 106)
-        Me.TextBox26.Name = "TextBox26"
-        Me.TextBox26.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox26.TabIndex = 5
-        '
-        'TextBox27
-        '
-        Me.TextBox27.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox27.Location = New System.Drawing.Point(409, 71)
-        Me.TextBox27.Name = "TextBox27"
-        Me.TextBox27.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox27.TabIndex = 5
-        '
-        'TextBox28
-        '
-        Me.TextBox28.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox28.Location = New System.Drawing.Point(182, 246)
-        Me.TextBox28.Name = "TextBox28"
-        Me.TextBox28.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox28.TabIndex = 5
-        '
-        'TextBox29
-        '
-        Me.TextBox29.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox29.Location = New System.Drawing.Point(182, 211)
-        Me.TextBox29.Name = "TextBox29"
-        Me.TextBox29.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox29.TabIndex = 5
-        '
-        'TextBox30
-        '
-        Me.TextBox30.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox30.Location = New System.Drawing.Point(182, 176)
-        Me.TextBox30.Name = "TextBox30"
-        Me.TextBox30.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox30.TabIndex = 5
-        '
-        'TextBox31
-        '
-        Me.TextBox31.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox31.Location = New System.Drawing.Point(182, 141)
-        Me.TextBox31.Name = "TextBox31"
-        Me.TextBox31.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox31.TabIndex = 5
-        '
-        'TextBox32
-        '
-        Me.TextBox32.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox32.Location = New System.Drawing.Point(182, 106)
-        Me.TextBox32.Name = "TextBox32"
-        Me.TextBox32.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox32.TabIndex = 5
-        '
-        'TextBox33
-        '
-        Me.TextBox33.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox33.Location = New System.Drawing.Point(182, 71)
-        Me.TextBox33.Name = "TextBox33"
-        Me.TextBox33.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox33.TabIndex = 5
-        '
-        'TextBox34
-        '
-        Me.TextBox34.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox34.Location = New System.Drawing.Point(181, 281)
-        Me.TextBox34.Name = "TextBox34"
-        Me.TextBox34.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox34.TabIndex = 5
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1889,13 +1892,13 @@ Partial Class Form1
         CType(Me.Splitcontaineraaliyah, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Splitcontaineraaliyah.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
+        Me.P_Aaliyah_Stammdaten.ResumeLayout(False)
+        Me.P_Aaliyah_Stammdaten.PerformLayout()
         Me.P_Aaliyah_Kontakte.ResumeLayout(False)
         Me.P_Aaliyah_Kontakte.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.P_Aaliyah_Eltern.ResumeLayout(False)
         Me.P_Aaliyah_Eltern.PerformLayout()
-        Me.P_Aaliyah_Stammdaten.ResumeLayout(False)
-        Me.P_Aaliyah_Stammdaten.PerformLayout()
         Me.P_Aaliyah_Schule.ResumeLayout(False)
         Me.P_Aaliyah_Schule.PerformLayout()
         Me.P_Aaliyah_Hilfen.ResumeLayout(False)

@@ -324,6 +324,80 @@ Partial Public Class DataSet1
         
         Private columnGeburtsdatum As Global.System.Data.DataColumn
         
+        Private columnAufnahmedatum As Global.System.Data.DataColumn
+        
+        Private columnSorgerechtsstatus As Global.System.Data.DataColumn
+        
+        Private columnJugendamt As Global.System.Data.DataColumn
+        
+        Private columnNationalität As Global.System.Data.DataColumn
+        
+        Private columnKonfession As Global.System.Data.DataColumn
+        
+        Private columnSchule As Global.System.Data.DataColumn
+        
+        Private columnKrankenversicherung As Global.System.Data.DataColumn
+        
+        Private columnGeburtsort As Global.System.Data.DataColumn
+        
+        Private columnHilfe_nach As Global.System.Data.DataColumn
+        
+        Private columnBesonderheiten As Global.System.Data.DataColumn
+        
+        Private columnKinderarzt As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Kinderarzt As Global.System.Data.DataColumn
+        
+        Private columnAugenarzt As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Augenarzt As Global.System.Data.DataColumn
+        
+        Private columnZahnarzt As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Zahnarzt As Global.System.Data.DataColumn
+        
+        Private columnHNO As Global.System.Data.DataColumn
+        
+        Private columnAdresse_HNO As Global.System.Data.DataColumn
+        
+        Private columnHautarzt As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Hautarzt As Global.System.Data.DataColumn
+        
+        Private columnFrauenarzt As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Frauenarzt As Global.System.Data.DataColumn
+        
+        Private columnKrankenhaus As Global.System.Data.DataColumn
+        
+        Private columnName_Mutter As Global.System.Data.DataColumn
+        
+        Private columnName_Vater As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Mutter As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Vater As Global.System.Data.DataColumn
+        
+        Private columnPsycho As Global.System.Data.DataColumn
+        
+        Private columnAdressePsycho As Global.System.Data.DataColumn
+        
+        Private columnSachbarbeiter As Global.System.Data.DataColumn
+        
+        Private columnSorrgeberechtigte_Person As Global.System.Data.DataColumn
+        
+        Private columnDurchwahl As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Jugendamt As Global.System.Data.DataColumn
+        
+        Private columnAdresse_Schule As Global.System.Data.DataColumn
+        
+        Private columnLehrkraft As Global.System.Data.DataColumn
+        
+        Private columnVerein As Global.System.Data.DataColumn
+        
+        Private columnAnsprechpartner_Verein As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -384,6 +458,302 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property AufnahmedatumColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAufnahmedatum
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property SorgerechtsstatusColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSorgerechtsstatus
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property JugendamtColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnJugendamt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NationalitätColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNationalität
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property KonfessionColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKonfession
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property SchuleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSchule
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property KrankenversicherungColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKrankenversicherung
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property GeburtsortColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnGeburtsort
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Hilfe_nachColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHilfe_nach
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property BesonderheitenColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnBesonderheiten
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property KinderarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKinderarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_KinderarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Kinderarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property AugenarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAugenarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_AugenarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Augenarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ZahnarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnZahnarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_ZahnarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Zahnarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property HNOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_HNOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_HNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property HautarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnHautarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_HautarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Hautarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property FrauenarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFrauenarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_FrauenarztColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Frauenarzt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property KrankenhausColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnKrankenhaus
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Name_MutterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName_Mutter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Name_VaterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnName_Vater
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_MutterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Mutter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_VaterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Vater
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property PsychoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnPsycho
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property AdressePsychoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdressePsycho
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property SachbarbeiterColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSachbarbeiter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Sorrgeberechtigte_PersonColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnSorrgeberechtigte_Person
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property DurchwahlColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDurchwahl
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_JugendamtColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Jugendamt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Adresse_SchuleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAdresse_Schule
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property LehrkraftColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnLehrkraft
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property VereinColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVerein
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Ansprechpartner_VereinColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAnsprechpartner_Verein
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -420,9 +790,49 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddKindRow(ByVal Vorname As String, ByVal Nachname As String, ByVal Geburtsdatum As String) As KindRow
+        Public Overloads Function AddKindRow( _
+                    ByVal Vorname As String,  _
+                    ByVal Nachname As String,  _
+                    ByVal Geburtsdatum As String,  _
+                    ByVal Aufnahmedatum As String,  _
+                    ByVal Sorgerechtsstatus As String,  _
+                    ByVal Jugendamt As String,  _
+                    ByVal Nationalität As String,  _
+                    ByVal Konfession As String,  _
+                    ByVal Schule As String,  _
+                    ByVal Krankenversicherung As String,  _
+                    ByVal Geburtsort As String,  _
+                    ByVal Hilfe_nach As String,  _
+                    ByVal Besonderheiten As String,  _
+                    ByVal Kinderarzt As String,  _
+                    ByVal Adresse_Kinderarzt As String,  _
+                    ByVal Augenarzt As String,  _
+                    ByVal Adresse_Augenarzt As String,  _
+                    ByVal Zahnarzt As String,  _
+                    ByVal Adresse_Zahnarzt As String,  _
+                    ByVal HNO As String,  _
+                    ByVal Adresse_HNO As String,  _
+                    ByVal Hautarzt As String,  _
+                    ByVal Adresse_Hautarzt As String,  _
+                    ByVal Frauenarzt As String,  _
+                    ByVal Adresse_Frauenarzt As String,  _
+                    ByVal Krankenhaus As String,  _
+                    ByVal Name_Mutter As String,  _
+                    ByVal Name_Vater As String,  _
+                    ByVal Adresse_Mutter As String,  _
+                    ByVal Adresse_Vater As String,  _
+                    ByVal Psycho As String,  _
+                    ByVal AdressePsycho As String,  _
+                    ByVal Sachbarbeiter As String,  _
+                    ByVal Sorrgeberechtigte_Person As String,  _
+                    ByVal Durchwahl As String,  _
+                    ByVal Adresse_Jugendamt As String,  _
+                    ByVal Adresse_Schule As String,  _
+                    ByVal Lehrkraft As String,  _
+                    ByVal Verein As String,  _
+                    ByVal Ansprechpartner_Verein As String) As KindRow
             Dim rowKindRow As KindRow = CType(Me.NewRow,KindRow)
-            Dim columnValuesArray() As Object = New Object() {Vorname, Nachname, Geburtsdatum}
+            Dim columnValuesArray() As Object = New Object() {Vorname, Nachname, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Jugendamt, Nationalität, Konfession, Schule, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Kinderarzt, Adresse_Kinderarzt, Augenarzt, Adresse_Augenarzt, Zahnarzt, Adresse_Zahnarzt, HNO, Adresse_HNO, Hautarzt, Adresse_Hautarzt, Frauenarzt, Adresse_Frauenarzt, Krankenhaus, Name_Mutter, Name_Vater, Adresse_Mutter, Adresse_Vater, Psycho, AdressePsycho, Sachbarbeiter, Sorrgeberechtigte_Person, Durchwahl, Adresse_Jugendamt, Adresse_Schule, Lehrkraft, Verein, Ansprechpartner_Verein}
             rowKindRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowKindRow)
             Return rowKindRow
@@ -448,6 +858,43 @@ Partial Public Class DataSet1
             Me.columnVorname = MyBase.Columns("Vorname")
             Me.columnNachname = MyBase.Columns("Nachname")
             Me.columnGeburtsdatum = MyBase.Columns("Geburtsdatum")
+            Me.columnAufnahmedatum = MyBase.Columns("Aufnahmedatum")
+            Me.columnSorgerechtsstatus = MyBase.Columns("Sorgerechtsstatus")
+            Me.columnJugendamt = MyBase.Columns("Jugendamt")
+            Me.columnNationalität = MyBase.Columns("Nationalität")
+            Me.columnKonfession = MyBase.Columns("Konfession")
+            Me.columnSchule = MyBase.Columns("Schule")
+            Me.columnKrankenversicherung = MyBase.Columns("Krankenversicherung")
+            Me.columnGeburtsort = MyBase.Columns("Geburtsort")
+            Me.columnHilfe_nach = MyBase.Columns("Hilfe nach")
+            Me.columnBesonderheiten = MyBase.Columns("Besonderheiten")
+            Me.columnKinderarzt = MyBase.Columns("Kinderarzt")
+            Me.columnAdresse_Kinderarzt = MyBase.Columns("Adresse Kinderarzt")
+            Me.columnAugenarzt = MyBase.Columns("Augenarzt")
+            Me.columnAdresse_Augenarzt = MyBase.Columns("Adresse Augenarzt")
+            Me.columnZahnarzt = MyBase.Columns("Zahnarzt")
+            Me.columnAdresse_Zahnarzt = MyBase.Columns("Adresse Zahnarzt")
+            Me.columnHNO = MyBase.Columns("HNO")
+            Me.columnAdresse_HNO = MyBase.Columns("Adresse HNO")
+            Me.columnHautarzt = MyBase.Columns("Hautarzt")
+            Me.columnAdresse_Hautarzt = MyBase.Columns("Adresse Hautarzt")
+            Me.columnFrauenarzt = MyBase.Columns("Frauenarzt")
+            Me.columnAdresse_Frauenarzt = MyBase.Columns("Adresse Frauenarzt")
+            Me.columnKrankenhaus = MyBase.Columns("Krankenhaus")
+            Me.columnName_Mutter = MyBase.Columns("Name Mutter")
+            Me.columnName_Vater = MyBase.Columns("Name Vater")
+            Me.columnAdresse_Mutter = MyBase.Columns("Adresse Mutter")
+            Me.columnAdresse_Vater = MyBase.Columns("Adresse Vater")
+            Me.columnPsycho = MyBase.Columns("Psycho")
+            Me.columnAdressePsycho = MyBase.Columns("AdressePsycho")
+            Me.columnSachbarbeiter = MyBase.Columns("Sachbarbeiter")
+            Me.columnSorrgeberechtigte_Person = MyBase.Columns("Sorrgeberechtigte Person")
+            Me.columnDurchwahl = MyBase.Columns("Durchwahl")
+            Me.columnAdresse_Jugendamt = MyBase.Columns("Adresse Jugendamt")
+            Me.columnAdresse_Schule = MyBase.Columns("Adresse Schule")
+            Me.columnLehrkraft = MyBase.Columns("Lehrkraft")
+            Me.columnVerein = MyBase.Columns("Verein")
+            Me.columnAnsprechpartner_Verein = MyBase.Columns("Ansprechpartner Verein")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -459,6 +906,80 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnNachname)
             Me.columnGeburtsdatum = New Global.System.Data.DataColumn("Geburtsdatum", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGeburtsdatum)
+            Me.columnAufnahmedatum = New Global.System.Data.DataColumn("Aufnahmedatum", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAufnahmedatum)
+            Me.columnSorgerechtsstatus = New Global.System.Data.DataColumn("Sorgerechtsstatus", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSorgerechtsstatus)
+            Me.columnJugendamt = New Global.System.Data.DataColumn("Jugendamt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnJugendamt)
+            Me.columnNationalität = New Global.System.Data.DataColumn("Nationalität", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNationalität)
+            Me.columnKonfession = New Global.System.Data.DataColumn("Konfession", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKonfession)
+            Me.columnSchule = New Global.System.Data.DataColumn("Schule", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSchule)
+            Me.columnKrankenversicherung = New Global.System.Data.DataColumn("Krankenversicherung", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKrankenversicherung)
+            Me.columnGeburtsort = New Global.System.Data.DataColumn("Geburtsort", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnGeburtsort)
+            Me.columnHilfe_nach = New Global.System.Data.DataColumn("Hilfe nach", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHilfe_nach)
+            Me.columnBesonderheiten = New Global.System.Data.DataColumn("Besonderheiten", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnBesonderheiten)
+            Me.columnKinderarzt = New Global.System.Data.DataColumn("Kinderarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKinderarzt)
+            Me.columnAdresse_Kinderarzt = New Global.System.Data.DataColumn("Adresse Kinderarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Kinderarzt)
+            Me.columnAugenarzt = New Global.System.Data.DataColumn("Augenarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAugenarzt)
+            Me.columnAdresse_Augenarzt = New Global.System.Data.DataColumn("Adresse Augenarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Augenarzt)
+            Me.columnZahnarzt = New Global.System.Data.DataColumn("Zahnarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnZahnarzt)
+            Me.columnAdresse_Zahnarzt = New Global.System.Data.DataColumn("Adresse Zahnarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Zahnarzt)
+            Me.columnHNO = New Global.System.Data.DataColumn("HNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHNO)
+            Me.columnAdresse_HNO = New Global.System.Data.DataColumn("Adresse HNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_HNO)
+            Me.columnHautarzt = New Global.System.Data.DataColumn("Hautarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnHautarzt)
+            Me.columnAdresse_Hautarzt = New Global.System.Data.DataColumn("Adresse Hautarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Hautarzt)
+            Me.columnFrauenarzt = New Global.System.Data.DataColumn("Frauenarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFrauenarzt)
+            Me.columnAdresse_Frauenarzt = New Global.System.Data.DataColumn("Adresse Frauenarzt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Frauenarzt)
+            Me.columnKrankenhaus = New Global.System.Data.DataColumn("Krankenhaus", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnKrankenhaus)
+            Me.columnName_Mutter = New Global.System.Data.DataColumn("Name Mutter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName_Mutter)
+            Me.columnName_Vater = New Global.System.Data.DataColumn("Name Vater", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnName_Vater)
+            Me.columnAdresse_Mutter = New Global.System.Data.DataColumn("Adresse Mutter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Mutter)
+            Me.columnAdresse_Vater = New Global.System.Data.DataColumn("Adresse Vater", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Vater)
+            Me.columnPsycho = New Global.System.Data.DataColumn("Psycho", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnPsycho)
+            Me.columnAdressePsycho = New Global.System.Data.DataColumn("AdressePsycho", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdressePsycho)
+            Me.columnSachbarbeiter = New Global.System.Data.DataColumn("Sachbarbeiter", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSachbarbeiter)
+            Me.columnSorrgeberechtigte_Person = New Global.System.Data.DataColumn("Sorrgeberechtigte Person", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnSorrgeberechtigte_Person)
+            Me.columnDurchwahl = New Global.System.Data.DataColumn("Durchwahl", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDurchwahl)
+            Me.columnAdresse_Jugendamt = New Global.System.Data.DataColumn("Adresse Jugendamt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Jugendamt)
+            Me.columnAdresse_Schule = New Global.System.Data.DataColumn("Adresse Schule", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAdresse_Schule)
+            Me.columnLehrkraft = New Global.System.Data.DataColumn("Lehrkraft", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnLehrkraft)
+            Me.columnVerein = New Global.System.Data.DataColumn("Verein", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVerein)
+            Me.columnAnsprechpartner_Verein = New Global.System.Data.DataColumn("Ansprechpartner Verein", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAnsprechpartner_Verein)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -604,6 +1125,18 @@ Partial Public Class DataSet1
         
         Private columnPasswort As Global.System.Data.DataColumn
         
+        Private columnGeburtsdatum As Global.System.Data.DataColumn
+        
+        Private columnZuständigkeit_Schule As Global.System.Data.DataColumn
+        
+        Private columnZuständigkeit_Psycho As Global.System.Data.DataColumn
+        
+        Private columnZusatzqualifikation As Global.System.Data.DataColumn
+        
+        Private columnProjekt As Global.System.Data.DataColumn
+        
+        Private columnFortbildung As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -672,6 +1205,54 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property GeburtsdatumColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnGeburtsdatum
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Zuständigkeit_SchuleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnZuständigkeit_Schule
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property Zuständigkeit_PsychoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnZuständigkeit_Psycho
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ZusatzqualifikationColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnZusatzqualifikation
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ProjektColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnProjekt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property FortbildungColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnFortbildung
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -708,9 +1289,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddBenutzerRow(ByVal Username As String, ByVal Vorname As String, ByVal Nachname As String, ByVal Passwort As String) As BenutzerRow
+        Public Overloads Function AddBenutzerRow(ByVal Username As String, ByVal Vorname As String, ByVal Nachname As String, ByVal Passwort As String, ByVal Geburtsdatum As String, ByVal Zuständigkeit_Schule As String, ByVal Zuständigkeit_Psycho As String, ByVal Zusatzqualifikation As String, ByVal Projekt As String, ByVal Fortbildung As String) As BenutzerRow
             Dim rowBenutzerRow As BenutzerRow = CType(Me.NewRow,BenutzerRow)
-            Dim columnValuesArray() As Object = New Object() {Username, Vorname, Nachname, Passwort}
+            Dim columnValuesArray() As Object = New Object() {Username, Vorname, Nachname, Passwort, Geburtsdatum, Zuständigkeit_Schule, Zuständigkeit_Psycho, Zusatzqualifikation, Projekt, Fortbildung}
             rowBenutzerRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowBenutzerRow)
             Return rowBenutzerRow
@@ -737,6 +1318,12 @@ Partial Public Class DataSet1
             Me.columnVorname = MyBase.Columns("Vorname")
             Me.columnNachname = MyBase.Columns("Nachname")
             Me.columnPasswort = MyBase.Columns("Passwort")
+            Me.columnGeburtsdatum = MyBase.Columns("Geburtsdatum")
+            Me.columnZuständigkeit_Schule = MyBase.Columns("Zuständigkeit Schule")
+            Me.columnZuständigkeit_Psycho = MyBase.Columns("Zuständigkeit Psycho")
+            Me.columnZusatzqualifikation = MyBase.Columns("Zusatzqualifikation")
+            Me.columnProjekt = MyBase.Columns("Projekt")
+            Me.columnFortbildung = MyBase.Columns("Fortbildung")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -750,6 +1337,18 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnNachname)
             Me.columnPasswort = New Global.System.Data.DataColumn("Passwort", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPasswort)
+            Me.columnGeburtsdatum = New Global.System.Data.DataColumn("Geburtsdatum", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnGeburtsdatum)
+            Me.columnZuständigkeit_Schule = New Global.System.Data.DataColumn("Zuständigkeit Schule", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnZuständigkeit_Schule)
+            Me.columnZuständigkeit_Psycho = New Global.System.Data.DataColumn("Zuständigkeit Psycho", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnZuständigkeit_Psycho)
+            Me.columnZusatzqualifikation = New Global.System.Data.DataColumn("Zusatzqualifikation", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnZusatzqualifikation)
+            Me.columnProjekt = New Global.System.Data.DataColumn("Projekt", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProjekt)
+            Me.columnFortbildung = New Global.System.Data.DataColumn("Fortbildung", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnFortbildung)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -941,6 +1540,561 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Aufnahmedatum() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.AufnahmedatumColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Aufnahmedatum in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.AufnahmedatumColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Sorgerechtsstatus() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.SorgerechtsstatusColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sorgerechtsstatus in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.SorgerechtsstatusColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Jugendamt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.JugendamtColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Jugendamt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.JugendamtColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Nationalität() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.NationalitätColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Nationalität in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.NationalitätColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Konfession() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.KonfessionColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Konfession in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.KonfessionColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Schule() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.SchuleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Schule in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.SchuleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Krankenversicherung() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.KrankenversicherungColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Krankenversicherung in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.KrankenversicherungColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Geburtsort() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.GeburtsortColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Geburtsort in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.GeburtsortColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Hilfe_nach() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Hilfe_nachColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Hilfe nach in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Hilfe_nachColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Besonderheiten() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.BesonderheitenColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Besonderheiten in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.BesonderheitenColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Kinderarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.KinderarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Kinderarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.KinderarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Kinderarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_KinderarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Kinderarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_KinderarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Augenarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.AugenarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Augenarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.AugenarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Augenarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_AugenarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Augenarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_AugenarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Zahnarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.ZahnarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Zahnarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.ZahnarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Zahnarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_ZahnarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Zahnarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_ZahnarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property HNO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.HNOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte HNO in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.HNOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_HNO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_HNOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse HNO in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_HNOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Hautarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.HautarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Hautarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.HautarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Hautarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_HautarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Hautarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_HautarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Frauenarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.FrauenarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Frauenarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.FrauenarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Frauenarzt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_FrauenarztColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Frauenarzt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_FrauenarztColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Krankenhaus() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.KrankenhausColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Krankenhaus in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.KrankenhausColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Name_Mutter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Name_MutterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name Mutter in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Name_MutterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Name_Vater() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Name_VaterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Name Vater in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Name_VaterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Mutter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_MutterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Mutter in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_MutterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Vater() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_VaterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Vater in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_VaterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Psycho() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.PsychoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Psycho in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.PsychoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property AdressePsycho() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.AdressePsychoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte AdressePsycho in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.AdressePsychoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Sachbarbeiter() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.SachbarbeiterColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sachbarbeiter in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.SachbarbeiterColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Sorrgeberechtigte_Person() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Sorrgeberechtigte_PersonColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Sorrgeberechtigte Person in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Sorrgeberechtigte_PersonColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Durchwahl() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.DurchwahlColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Durchwahl in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.DurchwahlColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Jugendamt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_JugendamtColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Jugendamt in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_JugendamtColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Adresse_Schule() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Adresse_SchuleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Adresse Schule in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Adresse_SchuleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Lehrkraft() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.LehrkraftColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Lehrkraft in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.LehrkraftColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Verein() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.VereinColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Verein in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.VereinColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Ansprechpartner_Verein() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableKind.Ansprechpartner_VereinColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Ansprechpartner Verein in Tabelle Kind ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableKind.Ansprechpartner_VereinColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsVornameNull() As Boolean
             Return Me.IsNull(Me.tableKind.VornameColumn)
         End Function
@@ -973,6 +2127,450 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetGeburtsdatumNull()
             Me(Me.tableKind.GeburtsdatumColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAufnahmedatumNull() As Boolean
+            Return Me.IsNull(Me.tableKind.AufnahmedatumColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAufnahmedatumNull()
+            Me(Me.tableKind.AufnahmedatumColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSorgerechtsstatusNull() As Boolean
+            Return Me.IsNull(Me.tableKind.SorgerechtsstatusColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSorgerechtsstatusNull()
+            Me(Me.tableKind.SorgerechtsstatusColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsJugendamtNull() As Boolean
+            Return Me.IsNull(Me.tableKind.JugendamtColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetJugendamtNull()
+            Me(Me.tableKind.JugendamtColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsNationalitätNull() As Boolean
+            Return Me.IsNull(Me.tableKind.NationalitätColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetNationalitätNull()
+            Me(Me.tableKind.NationalitätColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsKonfessionNull() As Boolean
+            Return Me.IsNull(Me.tableKind.KonfessionColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetKonfessionNull()
+            Me(Me.tableKind.KonfessionColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSchuleNull() As Boolean
+            Return Me.IsNull(Me.tableKind.SchuleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSchuleNull()
+            Me(Me.tableKind.SchuleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsKrankenversicherungNull() As Boolean
+            Return Me.IsNull(Me.tableKind.KrankenversicherungColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetKrankenversicherungNull()
+            Me(Me.tableKind.KrankenversicherungColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsGeburtsortNull() As Boolean
+            Return Me.IsNull(Me.tableKind.GeburtsortColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetGeburtsortNull()
+            Me(Me.tableKind.GeburtsortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsHilfe_nachNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Hilfe_nachColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetHilfe_nachNull()
+            Me(Me.tableKind.Hilfe_nachColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsBesonderheitenNull() As Boolean
+            Return Me.IsNull(Me.tableKind.BesonderheitenColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetBesonderheitenNull()
+            Me(Me.tableKind.BesonderheitenColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsKinderarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.KinderarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetKinderarztNull()
+            Me(Me.tableKind.KinderarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_KinderarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_KinderarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_KinderarztNull()
+            Me(Me.tableKind.Adresse_KinderarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAugenarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.AugenarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAugenarztNull()
+            Me(Me.tableKind.AugenarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_AugenarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_AugenarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_AugenarztNull()
+            Me(Me.tableKind.Adresse_AugenarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsZahnarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.ZahnarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetZahnarztNull()
+            Me(Me.tableKind.ZahnarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_ZahnarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_ZahnarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_ZahnarztNull()
+            Me(Me.tableKind.Adresse_ZahnarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsHNONull() As Boolean
+            Return Me.IsNull(Me.tableKind.HNOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetHNONull()
+            Me(Me.tableKind.HNOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_HNONull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_HNOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_HNONull()
+            Me(Me.tableKind.Adresse_HNOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsHautarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.HautarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetHautarztNull()
+            Me(Me.tableKind.HautarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_HautarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_HautarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_HautarztNull()
+            Me(Me.tableKind.Adresse_HautarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsFrauenarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.FrauenarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetFrauenarztNull()
+            Me(Me.tableKind.FrauenarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_FrauenarztNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_FrauenarztColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_FrauenarztNull()
+            Me(Me.tableKind.Adresse_FrauenarztColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsKrankenhausNull() As Boolean
+            Return Me.IsNull(Me.tableKind.KrankenhausColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetKrankenhausNull()
+            Me(Me.tableKind.KrankenhausColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsName_MutterNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Name_MutterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetName_MutterNull()
+            Me(Me.tableKind.Name_MutterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsName_VaterNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Name_VaterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetName_VaterNull()
+            Me(Me.tableKind.Name_VaterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_MutterNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_MutterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_MutterNull()
+            Me(Me.tableKind.Adresse_MutterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_VaterNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_VaterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_VaterNull()
+            Me(Me.tableKind.Adresse_VaterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsPsychoNull() As Boolean
+            Return Me.IsNull(Me.tableKind.PsychoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetPsychoNull()
+            Me(Me.tableKind.PsychoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdressePsychoNull() As Boolean
+            Return Me.IsNull(Me.tableKind.AdressePsychoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdressePsychoNull()
+            Me(Me.tableKind.AdressePsychoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSachbarbeiterNull() As Boolean
+            Return Me.IsNull(Me.tableKind.SachbarbeiterColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSachbarbeiterNull()
+            Me(Me.tableKind.SachbarbeiterColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsSorrgeberechtigte_PersonNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Sorrgeberechtigte_PersonColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetSorrgeberechtigte_PersonNull()
+            Me(Me.tableKind.Sorrgeberechtigte_PersonColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsDurchwahlNull() As Boolean
+            Return Me.IsNull(Me.tableKind.DurchwahlColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetDurchwahlNull()
+            Me(Me.tableKind.DurchwahlColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_JugendamtNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_JugendamtColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_JugendamtNull()
+            Me(Me.tableKind.Adresse_JugendamtColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAdresse_SchuleNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Adresse_SchuleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAdresse_SchuleNull()
+            Me(Me.tableKind.Adresse_SchuleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsLehrkraftNull() As Boolean
+            Return Me.IsNull(Me.tableKind.LehrkraftColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetLehrkraftNull()
+            Me(Me.tableKind.LehrkraftColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsVereinNull() As Boolean
+            Return Me.IsNull(Me.tableKind.VereinColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetVereinNull()
+            Me(Me.tableKind.VereinColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAnsprechpartner_VereinNull() As Boolean
+            Return Me.IsNull(Me.tableKind.Ansprechpartner_VereinColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAnsprechpartner_VereinNull()
+            Me(Me.tableKind.Ansprechpartner_VereinColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1053,6 +2651,96 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Geburtsdatum() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBenutzer.GeburtsdatumColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Geburtsdatum in Tabelle Benutzer ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBenutzer.GeburtsdatumColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Zuständigkeit_Schule() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBenutzer.Zuständigkeit_SchuleColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Zuständigkeit Schule in Tabelle Benutzer ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBenutzer.Zuständigkeit_SchuleColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Zuständigkeit_Psycho() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBenutzer.Zuständigkeit_PsychoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Zuständigkeit Psycho in Tabelle Benutzer ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBenutzer.Zuständigkeit_PsychoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Zusatzqualifikation() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBenutzer.ZusatzqualifikationColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Zusatzqualifikation in Tabelle Benutzer ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBenutzer.ZusatzqualifikationColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Projekt() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBenutzer.ProjektColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Projekt in Tabelle Benutzer ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBenutzer.ProjektColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Fortbildung() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableBenutzer.FortbildungColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Fortbildung in Tabelle Benutzer ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableBenutzer.FortbildungColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsUsernameNull() As Boolean
             Return Me.IsNull(Me.tableBenutzer.UsernameColumn)
         End Function
@@ -1097,6 +2785,78 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetPasswortNull()
             Me(Me.tableBenutzer.PasswortColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsGeburtsdatumNull() As Boolean
+            Return Me.IsNull(Me.tableBenutzer.GeburtsdatumColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetGeburtsdatumNull()
+            Me(Me.tableBenutzer.GeburtsdatumColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsZuständigkeit_SchuleNull() As Boolean
+            Return Me.IsNull(Me.tableBenutzer.Zuständigkeit_SchuleColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetZuständigkeit_SchuleNull()
+            Me(Me.tableBenutzer.Zuständigkeit_SchuleColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsZuständigkeit_PsychoNull() As Boolean
+            Return Me.IsNull(Me.tableBenutzer.Zuständigkeit_PsychoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetZuständigkeit_PsychoNull()
+            Me(Me.tableBenutzer.Zuständigkeit_PsychoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsZusatzqualifikationNull() As Boolean
+            Return Me.IsNull(Me.tableBenutzer.ZusatzqualifikationColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetZusatzqualifikationNull()
+            Me(Me.tableBenutzer.ZusatzqualifikationColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsProjektNull() As Boolean
+            Return Me.IsNull(Me.tableBenutzer.ProjektColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetProjektNull()
+            Me(Me.tableBenutzer.ProjektColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsFortbildungNull() As Boolean
+            Return Me.IsNull(Me.tableBenutzer.FortbildungColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetFortbildungNull()
+            Me(Me.tableBenutzer.FortbildungColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
