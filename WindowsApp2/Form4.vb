@@ -10,12 +10,12 @@
 
     Dim myCol As DataColumn
     Dim myRow As DataRow
-    '
+
 
 
     Dim currRows() As DataRow = testDataTable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
 
-
+    'https://msdn.microsoft.com/de-de/library/system.data.datatable.newrow(v=vs.110).aspx
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
