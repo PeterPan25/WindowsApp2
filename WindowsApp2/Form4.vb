@@ -10,6 +10,7 @@
     Dim myRow As DataRow
     '
 
+
     Dim currRows() As DataRow = testDataTable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
 
 
@@ -25,23 +26,23 @@
 
         ' daten.Add(key:="schule", value:=schule)
 
-        'customersRow.vorname = vorname
-        'customersRow.nachname = nachname
-        'customersRow.datum = datum
-        'customersRow.schule = schule
+        testRow.vorname = vorname
+        testRow.nachname = nachname
+        testRow.datum = datum
+        testRow.schule = schule
 
-        testRow("vorname") = vorname
-        testRow("nachname") = nachname
-        testRow("schule") = schule
-        testRow("datum") = datum
+        'testRow("vorname") = vorname
+        'testRow("nachname") = nachname
+        'testRow("schule") = schule
+        'testRow("datum") = datum
 
         testDataTable.Rows.Add(testRow)
 
-        For Each myCol In testDataTable.Columns
-            Console.Write(testRow.vorname & testRow.nachname & testRow.datum & testRow.schule)
-        Next
+        ' For Each myCol In testDataTable.Columns
+        Console.Write(testRow.vorname & vbTab & testRow.nachname) '& testRow.datum & testRow.schule)
+        'Next
 
-        Console.WriteLine(vbTab)
+        Console.WriteLine(vbTab & "Hallo")
 
         For Each myRow In currRows
             For Each myCol In testDataTable.Columns
@@ -53,5 +54,19 @@
         Next
 
         ' F_Peter.Show()
+    End Sub
+
+    Private Sub jaklar()
+
+
+        For Each myRow In testDataTable.Rows
+            For Each myCol In testDataTable.Columns
+                Console.WriteLine(myRow(myCol))
+            Next
+        Next
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        jaklar()
     End Sub
 End Class
