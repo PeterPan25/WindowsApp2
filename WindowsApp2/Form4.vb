@@ -4,19 +4,21 @@
     Dim datum As String
     Dim schule As String
     Dim daten As New Dictionary(Of String, String)
-    Dim testDataTable As New DataSet1.TestDataTable
+    '  Dim testDataTable As New DataSet1.TestDataTable
+    ' Dim testDataset As New DataSet1
 
-    Dim testRow2 As DataSet1.TestRow = testDataTable.NewRow()
+
+    ' Dim testRow2 As DataSet1.TestRow = testDataTable.NewRow()
 
     Dim myCol As DataColumn
     Dim myRow As DataRow
 
-    Dim testColumn As DataColumn = testDataTable.Columns.Add
+    ' Dim testColumn As DataColumn = testDataTable.Columns.Add
 
 
 
 
-    Dim currRows() As DataRow = testDataTable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
+    'Dim currRows() As DataRow = testDataTable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
 
     'https://msdn.microsoft.com/de-de/library/system.data.datatable.newrow(v=vs.110).aspx
 
@@ -25,7 +27,34 @@
         'testColumn.AutoIncrement = True
         'testColumn.AutoIncrementSeed = 0
         'testColumn.AutoIncrementStep = 1
-        Dim testRow As DataSet1.TestRow = testDataTable.NewRow()
+        AcceptChanges()
+
+        'For Each myRow In currRows
+        'For Each myCol In testDataTable.Columns
+        'Console.Write(vbTab & myRow(myCol).ToString())
+        'Next
+        '
+        'Dim rowState As String = System.Enum.GetName(myRow.RowState.GetType(), myRow.RowState)
+        'Console.WriteLine(vbTab & rowState)
+        'Next
+
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+
+    End Sub
+
+    Private Sub AcceptChanges()
+        Dim testDataSet As DataSet1
+        testDataSet = New DataSet1()
+
+        Dim testDataTable As DataTable
+        testDataTable = testDataSet.Tables("Test")
+
+        Dim testRow As DataRow
+        testRow = testDataTable.NewRow()
+        ' Dim testRow As DataSet1.TestRow = testDataTable.NewRow()
 
         vorname = TextBox1.Text
         nachname = TextBox4.Text
@@ -35,10 +64,10 @@
 
         ' daten.Add(key:="schule", value:=schule)
 
-        testRow.vorname = vorname
-        testRow.nachname = nachname
-        testRow.datum = datum
-        testRow.schule = schule
+        testRow("vorname") = vorname
+        testRow("nachname") = nachname
+        testRow("datum") = datum
+        testRow("schule") = schule
 
         'testRow("vorname") = vorname
         'testRow("nachname") = nachname
@@ -46,37 +75,31 @@
         'testRow("datum") = datum
 
         testDataTable.Rows.Add(testRow)
+        testDataset.AcceptChanges()
+
 
         ' For Each myCol In testDataTable.Columns
-        Console.Write(testRow.vorname & vbTab & testRow.nachname) '& testRow.datum & testRow.schule)
+        '  Console.Write(testRow.vorname & vbTab & testRow.nachname) '& testRow.datum & testRow.schule)
         'Next
 
         Console.WriteLine(vbTab & "Hallo")
-
-        For Each myRow In currRows
-            For Each myCol In testDataTable.Columns
-                Console.Write(vbTab & myRow(myCol).ToString())
-            Next
-
-            Dim rowState As String = System.Enum.GetName(myRow.RowState.GetType(), myRow.RowState)
-            Console.WriteLine(vbTab & rowState)
-        Next
-
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
-
     End Sub
 
     Private Sub jaklar()
+        Dim testDataSet1 As DataSet1.TestDataTable
 
 
-        For Each myRow In testDataTable.Rows
-            For Each myCol In testDataTable.Columns
+        testDataSet1.GetChanges()
+
+
+
+        For Each myRow In testDataSet1.Rows
+            For Each myCol In testDataSet1.Columns
                 Console.WriteLine(myRow(myCol))
             Next
         Next
+
+        Label1.Text = testDataSet1.Rows(1)("vorname").ToString()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -87,4 +110,6 @@
 
         F_Peter.Show()
     End Sub
+
+
 End Class

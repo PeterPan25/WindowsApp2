@@ -3205,11 +3205,11 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property vorname() As String
             Get
-                Try 
+                If Me.IsvornameNull Then
+                    Return String.Empty
+                Else
                     Return CType(Me(Me.tableTest.vornameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte vorname in Tabelle Test ist DBNull.", e)
-                End Try
+                End If
             End Get
             Set
                 Me(Me.tableTest.vornameColumn) = value
@@ -3220,11 +3220,11 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property datum() As String
             Get
-                Try 
+                If Me.IsdatumNull Then
+                    Return String.Empty
+                Else
                     Return CType(Me(Me.tableTest.datumColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte datum in Tabelle Test ist DBNull.", e)
-                End Try
+                End If
             End Get
             Set
                 Me(Me.tableTest.datumColumn) = value
@@ -3235,11 +3235,11 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property nachname() As String
             Get
-                Try 
+                If Me.IsnachnameNull Then
+                    Return String.Empty
+                Else
                     Return CType(Me(Me.tableTest.nachnameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte nachname in Tabelle Test ist DBNull.", e)
-                End Try
+                End If
             End Get
             Set
                 Me(Me.tableTest.nachnameColumn) = value
@@ -3250,11 +3250,11 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property schule() As String
             Get
-                Try 
+                If Me.IsschuleNull Then
+                    Return String.Empty
+                Else
                     Return CType(Me(Me.tableTest.schuleColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte schule in Tabelle Test ist DBNull.", e)
-                End Try
+                End If
             End Get
             Set
                 Me(Me.tableTest.schuleColumn) = value

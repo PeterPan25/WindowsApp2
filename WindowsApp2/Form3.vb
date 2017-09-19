@@ -3,9 +3,9 @@
 Public Class F_Peter
     Dim myCol As DataColumn
     Dim myRow As DataRow
-    Dim testtable As New DataSet1.TestDataTable
+    Dim testtable As New DataTable
 
-    Dim currRows() As DataRow = testtable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
+    ' Dim currRows() As DataRow = testtable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
 
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
@@ -25,24 +25,36 @@ Public Class F_Peter
     End Sub
 
     Private Sub labeltext()
-        If (currRows.Length < 1) Then
-            Console.WriteLine("No Current Rows Found")
-        Else
-            For Each myCol In testtable.Columns
-                Console.Write(vbTab & myCol.ColumnName)
-            Next
 
-            Console.WriteLine(vbTab & "RowState")
+        Dim testSet As DataSet
+        testSet = New DataSet1()
 
-            For Each myRow In currRows
-                For Each myCol In testtable.Columns
-                    Console.Write(vbTab & myRow(myCol).ToString())
-                Next
+        testtable = testSet.Tables("Test")
+        testtable.GetChanges()
+        'If (currRows.Length < 1) Then
+        '    Console.WriteLine("No Current Rows Found")
+        'Else
+        '    For Each myCol In testtable.Columns
+        '        Console.Write(vbTab & myCol.ColumnName)
+        '    Next
 
-                Dim rowState As String = System.Enum.GetName(myRow.RowState.GetType(), myRow.RowState)
-                Console.WriteLine(vbTab & rowState)
-            Next
-        End If
+        '    Console.WriteLine(vbTab & "RowState")
+
+        '    For Each myRow In currRows
+        '        For Each myCol In testtable.Columns
+        '            Console.Write(vbTab & myRow(myCol).ToString())
+        '        Next
+
+        '        Dim rowState As String = System.Enum.GetName(myRow.RowState.GetType(), myRow.RowState)
+        '        Console.WriteLine(vbTab & rowState)
+        '    Next
+        'End If
+        Label1.Text = testtable.Rows(0)("vorname").ToString()
+        Label2.Text = testtable.Rows(0)("vorname").ToString()
+        Label3.Text = testtable.Rows(0)("vorname").ToString()
+        Label4.Text = testtable.Rows(0)("vorname").ToString()
+
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
