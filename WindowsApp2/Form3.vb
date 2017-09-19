@@ -1,9 +1,12 @@
-﻿Public Class F_Peter
+﻿Imports WindowsApp2
+
+Public Class F_Peter
     Dim myCol As DataColumn
     Dim myRow As DataRow
     Dim testtable As New DataSet1.TestDataTable
 
     Dim currRows() As DataRow = testtable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
+
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim name As String

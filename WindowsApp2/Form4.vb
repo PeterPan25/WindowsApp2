@@ -5,11 +5,14 @@
     Dim schule As String
     Dim daten As New Dictionary(Of String, String)
     Dim testDataTable As New DataSet1.TestDataTable
-    Dim testRow As DataSet1.TestRow = testDataTable.NewRow()
+
     Dim testRow2 As DataSet1.TestRow = testDataTable.NewRow()
 
     Dim myCol As DataColumn
     Dim myRow As DataRow
+
+    Dim testColumn As DataColumn = testDataTable.Columns.Add
+
 
 
 
@@ -19,11 +22,15 @@
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'testColumn.AutoIncrement = True
+        'testColumn.AutoIncrementSeed = 0
+        'testColumn.AutoIncrementStep = 1
+        Dim testRow As DataSet1.TestRow = testDataTable.NewRow()
+
         vorname = TextBox1.Text
         nachname = TextBox4.Text
         schule = TextBox2.Text
         datum = TextBox3.Text
-
 
 
         ' daten.Add(key:="schule", value:=schule)
@@ -77,45 +84,7 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        vorname = TextBox1.Text
-        nachname = TextBox4.Text
-        schule = TextBox2.Text
-        datum = TextBox3.Text
 
-
-
-        ' daten.Add(key:="schule", value:=schule)
-
-        testRow2.vorname = vorname
-        testRow2.nachname = nachname
-        testRow2.datum = datum
-        testRow2.schule = schule
-
-        'testRow("vorname") = vorname
-        'testRow("nachname") = nachname
-        'testRow("schule") = schule
-        'testRow("datum") = datum
-
-        testDataTable.Rows.Add(testRow2)
-
-        ' For Each myCol In testDataTable.Columns
-        Console.Write(testRow.vorname & vbTab & testRow.nachname) '& testRow.datum & testRow.schule)
-        'Next
-
-        Console.WriteLine(vbTab & "Hallo")
-
-        For Each myRow In currRows
-            For Each myCol In testDataTable.Columns
-                Console.Write(vbTab & myRow(myCol).ToString())
-            Next
-
-            Dim rowState As String = System.Enum.GetName(myRow.RowState.GetType(), myRow.RowState)
-            Console.WriteLine(vbTab & rowState)
-        Next
-
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
+        F_Peter.Show()
     End Sub
 End Class
