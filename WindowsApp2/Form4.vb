@@ -4,7 +4,7 @@
     Dim datum As String
     Dim schule As String
     Dim daten As New Dictionary(Of String, String)
-    '  Dim testDataTable As New DataSet1.TestDataTable
+    Dim testDataTable As New DataSet1.TestDataTable
     ' Dim testDataset As New DataSet1
 
 
@@ -45,12 +45,12 @@
 
     End Sub
 
-    Private Sub AcceptChanges()
-        Dim testDataSet As DataSet1
-        testDataSet = New DataSet1()
+    Private Function AcceptChanges()
+        ' Dim testDataSet As DataSet1
+        'testDataSet = New DataSet1()
 
-        Dim testDataTable As DataTable
-        testDataTable = testDataSet.Tables("Test")
+        'Dim testDataTable As DataTable
+        'testDataTable = testDataSet.Tables("Test")
 
         Dim testRow As DataRow
         testRow = testDataTable.NewRow()
@@ -75,7 +75,9 @@
         'testRow("datum") = datum
 
         testDataTable.Rows.Add(testRow)
-        testDataset.AcceptChanges()
+        testDataTable.AcceptChanges()
+
+
 
 
         ' For Each myCol In testDataTable.Columns
@@ -83,23 +85,25 @@
         'Next
 
         Console.WriteLine(vbTab & "Hallo")
-    End Sub
+        Return testDataTable
+
+    End Function
 
     Private Sub jaklar()
-        Dim testDataSet1 As DataSet1.TestDataTable
-
-
-        testDataSet1.GetChanges()
 
 
 
-        For Each myRow In testDataSet1.Rows
-            For Each myCol In testDataSet1.Columns
+
+
+
+
+        For Each myRow In testDataTable.Rows
+            For Each myCol In testDataTable.Columns
                 Console.WriteLine(myRow(myCol))
             Next
         Next
 
-        Label1.Text = testDataSet1.Rows(1)("vorname").ToString()
+        Label1.Text = testDataTable.Rows(1)("vorname").ToString()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -107,8 +111,13 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Close()
+
 
         F_Peter.Show()
+
+
+
     End Sub
 
 
