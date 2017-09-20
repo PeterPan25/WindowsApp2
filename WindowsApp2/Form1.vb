@@ -470,6 +470,71 @@
         P_Aaliyah_Hobby.Visible = False
     End Sub
 
+    Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
+        Dim name As String
+        Dim name2 As String
+        Dim name3(3) As String
+        Dim i As Integer
+        Dim p As Integer
+        Dim s(3) As String
+
+        s(0) = P_Aaliyah_Eltern.Name
+        s(1) = P_Aaliyah_HNO.Name
+        s(2) = P_Aaliyah_Doku.Name
+
+
+
+        name3(0) = "Eltern"
+        name3(1) = "HNO"
+        name3(2) = "Doku"
+
+        name = e.Node.Text
+
+        For i = 0 To 2
+            If e.Node.Text = name3(i) Then
+                '  P_Aaliyah_Doku.Visible = False
+
+                name2 = "P_Aaliyah_" + name3(i)
+
+                For p = 0 To 2
+
+                    If name2 = s(p) Then
+
+                        P_Aaliyah_Doku.Visible = False
+                        P_Aaliyah_Stammdaten.Visible = True
+                        P_Aaliyah_Schule.Visible = False
+                        P_Aaliyah_Kontakte.Visible = False
+                        P_Aaliyah_Hilfen.Visible = False
+                        P_Aaliyah_Eltern.Visible = False
+                        P_Aaliyah_Kinderarzt.Visible = False
+                        P_Aaliyah_Hautarzt.Visible = False
+                        P_Aaliyah_HNO.Visible = False
+                        P_Aaliyah_Augenarzt.Visible = False
+                        P_Aaliyah_Zahnarzt.Visible = False
+                        P_Aaliyah_Frauenarzt.Visible = False
+                        P_Aaliyah_Krankenhaus.Visible = False
+                        P_Aaliyah_Psycho.Visible = False
+                        P_Aaliyah_Hobby.Visible = False
+
+
+                    End If
+
+                Next
+
+
+
+
+
+
+            End If
+
+
+        Next
+
+
+    End Sub
+
+
 
 
     'Private Sub TreeView1_nodemouseclick(sender As Object, e As TreeViewEventArgs) Handles TreeView1.NodeMouseClick
