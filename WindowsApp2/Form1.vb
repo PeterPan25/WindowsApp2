@@ -510,7 +510,7 @@
         name3(10) = "Zahnarzt"
         name3(11) = "Frauenarzt"
         name3(12) = "Krankenhaus"
-        name3(13) = "Psycho"
+        name3(13) = "Psycho/SPZ"
         name3(14) = "Hobby"
 
 
@@ -796,6 +796,7 @@
 
     End Sub
 
-
-
+    Public Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Class1.text()
+    End Sub
 End Class

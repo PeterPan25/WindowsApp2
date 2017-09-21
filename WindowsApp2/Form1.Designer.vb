@@ -197,6 +197,8 @@ Partial Class Form1
         Me.CB_name = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label50 = New System.Windows.Forms.Label()
         CType(Me.Splitcontaineraaliyah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontaineraaliyah.Panel1.SuspendLayout()
         Me.Splitcontaineraaliyah.Panel2.SuspendLayout()
@@ -332,6 +334,8 @@ Partial Class Form1
         'P_Aaliyah_Doku
         '
         Me.P_Aaliyah_Doku.BackColor = System.Drawing.SystemColors.Control
+        Me.P_Aaliyah_Doku.Controls.Add(Me.Label50)
+        Me.P_Aaliyah_Doku.Controls.Add(Me.Button2)
         Me.P_Aaliyah_Doku.Controls.Add(Me.RichTextBoxdoku)
         Me.P_Aaliyah_Doku.Controls.Add(Me.L_Aaliyah_Doku)
         Me.P_Aaliyah_Doku.Dock = System.Windows.Forms.DockStyle.Fill
@@ -624,7 +628,7 @@ Partial Class Form1
         Me.P_Aaliyah_Psycho.Controls.Add(Me.L_Aaliyah_Psycho)
         Me.P_Aaliyah_Psycho.Dock = System.Windows.Forms.DockStyle.Fill
         Me.P_Aaliyah_Psycho.Location = New System.Drawing.Point(0, 0)
-        Me.P_Aaliyah_Psycho.Name = "P_Aaliyah_Psycho"
+        Me.P_Aaliyah_Psycho.Name = "P_Aaliyah_Psycho/SPZ"
         Me.P_Aaliyah_Psycho.Size = New System.Drawing.Size(827, 476)
         Me.P_Aaliyah_Psycho.TabIndex = 8
         '
@@ -1878,6 +1882,24 @@ Partial Class Form1
         Me.Label16.TabIndex = 7
         Me.Label16.Text = "Label16"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(553, 9)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 2
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label50
+        '
+        Me.Label50.AutoSize = True
+        Me.Label50.Location = New System.Drawing.Point(357, 230)
+        Me.Label50.Name = "Label50"
+        Me.Label50.Size = New System.Drawing.Size(45, 13)
+        Me.Label50.TabIndex = 3
+        Me.Label50.Text = "Label50"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2075,4 +2097,6 @@ Partial Class Form1
     Friend WithEvents TextBox28 As TextBox
     Friend WithEvents TextBox23 As TextBox
     Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents Label50 As Label
+    Friend WithEvents Button2 As Button
 End Class
