@@ -158,6 +158,19 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\DataSet1.BenutzerDataTable.datasource" />
+    <None Include="My Project\DataSources\DataSet1.BenutzerRow.datasource" />
+    <None Include="My Project\DataSources\DataSet1.BenutzerRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\DataSet1.BenutzerRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\DataSet1.KindDataTable.datasource" />
+    <None Include="My Project\DataSources\DataSet1.KindRow.datasource" />
+    <None Include="My Project\DataSources\DataSet1.KindRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\DataSet1.KindRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\DataSet1.TestDataTable.datasource" />
+    <None Include="My Project\DataSources\DataSet1.TestRow.datasource" />
+    <None Include="My Project\DataSources\DataSet1.TestRowChangeEvent.datasource" />
+    <None Include="My Project\DataSources\DataSet1.TestRowChangeEventHandler.datasource" />
+    <None Include="My Project\DataSources\Form1.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

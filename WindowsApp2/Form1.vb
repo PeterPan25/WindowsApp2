@@ -470,56 +470,48 @@
         P_Aaliyah_Hobby.Visible = False
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim str As String
+
+        str = InputBox("please enter a linklabel")
+        TreeView100.Nodes.Cast(Of LinkLabel)
+        If TreeView100.selectednode Is Nothing Then
+            TreeView100.Nodes.Add(str, str)
+            TreeView100.Nodes.Cast(Of LinkLabel)
+        Else TreeView100.SelectedNode.Nodes.Add(str, str)
+        End If
+
+    End Sub
+
+    Private Sub TreeView100_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView100.AfterSelect
+
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
+    End Sub
 
 
-    'Private Sub TreeView1_nodemouseclick(sender As Object, e As TreeViewEventArgs) Handles TreeView1.NodeMouseClick
+    'Private Sub TreeView1_Afterselect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
 
-    '    Dim name As String
+    '    Dim node As String
 
-    '    name = TreeNode.Name
+    '    TreeView1.Nodes.Cast(Of LinkLabel)
+
+    '    Dim llnode As LinkLabel
 
 
-    '    P_Aaliyah_Doku.Show()
-    '    P_Aaliyah_Kontakte.Visible = False
-    '    P_Aaliyah_Stammdaten.Visible = False
-    '    P_Aaliyah_Hilfen.Visible = False
-    '    P_Aaliyah_Doku.Visible = True
-    '    P_Aaliyah_Eltern.Visible = False
-    '    P_Aaliyah_Kinderarzt.Visible = False
-    '    P_Aaliyah_Hautarzt.Visible = False
-    '    P_Aaliyah_HNO.Visible = False
-    '    P_Aaliyah_Augenarzt.Visible = False
-    '    P_Aaliyah_Zahnarzt.Visible = False
-    '    P_Aaliyah_Frauenarzt.Visible = False
-    '    P_Aaliyah_Krankenhaus.Visible = False
-    '    P_Aaliyah_Psycho.Visible = False
-    '    P_Aaliyah_Hobby.Visible = False
-    'End Sub
+    '    'TreeView1.Nodes.Cast(Of LinkLabel)
 
-    'Private Sub start_load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-    '    TreeView1.Nodes.AddRange(New System.Windows.Forms.SplitContainer.treenode() _
-    '    (New system.windows.forms.splitcontainer.treenode("allgemeine Daten",_
-    '    New System.Windows.Forms.SplitContainer.treenode()_
-    '    (New system.windows.forms.splitcontainer.treenode("Stammdaten"),_
-    '    New system.windows.forms.splitcontainer.treenode("Kontakte"))
-    '    TreeView1.SelectedImageKey = -1
+    '    'TreeView1.Nodes.stammdaten.cast(Of LinkLabel)
 
-    '    TreeView1.Nodes(0).Nodes(0).Tag = SC_Aaliyah.P_Aaliyah_Stammdaten
-    '    TreeView1.Nodes(0).Nodes(1).Tag = SC_Aaliyah.P_Aaliyah_Kontakte
-    'End Sub
+
+    '    llnode = TreeView1.SelectedNode.Text
 
 
 
-    'Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
 
-    '    If Not e.Node.Tag Is Nothing Then
-    '        Dim p As Panel = DirectCast(e.Node.Tag, Panel)
-    '        p.Show()
-    '        p.Dispose()
-    '    End If
-
-
-    '    If e.Node.Name = "Knotenstammdaten" Then
+    '    If node = llnode Then
     '        P_Aaliyah_Stammdaten.Show()
     '        P_Aaliyah_Kontakte.Visible = False
     '        P_Aaliyah_Hilfen.Visible = False
@@ -538,6 +530,5 @@
     '    End If
 
     'End Sub
-
 
 End Class

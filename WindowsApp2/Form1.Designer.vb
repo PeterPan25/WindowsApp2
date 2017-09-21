@@ -50,6 +50,11 @@ Partial Class Form1
         Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
         Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26})
         Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
+        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Kinder", "hinzufügen", "bearbeiten", "entfernen"}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("")
         Me.Splitcontaineraaliyah = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
@@ -197,6 +202,9 @@ Partial Class Form1
         Me.CB_name = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TreeView100 = New System.Windows.Forms.TreeView()
+        Me.ListView1 = New System.Windows.Forms.ListView()
         CType(Me.Splitcontaineraaliyah, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontaineraaliyah.Panel1.SuspendLayout()
         Me.Splitcontaineraaliyah.Panel2.SuspendLayout()
@@ -1878,11 +1886,46 @@ Partial Class Form1
         Me.Label16.TabIndex = 7
         Me.Label16.Text = "Label16"
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(71, 63)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TreeView100
+        '
+        Me.TreeView100.HotTracking = True
+        Me.TreeView100.Location = New System.Drawing.Point(194, 47)
+        Me.TreeView100.Name = "TreeView100"
+        Me.TreeView100.Size = New System.Drawing.Size(121, 97)
+        Me.TreeView100.TabIndex = 10
+        '
+        'ListView1
+        '
+        ListViewGroup1.Header = "ListViewGroup"
+        ListViewGroup1.Name = "Admin"
+        ListViewGroup2.Header = "ListViewGroup"
+        ListViewGroup2.Name = "Daten"
+        Me.ListView1.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2})
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3})
+        Me.ListView1.Location = New System.Drawing.Point(876, 41)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(121, 97)
+        Me.ListView1.TabIndex = 11
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.List
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1127, 650)
+        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.TreeView100)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.CB_name)
         Me.Controls.Add(Me.Splitcontaineraaliyah)
         Me.Name = "Form1"
@@ -2075,4 +2118,7 @@ Partial Class Form1
     Friend WithEvents TextBox28 As TextBox
     Friend WithEvents TextBox23 As TextBox
     Friend WithEvents TextBox22 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents TreeView100 As TreeView
+    Friend WithEvents ListView1 As ListView
 End Class
