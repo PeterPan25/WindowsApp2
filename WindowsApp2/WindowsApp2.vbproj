@@ -143,6 +143,96 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewFolder1\Augenarzt.Designer.vb">
+      <DependentUpon>Augenarzt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Augenarzt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Doku.Designer.vb">
+      <DependentUpon>Doku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Doku.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Eltern.Designer.vb">
+      <DependentUpon>Eltern.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Eltern.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Frauenarzt.Designer.vb">
+      <DependentUpon>Frauenarzt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Frauenarzt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Hautarzt.Designer.vb">
+      <DependentUpon>Hautarzt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Hautarzt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Hilfen.Designer.vb">
+      <DependentUpon>Hilfen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Hilfen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\HNO.Designer.vb">
+      <DependentUpon>HNO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\HNO.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Hobby.Designer.vb">
+      <DependentUpon>Hobby.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Hobby.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Kinderarzt.Designer.vb">
+      <DependentUpon>Kinderarzt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Kinderarzt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Kontakte.Designer.vb">
+      <DependentUpon>Kontakte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Kontakte.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Krankenhaus.Designer.vb">
+      <DependentUpon>Krankenhaus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Krankenhaus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Psycho.Designer.vb">
+      <DependentUpon>Psycho.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Psycho.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Schule.Designer.vb">
+      <DependentUpon>Schule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Schule.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Stammdaten.Designer.vb">
+      <DependentUpon>Stammdaten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Stammdaten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Zahnarzt.Designer.vb">
+      <DependentUpon>Zahnarzt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Zahnarzt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="anlegen.resx">
@@ -165,6 +255,51 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Augenarzt.resx">
+      <DependentUpon>Augenarzt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Doku.resx">
+      <DependentUpon>Doku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Eltern.resx">
+      <DependentUpon>Eltern.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Frauenarzt.resx">
+      <DependentUpon>Frauenarzt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Hautarzt.resx">
+      <DependentUpon>Hautarzt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Hilfen.resx">
+      <DependentUpon>Hilfen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\HNO.resx">
+      <DependentUpon>HNO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Hobby.resx">
+      <DependentUpon>Hobby.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Kinderarzt.resx">
+      <DependentUpon>Kinderarzt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Kontakte.resx">
+      <DependentUpon>Kontakte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Krankenhaus.resx">
+      <DependentUpon>Krankenhaus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Psycho.resx">
+      <DependentUpon>Psycho.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Schule.resx">
+      <DependentUpon>Schule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Stammdaten.resx">
+      <DependentUpon>Stammdaten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewFolder1\Zahnarzt.resx">
+      <DependentUpon>Zahnarzt.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
