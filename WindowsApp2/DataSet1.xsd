@@ -77,10 +77,10 @@
         <xs:element name="Test" msprop:Generator_TableClassName="TestDataTable" msprop:Generator_TableVarName="tableTest" msprop:Generator_TablePropName="Test" msprop:Generator_RowDeletingName="TestRowDeleting" msprop:Generator_RowChangingName="TestRowChanging" msprop:Generator_RowEvHandlerName="TestRowChangeEventHandler" msprop:Generator_RowDeletedName="TestRowDeleted" msprop:Generator_UserTableName="Test" msprop:Generator_RowChangedName="TestRowChanged" msprop:Generator_RowEvArgName="TestRowChangeEvent" msprop:Generator_RowClassName="TestRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="vorname" msprop:Generator_ColumnVarNameInTable="columnvorname" msprop:Generator_ColumnPropNameInRow="vorname" msprop:Generator_ColumnPropNameInTable="vornameColumn" msprop:Generator_UserColumnName="vorname" type="xs:string" minOccurs="0" />
-              <xs:element name="datum" msprop:Generator_ColumnVarNameInTable="columndatum" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_UserColumnName="datum" type="xs:string" minOccurs="0" />
-              <xs:element name="nachname" msprop:Generator_ColumnVarNameInTable="columnnachname" msprop:Generator_ColumnPropNameInRow="nachname" msprop:Generator_ColumnPropNameInTable="nachnameColumn" msprop:Generator_UserColumnName="nachname" type="xs:string" minOccurs="0" />
-              <xs:element name="schule" msprop:Generator_ColumnVarNameInTable="columnschule" msprop:Generator_ColumnPropNameInRow="schule" msprop:Generator_ColumnPropNameInTable="schuleColumn" msprop:Generator_UserColumnName="schule" type="xs:string" minOccurs="0" />
+              <xs:element name="vorname" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="vorname" msprop:Generator_ColumnVarNameInTable="columnvorname" msprop:Generator_ColumnPropNameInTable="vornameColumn" msprop:Generator_UserColumnName="vorname" type="xs:string" minOccurs="0" />
+              <xs:element name="datum" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="datum" msprop:Generator_ColumnVarNameInTable="columndatum" msprop:Generator_ColumnPropNameInTable="datumColumn" msprop:Generator_UserColumnName="datum" type="xs:string" minOccurs="0" />
+              <xs:element name="nachname" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="nachname" msprop:Generator_ColumnVarNameInTable="columnnachname" msprop:Generator_ColumnPropNameInTable="nachnameColumn" msprop:Generator_UserColumnName="nachname" type="xs:string" minOccurs="0" />
+              <xs:element name="schule" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="schule" msprop:Generator_ColumnVarNameInTable="columnschule" msprop:Generator_ColumnPropNameInTable="schuleColumn" msprop:Generator_UserColumnName="schule" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

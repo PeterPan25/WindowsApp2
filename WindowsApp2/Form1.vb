@@ -470,65 +470,333 @@
         P_Aaliyah_Hobby.Visible = False
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim str As String
+    Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
+        Dim name As String
+        Dim name2 As String
+        Dim name3(15) As String
+        Dim i As Integer
+        Dim p As Integer
+        Dim s(15) As String
 
-        str = InputBox("please enter a linklabel")
-        TreeView100.Nodes.Cast(Of LinkLabel)
-        If TreeView100.selectednode Is Nothing Then
-            TreeView100.Nodes.Add(str, str)
-            TreeView100.Nodes.Cast(Of LinkLabel)
-        Else TreeView100.SelectedNode.Nodes.Add(str, str)
-        End If
+        s(0) = P_Aaliyah_Eltern.Name
+        s(1) = P_Aaliyah_HNO.Name
+        s(2) = P_Aaliyah_Doku.Name
+        s(3) = P_Aaliyah_Stammdaten.Name
+        s(4) = P_Aaliyah_Schule.Name
+        s(5) = P_Aaliyah_Kontakte.Name
+        s(6) = P_Aaliyah_Hilfen.Name
+
+        s(7) = P_Aaliyah_Kinderarzt.Name
+        s(8) = P_Aaliyah_Hautarzt.Name
+
+        s(9) = P_Aaliyah_Augenarzt.Name
+        s(10) = P_Aaliyah_Zahnarzt.Name
+        s(11) = P_Aaliyah_Frauenarzt.Name
+        s(12) = P_Aaliyah_Krankenhaus.Name
+        s(13) = P_Aaliyah_Psycho.Name
+        s(14) = P_Aaliyah_Hobby.Name
+
+
+        name3(0) = "Eltern"
+        name3(1) = "HNO"
+        name3(2) = "Doku"
+        name3(3) = "Stammdaten"
+        name3(4) = "Schule"
+        name3(5) = "Kontakte"
+        name3(6) = "Hilfen"
+        name3(7) = "Kinderarzt"
+        name3(8) = "Hautarzt"
+        name3(9) = "Augenarzt"
+        name3(10) = "Zahnarzt"
+        name3(11) = "Frauenarzt"
+        name3(12) = "Krankenhaus"
+        name3(13) = "Psycho/SPZ"
+        name3(14) = "Hobby"
+
+
+        name = e.Node.Text
+
+        For i = 0 To 14
+            If e.Node.Text = name3(i) Then
+
+                name2 = "P_Aaliyah_" + name3(i)
+
+                For p = 0 To 14
+
+                    If name2 = s(p) Then
+
+                        Select Case p
+                            Case 0
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = True
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+
+                            Case 1
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = True
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+
+                            Case 2
+                                P_Aaliyah_Doku.Visible = True
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+
+                            Case 3
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = True
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 4
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = True
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 5
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = True
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 6
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = True
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 7
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = True
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 8
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = True
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 9
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = True
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 10
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = True
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 11
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = True
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 12
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = True
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 13
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = True
+                                P_Aaliyah_Hobby.Visible = False
+                            Case 14
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = True
+
+
+
+                        End Select
+
+
+
+
+
+
+                    End If
+
+                Next
+
+
+
+
+
+
+            End If
+
+
+        Next
+
 
     End Sub
 
-    Private Sub TreeView100_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView100.AfterSelect
-
+    Public Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Class1.text()
     End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
-
-    End Sub
-
-
-    'Private Sub TreeView1_Afterselect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
-
-    '    Dim node As String
-
-    '    TreeView1.Nodes.Cast(Of LinkLabel)
-
-    '    Dim llnode As LinkLabel
-
-
-    '    'TreeView1.Nodes.Cast(Of LinkLabel)
-
-    '    'TreeView1.Nodes.stammdaten.cast(Of LinkLabel)
-
-
-    '    llnode = TreeView1.SelectedNode.Text
-
-
-
-
-    '    If node = llnode Then
-    '        P_Aaliyah_Stammdaten.Show()
-    '        P_Aaliyah_Kontakte.Visible = False
-    '        P_Aaliyah_Hilfen.Visible = False
-    '        P_Aaliyah_Doku.Visible = False
-    '        P_Aaliyah_Eltern.Visible = False
-    '        P_Aaliyah_Kinderarzt.Visible = False
-    '        P_Aaliyah_Hautarzt.Visible = False
-    '        P_Aaliyah_HNO.Visible = False
-    '        P_Aaliyah_Augenarzt.Visible = False
-    '        P_Aaliyah_Zahnarzt.Visible = False
-    '        P_Aaliyah_Frauenarzt.Visible = False
-    '        P_Aaliyah_Krankenhaus.Visible = False
-    '        P_Aaliyah_Psycho.Visible = False
-    '        P_Aaliyah_Hobby.Visible = False
-    '        P_Aaliyah_Stammdaten.Visible = True
-    '    End If
-
-    'End Sub
-
 End Class
