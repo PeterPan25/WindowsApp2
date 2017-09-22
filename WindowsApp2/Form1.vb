@@ -473,10 +473,10 @@
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         Dim name As String
         Dim name2 As String
-        Dim name3(15) As String
+        Dim name3(16) As String
         Dim i As Integer
         Dim p As Integer
-        Dim s(15) As String
+        Dim s(16) As String
 
         s(0) = P_Aaliyah_Eltern.Name
         s(1) = P_Aaliyah_HNO.Name
@@ -495,7 +495,7 @@
         s(12) = P_Aaliyah_Krankenhaus.Name
         s(13) = P_Aaliyah_Psycho.Name
         s(14) = P_Aaliyah_Hobby.Name
-
+        s(15) = Panel1.Name
 
         name3(0) = "Eltern"
         name3(1) = "HNO"
@@ -512,16 +512,16 @@
         name3(12) = "Krankenhaus"
         name3(13) = "Psycho/SPZ"
         name3(14) = "Hobby"
-
+        name3(15) = "hinzufügen"
 
         name = e.Node.Text
 
-        For i = 0 To 14
+        For i = 0 To 15
             If e.Node.Text = name3(i) Then
 
                 name2 = "P_Aaliyah_" + name3(i)
 
-                For p = 0 To 14
+                For p = 0 To 15
 
                     If name2 = s(p) Then
 
@@ -542,6 +542,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
 
                             Case 1
                                 P_Aaliyah_Doku.Visible = False
@@ -559,6 +560,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
 
                             Case 2
                                 P_Aaliyah_Doku.Visible = True
@@ -576,6 +578,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
 
                             Case 3
                                 P_Aaliyah_Doku.Visible = False
@@ -593,6 +596,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 4
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -609,6 +613,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 5
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -625,6 +630,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 6
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -641,6 +647,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 7
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -657,6 +664,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 8
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -673,6 +681,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 9
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -689,6 +698,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 10
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -705,6 +715,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 11
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -721,6 +732,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 12
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -737,6 +749,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = True
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 13
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -753,6 +766,7 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = True
                                 P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = False
                             Case 14
                                 P_Aaliyah_Doku.Visible = False
                                 P_Aaliyah_Stammdaten.Visible = False
@@ -769,8 +783,24 @@
                                 P_Aaliyah_Krankenhaus.Visible = False
                                 P_Aaliyah_Psycho.Visible = False
                                 P_Aaliyah_Hobby.Visible = True
-
-
+                                Panel1.Visible = False
+                            Case 15
+                                P_Aaliyah_Doku.Visible = False
+                                P_Aaliyah_Stammdaten.Visible = False
+                                P_Aaliyah_Schule.Visible = False
+                                P_Aaliyah_Kontakte.Visible = False
+                                P_Aaliyah_Hilfen.Visible = False
+                                P_Aaliyah_Eltern.Visible = False
+                                P_Aaliyah_Kinderarzt.Visible = False
+                                P_Aaliyah_Hautarzt.Visible = False
+                                P_Aaliyah_HNO.Visible = False
+                                P_Aaliyah_Augenarzt.Visible = False
+                                P_Aaliyah_Zahnarzt.Visible = False
+                                P_Aaliyah_Frauenarzt.Visible = False
+                                P_Aaliyah_Krankenhaus.Visible = False
+                                P_Aaliyah_Psycho.Visible = False
+                                P_Aaliyah_Hobby.Visible = False
+                                Panel1.Visible = True
 
                         End Select
 
@@ -798,5 +828,20 @@
 
     Public Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Class1.text()
+    End Sub
+
+    Public Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim table As DataSet1.TestDataTable
+
+        Dim row As DataRow
+        Dim col As DataColumn
+
+
+
+        For Each row In table.Rows
+            For Each col In table.Columns
+                Console.WriteLine(row(col))
+            Next
+        Next
     End Sub
 End Class

@@ -89,7 +89,7 @@
 
     End Function
 
-    Private Sub jaklar()
+    Private Sub JaKlar()
 
 
 

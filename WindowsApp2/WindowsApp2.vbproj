@@ -88,6 +88,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anlegen.Designer.vb">
+      <DependentUpon>anlegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="anlegen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Class1.vb" />
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -139,6 +145,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="anlegen.resx">
+      <DependentUpon>anlegen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
