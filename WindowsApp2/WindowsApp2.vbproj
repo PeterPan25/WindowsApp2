@@ -94,6 +94,12 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Class1.vb" />
     <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -237,6 +243,9 @@
   <ItemGroup>
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
