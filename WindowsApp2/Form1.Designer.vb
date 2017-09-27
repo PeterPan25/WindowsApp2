@@ -22,34 +22,34 @@ Partial Class Form1
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
-        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
-        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
-        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode29, TreeNode30, TreeNode31})
-        Dim TreeNode33 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
-        Dim TreeNode34 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
-        Dim TreeNode35 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
-        Dim TreeNode36 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode33, TreeNode34, TreeNode35})
-        Dim TreeNode37 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
-        Dim TreeNode38 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode32, TreeNode36, TreeNode37})
-        Dim TreeNode39 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
-        Dim TreeNode40 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
-        Dim TreeNode41 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
-        Dim TreeNode42 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode40, TreeNode41})
-        Dim TreeNode43 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
-        Dim TreeNode44 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
-        Dim TreeNode45 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
-        Dim TreeNode46 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho")
-        Dim TreeNode47 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
-        Dim TreeNode48 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinderarzt")
-        Dim TreeNode49 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hautarzt")
-        Dim TreeNode50 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Augenarzt")
-        Dim TreeNode51 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Zahnarzt")
-        Dim TreeNode52 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("HNO")
-        Dim TreeNode53 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
-        Dim TreeNode54 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
-        Dim TreeNode55 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode48, TreeNode49, TreeNode50, TreeNode51, TreeNode52, TreeNode53, TreeNode54})
-        Dim TreeNode56 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3})
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6, TreeNode7})
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8, TreeNode9})
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode12, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
+        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho")
+        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
+        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinderarzt")
+        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hautarzt")
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Augenarzt")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Zahnarzt")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("HNO")
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26})
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
@@ -74,6 +74,8 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -81,6 +83,7 @@ Partial Class Form1
         Me.Panel15.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
@@ -119,63 +122,63 @@ Partial Class Form1
         Me.TreeView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TreeView1.Location = New System.Drawing.Point(0, 0)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode29.Name = "Knoten31"
-        TreeNode29.Text = "hinzufügen"
-        TreeNode30.Name = "Knoten32"
-        TreeNode30.Text = "bearbeiten"
-        TreeNode31.Name = "Knoten33"
-        TreeNode31.Text = "entfernen"
-        TreeNode32.Name = "Knoten29"
-        TreeNode32.Text = "Kinder"
-        TreeNode33.Name = "Knoten34"
-        TreeNode33.Text = "hinzufügen"
-        TreeNode34.Name = "Knoten35"
-        TreeNode34.Text = "bearbeiten"
-        TreeNode35.Name = "Knoten36"
-        TreeNode35.Text = "entfernen"
-        TreeNode36.Name = "Knoten30"
-        TreeNode36.Text = "Benutzer"
-        TreeNode37.Name = "Knoten1"
-        TreeNode37.Text = "Mitarbeiter"
-        TreeNode38.Name = "Knoten27"
-        TreeNode38.Text = "admin"
-        TreeNode39.Name = "Knoten28"
-        TreeNode39.Text = "Tagesbericht"
-        TreeNode40.Name = "Knoten10"
-        TreeNode40.Text = "Stammdaten"
-        TreeNode41.Name = "Knoten11"
-        TreeNode41.Text = "Kontakte"
-        TreeNode42.Name = "Knoten9"
-        TreeNode42.Text = "allgemeine Daten"
-        TreeNode43.Name = "Knoten2"
-        TreeNode43.Text = "Hilfen"
-        TreeNode44.Name = "Knoten6"
-        TreeNode44.Text = "Doku"
-        TreeNode45.Name = "Knoten3"
-        TreeNode45.Text = "Schule"
-        TreeNode46.Name = "Knoten4"
-        TreeNode46.Text = "Psycho"
-        TreeNode47.Name = "Knoten5"
-        TreeNode47.Text = "Eltern"
-        TreeNode48.Name = "Knoten12"
-        TreeNode48.Text = "Kinderarzt"
-        TreeNode49.Name = "Knoten13"
-        TreeNode49.Text = "Hautarzt"
-        TreeNode50.Name = "Knoten14"
-        TreeNode50.Text = "Augenarzt"
-        TreeNode51.Name = "Knoten15"
-        TreeNode51.Text = "Zahnarzt"
-        TreeNode52.Name = "Knoten16"
-        TreeNode52.Text = "HNO"
-        TreeNode53.Name = "Knoten19"
-        TreeNode53.Text = "Krankenhaus"
-        TreeNode54.Name = "Knoten20"
-        TreeNode54.Text = "Frauenarzt"
-        TreeNode55.Name = "Knoten8"
-        TreeNode55.Text = "Ärzte"
-        TreeNode56.Name = "Knoten7"
-        TreeNode56.Text = "Hobby"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode38, TreeNode39, TreeNode42, TreeNode43, TreeNode44, TreeNode45, TreeNode46, TreeNode47, TreeNode55, TreeNode56})
+        TreeNode1.Name = "Knoten31"
+        TreeNode1.Text = "hinzufügen"
+        TreeNode2.Name = "Knoten32"
+        TreeNode2.Text = "bearbeiten"
+        TreeNode3.Name = "Knoten33"
+        TreeNode3.Text = "entfernen"
+        TreeNode4.Name = "Knoten29"
+        TreeNode4.Text = "Kinder"
+        TreeNode5.Name = "Knoten34"
+        TreeNode5.Text = "hinzufügen"
+        TreeNode6.Name = "Knoten35"
+        TreeNode6.Text = "bearbeiten"
+        TreeNode7.Name = "Knoten36"
+        TreeNode7.Text = "entfernen"
+        TreeNode8.Name = "Knoten30"
+        TreeNode8.Text = "Benutzer"
+        TreeNode9.Name = "Knoten1"
+        TreeNode9.Text = "Mitarbeiter"
+        TreeNode10.Name = "Knoten27"
+        TreeNode10.Text = "admin"
+        TreeNode11.Name = "Knoten28"
+        TreeNode11.Text = "Tagesbericht"
+        TreeNode12.Name = "Knoten10"
+        TreeNode12.Text = "Stammdaten"
+        TreeNode13.Name = "Knoten11"
+        TreeNode13.Text = "Kontakte"
+        TreeNode14.Name = "Knoten9"
+        TreeNode14.Text = "allgemeine Daten"
+        TreeNode15.Name = "Knoten2"
+        TreeNode15.Text = "Hilfen"
+        TreeNode16.Name = "Knoten6"
+        TreeNode16.Text = "Doku"
+        TreeNode17.Name = "Knoten3"
+        TreeNode17.Text = "Schule"
+        TreeNode18.Name = "Knoten4"
+        TreeNode18.Text = "Psycho"
+        TreeNode19.Name = "Knoten5"
+        TreeNode19.Text = "Eltern"
+        TreeNode20.Name = "Knoten12"
+        TreeNode20.Text = "Kinderarzt"
+        TreeNode21.Name = "Knoten13"
+        TreeNode21.Text = "Hautarzt"
+        TreeNode22.Name = "Knoten14"
+        TreeNode22.Text = "Augenarzt"
+        TreeNode23.Name = "Knoten15"
+        TreeNode23.Text = "Zahnarzt"
+        TreeNode24.Name = "Knoten16"
+        TreeNode24.Text = "HNO"
+        TreeNode25.Name = "Knoten19"
+        TreeNode25.Text = "Krankenhaus"
+        TreeNode26.Name = "Knoten20"
+        TreeNode26.Text = "Frauenarzt"
+        TreeNode27.Name = "Knoten8"
+        TreeNode27.Text = "Ärzte"
+        TreeNode28.Name = "Knoten7"
+        TreeNode28.Text = "Hobby"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode14, TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode27, TreeNode28})
         Me.TreeView1.Size = New System.Drawing.Size(145, 490)
         Me.TreeView1.TabIndex = 1
         '
@@ -369,12 +372,33 @@ Partial Class Form1
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
+        '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
         Me.SplitContainer1.Size = New System.Drawing.Size(1127, 650)
         Me.SplitContainer1.SplitterDistance = 156
         Me.SplitContainer1.TabIndex = 9
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(862, 97)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(100, 65)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 1
         '
         'Form1
         '
@@ -391,6 +415,8 @@ Partial Class Form1
         Me.Splitcontainer2.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -422,4 +448,6 @@ Partial Class Form1
     Friend WithEvents Doku1 As Doku
     Friend WithEvents Augenarzt1 As Augenarzt
     Friend WithEvents Anlegen1 As anlegen
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
 End Class

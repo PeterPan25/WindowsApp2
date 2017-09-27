@@ -1,8 +1,8 @@
 ﻿Public Class Form1
     Dim form As Form
 
-
-
+    Dim data2 As New DataSet1
+    Dim data3 As New DataSet1.KindDataTable
 
     ' Private Sub B_öffnen_Click(sender As Object, e As EventArgs) Handles B_öffnen.Click
 
@@ -403,6 +403,14 @@
         Next
 
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim av As New DataSet1TableAdapters.KindTableAdapter
+        av.GetData()
+        av.Fill(data3)
+
+        TextBox1.Text = data3.Rows(0)("Name").ToString()
     End Sub
 
     'Public Sub Button2_Click(sender As Object, e As EventArgs)
