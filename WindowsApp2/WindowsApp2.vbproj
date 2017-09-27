@@ -312,9 +312,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <Content Include="Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -322,11 +319,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
-    </Content>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -334,18 +334,6 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\DataSources\DataSet1.BenutzerDataTable.datasource" />
-    <None Include="My Project\DataSources\DataSet1.BenutzerRow.datasource" />
-    <None Include="My Project\DataSources\DataSet1.BenutzerRowChangeEvent.datasource" />
-    <None Include="My Project\DataSources\DataSet1.BenutzerRowChangeEventHandler.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindDataTable.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindRow.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindRowChangeEvent.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindRowChangeEventHandler.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestDataTable.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestRow.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestRowChangeEvent.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestRowChangeEventHandler.datasource" />
     <None Include="My Project\DataSources\Form1.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
