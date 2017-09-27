@@ -94,22 +94,10 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\Augenarztneu.Designer.vb">
-      <DependentUpon>Augenarztneu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ansichten\Augenarztneu.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Ansichten\UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
     <Compile Include="Ansichten\UserControl1.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Augenarztneu.Designer.vb">
-      <DependentUpon>Augenarztneu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Augenarztneu.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
@@ -256,14 +244,8 @@
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Augenarztneu.resx">
-      <DependentUpon>Augenarztneu.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Augenarztneu.resx">
-      <DependentUpon>Augenarztneu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
