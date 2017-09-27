@@ -4,7 +4,7 @@
     Dim datum As String
     Dim schule As String
     Dim daten As New Dictionary(Of String, String)
-    Dim testDataTable As New DataSet1.TestDataTable
+    ' Dim testDataTable As New DataSet1.TestDataTable
     ' Dim testDataset As New DataSet1
 
 
@@ -53,7 +53,7 @@
         'testDataTable = testDataSet.Tables("Test")
 
         Dim testRow As DataRow
-        testRow = testDataTable.NewRow()
+        '  testRow = testDataTable.NewRow()
         ' Dim testRow As DataSet1.TestRow = testDataTable.NewRow()
 
         vorname = TextBox1.Text
@@ -74,8 +74,8 @@
         'testRow("schule") = schule
         'testRow("datum") = datum
 
-        testDataTable.Rows.Add(testRow)
-        testDataTable.AcceptChanges()
+        '  testDataTable.Rows.Add(testRow)
+        ' testDataTable.AcceptChanges()
 
 
 
@@ -85,7 +85,7 @@
         'Next
 
         Console.WriteLine(vbTab & "Hallo")
-        Return testDataTable
+        '  Return testDataTable
 
     End Function
 
@@ -97,13 +97,13 @@
 
 
 
-        For Each myRow In testDataTable.Rows
-            For Each myCol In testDataTable.Columns
-                Console.WriteLine(myRow(myCol))
-            Next
-        Next
+        'For Each myRow In testDataTable.Rows
+        '    For Each myCol In testDataTable.Columns
+        '        Console.WriteLine(myRow(myCol))
+        '    Next
+        'Next
 
-        Label1.Text = testDataTable.Rows(1)("vorname").ToString()
+        'Label1.Text = testDataTable.Rows(1)("vorname").ToString()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
