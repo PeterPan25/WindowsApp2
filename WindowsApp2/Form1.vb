@@ -406,12 +406,44 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim av As New DataSet1TableAdapters.KindTableAdapter
-        av.GetData()
-        av.Fill(data3)
+        'Dim av As New DataSet1TableAdapters.KindTableAdapter
+        'av.GetData()
+        'av.Fill(data3)
 
-        TextBox1.Text = data3.Rows(0)("Name").ToString()
+        'TextBox1.Text = data3.Rows(0)("Name").ToString()
+        Dim mild1 As String
+        Dim mild2 As String
+        Dim a As DataRow
+        a = Me.DataSet1.Augenarzt.NewRow()
+        Dim b As DataRow
+        b = Me.DataSet1.Augenarzt.NewRow()
+
+        mild1 = TextBox1.Text
+        mild2 = TextBox2.Text
+
+        a("A_Name") = mild1
+        a("Name") = mild2
+
+        Me.DataSet1.Augenarzt.AddAugenarztRow(a)
+        ' Me.DataSet1.Augenarzt.AddAugenarztRow("Name")
+
+
+        Me.Validate()
+        Me.AugenarztBindingSource.EndEdit()
+        Me.AugenarztTableAdapter.Update(Me.DataSet1.Augenarzt)
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
     End Sub
+
+    Private Sub AugenarztBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.AugenarztBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+    End Sub
+
+
+
 
     'Public Sub Button2_Click(sender As Object, e As EventArgs)
     '    Class1.text()
