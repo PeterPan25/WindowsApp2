@@ -94,12 +94,6 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\Augenarztneu.Designer.vb">
-      <DependentUpon>Augenarztneu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Ansichten\Augenarztneu.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Ansichten\UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
@@ -107,6 +101,14 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -242,9 +244,6 @@
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Augenarztneu.resx">
-      <DependentUpon>Augenarztneu.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
@@ -313,22 +312,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\DataSources\DataSet1.BenutzerDataTable.datasource" />
-    <None Include="My Project\DataSources\DataSet1.BenutzerRow.datasource" />
-    <None Include="My Project\DataSources\DataSet1.BenutzerRowChangeEvent.datasource" />
-    <None Include="My Project\DataSources\DataSet1.BenutzerRowChangeEventHandler.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindDataTable.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindRow.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindRowChangeEvent.datasource" />
-    <None Include="My Project\DataSources\DataSet1.KindRowChangeEventHandler.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestDataTable.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestRow.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestRowChangeEvent.datasource" />
-    <None Include="My Project\DataSources\DataSet1.TestRowChangeEventHandler.datasource" />
     <None Include="My Project\DataSources\Form1.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
