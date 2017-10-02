@@ -99,9 +99,10 @@ Partial Class Augenarzt
         '
         Me.Label1.AutoSize = True
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(270, 13)
+        Me.Label1.Size = New System.Drawing.Size(270, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Name"
         '
@@ -109,9 +110,10 @@ Partial Class Augenarzt
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 67)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(270, 13)
+        Me.Label2.Size = New System.Drawing.Size(270, 18)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Anschrift"
         '

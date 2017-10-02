@@ -54,10 +54,10 @@
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
         Dim name As String
         Dim name2 As String
-        Dim name3(16) As String
+        Dim name3(18) As String
         Dim i As Integer
         Dim p As Integer
-        Dim s(16) As String
+        Dim s(18) As String
 
         s(0) = Eltern1.Name
         s(1) = HNO1.Name
@@ -74,7 +74,9 @@
         s(12) = Krankenhaus1.Name
         s(13) = Psycho1.Name
         s(14) = Hobby1.Name
-        s(15) = Panel1.Name
+        s(15) = Tagesbericht1.Name
+        s(16) = Formulare1.Name
+        s(17) = Panel1.Name
 
         name3(0) = "Eltern"
         name3(1) = "HNO"
@@ -91,16 +93,18 @@
         name3(12) = "Krankenhaus"
         name3(13) = "Psycho"
         name3(14) = "Hobby"
-        name3(15) = "hinzufügen"
+        name3(15) = "Tagesbericht"
+        name3(16) = "Formulare"
+        name3(17) = "hinzufügen"
 
         name = e.Node.Text
 
-        For i = 0 To 15
+        For i = 0 To 17
             If e.Node.Text = name3(i) Then
 
                 name2 = name3(i) + ("1")
 
-                For p = 0 To 15
+                For p = 0 To 17
 
                     If name2 = s(p) Then
 
@@ -121,6 +125,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
 
                             Case 1
@@ -139,6 +145,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
 
                             Case 2
@@ -157,6 +165,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
 
                             Case 3
@@ -175,6 +185,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 4
                                 Eltern1.Visible = False
@@ -192,6 +204,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 5
                                 Eltern1.Visible = False
@@ -209,6 +223,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 6
                                 Eltern1.Visible = False
@@ -226,6 +242,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 7
                                 Eltern1.Visible = False
@@ -243,6 +261,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 8
                                 Eltern1.Visible = False
@@ -260,6 +280,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 9
                                 Eltern1.Visible = False
@@ -277,6 +299,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 10
                                 Eltern1.Visible = False
@@ -294,6 +318,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 11
                                 Eltern1.Visible = False
@@ -311,6 +337,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 12
                                 Eltern1.Visible = False
@@ -328,6 +356,8 @@
                                 Krankenhaus1.Visible = True
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 13
                                 Eltern1.Visible = False
@@ -345,6 +375,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = True
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 14
                                 Eltern1.Visible = False
@@ -362,6 +394,8 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = True
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 15
                                 Eltern1.Visible = False
@@ -379,8 +413,47 @@
                                 Krankenhaus1.Visible = False
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = False
                                 Panel1.Visible = True
-
+                            Case 16
+                                Eltern1.Visible = False
+                                HNO1.Visible = False
+                                Doku1.Visible = False
+                                Stammdaten1.Visible = False
+                                Schule1.Visible = False
+                                Kontakte1.Visible = False
+                                Hilfen1.Visible = False
+                                Kinderarzt1.Visible = False
+                                Hautarzt1.Visible = False
+                                Augenarzt1.Visible = False
+                                Zahnarzt1.Visible = False
+                                Frauenarzt1.Visible = False
+                                Krankenhaus1.Visible = False
+                                Psycho1.Visible = False
+                                Hobby1.Visible = False
+                                Tagesbericht1.Visible = True
+                                Formulare1.visible = False
+                                Panel1.Visible = True
+                            Case 17
+                                Eltern1.Visible = False
+                                HNO1.Visible = False
+                                Doku1.Visible = False
+                                Stammdaten1.Visible = False
+                                Schule1.Visible = False
+                                Kontakte1.Visible = False
+                                Hilfen1.Visible = False
+                                Kinderarzt1.Visible = False
+                                Hautarzt1.Visible = False
+                                Augenarzt1.Visible = False
+                                Zahnarzt1.Visible = False
+                                Frauenarzt1.Visible = False
+                                Krankenhaus1.Visible = False
+                                Psycho1.Visible = False
+                                Hobby1.Visible = False
+                                Tagesbericht1.Visible = False
+                                Formulare1.visible = True
+                                Panel1.Visible = True
                         End Select
 
 
@@ -404,6 +477,11 @@
 
 
     End Sub
+
+
+
+
+
 
     'Public Sub Button2_Click(sender As Object, e As EventArgs)
     '    Class1.text()

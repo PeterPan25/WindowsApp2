@@ -50,10 +50,12 @@ Partial Class Form1
         Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
         Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26})
         Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
+        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Fomulare")
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Tagesbericht1 = New WindowsApp2.Tagesbericht()
         Me.Augenarzt1 = New WindowsApp2.Augenarzt()
         Me.Psycho1 = New WindowsApp2.Psycho()
         Me.Zahnarzt1 = New WindowsApp2.Zahnarzt()
@@ -75,6 +77,7 @@ Partial Class Form1
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.DataSet11 = New WindowsApp2.DataSet1()
+        Me.Formulare1 = New WindowsApp2.Formulare()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -82,6 +85,7 @@ Partial Class Form1
         Me.Panel15.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -177,12 +181,16 @@ Partial Class Form1
         TreeNode27.Text = "Ärzte"
         TreeNode28.Name = "Knoten7"
         TreeNode28.Text = "Hobby"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode14, TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode27, TreeNode28})
+        TreeNode29.Name = "Knoten0"
+        TreeNode29.Text = "Fomulare"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode14, TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode27, TreeNode28, TreeNode29})
         Me.TreeView1.Size = New System.Drawing.Size(145, 490)
         Me.TreeView1.TabIndex = 1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Formulare1)
+        Me.Panel1.Controls.Add(Me.Tagesbericht1)
         Me.Panel1.Controls.Add(Me.Augenarzt1)
         Me.Panel1.Controls.Add(Me.Psycho1)
         Me.Panel1.Controls.Add(Me.Zahnarzt1)
@@ -204,6 +212,14 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(978, 490)
         Me.Panel1.TabIndex = 4
+        '
+        'Tagesbericht1
+        '
+        Me.Tagesbericht1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Tagesbericht1.Location = New System.Drawing.Point(0, 0)
+        Me.Tagesbericht1.Name = "Tagesbericht1"
+        Me.Tagesbericht1.Size = New System.Drawing.Size(978, 490)
+        Me.Tagesbericht1.TabIndex = 17
         '
         'Augenarzt1
         '
@@ -340,7 +356,7 @@ Partial Class Form1
         Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_name.FormattingEnabled = True
         Me.CB_name.Items.AddRange(New Object() {"Aaliyah"})
-        Me.CB_name.Location = New System.Drawing.Point(415, 65)
+        Me.CB_name.Location = New System.Drawing.Point(437, 61)
         Me.CB_name.Name = "CB_name"
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
         Me.CB_name.TabIndex = 8
@@ -371,6 +387,10 @@ Partial Class Form1
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
+        '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
@@ -383,12 +403,19 @@ Partial Class Form1
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'Formulare1
+        '
+        Me.Formulare1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Formulare1.Location = New System.Drawing.Point(0, 0)
+        Me.Formulare1.Name = "Formulare1"
+        Me.Formulare1.Size = New System.Drawing.Size(978, 490)
+        Me.Formulare1.TabIndex = 18
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1127, 650)
-        Me.Controls.Add(Me.CB_name)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Form1"
         Me.Text = "Start"
@@ -398,6 +425,7 @@ Partial Class Form1
         Me.Splitcontainer2.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -431,4 +459,6 @@ Partial Class Form1
     Friend WithEvents Augenarzt1 As Augenarzt
     Friend WithEvents Anlegen1 As anlegen
     Friend WithEvents DataSet11 As DataSet1
+    Friend WithEvents Tagesbericht1 As Tagesbericht
+    Friend WithEvents Formulare1 As Formulare
 End Class
