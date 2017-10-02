@@ -5,13 +5,10 @@
 
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        'If PictureBox1.Image = ImageList1.Images.Item(0) Then
-        '    Process.Start("Z:\Software\Formularvorlagen\Ämterplan.doc")
-        'Else
-        '    PictureBox1.Image = ImageList1.Images.Item(0)
-        'End If
+
         PictureBox1.Image = ImageList1.Images.Item(0)
-        Process.Start(fileName:="E:\a.mp3")
+        PictureBox1.Image.Tag = 0
+
 
 
     End Sub
