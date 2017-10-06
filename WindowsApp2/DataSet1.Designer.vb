@@ -51,8 +51,6 @@ Partial Public Class DataSet1
     
     Private tableZahnarzt As ZahnarztDataTable
     
-    Private relationFK_Augenarzt_Kind As Global.System.Data.DataRelation
-    
     Private relationFK_Frauenarzt_Kind As Global.System.Data.DataRelation
     
     Private relationFK_Hautarzt_Kind As Global.System.Data.DataRelation
@@ -72,6 +70,8 @@ Partial Public Class DataSet1
     Private relationFK_Schule_Kind As Global.System.Data.DataRelation
     
     Private relationFK_Zahnarzt_Kind As Global.System.Data.DataRelation
+    
+    Private relationFK_Augenarzt_Kind As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -504,7 +504,6 @@ Partial Public Class DataSet1
                 Me.tableZahnarzt.InitVars
             End If
         End If
-        Me.relationFK_Augenarzt_Kind = Me.Relations("FK_Augenarzt_Kind")
         Me.relationFK_Frauenarzt_Kind = Me.Relations("FK_Frauenarzt_Kind")
         Me.relationFK_Hautarzt_Kind = Me.Relations("FK_Hautarzt_Kind")
         Me.relationFK_Hilfen_Kind = Me.Relations("FK_Hilfen_Kind")
@@ -515,6 +514,7 @@ Partial Public Class DataSet1
         Me.relationFK_Psycho_Kind = Me.Relations("FK_Psycho_Kind")
         Me.relationFK_Schule_Kind = Me.Relations("FK_Schule_Kind")
         Me.relationFK_Zahnarzt_Kind = Me.Relations("FK_Zahnarzt_Kind")
+        Me.relationFK_Augenarzt_Kind = Me.Relations("FK_Augenarzt_Kind")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -551,8 +551,6 @@ Partial Public Class DataSet1
         MyBase.Tables.Add(Me.tableSchule)
         Me.tableZahnarzt = New ZahnarztDataTable()
         MyBase.Tables.Add(Me.tableZahnarzt)
-        Me.relationFK_Augenarzt_Kind = New Global.System.Data.DataRelation("FK_Augenarzt_Kind", New Global.System.Data.DataColumn() {Me.tableKind.NameColumn}, New Global.System.Data.DataColumn() {Me.tableAugenarzt.NameColumn}, false)
-        Me.Relations.Add(Me.relationFK_Augenarzt_Kind)
         Me.relationFK_Frauenarzt_Kind = New Global.System.Data.DataRelation("FK_Frauenarzt_Kind", New Global.System.Data.DataColumn() {Me.tableKind.NameColumn}, New Global.System.Data.DataColumn() {Me.tableFrauenarzt.NameColumn}, false)
         Me.Relations.Add(Me.relationFK_Frauenarzt_Kind)
         Me.relationFK_Hautarzt_Kind = New Global.System.Data.DataRelation("FK_Hautarzt_Kind", New Global.System.Data.DataColumn() {Me.tableKind.NameColumn}, New Global.System.Data.DataColumn() {Me.tableHautarzt.NameColumn}, false)
@@ -573,6 +571,8 @@ Partial Public Class DataSet1
         Me.Relations.Add(Me.relationFK_Schule_Kind)
         Me.relationFK_Zahnarzt_Kind = New Global.System.Data.DataRelation("FK_Zahnarzt_Kind", New Global.System.Data.DataColumn() {Me.tableKind.NameColumn}, New Global.System.Data.DataColumn() {Me.tableZahnarzt.NameColumn}, false)
         Me.Relations.Add(Me.relationFK_Zahnarzt_Kind)
+        Me.relationFK_Augenarzt_Kind = New Global.System.Data.DataRelation("FK_Augenarzt_Kind", New Global.System.Data.DataColumn() {Me.tableKind.NameColumn}, New Global.System.Data.DataColumn() {Me.tableAugenarzt.NameColumn}, false)
+        Me.Relations.Add(Me.relationFK_Augenarzt_Kind)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -768,6 +768,8 @@ Partial Public Class DataSet1
         
         Private columnStrasse As Global.System.Data.DataColumn
         
+        Private columnDatum As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -844,6 +846,14 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property DatumColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnDatum
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -880,21 +890,15 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddAugenarztRow(ByVal parentKindRowByFK_Augenarzt_Kind As KindRow, ByVal A_Name As String, ByVal Ort As String, ByVal Plz As Integer, ByVal Strasse As String) As AugenarztRow
+        Public Overloads Function AddAugenarztRow(ByVal parentKindRowByFK_Augenarzt_Kind As KindRow, ByVal A_Name As String, ByVal Ort As String, ByVal Plz As Integer, ByVal Strasse As String, ByVal Datum As Date) As AugenarztRow
             Dim rowAugenarztRow As AugenarztRow = CType(Me.NewRow,AugenarztRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, A_Name, Ort, Plz, Strasse}
+            Dim columnValuesArray() As Object = New Object() {Nothing, A_Name, Ort, Plz, Strasse, Datum}
             If (Not (parentKindRowByFK_Augenarzt_Kind) Is Nothing) Then
                 columnValuesArray(0) = parentKindRowByFK_Augenarzt_Kind(0)
             End If
             rowAugenarztRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowAugenarztRow)
             Return rowAugenarztRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByA_Name(ByVal A_Name As String) As AugenarztRow
-            Return CType(Me.Rows.Find(New Object() {A_Name}),AugenarztRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -919,6 +923,7 @@ Partial Public Class DataSet1
             Me.columnOrt = MyBase.Columns("Ort")
             Me.columnPlz = MyBase.Columns("Plz")
             Me.columnStrasse = MyBase.Columns("Strasse")
+            Me.columnDatum = MyBase.Columns("Datum")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -934,13 +939,16 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnPlz)
             Me.columnStrasse = New Global.System.Data.DataColumn("Strasse", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnStrasse)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnA_Name}, true))
+            Me.columnDatum = New Global.System.Data.DataColumn("Datum", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnDatum)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint2", New Global.System.Data.DataColumn() {Me.columnDatum}, false))
             Me.columnName.MaxLength = 50
             Me.columnA_Name.AllowDBNull = false
-            Me.columnA_Name.Unique = true
             Me.columnA_Name.MaxLength = 50
             Me.columnOrt.MaxLength = 50
             Me.columnStrasse.MaxLength = 50
+            Me.columnDatum.AllowDBNull = false
+            Me.columnDatum.Unique = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5286,6 +5294,17 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Datum() As Date
+            Get
+                Return CType(Me(Me.tableAugenarzt.DatumColumn),Date)
+            End Get
+            Set
+                Me(Me.tableAugenarzt.DatumColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property KindRow() As KindRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Augenarzt_Kind")),KindRow)
@@ -6561,16 +6580,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function GetAugenarztRows() As AugenarztRow()
-            If (Me.Table.ChildRelations("FK_Augenarzt_Kind") Is Nothing) Then
-                Return New AugenarztRow(-1) {}
-            Else
-                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_Augenarzt_Kind")),AugenarztRow())
-            End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function GetFrauenarztRows() As FrauenarztRow()
             If (Me.Table.ChildRelations("FK_Frauenarzt_Kind") Is Nothing) Then
                 Return New FrauenarztRow(-1) {}
@@ -6666,6 +6675,16 @@ Partial Public Class DataSet1
                 Return New ZahnarztRow(-1) {}
             Else
                 Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_Zahnarzt_Kind")),ZahnarztRow())
+            End If
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function GetAugenarztRows() As AugenarztRow()
+            If (Me.Table.ChildRelations("FK_Augenarzt_Kind") Is Nothing) Then
+                Return New AugenarztRow(-1) {}
+            Else
+                Return CType(MyBase.GetChildRows(Me.Table.ChildRelations("FK_Augenarzt_Kind")),AugenarztRow())
             End If
         End Function
     End Class
@@ -8354,14 +8373,15 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("Ort", "Ort")
             tableMapping.ColumnMappings.Add("Plz", "Plz")
             tableMapping.ColumnMappings.Add("Strasse", "Strasse")
+            tableMapping.ColumnMappings.Add("Datum", "Datum")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Augenarzt] WHERE (((@IsNull_Name = 1 AND [Name] IS NULL) OR (["& _ 
-                "Name] = @Original_Name)) AND ([A_Name] = @Original_A_Name) AND ((@IsNull_Ort = 1"& _ 
-                " AND [Ort] IS NULL) OR ([Ort] = @Original_Ort)) AND ((@IsNull_Plz = 1 AND [Plz] "& _ 
-                "IS NULL) OR ([Plz] = @Original_Plz)) AND ((@IsNull_Strasse = 1 AND [Strasse] IS "& _ 
-                "NULL) OR ([Strasse] = @Original_Strasse)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Augenarzt] WHERE (((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] "& _ 
+                "= @Original_Name)) AND ([A_Name] = @Original_A_Name) AND ((@IsNull_Ort = 1 AND ["& _ 
+                "Ort] IS NULL) OR ([Ort] = @Original_Ort)) AND ((@IsNull_Plz = 1 AND [Plz] IS NUL"& _ 
+                "L) OR ([Plz] = @Original_Plz)) AND ((@IsNull_Strasse = 1 AND [Strasse] IS NULL) "& _ 
+                "OR ([Strasse] = @Original_Strasse)) AND ([Datum] = @Original_Datum))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Name", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -8372,32 +8392,36 @@ Namespace DataSet1TableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strasse", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Augenarzt] ([Name], [A_Name], [Ort], [Plz], [Strasse]) VALUES "& _ 
-                "(@Name, @A_Name, @Ort, @Plz, @Strasse);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, A_Name, Ort, Plz, Strasse "& _ 
-                "FROM Augenarzt WHERE (A_Name = @A_Name)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Augenarzt] ([Name], [A_Name], [Ort], [Plz], [Strasse], [Datum]) VALU"& _ 
+                "ES (@Name, @A_Name, @Ort, @Plz, @Strasse, @Datum);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, A_Name, Ort, Pl"& _ 
+                "z, Strasse, Datum FROM Augenarzt WHERE (Datum = @Datum)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@A_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "A_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Augenarzt] SET [Name] = @Name, [A_Name] = @A_Name, [Ort] = @Ort, [P"& _ 
-                "lz] = @Plz, [Strasse] = @Strasse WHERE (((@IsNull_Name = 1 AND [Name] IS NULL) O"& _ 
-                "R ([Name] = @Original_Name)) AND ([A_Name] = @Original_A_Name) AND ((@IsNull_Ort"& _ 
-                " = 1 AND [Ort] IS NULL) OR ([Ort] = @Original_Ort)) AND ((@IsNull_Plz = 1 AND [P"& _ 
-                "lz] IS NULL) OR ([Plz] = @Original_Plz)) AND ((@IsNull_Strasse = 1 AND [Strasse]"& _ 
-                " IS NULL) OR ([Strasse] = @Original_Strasse)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, A_Name, Ort, Plz, "& _ 
-                "Strasse FROM Augenarzt WHERE (A_Name = @A_Name)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Augenarzt] SET [Name] = @Name, [A_Name] = @A_Name, [Ort] = @Ort, [Plz] = "& _ 
+                "@Plz, [Strasse] = @Strasse, [Datum] = @Datum WHERE (((@IsNull_Name = 1 AND [Name"& _ 
+                "] IS NULL) OR ([Name] = @Original_Name)) AND ([A_Name] = @Original_A_Name) AND ("& _ 
+                "(@IsNull_Ort = 1 AND [Ort] IS NULL) OR ([Ort] = @Original_Ort)) AND ((@IsNull_Pl"& _ 
+                "z = 1 AND [Plz] IS NULL) OR ([Plz] = @Original_Plz)) AND ((@IsNull_Strasse = 1 A"& _ 
+                "ND [Strasse] IS NULL) OR ([Strasse] = @Original_Strasse)) AND ([Datum] = @Origin"& _ 
+                "al_Datum));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, A_Name, Ort, Plz, Strasse, Datum FROM Augenarzt WHERE "& _ 
+                "(Datum = @Datum)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@A_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "A_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Name", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_A_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "A_Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -8407,6 +8431,7 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strasse", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8419,11 +8444,15 @@ Namespace DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Name, A_Name, Ort, Plz, Strasse FROM dbo.Augenarzt"
+            Me._commandCollection(0).CommandText = "SELECT Name, A_Name, Ort, Plz, Strasse, Datum FROM Augenarzt"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT Name, A_Name, Ort, Plz, Strasse, Datum FROM Augenarzt"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8448,6 +8477,19 @@ Namespace DataSet1TableAdapters
             Dim dataTable As DataSet1.AugenarztDataTable = New DataSet1.AugenarztDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As DataSet1.AugenarztDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -8482,7 +8524,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Name As String, ByVal Original_A_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Name As String, ByVal Original_A_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String, ByVal Original_Datum As Date) As Integer
             If (Original_Name Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
@@ -8516,6 +8558,7 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Strasse,String)
             End If
+            Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Datum,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8535,7 +8578,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Name As String, ByVal A_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Name As String, ByVal A_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Datum As Date) As Integer
             If (Name Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -8561,6 +8604,7 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = CType(Strasse,String)
             End If
+            Me.Adapter.InsertCommand.Parameters(5).Value = CType(Datum,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8580,7 +8624,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Name As String, ByVal A_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Original_Name As String, ByVal Original_A_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String) As Integer
+        Public Overloads Overridable Function Update(ByVal Name As String, ByVal A_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Datum As Date, ByVal Original_Name As String, ByVal Original_A_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String, ByVal Original_Datum As Date) As Integer
             If (Name Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
@@ -8606,39 +8650,41 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Strasse,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Datum,Date)
             If (Original_Name Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Name,String)
             End If
             If (Original_A_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_A_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_A_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_A_Name,String)
             End If
             If (Original_Ort Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Ort,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Ort,String)
             End If
             If (Original_Plz.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Plz.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Plz.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
             If (Original_Strasse Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Strasse,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Strasse,String)
             End If
+            Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Datum,Date)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -8652,14 +8698,6 @@ Namespace DataSet1TableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Original_Name As String, ByVal Original_A_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String) As Integer
-            Return Me.Update(Name, Original_A_Name, Ort, Plz, Strasse, Original_Name, Original_A_Name, Original_Ort, Original_Plz, Original_Strasse)
         End Function
     End Class
     
