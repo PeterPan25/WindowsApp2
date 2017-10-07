@@ -23,7 +23,7 @@ Partial Class Tagesbericht
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -45,7 +45,7 @@ Partial Class Tagesbericht
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label16)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Überschrift)
         '
         'SplitContainer1.Panel2
@@ -55,14 +55,13 @@ Partial Class Tagesbericht
         Me.SplitContainer1.SplitterDistance = 100
         Me.SplitContainer1.TabIndex = 1
         '
-        'Label1
+        'Label16
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(567, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(36, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "datum"
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(567, 12)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(0, 13)
+        Me.Label16.TabIndex = 1
         '
         'Überschrift
         '
@@ -86,6 +85,7 @@ Partial Class Tagesbericht
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.CheckBox1, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 2
@@ -126,5 +126,5 @@ Partial Class Tagesbericht
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Überschrift As Label
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Label16 As Label
 End Class

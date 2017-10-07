@@ -150,24 +150,24 @@
                                 Panel1.Visible = True
 
                             Case 2
-                                Eltern1.Visible = False
-                                HNO1.Visible = False
+                                'Eltern1.Visible = False
+                                'HNO1.Visible = False
                                 Doku1.Visible = True
-                                Stammdaten1.Visible = False
-                                Schule1.Visible = False
-                                Kontakte1.Visible = False
-                                Hilfen1.Visible = False
-                                Kinderarzt1.Visible = False
-                                Hautarzt1.Visible = False
-                                Augenarzt1.Visible = False
-                                Zahnarzt1.Visible = False
-                                Frauenarzt1.Visible = False
-                                Krankenhaus1.Visible = False
-                                Psycho1.Visible = False
-                                Hobby1.Visible = False
-                                Tagesbericht1.Visible = False
-                                Formulare1.visible = False
-                                Panel1.Visible = True
+                                'Stammdaten1.Visible = False
+                                'Schule1.Visible = False
+                                'Kontakte1.Visible = False
+                                'Hilfen1.Visible = False
+                                'Kinderarzt1.Visible = False
+                                'Hautarzt1.Visible = False
+                                'Augenarzt1.Visible = False
+                                'Zahnarzt1.Visible = False
+                                'Frauenarzt1.Visible = False
+                                'Krankenhaus1.Visible = False
+                                'Psycho1.Visible = False
+                                'Hobby1.Visible = False
+                                'Tagesbericht1.Visible = False
+                                'Formulare1.visible = False
+                                'Panel1.Visible = True
 
                             Case 3
                                 Eltern1.Visible = False
@@ -227,24 +227,24 @@
                                 Formulare1.visible = False
                                 Panel1.Visible = True
                             Case 6
-                                Eltern1.Visible = False
-                                HNO1.Visible = False
-                                Doku1.Visible = False
-                                Stammdaten1.Visible = False
-                                Schule1.Visible = False
-                                Kontakte1.Visible = False
+                                'Eltern1.Visible = False
+                                'HNO1.Visible = False
+                                'Doku1.Visible = False
+                                'Stammdaten1.Visible = False
+                                'Schule1.Visible = False
+                                'Kontakte1.Visible = False
                                 Hilfen1.Visible = True
-                                Kinderarzt1.Visible = False
-                                Hautarzt1.Visible = False
-                                Augenarzt1.Visible = False
-                                Zahnarzt1.Visible = False
-                                Frauenarzt1.Visible = False
-                                Krankenhaus1.Visible = False
-                                Psycho1.Visible = False
-                                Hobby1.Visible = False
-                                Tagesbericht1.Visible = False
-                                Formulare1.visible = False
-                                Panel1.Visible = True
+                                'Kinderarzt1.Visible = False
+                                'Hautarzt1.Visible = False
+                                'Augenarzt1.Visible = False
+                                'Zahnarzt1.Visible = False
+                                'Frauenarzt1.Visible = False
+                                'Krankenhaus1.Visible = False
+                                'Psycho1.Visible = False
+                                'Hobby1.Visible = False
+                                'Tagesbericht1.Visible = False
+                                'Formulare1.visible = False
+                                'Panel1.Visible = True
                             Case 7
                                 Eltern1.Visible = False
                                 HNO1.Visible = False
@@ -452,7 +452,7 @@
                                 Psycho1.Visible = False
                                 Hobby1.Visible = False
                                 Tagesbericht1.Visible = False
-                                Formulare1.visible = True
+                                Formulare1.Visible = True
                                 Panel1.Visible = True
                         End Select
 
@@ -477,6 +477,14 @@
 
 
     End Sub
+
+    'Private Sub Tagesbericht1_Load(sender As Object, e As EventArgs) Handles Tagesbericht1.Load
+    '    Label16.Text = Now.Date
+
+    'End Sub
+
+
+
 
 
 
