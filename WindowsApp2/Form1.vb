@@ -50,25 +50,44 @@
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
-        'name per dropdown auswählen - funktioniert
-
-        Dim name As String
-        name = "F_" + CB_name.Text
 
 
-        If name = My.Forms.F_Aaliyah.Name Then
-            F_Aaliyah.Show()
-        ElseIf name = My.Forms.F_Peter.Name Then
-            F_Peter.Show()
-        ElseIf name = My.Forms.F_Hans.Name Then
-            F_Hans.Show()
+        'Dim av As New DataSet1TableAdapters.KindTableAdapter
+        ''av.GetData()
+        ''av.Fill(data3)
+        'Dim data2 As New DataSet1
+        'Dim data3 As New DataSet1.KindDataTable
 
-        Else
+        'av.GetData()
+        'av.Fill(data3)
+
+        'Dim test(25) As String
 
 
-            MessageBox.Show("Kind nicht vorhanden")
 
-        End If
+
+        'Me.TableAdapterManager.KindTableAdapter.Fill(data3)
+        'test = data3.NameColumn.ToString()
+
+        ''name per dropdown auswählen - funktioniert
+
+        'Dim name As String
+        'name = "F_" + CB_name.Text
+
+
+        'If name = My.Forms.F_Aaliyah.Name Then
+        '    F_Aaliyah.Show()
+        'ElseIf name = My.Forms.F_Peter.Name Then
+        '    F_Peter.Show()
+        'ElseIf name = My.Forms.F_Hans.Name Then
+        '    F_Hans.Show()
+
+        'Else
+
+
+        '    MessageBox.Show("Kind nicht vorhanden")
+
+        'End If
     End Sub
 
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
@@ -173,6 +192,12 @@
             End If
 
         Next
+
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Kind". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
 
     End Sub
 
