@@ -40,7 +40,6 @@ Partial Class Stammdaten
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -50,10 +49,11 @@ Partial Class Stammdaten
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.DataSet11 = New WindowsApp2.DataSet1()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -92,7 +92,6 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox4, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox5, 1, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox6, 1, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox7, 1, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox8, 3, 0)
@@ -103,6 +102,7 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox13, 3, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 3, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 1, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
@@ -286,14 +286,6 @@ Partial Class Stammdaten
         Me.TextBox4.Size = New System.Drawing.Size(232, 24)
         Me.TextBox4.TabIndex = 16
         '
-        'TextBox5
-        '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBox5.Location = New System.Drawing.Point(162, 239)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(232, 24)
-        Me.TextBox5.TabIndex = 17
-        '
         'TextBox6
         '
         Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Top
@@ -367,6 +359,14 @@ Partial Class Stammdaten
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(162, 62)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(232, 24)
+        Me.DateTimePicker1.TabIndex = 27
+        '
         'KindTableAdapter
         '
         Me.KindTableAdapter.ClearBeforeFill = True
@@ -394,13 +394,13 @@ Partial Class Stammdaten
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'DateTimePicker1
+        'DateTimePicker2
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(162, 62)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(232, 24)
-        Me.DateTimePicker1.TabIndex = 27
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(162, 239)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(232, 24)
+        Me.DateTimePicker2.TabIndex = 28
         '
         'Stammdaten
         '
@@ -434,7 +434,6 @@ Partial Class Stammdaten
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
@@ -448,4 +447,5 @@ Partial Class Stammdaten
     Friend WithEvents Button1 As Button
     Friend WithEvents DataSet11 As DataSet1
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents DateTimePicker2 As DateTimePicker
 End Class
