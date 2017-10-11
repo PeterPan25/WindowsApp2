@@ -1,8 +1,12 @@
 ﻿Public Class Form1
     Dim form As Form
 
+    Dim data3 As New DataSet1.KindDataTable
+    Dim name3 As String() = {"a"}
+    Dim z As Integer
+
     Dim i As Integer
-    Dim name3(18) As String
+
     Dim name2 As String() = {"Eltern",
         "HNO",
         "Doku",
@@ -21,6 +25,7 @@
         "Tagesbericht",
         "Formulare",
         "hinzufügen"}
+
 
 
 
@@ -50,18 +55,6 @@
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
-
-
-        'Dim av As New DataSet1TableAdapters.KindTableAdapter
-        ''av.GetData()
-        ''av.Fill(data3)
-        'Dim data2 As New DataSet1
-        'Dim data3 As New DataSet1.KindDataTable
-
-        'av.GetData()
-        'av.Fill(data3)
-
-        'Dim test(25) As String
 
 
 
@@ -199,6 +192,12 @@
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Kind". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
 
+        combotext()
+
+
+
+
+
     End Sub
 
     'Private Sub Tagesbericht1_Load(sender As Object, e As EventArgs) Handles Tagesbericht1.Load
@@ -206,7 +205,17 @@
 
     'End Sub
 
+    Public Sub combotext()
+        Me.TableAdapterManager.KindTableAdapter.Fill(data3)
 
+        ReDim name3(data3.Rows.Count - 1)
+
+        For z = 0 To (data3.Rows.Count - 1)
+            name3(z) = data3.Rows(z)("Name")
+        Next
+
+        CB_name.DataSource = name3
+    End Sub
 
 
 
