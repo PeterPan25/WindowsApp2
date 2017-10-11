@@ -38,7 +38,6 @@ Partial Class Stammdaten
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -50,11 +49,13 @@ Partial Class Stammdaten
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.DataSet11 = New WindowsApp2.DataSet1()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Überschrift
@@ -89,7 +90,6 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 2, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 2, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox4, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox5, 1, 4)
@@ -102,6 +102,7 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox12, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox13, 3, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.Button1, 3, 6)
+        Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
@@ -269,14 +270,6 @@ Partial Class Stammdaten
         Me.TextBox1.Size = New System.Drawing.Size(232, 24)
         Me.TextBox1.TabIndex = 13
         '
-        'TextBox2
-        '
-        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBox2.Location = New System.Drawing.Point(162, 62)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(232, 24)
-        Me.TextBox2.TabIndex = 14
-        '
         'TextBox3
         '
         Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Top
@@ -365,6 +358,15 @@ Partial Class Stammdaten
         Me.TextBox13.Size = New System.Drawing.Size(234, 24)
         Me.TextBox13.TabIndex = 25
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(559, 357)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 26
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'KindTableAdapter
         '
         Me.KindTableAdapter.ClearBeforeFill = True
@@ -387,14 +389,18 @@ Partial Class Stammdaten
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'Button1
+        'DataSet11
         '
-        Me.Button1.Location = New System.Drawing.Point(559, 357)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(162, 62)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(232, 24)
+        Me.DateTimePicker1.TabIndex = 27
         '
         'Stammdaten
         '
@@ -406,13 +412,8 @@ Partial Class Stammdaten
         Me.Size = New System.Drawing.Size(796, 497)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
 
     End Sub
     Friend WithEvents Überschrift As Label
@@ -431,7 +432,6 @@ Partial Class Stammdaten
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
@@ -447,5 +447,5 @@ Partial Class Stammdaten
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Button1 As Button
     Friend WithEvents DataSet11 As DataSet1
-
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
