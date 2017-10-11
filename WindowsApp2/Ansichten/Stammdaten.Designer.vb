@@ -52,6 +52,7 @@ Partial Class Stammdaten
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.DataSet11 = New WindowsApp2.DataSet1()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
@@ -407,6 +408,12 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+
     End Sub
     Friend WithEvents Überschrift As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
@@ -439,4 +446,6 @@ Partial Class Stammdaten
     Friend WithEvents KindTableAdapter As DataSet1TableAdapters.KindTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Button1 As Button
+    Friend WithEvents DataSet11 As DataSet1
+
 End Class

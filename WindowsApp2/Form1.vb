@@ -188,7 +188,7 @@
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Kind". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
 
