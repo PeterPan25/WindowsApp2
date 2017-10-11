@@ -5,7 +5,9 @@
         'Dim mild2 As String
         'Dim mild3 As String
         Dim data2 As New DataSet1.KindDataTable
-
+        Dim myRow As DataRow
+        Dim myCol As DataColumn
+        TableAdapterManager.KindTableAdapter.Fill(data2)
         a = data2.NewRow()
 
 
@@ -14,6 +16,7 @@
         'mild3 = String.Concat(mild1, " ", mild2)
 
         a("Name") = String.Concat(TextBox1.Text, " ", TextBox8.Text)
+        a("Nationalität") = TextBox3.Text
 
         data2.AddKindRow(a)
         ' Me.DataSet1.Augenarzt.AddAugenarztRow("Name")
@@ -27,7 +30,11 @@
         TextBox1.Clear()
         TextBox8.Clear()
 
-
+        For Each myRow In data2.Rows
+            For Each myCol In data2.Columns
+                Console.WriteLine(vbTab & myRow(myCol).ToString())
+            Next
+        Next
 
     End Sub
 End Class
