@@ -192,7 +192,7 @@
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Kind". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
 
-        combotext()
+        Combotext()
 
 
 
@@ -205,7 +205,7 @@
 
     'End Sub
 
-    Public Sub combotext()
+    Public Sub Combotext()
         Me.TableAdapterManager.KindTableAdapter.Fill(data3)
 
         ReDim name3(data3.Rows.Count - 1)

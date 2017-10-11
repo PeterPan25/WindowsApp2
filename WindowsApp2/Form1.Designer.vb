@@ -94,6 +94,7 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+
         Me.SuspendLayout()
         '
         'Splitcontainer2
@@ -224,7 +225,7 @@ Partial Class Form1
         Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
         Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_name.FormattingEnabled = True
-        Me.CB_name.Items.AddRange(name3)
+        ' Me.CB_name.Items.AddRange()
         Me.CB_name.Location = New System.Drawing.Point(437, 61)
         Me.CB_name.Name = "CB_name"
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
@@ -488,7 +489,6 @@ Partial Class Form1
     Friend WithEvents Splitcontainer2 As SplitContainer
     Friend WithEvents Panel15 As Panel
     Friend WithEvents CB_name As ComboBox
-
     Friend WithEvents Label16 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents TreeView1 As TreeView
