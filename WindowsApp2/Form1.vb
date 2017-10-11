@@ -221,26 +221,4 @@
 
 
 
-
-
-    'Public Sub Button2_Click(sender As Object, e As EventArgs)
-    '    Class1.text()
-    'End Sub
-
-    'Public Sub Button3_Click(sender As Object, e As EventArgs)
-    '    Dim table As DataSet1.TestDataTable
-
-    '    Dim row As DataRow
-    '    Dim col As DataColumn
-
-
-
-    '    For Each row In table.Rows
-    '        For Each col In table.Columns
-    '            Console.WriteLine(row(col))
-    '        Next
-    '    Next
-    'End Sub
-
-
 End Class
