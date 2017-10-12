@@ -236,7 +236,7 @@
                 Console.WriteLine(r1(k)(3))
                 Label1.Text = r1(k)(8)
             Catch ex As Exception
-
+                Label1.Text = "Henner mieft"
             End Try
 
 
