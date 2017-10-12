@@ -64,6 +64,7 @@ Partial Class Form1
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Tagesbericht1 = New WindowsApp2.Tagesbericht()
         Me.Formulare1 = New WindowsApp2.Formulare()
         Me.Augenarzt1 = New WindowsApp2.Augenarzt()
@@ -94,7 +95,6 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-
         Me.SuspendLayout()
         '
         'Splitcontainer2
@@ -225,7 +225,6 @@ Partial Class Form1
         Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
         Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_name.FormattingEnabled = True
-        ' Me.CB_name.Items.AddRange()
         Me.CB_name.Location = New System.Drawing.Point(437, 61)
         Me.CB_name.Name = "CB_name"
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
@@ -269,6 +268,7 @@ Partial Class Form1
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
         '
         'SplitContainer1.Panel2
@@ -299,6 +299,14 @@ Partial Class Form1
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(964, 93)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 9
         '
         'Tagesbericht1
         '
@@ -480,6 +488,7 @@ Partial Class Form1
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -516,4 +525,5 @@ Partial Class Form1
     Friend WithEvents KindBindingSource As BindingSource
     Friend WithEvents KindTableAdapter As DataSet1TableAdapters.KindTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents Label1 As Label
 End Class
