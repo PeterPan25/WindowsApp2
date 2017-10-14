@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Schule
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,130 +20,197 @@ Partial Class Schule
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Überschrift = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'RichTextBox1
+        'SplitContainer1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(18, 171)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(762, 321)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
-        'TextBox1
+        'SplitContainer1.Panel1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(72, 104)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.SplitContainer1.Panel1.Controls.Add(Me.TableLayoutPanel1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Überschrift)
         '
-        'TextBox2
+        'SplitContainer1.Panel2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(255, 104)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.SplitContainer1.Panel2.Controls.Add(Me.RichTextBox2)
+        Me.SplitContainer1.Size = New System.Drawing.Size(805, 509)
+        Me.SplitContainer1.SplitterDistance = 159
+        Me.SplitContainer1.TabIndex = 13
         '
-        'TextBox3
+        'TableLayoutPanel1
         '
-        Me.TextBox3.Location = New System.Drawing.Point(484, 104)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 3
+        Me.TableLayoutPanel1.ColumnCount = 4
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox8, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label10, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox6, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label9, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox7, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Label8, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox9, 3, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(805, 135)
+        Me.TableLayoutPanel1.TabIndex = 6
         '
-        'TextBox4
+        'TextBox8
         '
-        Me.TextBox4.Location = New System.Drawing.Point(691, 103)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 4
+        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox8.Location = New System.Drawing.Point(164, 70)
+        Me.TextBox8.Multiline = True
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(235, 62)
+        Me.TextBox8.TabIndex = 6
         '
-        'Label1
+        'Label10
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(105, 58)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(40, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Schule"
+        Me.Label10.AutoSize = True
+        Me.Label10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(3, 67)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(155, 18)
+        Me.Label10.TabIndex = 5
+        Me.Label10.Text = "Anschrift"
         '
-        'Label2
+        'Label7
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(293, 58)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 13)
-        Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Anschrift"
+        Me.Label7.AutoSize = True
+        Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(3, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(155, 18)
+        Me.Label7.TabIndex = 0
+        Me.Label7.Text = "Schule"
         '
-        'Label3
+        'TextBox6
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(518, 58)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(38, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Klasse"
+        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox6.Location = New System.Drawing.Point(164, 3)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(235, 24)
+        Me.TextBox6.TabIndex = 2
         '
-        'Label4
+        'Label9
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(732, 58)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Lehrkraft"
+        Me.Label9.AutoSize = True
+        Me.Label9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(405, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(155, 18)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "Klasse"
         '
-        'Label5
+        'TextBox7
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(378, 17)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(40, 13)
-        Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Schule"
+        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox7.Location = New System.Drawing.Point(566, 3)
+        Me.TextBox7.Multiline = True
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(236, 20)
+        Me.TextBox7.TabIndex = 3
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(405, 67)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(155, 18)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "Klassenlehrer"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox9.Location = New System.Drawing.Point(566, 70)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(236, 24)
+        Me.TextBox9.TabIndex = 7
+        '
+        'Überschrift
+        '
+        Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Location = New System.Drawing.Point(0, 0)
+        Me.Überschrift.Name = "Überschrift"
+        Me.Überschrift.Size = New System.Drawing.Size(805, 24)
+        Me.Überschrift.TabIndex = 5
+        Me.Überschrift.Text = "Schule"
+        Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RichTextBox2.Location = New System.Drawing.Point(0, 0)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(805, 346)
+        Me.RichTextBox2.TabIndex = 0
+        Me.RichTextBox2.Text = ""
         '
         'Schule
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Schule"
         Me.Size = New System.Drawing.Size(805, 509)
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
+    Friend WithEvents SplitContainer1 As SplitContainer
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Überschrift As Label
+    Friend WithEvents RichTextBox2 As RichTextBox
 End Class

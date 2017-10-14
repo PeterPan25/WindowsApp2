@@ -94,10 +94,22 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\Tagesbericht.Designer.vb">
+      <DependentUpon>Tagesbericht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Tagesbericht.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\UserControl1.Designer.vb">
       <DependentUpon>UserControl1.vb</DependentUpon>
     </Compile>
     <Compile Include="Ansichten\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ansichten\Formulare.Designer.vb">
+      <DependentUpon>Formulare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Formulare.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Class1.vb" />
@@ -244,8 +256,14 @@
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\Tagesbericht.resx">
+      <DependentUpon>Tagesbericht.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\UserControl1.resx">
       <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\Formulare.resx">
+      <DependentUpon>Formulare.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -319,6 +337,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Ämterplan.jpg" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -341,6 +360,17 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="Resources\Aufnahme.docx" />
+    <None Include="Resources\Aufnahmebogen.doc" />
+    <None Include="Resources\Beurteilung Nicole.docx" />
+    <None Include="Resources\Blanko Inari Zettel.docx" />
+    <None Include="Resources\Briefkopf mit Logo.docx" />
+    <None Include="Resources\Entwicklungsstufen im Inari.doc" />
+    <None Include="Resources\Messen und wiegen.doc" />
+    <None Include="Resources\Mitarbeitergespräche.docx" />
+    <None Include="Resources\Vollmacht.doc" />
+    <None Include="Resources\Vorlage Bericht.docx" />
+    <None Include="Resources\Ämterplan.doc" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
