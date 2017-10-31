@@ -51,6 +51,10 @@
         TextBox7.ForeColor = Color.Black
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
     'Dim item As New ListViewItem
     'With Kontakte.ListView1.Items.add(Me.TextBox1.Text)

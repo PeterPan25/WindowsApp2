@@ -1,8 +1,15 @@
-﻿'Public Class Kontakte
-'    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-'        With ListView1.Items.Add(InputBox("Name des Kindes"))
-'            .SubItems.Add(InputBox("Was war heute los?"))
-'            .SubItems.Add(InputBox("Ist das besonders wichtig?"))
-'        End With
-'    End Sub
-'End Class
+﻿Public Class Kontakte
+    '    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    '        With ListView1.Items.Add(InputBox("Name des Kindes"))
+    '            .SubItems.Add(InputBox("Was war heute los?"))
+    '            .SubItems.Add(InputBox("Ist das besonders wichtig?"))
+    '        End With
+    '    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Dim form2 As New Form
+        'form2.Show()
+        WindowsApp2.F_Aaliyah.Show()
+
+    End Sub
+End Class

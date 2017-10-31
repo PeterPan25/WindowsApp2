@@ -176,10 +176,5 @@ Partial Class Kontakte
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Dim form2 As New Form
-        'form2.Show()
-        WindowsApp2.F_Aaliyah.Show()
 
-    End Sub
 End Class
