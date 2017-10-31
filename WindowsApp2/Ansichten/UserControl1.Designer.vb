@@ -37,6 +37,7 @@ Partial Class UserControl1
         '
         'Label1
         '
+        Dim date1 As Date = Date.Now
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.HotTrack
@@ -44,7 +45,9 @@ Partial Class UserControl1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(374, 27)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Dienstag, 24. Oktober 2017 16:58:57"
+        Me.Label1.Text = date1.ToLongDateString
+        ' Me.Label1.Text = "Dienstag, 24. Oktober 2017 16:58:57"
+
         '
         'UserControl1
         '
