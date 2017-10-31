@@ -3,12 +3,15 @@
 
     Private Sub F_Aaliyah_Load(sender As Object, e As EventArgs) Handles Me.Load
         If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
-        If TextBox2.Text = Nothing Then TextBox2.Text = "Vorname"
+        If TextBox2.Text = Nothing Then TextBox2.Text = "Kind"
         If TextBox3.Text = Nothing Then TextBox3.Text = "Rolle"
-        If TextBox4.Text = Nothing Then TextBox4.Text = "Adresse"
+        If TextBox4.Text = Nothing Then TextBox4.Text = "Straße"
         If TextBox5.Text = Nothing Then TextBox5.Text = "Telefon"
         If TextBox6.Text = Nothing Then TextBox6.Text = "Mail"
         If TextBox7.Text = Nothing Then TextBox7.Text = "Sonstiges"
+        If TextBox8.Text = Nothing Then TextBox8.Text = "Postleitzahl"
+        If TextBox9.Text = Nothing Then TextBox9.Text = "Ort"
+        If TextBox10.Text = Nothing Then TextBox10.Text = "Hausnummer"
         TextBox1.ForeColor = Color.Gray
         TextBox2.ForeColor = Color.Gray
         TextBox3.ForeColor = Color.Gray
@@ -16,6 +19,11 @@
         TextBox5.ForeColor = Color.Gray
         TextBox6.ForeColor = Color.Gray
         TextBox7.ForeColor = Color.Gray
+        TextBox8.ForeColor = Color.Gray
+        TextBox9.ForeColor = Color.Gray
+        TextBox10.ForeColor = Color.Gray
+
+
 
     End Sub
 
@@ -24,7 +32,7 @@
         TextBox1.ForeColor = Color.Black
     End Sub
     Private Sub TextBox2_doubleclick(sender As Object, e As EventArgs) Handles TextBox2.DoubleClick
-        If TextBox2.Text = "Vorname" Then TextBox2.Clear()
+        If TextBox2.Text = "Kind" Then TextBox2.Clear()
         TextBox2.ForeColor = Color.Black
     End Sub
     Private Sub TextBox3_doubleclick(sender As Object, e As EventArgs) Handles TextBox3.DoubleClick
@@ -34,12 +42,12 @@
 
 
     Private Sub TextBox4_doubleclick(sender As Object, e As EventArgs) Handles TextBox4.DoubleClick
-        If TextBox4.Text = "Adresse" Then TextBox6.Clear()
+        If TextBox4.Text = "Straße" Then TextBox4.Clear()
         TextBox4.ForeColor = Color.Black
     End Sub
 
     Private Sub TextBox5_doubleclick(sender As Object, e As EventArgs) Handles TextBox5.DoubleClick
-        If TextBox5.Text = "Telefon" Then TextBox6.Clear()
+        If TextBox5.Text = "Telefon" Then TextBox5.Clear()
         TextBox5.ForeColor = Color.Black
     End Sub
     Private Sub TextBox6_doubleclick(sender As Object, e As EventArgs) Handles TextBox6.DoubleClick, TextBox7.DoubleClick
@@ -47,9 +55,24 @@
         TextBox6.ForeColor = Color.Black
     End Sub
     Private Sub TextBox7_doubleclick(sender As Object, e As EventArgs) Handles TextBox7.DoubleClick
-        If TextBox7.Text = "Sonstiges" Then TextBox6.Clear()
+        If TextBox7.Text = "Sonstiges" Then TextBox7.Clear()
         TextBox7.ForeColor = Color.Black
     End Sub
+
+    Private Sub TextBox8_doubleclick(sender As Object, e As EventArgs) Handles TextBox7.DoubleClick
+        If TextBox7.Text = "Postleitzahl" Then TextBox8.Clear()
+        TextBox7.ForeColor = Color.Black
+    End Sub
+    Private Sub TextBox9_doubleclick(sender As Object, e As EventArgs) Handles TextBox7.DoubleClick
+        If TextBox7.Text = "Ort" Then TextBox9.Clear()
+        TextBox7.ForeColor = Color.Black
+    End Sub
+    Private Sub TextBox10_doubleclick(sender As Object, e As EventArgs) Handles TextBox7.DoubleClick
+        If TextBox7.Text = "Hausnummer" Then TextBox10.Clear()
+        TextBox7.ForeColor = Color.Black
+    End Sub
+
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 

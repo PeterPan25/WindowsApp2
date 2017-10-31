@@ -22,6 +22,7 @@ Partial Class Kontakte
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -35,11 +36,17 @@ Partial Class Kontakte
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
+        Me.KontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KontakteTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -146,6 +153,39 @@ Partial Class Kontakte
         '
         Me.ColumnHeader7.Text = "Sonstiges"
         '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'KontakteBindingSource
+        '
+        Me.KontakteBindingSource.DataMember = "Kontakte"
+        Me.KontakteBindingSource.DataSource = Me.DataSet1
+        '
+        'KontakteTableAdapter
+        '
+        Me.KontakteTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Me.KontakteTableAdapter
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
         'Kontakte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -158,6 +198,8 @@ Partial Class Kontakte
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -175,6 +217,9 @@ Partial Class Kontakte
     Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents ColumnHeader7 As ColumnHeader
-
+    Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents KontakteBindingSource As BindingSource
+    Friend WithEvents KontakteTableAdapter As DataSet1TableAdapters.KontakteTableAdapter
+    Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
 
 End Class

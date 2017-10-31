@@ -12,4 +12,11 @@
         WindowsApp2.F_Aaliyah.Show()
 
     End Sub
+
+    'Private Sub KontakteBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MyBaseBindingNavigatorSaveItem.Click
+    '    Me.Validate()
+    '    Me.KontakteBindingSource.EndEdit()
+    '    Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+    'End Sub
 End Class

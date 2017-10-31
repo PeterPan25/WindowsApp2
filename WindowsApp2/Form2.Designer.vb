@@ -30,6 +30,9 @@ Partial Class F_Aaliyah
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -41,7 +44,7 @@ Partial Class F_Aaliyah
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(152, 181)
+        Me.Button1.Location = New System.Drawing.Point(192, 231)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 49)
         Me.Button1.TabIndex = 1
@@ -64,37 +67,61 @@ Partial Class F_Aaliyah
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 101)
+        Me.TextBox4.Location = New System.Drawing.Point(13, 205)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
         Me.TextBox4.TabIndex = 0
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(12, 127)
+        Me.TextBox5.Location = New System.Drawing.Point(12, 101)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
         Me.TextBox5.TabIndex = 0
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(12, 153)
+        Me.TextBox6.Location = New System.Drawing.Point(12, 127)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 20)
         Me.TextBox6.TabIndex = 0
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(12, 179)
+        Me.TextBox7.Location = New System.Drawing.Point(13, 153)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 0
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(12, 179)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.TabIndex = 2
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(167, 179)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 3
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(167, 205)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox10.TabIndex = 4
         '
         'F_Aaliyah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.ClientSize = New System.Drawing.Size(313, 339)
+        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
@@ -118,4 +145,7 @@ Partial Class F_Aaliyah
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox10 As TextBox
 End Class
