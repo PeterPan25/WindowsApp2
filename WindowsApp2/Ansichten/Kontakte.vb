@@ -5,6 +5,13 @@
     '            .SubItems.Add(InputBox("Ist das besonders wichtig?"))
     '        End With
     '    End Sub
+    Public Sub Daten_laden()
+        Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
+
+
+
+        Me.KontakteDataGridView.Update()
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'Dim form2 As New Form
