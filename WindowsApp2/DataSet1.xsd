@@ -1191,7 +1191,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Augenarzt" msprop:Generator_TableClassName="AugenarztDataTable" msprop:Generator_TableVarName="tableAugenarzt" msprop:Generator_RowChangedName="AugenarztRowChanged" msprop:Generator_TablePropName="Augenarzt" msprop:Generator_RowDeletingName="AugenarztRowDeleting" msprop:Generator_RowChangingName="AugenarztRowChanging" msprop:Generator_RowEvHandlerName="AugenarztRowChangeEventHandler" msprop:Generator_RowDeletedName="AugenarztRowDeleted" msprop:Generator_RowClassName="AugenarztRow" msprop:Generator_UserTableName="Augenarzt" msprop:Generator_RowEvArgName="AugenarztRowChangeEvent">
+        <xs:element name="Augenarzt" msprop:Generator_TableClassName="AugenarztDataTable" msprop:Generator_TableVarName="tableAugenarzt" msprop:Generator_TablePropName="Augenarzt" msprop:Generator_RowDeletingName="AugenarztRowDeleting" msprop:Generator_RowChangingName="AugenarztRowChanging" msprop:Generator_RowEvHandlerName="AugenarztRowChangeEventHandler" msprop:Generator_RowDeletedName="AugenarztRowDeleted" msprop:Generator_UserTableName="Augenarzt" msprop:Generator_RowChangedName="AugenarztRowChanged" msprop:Generator_RowEvArgName="AugenarztRowChangeEvent" msprop:Generator_RowClassName="AugenarztRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1226,7 +1226,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Frauenarzt" msprop:Generator_TableClassName="FrauenarztDataTable" msprop:Generator_TableVarName="tableFrauenarzt" msprop:Generator_RowChangedName="FrauenarztRowChanged" msprop:Generator_TablePropName="Frauenarzt" msprop:Generator_RowDeletingName="FrauenarztRowDeleting" msprop:Generator_RowChangingName="FrauenarztRowChanging" msprop:Generator_RowEvHandlerName="FrauenarztRowChangeEventHandler" msprop:Generator_RowDeletedName="FrauenarztRowDeleted" msprop:Generator_RowClassName="FrauenarztRow" msprop:Generator_UserTableName="Frauenarzt" msprop:Generator_RowEvArgName="FrauenarztRowChangeEvent">
+        <xs:element name="Frauenarzt" msprop:Generator_TableClassName="FrauenarztDataTable" msprop:Generator_TableVarName="tableFrauenarzt" msprop:Generator_TablePropName="Frauenarzt" msprop:Generator_RowDeletingName="FrauenarztRowDeleting" msprop:Generator_RowChangingName="FrauenarztRowChanging" msprop:Generator_RowEvHandlerName="FrauenarztRowChangeEventHandler" msprop:Generator_RowDeletedName="FrauenarztRowDeleted" msprop:Generator_UserTableName="Frauenarzt" msprop:Generator_RowChangedName="FrauenarztRowChanged" msprop:Generator_RowEvArgName="FrauenarztRowChangeEvent" msprop:Generator_RowClassName="FrauenarztRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1261,7 +1261,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Hautarzt" msprop:Generator_TableClassName="HautarztDataTable" msprop:Generator_TableVarName="tableHautarzt" msprop:Generator_RowChangedName="HautarztRowChanged" msprop:Generator_TablePropName="Hautarzt" msprop:Generator_RowDeletingName="HautarztRowDeleting" msprop:Generator_RowChangingName="HautarztRowChanging" msprop:Generator_RowEvHandlerName="HautarztRowChangeEventHandler" msprop:Generator_RowDeletedName="HautarztRowDeleted" msprop:Generator_RowClassName="HautarztRow" msprop:Generator_UserTableName="Hautarzt" msprop:Generator_RowEvArgName="HautarztRowChangeEvent">
+        <xs:element name="Hautarzt" msprop:Generator_TableClassName="HautarztDataTable" msprop:Generator_TableVarName="tableHautarzt" msprop:Generator_TablePropName="Hautarzt" msprop:Generator_RowDeletingName="HautarztRowDeleting" msprop:Generator_RowChangingName="HautarztRowChanging" msprop:Generator_RowEvHandlerName="HautarztRowChangeEventHandler" msprop:Generator_RowDeletedName="HautarztRowDeleted" msprop:Generator_UserTableName="Hautarzt" msprop:Generator_RowChangedName="HautarztRowChanged" msprop:Generator_RowEvArgName="HautarztRowChangeEvent" msprop:Generator_RowClassName="HautarztRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1296,7 +1296,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Hilfen" msprop:Generator_TableClassName="HilfenDataTable" msprop:Generator_TableVarName="tableHilfen" msprop:Generator_RowChangedName="HilfenRowChanged" msprop:Generator_TablePropName="Hilfen" msprop:Generator_RowDeletingName="HilfenRowDeleting" msprop:Generator_RowChangingName="HilfenRowChanging" msprop:Generator_RowEvHandlerName="HilfenRowChangeEventHandler" msprop:Generator_RowDeletedName="HilfenRowDeleted" msprop:Generator_RowClassName="HilfenRow" msprop:Generator_UserTableName="Hilfen" msprop:Generator_RowEvArgName="HilfenRowChangeEvent">
+        <xs:element name="Hilfen" msprop:Generator_TableClassName="HilfenDataTable" msprop:Generator_TableVarName="tableHilfen" msprop:Generator_TablePropName="Hilfen" msprop:Generator_RowDeletingName="HilfenRowDeleting" msprop:Generator_RowChangingName="HilfenRowChanging" msprop:Generator_RowEvHandlerName="HilfenRowChangeEventHandler" msprop:Generator_RowDeletedName="HilfenRowDeleted" msprop:Generator_UserTableName="Hilfen" msprop:Generator_RowChangedName="HilfenRowChanged" msprop:Generator_RowEvArgName="HilfenRowChangeEvent" msprop:Generator_RowClassName="HilfenRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1365,7 +1365,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HNO" msprop:Generator_TableClassName="HNODataTable" msprop:Generator_TableVarName="tableHNO" msprop:Generator_RowChangedName="HNORowChanged" msprop:Generator_TablePropName="HNO" msprop:Generator_RowDeletingName="HNORowDeleting" msprop:Generator_RowChangingName="HNORowChanging" msprop:Generator_RowEvHandlerName="HNORowChangeEventHandler" msprop:Generator_RowDeletedName="HNORowDeleted" msprop:Generator_RowClassName="HNORow" msprop:Generator_UserTableName="HNO" msprop:Generator_RowEvArgName="HNORowChangeEvent">
+        <xs:element name="HNO" msprop:Generator_TableClassName="HNODataTable" msprop:Generator_TableVarName="tableHNO" msprop:Generator_TablePropName="HNO" msprop:Generator_RowDeletingName="HNORowDeleting" msprop:Generator_RowChangingName="HNORowChanging" msprop:Generator_RowEvHandlerName="HNORowChangeEventHandler" msprop:Generator_RowDeletedName="HNORowDeleted" msprop:Generator_UserTableName="HNO" msprop:Generator_RowChangedName="HNORowChanged" msprop:Generator_RowEvArgName="HNORowChangeEvent" msprop:Generator_RowClassName="HNORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1400,7 +1400,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Hobby" msprop:Generator_TableClassName="HobbyDataTable" msprop:Generator_TableVarName="tableHobby" msprop:Generator_RowChangedName="HobbyRowChanged" msprop:Generator_TablePropName="Hobby" msprop:Generator_RowDeletingName="HobbyRowDeleting" msprop:Generator_RowChangingName="HobbyRowChanging" msprop:Generator_RowEvHandlerName="HobbyRowChangeEventHandler" msprop:Generator_RowDeletedName="HobbyRowDeleted" msprop:Generator_RowClassName="HobbyRow" msprop:Generator_UserTableName="Hobby" msprop:Generator_RowEvArgName="HobbyRowChangeEvent">
+        <xs:element name="Hobby" msprop:Generator_TableClassName="HobbyDataTable" msprop:Generator_TableVarName="tableHobby" msprop:Generator_TablePropName="Hobby" msprop:Generator_RowDeletingName="HobbyRowDeleting" msprop:Generator_RowChangingName="HobbyRowChanging" msprop:Generator_RowEvHandlerName="HobbyRowChangeEventHandler" msprop:Generator_RowDeletedName="HobbyRowDeleted" msprop:Generator_UserTableName="Hobby" msprop:Generator_RowChangedName="HobbyRowChanged" msprop:Generator_RowEvArgName="HobbyRowChangeEvent" msprop:Generator_RowClassName="HobbyRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1449,7 +1449,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Kind" msprop:Generator_TableClassName="KindDataTable" msprop:Generator_TableVarName="tableKind" msprop:Generator_RowChangedName="KindRowChanged" msprop:Generator_TablePropName="Kind" msprop:Generator_RowDeletingName="KindRowDeleting" msprop:Generator_RowChangingName="KindRowChanging" msprop:Generator_RowEvHandlerName="KindRowChangeEventHandler" msprop:Generator_RowDeletedName="KindRowDeleted" msprop:Generator_RowClassName="KindRow" msprop:Generator_UserTableName="Kind" msprop:Generator_RowEvArgName="KindRowChangeEvent">
+        <xs:element name="Kind" msprop:Generator_TableClassName="KindDataTable" msprop:Generator_TableVarName="tableKind" msprop:Generator_TablePropName="Kind" msprop:Generator_RowDeletingName="KindRowDeleting" msprop:Generator_RowChangingName="KindRowChanging" msprop:Generator_RowEvHandlerName="KindRowChangeEventHandler" msprop:Generator_RowDeletedName="KindRowDeleted" msprop:Generator_UserTableName="Kind" msprop:Generator_RowChangedName="KindRowChanged" msprop:Generator_RowEvArgName="KindRowChangeEvent" msprop:Generator_RowClassName="KindRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
@@ -1527,7 +1527,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Kinderarzt" msprop:Generator_TableClassName="KinderarztDataTable" msprop:Generator_TableVarName="tableKinderarzt" msprop:Generator_RowChangedName="KinderarztRowChanged" msprop:Generator_TablePropName="Kinderarzt" msprop:Generator_RowDeletingName="KinderarztRowDeleting" msprop:Generator_RowChangingName="KinderarztRowChanging" msprop:Generator_RowEvHandlerName="KinderarztRowChangeEventHandler" msprop:Generator_RowDeletedName="KinderarztRowDeleted" msprop:Generator_RowClassName="KinderarztRow" msprop:Generator_UserTableName="Kinderarzt" msprop:Generator_RowEvArgName="KinderarztRowChangeEvent">
+        <xs:element name="Kinderarzt" msprop:Generator_TableClassName="KinderarztDataTable" msprop:Generator_TableVarName="tableKinderarzt" msprop:Generator_TablePropName="Kinderarzt" msprop:Generator_RowDeletingName="KinderarztRowDeleting" msprop:Generator_RowChangingName="KinderarztRowChanging" msprop:Generator_RowEvHandlerName="KinderarztRowChangeEventHandler" msprop:Generator_RowDeletedName="KinderarztRowDeleted" msprop:Generator_UserTableName="Kinderarzt" msprop:Generator_RowChangedName="KinderarztRowChanged" msprop:Generator_RowEvArgName="KinderarztRowChangeEvent" msprop:Generator_RowClassName="KinderarztRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1562,7 +1562,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Krankenhaus" msprop:Generator_TableClassName="KrankenhausDataTable" msprop:Generator_TableVarName="tableKrankenhaus" msprop:Generator_RowChangedName="KrankenhausRowChanged" msprop:Generator_TablePropName="Krankenhaus" msprop:Generator_RowDeletingName="KrankenhausRowDeleting" msprop:Generator_RowChangingName="KrankenhausRowChanging" msprop:Generator_RowEvHandlerName="KrankenhausRowChangeEventHandler" msprop:Generator_RowDeletedName="KrankenhausRowDeleted" msprop:Generator_RowClassName="KrankenhausRow" msprop:Generator_UserTableName="Krankenhaus" msprop:Generator_RowEvArgName="KrankenhausRowChangeEvent">
+        <xs:element name="Krankenhaus" msprop:Generator_TableClassName="KrankenhausDataTable" msprop:Generator_TableVarName="tableKrankenhaus" msprop:Generator_TablePropName="Krankenhaus" msprop:Generator_RowDeletingName="KrankenhausRowDeleting" msprop:Generator_RowChangingName="KrankenhausRowChanging" msprop:Generator_RowEvHandlerName="KrankenhausRowChangeEventHandler" msprop:Generator_RowDeletedName="KrankenhausRowDeleted" msprop:Generator_UserTableName="Krankenhaus" msprop:Generator_RowChangedName="KrankenhausRowChanged" msprop:Generator_RowEvArgName="KrankenhausRowChangeEvent" msprop:Generator_RowClassName="KrankenhausRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1611,7 +1611,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Mitarbeiter" msprop:Generator_TableClassName="MitarbeiterDataTable" msprop:Generator_TableVarName="tableMitarbeiter" msprop:Generator_RowChangedName="MitarbeiterRowChanged" msprop:Generator_TablePropName="Mitarbeiter" msprop:Generator_RowDeletingName="MitarbeiterRowDeleting" msprop:Generator_RowChangingName="MitarbeiterRowChanging" msprop:Generator_RowEvHandlerName="MitarbeiterRowChangeEventHandler" msprop:Generator_RowDeletedName="MitarbeiterRowDeleted" msprop:Generator_RowClassName="MitarbeiterRow" msprop:Generator_UserTableName="Mitarbeiter" msprop:Generator_RowEvArgName="MitarbeiterRowChangeEvent">
+        <xs:element name="Mitarbeiter" msprop:Generator_TableClassName="MitarbeiterDataTable" msprop:Generator_TableVarName="tableMitarbeiter" msprop:Generator_TablePropName="Mitarbeiter" msprop:Generator_RowDeletingName="MitarbeiterRowDeleting" msprop:Generator_RowChangingName="MitarbeiterRowChanging" msprop:Generator_RowEvHandlerName="MitarbeiterRowChangeEventHandler" msprop:Generator_RowDeletedName="MitarbeiterRowDeleted" msprop:Generator_UserTableName="Mitarbeiter" msprop:Generator_RowChangedName="MitarbeiterRowChanged" msprop:Generator_RowEvArgName="MitarbeiterRowChangeEvent" msprop:Generator_RowClassName="MitarbeiterRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Benutzername" msprop:Generator_ColumnVarNameInTable="columnBenutzername" msprop:Generator_ColumnPropNameInRow="Benutzername" msprop:Generator_ColumnPropNameInTable="BenutzernameColumn" msprop:Generator_UserColumnName="Benutzername" minOccurs="0">
@@ -1674,7 +1674,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Psycho" msprop:Generator_TableClassName="PsychoDataTable" msprop:Generator_TableVarName="tablePsycho" msprop:Generator_RowChangedName="PsychoRowChanged" msprop:Generator_TablePropName="Psycho" msprop:Generator_RowDeletingName="PsychoRowDeleting" msprop:Generator_RowChangingName="PsychoRowChanging" msprop:Generator_RowEvHandlerName="PsychoRowChangeEventHandler" msprop:Generator_RowDeletedName="PsychoRowDeleted" msprop:Generator_RowClassName="PsychoRow" msprop:Generator_UserTableName="Psycho" msprop:Generator_RowEvArgName="PsychoRowChangeEvent">
+        <xs:element name="Psycho" msprop:Generator_TableClassName="PsychoDataTable" msprop:Generator_TableVarName="tablePsycho" msprop:Generator_TablePropName="Psycho" msprop:Generator_RowDeletingName="PsychoRowDeleting" msprop:Generator_RowChangingName="PsychoRowChanging" msprop:Generator_RowEvHandlerName="PsychoRowChangeEventHandler" msprop:Generator_RowDeletedName="PsychoRowDeleted" msprop:Generator_UserTableName="Psycho" msprop:Generator_RowChangedName="PsychoRowChanged" msprop:Generator_RowEvArgName="PsychoRowChangeEvent" msprop:Generator_RowClassName="PsychoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1709,7 +1709,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Schule" msprop:Generator_TableClassName="SchuleDataTable" msprop:Generator_TableVarName="tableSchule" msprop:Generator_RowChangedName="SchuleRowChanged" msprop:Generator_TablePropName="Schule" msprop:Generator_RowDeletingName="SchuleRowDeleting" msprop:Generator_RowChangingName="SchuleRowChanging" msprop:Generator_RowEvHandlerName="SchuleRowChangeEventHandler" msprop:Generator_RowDeletedName="SchuleRowDeleted" msprop:Generator_RowClassName="SchuleRow" msprop:Generator_UserTableName="Schule" msprop:Generator_RowEvArgName="SchuleRowChangeEvent">
+        <xs:element name="Schule" msprop:Generator_TableClassName="SchuleDataTable" msprop:Generator_TableVarName="tableSchule" msprop:Generator_TablePropName="Schule" msprop:Generator_RowDeletingName="SchuleRowDeleting" msprop:Generator_RowChangingName="SchuleRowChanging" msprop:Generator_RowEvHandlerName="SchuleRowChangeEventHandler" msprop:Generator_RowDeletedName="SchuleRowDeleted" msprop:Generator_UserTableName="Schule" msprop:Generator_RowChangedName="SchuleRowChanged" msprop:Generator_RowEvArgName="SchuleRowChangeEvent" msprop:Generator_RowClassName="SchuleRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1758,7 +1758,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Zahnarzt" msprop:Generator_TableClassName="ZahnarztDataTable" msprop:Generator_TableVarName="tableZahnarzt" msprop:Generator_RowChangedName="ZahnarztRowChanged" msprop:Generator_TablePropName="Zahnarzt" msprop:Generator_RowDeletingName="ZahnarztRowDeleting" msprop:Generator_RowChangingName="ZahnarztRowChanging" msprop:Generator_RowEvHandlerName="ZahnarztRowChangeEventHandler" msprop:Generator_RowDeletedName="ZahnarztRowDeleted" msprop:Generator_RowClassName="ZahnarztRow" msprop:Generator_UserTableName="Zahnarzt" msprop:Generator_RowEvArgName="ZahnarztRowChangeEvent">
+        <xs:element name="Zahnarzt" msprop:Generator_TableClassName="ZahnarztDataTable" msprop:Generator_TableVarName="tableZahnarzt" msprop:Generator_TablePropName="Zahnarzt" msprop:Generator_RowDeletingName="ZahnarztRowDeleting" msprop:Generator_RowChangingName="ZahnarztRowChanging" msprop:Generator_RowEvHandlerName="ZahnarztRowChangeEventHandler" msprop:Generator_RowDeletedName="ZahnarztRowDeleted" msprop:Generator_UserTableName="Zahnarzt" msprop:Generator_RowChangedName="ZahnarztRowChanged" msprop:Generator_RowEvArgName="ZahnarztRowChangeEvent" msprop:Generator_RowClassName="ZahnarztRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
@@ -1793,7 +1793,7 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Kontakte" msprop:Generator_TableClassName="KontakteDataTable" msprop:Generator_TableVarName="tableKontakte" msprop:Generator_TablePropName="Kontakte" msprop:Generator_RowDeletingName="KontakteRowDeleting" msprop:Generator_RowChangingName="KontakteRowChanging" msprop:Generator_RowEvHandlerName="KontakteRowChangeEventHandler" msprop:Generator_RowDeletedName="KontakteRowDeleted" msprop:Generator_UserTableName="Kontakte" msprop:Generator_RowChangedName="KontakteRowChanged" msprop:Generator_RowEvArgName="KontakteRowChangeEvent" msprop:Generator_RowClassName="KontakteRow">
+        <xs:element name="Kontakte" msprop:Generator_TableClassName="KontakteDataTable" msprop:Generator_TableVarName="tableKontakte" msprop:Generator_RowChangedName="KontakteRowChanged" msprop:Generator_TablePropName="Kontakte" msprop:Generator_RowDeletingName="KontakteRowDeleting" msprop:Generator_RowChangingName="KontakteRowChanging" msprop:Generator_RowEvHandlerName="KontakteRowChangeEventHandler" msprop:Generator_RowDeletedName="KontakteRowDeleted" msprop:Generator_RowClassName="KontakteRow" msprop:Generator_UserTableName="Kontakte" msprop:Generator_RowEvArgName="KontakteRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
@@ -1854,6 +1854,14 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="KindKontakte" msprop:Generator_TableClassName="KindKontakteDataTable" msprop:Generator_TableVarName="tableKindKontakte" msprop:Generator_TablePropName="KindKontakte" msprop:Generator_RowDeletingName="KindKontakteRowDeleting" msprop:Generator_RowChangingName="KindKontakteRowChanging" msprop:Generator_RowEvHandlerName="KindKontakteRowChangeEventHandler" msprop:Generator_RowDeletedName="KindKontakteRowDeleted" msprop:Generator_UserTableName="KindKontakte" msprop:Generator_RowChangedName="KindKontakteRowChanged" msprop:Generator_RowEvArgName="KindKontakteRowChangeEvent" msprop:Generator_RowClassName="KindKontakteRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" />
+              <xs:element name="Ko_Name" msprop:Generator_ColumnVarNameInTable="columnKo_Name" msprop:Generator_ColumnPropNameInRow="Ko_Name" msprop:Generator_ColumnPropNameInTable="Ko_NameColumn" msprop:Generator_UserColumnName="Ko_Name" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1919,21 +1927,34 @@ SELECT Name, Rolle, Hausnummer, PLZ, Ort, Straße, Mail, Telefon, Sonstiges, Ko_
       <xs:selector xpath=".//mstns:Kontakte" />
       <xs:field xpath="mstns:Ko_Name" />
     </xs:unique>
+    <xs:unique name="KindKontakteKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:KindKontakte" />
+      <xs:field xpath="mstns:Name" />
+      <xs:field xpath="mstns:Ko_Name" />
+    </xs:unique>
+    <xs:keyref name="Kontakte_KindKontakte" refer="Constraint2" msprop:rel_Generator_UserChildTable="KindKontakte" msprop:rel_Generator_ChildPropName="GetKindKontakteRows" msprop:rel_Generator_UserRelationName="Kontakte_KindKontakte" msprop:rel_Generator_ParentPropName="KontakteRow" msprop:rel_Generator_RelationVarName="relationKontakte_KindKontakte" msprop:rel_Generator_UserParentTable="Kontakte" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:KindKontakte" />
+      <xs:field xpath="mstns:Ko_Name" />
+    </xs:keyref>
+    <xs:keyref name="Kind_KindKontakte" refer="Kind_Constraint1" msprop:rel_Generator_UserChildTable="KindKontakte" msprop:rel_Generator_ChildPropName="GetKindKontakteRows" msprop:rel_Generator_UserRelationName="Kind_KindKontakte" msprop:rel_Generator_ParentPropName="KindRow" msprop:rel_Generator_RelationVarName="relationKind_KindKontakte" msprop:rel_Generator_UserParentTable="Kind" msdata:AcceptRejectRule="Cascade">
+      <xs:selector xpath=".//mstns:KindKontakte" />
+      <xs:field xpath="mstns:Name" />
+    </xs:keyref>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Augenarzt_Kind" msdata:parent="Kind" msdata:child="Augenarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Augenarzt" msprop:Generator_ChildPropName="GetAugenarztRows" msprop:Generator_UserRelationName="FK_Augenarzt_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Augenarzt_Kind" msprop:Generator_UserParentTable="Kind" />
-      <msdata:Relationship name="FK_Frauenarzt_Kind" msdata:parent="Kind" msdata:child="Frauenarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Frauenarzt" msprop:Generator_ChildPropName="GetFrauenarztRows" msprop:Generator_UserRelationName="FK_Frauenarzt_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Frauenarzt_Kind" msprop:Generator_UserParentTable="Kind" />
-      <msdata:Relationship name="FK_Hautarzt_Kind" msdata:parent="Kind" msdata:child="Hautarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Hautarzt" msprop:Generator_ChildPropName="GetHautarztRows" msprop:Generator_UserRelationName="FK_Hautarzt_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Hautarzt_Kind" msprop:Generator_UserParentTable="Kind" />
-      <msdata:Relationship name="FK_Hilfen_Kind" msdata:parent="Kind" msdata:child="Hilfen" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Hilfen" msprop:Generator_ChildPropName="GetHilfenRows" msprop:Generator_UserRelationName="FK_Hilfen_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Hilfen_Kind" msprop:Generator_UserParentTable="Kind" />
-      <msdata:Relationship name="FK_HNO_Kind" msdata:parent="Kind" msdata:child="HNO" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="HNO" msprop:Generator_ChildPropName="GetHNORows" msprop:Generator_UserRelationName="FK_HNO_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_HNO_Kind" msprop:Generator_UserParentTable="Kind" />
-      <msdata:Relationship name="FK_Hobby_Kind" msdata:parent="Kind" msdata:child="Hobby" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Hobby" msprop:Generator_ChildPropName="GetHobbyRows" msprop:Generator_UserRelationName="FK_Hobby_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Hobby_Kind" msprop:Generator_UserParentTable="Kind" />
-      <msdata:Relationship name="FK_Kinderarzt_Kind" msdata:parent="Kind" msdata:child="Kinderarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Kinderarzt" msprop:Generator_ChildPropName="GetKinderarztRows" msprop:Generator_UserRelationName="FK_Kinderarzt_Kind" msprop:Generator_RelationVarName="relationFK_Kinderarzt_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
-      <msdata:Relationship name="FK_Krankenhaus_Kind" msdata:parent="Kind" msdata:child="Krankenhaus" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Krankenhaus" msprop:Generator_ChildPropName="GetKrankenhausRows" msprop:Generator_UserRelationName="FK_Krankenhaus_Kind" msprop:Generator_RelationVarName="relationFK_Krankenhaus_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
-      <msdata:Relationship name="FK_Psycho_Kind" msdata:parent="Kind" msdata:child="Psycho" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Psycho" msprop:Generator_ChildPropName="GetPsychoRows" msprop:Generator_UserRelationName="FK_Psycho_Kind" msprop:Generator_RelationVarName="relationFK_Psycho_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
-      <msdata:Relationship name="FK_Schule_Kind" msdata:parent="Kind" msdata:child="Schule" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Schule" msprop:Generator_ChildPropName="GetSchuleRows" msprop:Generator_UserRelationName="FK_Schule_Kind" msprop:Generator_RelationVarName="relationFK_Schule_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
-      <msdata:Relationship name="FK_Zahnarzt_Kind" msdata:parent="Kind" msdata:child="Zahnarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Zahnarzt" msprop:Generator_ChildPropName="GetZahnarztRows" msprop:Generator_UserRelationName="FK_Zahnarzt_Kind" msprop:Generator_RelationVarName="relationFK_Zahnarzt_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
-      <msdata:Relationship name="FK_Kontakte_Kind" msdata:parent="Kind" msdata:child="Kontakte" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Kontakte" msprop:Generator_ChildPropName="GetKontakteRows" msprop:Generator_UserRelationName="FK_Kontakte_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Kontakte_Kind" msprop:Generator_UserParentTable="Kind" />
+      <msdata:Relationship name="FK_Augenarzt_Kind" msdata:parent="Kind" msdata:child="Augenarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Augenarzt" msprop:Generator_ChildPropName="GetAugenarztRows" msprop:Generator_UserRelationName="FK_Augenarzt_Kind" msprop:Generator_RelationVarName="relationFK_Augenarzt_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
+      <msdata:Relationship name="FK_Frauenarzt_Kind" msdata:parent="Kind" msdata:child="Frauenarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Frauenarzt" msprop:Generator_ChildPropName="GetFrauenarztRows" msprop:Generator_UserRelationName="FK_Frauenarzt_Kind" msprop:Generator_RelationVarName="relationFK_Frauenarzt_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
+      <msdata:Relationship name="FK_Hautarzt_Kind" msdata:parent="Kind" msdata:child="Hautarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Hautarzt" msprop:Generator_ChildPropName="GetHautarztRows" msprop:Generator_UserRelationName="FK_Hautarzt_Kind" msprop:Generator_RelationVarName="relationFK_Hautarzt_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
+      <msdata:Relationship name="FK_Hilfen_Kind" msdata:parent="Kind" msdata:child="Hilfen" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Hilfen" msprop:Generator_ChildPropName="GetHilfenRows" msprop:Generator_UserRelationName="FK_Hilfen_Kind" msprop:Generator_RelationVarName="relationFK_Hilfen_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
+      <msdata:Relationship name="FK_HNO_Kind" msdata:parent="Kind" msdata:child="HNO" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="HNO" msprop:Generator_ChildPropName="GetHNORows" msprop:Generator_UserRelationName="FK_HNO_Kind" msprop:Generator_RelationVarName="relationFK_HNO_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
+      <msdata:Relationship name="FK_Hobby_Kind" msdata:parent="Kind" msdata:child="Hobby" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Hobby" msprop:Generator_ChildPropName="GetHobbyRows" msprop:Generator_UserRelationName="FK_Hobby_Kind" msprop:Generator_RelationVarName="relationFK_Hobby_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
+      <msdata:Relationship name="FK_Kinderarzt_Kind" msdata:parent="Kind" msdata:child="Kinderarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Kinderarzt" msprop:Generator_ChildPropName="GetKinderarztRows" msprop:Generator_UserRelationName="FK_Kinderarzt_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Kinderarzt_Kind" msprop:Generator_UserParentTable="Kind" />
+      <msdata:Relationship name="FK_Krankenhaus_Kind" msdata:parent="Kind" msdata:child="Krankenhaus" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Krankenhaus" msprop:Generator_ChildPropName="GetKrankenhausRows" msprop:Generator_UserRelationName="FK_Krankenhaus_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Krankenhaus_Kind" msprop:Generator_UserParentTable="Kind" />
+      <msdata:Relationship name="FK_Psycho_Kind" msdata:parent="Kind" msdata:child="Psycho" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Psycho" msprop:Generator_ChildPropName="GetPsychoRows" msprop:Generator_UserRelationName="FK_Psycho_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Psycho_Kind" msprop:Generator_UserParentTable="Kind" />
+      <msdata:Relationship name="FK_Schule_Kind" msdata:parent="Kind" msdata:child="Schule" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Schule" msprop:Generator_ChildPropName="GetSchuleRows" msprop:Generator_UserRelationName="FK_Schule_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Schule_Kind" msprop:Generator_UserParentTable="Kind" />
+      <msdata:Relationship name="FK_Zahnarzt_Kind" msdata:parent="Kind" msdata:child="Zahnarzt" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Zahnarzt" msprop:Generator_ChildPropName="GetZahnarztRows" msprop:Generator_UserRelationName="FK_Zahnarzt_Kind" msprop:Generator_ParentPropName="KindRow" msprop:Generator_RelationVarName="relationFK_Zahnarzt_Kind" msprop:Generator_UserParentTable="Kind" />
+      <msdata:Relationship name="FK_Kontakte_Kind" msdata:parent="Kind" msdata:child="Kontakte" msdata:parentkey="Name" msdata:childkey="Name" msprop:Generator_UserChildTable="Kontakte" msprop:Generator_ChildPropName="GetKontakteRows" msprop:Generator_UserRelationName="FK_Kontakte_Kind" msprop:Generator_RelationVarName="relationFK_Kontakte_Kind" msprop:Generator_UserParentTable="Kind" msprop:Generator_ParentPropName="KindRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

@@ -20,6 +20,10 @@
 
     End Sub
 
+    Private Sub KontakteDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles KontakteDataGridView.RowHeaderMouseClick
+        F_Hans.Show()
+    End Sub
+
     'Private Sub KontakteBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MyBaseBindingNavigatorSaveItem.Click
     '    Me.Validate()
     '    Me.KontakteBindingSource.EndEdit()
