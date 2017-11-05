@@ -10,6 +10,7 @@
 
 
 
+
         Me.KontakteDataGridView.Update()
     End Sub
 
