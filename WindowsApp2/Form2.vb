@@ -6,6 +6,10 @@
         Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.KindKontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KindKontakteTableAdapter.Fill(Me.DataSet1.KindKontakte)
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kontakte". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.KindKontakte". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.KindKontakteTableAdapter.Fill(Me.DataSet1.KindKontakte)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.KindKontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KindKontakteTableAdapter.Fill(Me.DataSet1.KindKontakte)
 
@@ -83,7 +87,7 @@
         If TextBox10.Text = "Hausnummer" Then TextBox10.Clear()
         TextBox10.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox11_doubleclick(sender As Object, e As EventArgs) Handles TextBox11.DoubleClick
+    Private Sub TextBox11_doubleclick(sender As Object, e As EventArgs)
         If TextBox11.Text = "Vorname" Then TextBox10.Clear()
         TextBox11.ForeColor = Color.Black
     End Sub
@@ -166,6 +170,13 @@
     End Sub
 
     Private Sub KindKontakteBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.KindKontakteBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+    End Sub
+
+    Private Sub KindKontakteBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs)
         Me.Validate()
         Me.KindKontakteBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
