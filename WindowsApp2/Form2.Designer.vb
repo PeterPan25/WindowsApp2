@@ -34,16 +34,16 @@ Partial Class F_Aaliyah
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.DataSet1 = New WindowsApp2.DataSet1()
-        Me.KontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KontakteTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.KindKontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindKontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKontakteTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.KontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KontakteTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -125,19 +125,26 @@ Partial Class F_Aaliyah
         Me.TextBox10.Size = New System.Drawing.Size(100, 20)
         Me.TextBox10.TabIndex = 4
         '
+        'TextBox11
+        '
+        Me.TextBox11.Location = New System.Drawing.Point(118, 51)
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox11.TabIndex = 5
+        '
         'DataSet1
         '
         Me.DataSet1.DataSetName = "DataSet1"
         Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'KontakteBindingSource
+        'KindKontakteBindingSource
         '
-        Me.KontakteBindingSource.DataMember = "Kontakte"
-        Me.KontakteBindingSource.DataSource = Me.DataSet1
+        Me.KindKontakteBindingSource.DataMember = "KindKontakte"
+        Me.KindKontakteBindingSource.DataSource = Me.DataSet1
         '
-        'KontakteTableAdapter
+        'KindKontakteTableAdapter
         '
-        Me.KontakteTableAdapter.ClearBeforeFill = True
+        Me.KindKontakteTableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
@@ -156,6 +163,7 @@ Partial Class F_Aaliyah
         Me.TableAdapterManager.KindHNOTableAdapter = Nothing
         Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
         Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Me.KindKontakteTableAdapter
         Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
         Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
@@ -169,27 +177,20 @@ Partial Class F_Aaliyah
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'TextBox11
+        'KontakteBindingSource
         '
-        Me.TextBox11.Location = New System.Drawing.Point(118, 51)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 5
+        Me.KontakteBindingSource.DataMember = "Kontakte"
+        Me.KontakteBindingSource.DataSource = Me.DataSet1
         '
-        'KindKontakteBindingSource
+        'KontakteTableAdapter
         '
-        Me.KindKontakteBindingSource.DataMember = "KindKontakte"
-        Me.KindKontakteBindingSource.DataSource = Me.DataSet1
-        '
-        'KindKontakteTableAdapter
-        '
-        Me.KindKontakteTableAdapter.ClearBeforeFill = True
+        Me.KontakteTableAdapter.ClearBeforeFill = True
         '
         'F_Aaliyah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(694, 400)
+        Me.ClientSize = New System.Drawing.Size(827, 428)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.TextBox9)
@@ -205,8 +206,8 @@ Partial Class F_Aaliyah
         Me.Name = "F_Aaliyah"
         Me.Text = "neuer Kontakt"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -223,11 +224,11 @@ Partial Class F_Aaliyah
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents DataSet1 As DataSet1
-    Friend WithEvents KontakteBindingSource As BindingSource
-    Friend WithEvents KontakteTableAdapter As DataSet1TableAdapters.KontakteTableAdapter
-    Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents KindKontakteBindingSource As BindingSource
     Friend WithEvents KindKontakteTableAdapter As DataSet1TableAdapters.KindKontakteTableAdapter
+    Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents KontakteTableAdapter As DataSet1TableAdapters.KontakteTableAdapter
+    Friend WithEvents KontakteBindingSource As BindingSource
 End Class

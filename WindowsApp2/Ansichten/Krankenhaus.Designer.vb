@@ -186,9 +186,9 @@ Partial Class Krankenhaus
         Me.KindKontakteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.KindKontakteDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
         Me.KindKontakteDataGridView.DataSource = Me.KindKontakteBindingSource
-        Me.KindKontakteDataGridView.Location = New System.Drawing.Point(4, 3)
+        Me.KindKontakteDataGridView.Location = New System.Drawing.Point(295, 111)
         Me.KindKontakteDataGridView.Name = "KindKontakteDataGridView"
-        Me.KindKontakteDataGridView.Size = New System.Drawing.Size(831, 379)
+        Me.KindKontakteDataGridView.Size = New System.Drawing.Size(300, 220)
         Me.KindKontakteDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
@@ -222,7 +222,19 @@ Partial Class Krankenhaus
         Me.ResumeLayout(False)
 
     End Sub
-
+    Friend WithEvents KindKontakteBindingNavigator As BindingNavigator
+    Friend WithEvents BindingNavigatorAddNewItem As ToolStripButton
+    Friend WithEvents BindingNavigatorCountItem As ToolStripLabel
+    Friend WithEvents BindingNavigatorDeleteItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveFirstItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMovePreviousItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator As ToolStripSeparator
+    Friend WithEvents BindingNavigatorPositionItem As ToolStripTextBox
+    Friend WithEvents BindingNavigatorSeparator1 As ToolStripSeparator
+    Friend WithEvents BindingNavigatorMoveNextItem As ToolStripButton
+    Friend WithEvents BindingNavigatorMoveLastItem As ToolStripButton
+    Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
+    Friend WithEvents KindKontakteBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents Überschrift As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label1 As Label

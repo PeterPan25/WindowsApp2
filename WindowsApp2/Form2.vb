@@ -2,6 +2,10 @@
 
 
     Private Sub F_Aaliyah_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kontakte". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.KindKontakte". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.KindKontakteTableAdapter.Fill(Me.DataSet1.KindKontakte)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.KindKontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KindKontakteTableAdapter.Fill(Me.DataSet1.KindKontakte)
 
@@ -159,6 +163,13 @@
         Form1.Krankenhaus1.Daten1_laden()
 
         Me.Close()
+    End Sub
+
+    Private Sub KindKontakteBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.KindKontakteBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
     End Sub
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
     'Dim item As New ListViewItem
