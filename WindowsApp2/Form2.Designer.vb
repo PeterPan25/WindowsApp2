@@ -39,8 +39,11 @@ Partial Class F_Aaliyah
         Me.KontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KontakteTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.KindKontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindKontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKontakteTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -145,8 +148,19 @@ Partial Class F_Aaliyah
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
         Me.TableAdapterManager.HNOTableAdapter = Nothing
         Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
         Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
         Me.TableAdapterManager.KindTableAdapter = Nothing
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
         Me.TableAdapterManager.KontakteTableAdapter = Me.KontakteTableAdapter
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
@@ -162,11 +176,20 @@ Partial Class F_Aaliyah
         Me.TextBox11.Size = New System.Drawing.Size(100, 20)
         Me.TextBox11.TabIndex = 5
         '
+        'KindKontakteBindingSource
+        '
+        Me.KindKontakteBindingSource.DataMember = "KindKontakte"
+        Me.KindKontakteBindingSource.DataSource = Me.DataSet1
+        '
+        'KindKontakteTableAdapter
+        '
+        Me.KindKontakteTableAdapter.ClearBeforeFill = True
+        '
         'F_Aaliyah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(511, 348)
+        Me.ClientSize = New System.Drawing.Size(694, 400)
         Me.Controls.Add(Me.TextBox11)
         Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.TextBox9)
@@ -183,6 +206,7 @@ Partial Class F_Aaliyah
         Me.Text = "neuer Kontakt"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -204,4 +228,6 @@ Partial Class F_Aaliyah
     Friend WithEvents KontakteTableAdapter As DataSet1TableAdapters.KontakteTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents KindKontakteBindingSource As BindingSource
+    Friend WithEvents KindKontakteTableAdapter As DataSet1TableAdapters.KindKontakteTableAdapter
 End Class

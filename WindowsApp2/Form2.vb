@@ -2,6 +2,10 @@
 
 
     Private Sub F_Aaliyah_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.KindKontakte". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.KindKontakteTableAdapter.Fill(Me.DataSet1.KindKontakte)
+
+
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
         If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
@@ -85,20 +89,25 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim a As DataRow
 
-        Dim data2 As New DataSet1.KontakteDataTable
-        'Dim myRow As DataRow
-        'Dim myCol As DataColumn
-        TableAdapterManager.KontakteTableAdapter.Fill(data2)
-        a = data2.NewRow()
 
+        'Dim data2 As New DataSet1.KontakteDataTable
+        'Dim data3 As New DataSet1.KindKontakteDataTable
+        ''Dim myRow As DataRow
+        ''Dim myCol As DataColumn
+        'TableAdapterManager.KontakteTableAdapter.Fill(data2)
+        'TableAdapterManager.KindKontakteTableAdapter.Fill(data3)
+        'a = data2.NewRow()
+        'b = data3.NewRow()
+        a = Me.DataSet1.Kontakte.NewRow()
 
 
 
 
 
         a("Ko_Name") = String.Concat(TextBox11.Text, " ", TextBox1.Text)
+
         ' a("Geburtsdatum") = CDate(TextBox2.Text)
-        a("Name") = TextBox2.Text
+
         a("Rolle") = TextBox3.Text
         a("Straße") = TextBox4.Text
         a("Telefon") = TextBox5.Text
@@ -108,31 +117,22 @@
         a("Hausnummer") = TextBox10.Text
         a("PLZ") = TextBox8.Text
 
+        Me.DataSet1.Kontakte.AddKontakteRow(a)
 
-
-        data2.AddKontakteRow(a)
-
+        Console.WriteLine("1")
+        'data2.AddKontakteRow(a)
+        'data3.AddKindKontakteRow(b)
 
 
         Me.Validate()
 
-        Me.KontakteTableAdapter.Update(data2)
+        'Me.KontakteTableAdapter.Update(data2)
+        'Me.KindKontakteTableAdapter.Update(data3)
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
-        TextBox5.Clear()
-        TextBox6.Clear()
-        TextBox7.Clear()
-        TextBox8.Clear()
-        TextBox9.Clear()
-        TextBox10.Clear()
-
-        ' Form1.Kontakte1.KontakteDataGridView.Update()
         Form1.Kontakte1.Daten_laden()
-        Me.Close()
+        Me.daten_anlegen()
+        ' Form1.Kontakte1.KontakteDataGridView.Update()
+
 
     End Sub
 
@@ -142,7 +142,24 @@
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
     End Sub
+    Private Sub daten_anlegen()
+        Dim b As DataRow
+        b = Me.DataSet1.KindKontakte.NewRow()
 
+        b("Ko_Name") = String.Concat(TextBox11.Text, " ", TextBox1.Text)
+        b("Name") = Form1.CB_name.Text
+        Me.DataSet1.KindKontakte.AddKindKontakteRow(b)
+        Console.WriteLine("2")
+        Me.Validate()
+
+        'Me.KontakteTableAdapter.Update(data2)
+        'Me.KindKontakteTableAdapter.Update(data3)
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+        Form1.Krankenhaus1.Daten1_laden()
+
+        Me.Close()
+    End Sub
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
     'Dim item As New ListViewItem
     'With Kontakte.ListView1.Items.add(Me.TextBox1.Text)
