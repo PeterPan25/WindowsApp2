@@ -13,7 +13,7 @@
         Dim data2 As New DataTable
         data2 = Me.DataSet1.KindKontakte
 
-
+        'gggg
 
 
         Me.KindKontakteDataGridView.Update()
