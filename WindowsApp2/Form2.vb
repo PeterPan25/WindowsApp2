@@ -43,52 +43,57 @@
 
     End Sub
 
-    Private Sub TextBox1_doubleclick(sender As Object, e As EventArgs) Handles TextBox1.DoubleClick
+    Private Sub TextBox1_click(sender As Object, e As EventArgs) Handles TextBox1.Enter
         If TextBox1.Text = "Name" Then TextBox1.Clear()
         TextBox1.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox2_doubleclick(sender As Object, e As EventArgs) Handles TextBox2.DoubleClick
+    Private Sub TextBox1_leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
+        If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
+        TextBox1.ForeColor = Color.Gray
+        If TextBox1.Text <> Nothing Then TextBox1.ForeColor = Color.Black
+    End Sub
+    Private Sub TextBox2_click(sender As Object, e As EventArgs) Handles TextBox2.Enter
         If TextBox2.Text = "Kind" Then TextBox2.Clear()
         TextBox2.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox3_doubleclick(sender As Object, e As EventArgs) Handles TextBox3.DoubleClick
+    Private Sub TextBox3_click(sender As Object, e As EventArgs) Handles TextBox3.Enter
         If TextBox3.Text = "Rolle" Then TextBox3.Clear()
         TextBox3.ForeColor = Color.Black
     End Sub
 
 
-    Private Sub TextBox4_doubleclick(sender As Object, e As EventArgs) Handles TextBox4.DoubleClick
+    Private Sub TextBox4_click(sender As Object, e As EventArgs) Handles TextBox4.Enter
         If TextBox4.Text = "Straße" Then TextBox4.Clear()
         TextBox4.ForeColor = Color.Black
     End Sub
 
-    Private Sub TextBox5_doubleclick(sender As Object, e As EventArgs) Handles TextBox5.DoubleClick
+    Private Sub TextBox5_click(sender As Object, e As EventArgs) Handles TextBox5.Enter
         If TextBox5.Text = "Telefon" Then TextBox5.Clear()
         TextBox5.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox6_doubleclick(sender As Object, e As EventArgs) Handles TextBox6.DoubleClick, TextBox7.DoubleClick
+    Private Sub TextBox6_click(sender As Object, e As EventArgs) Handles TextBox6.Enter
         If TextBox6.Text = "Mail" Then TextBox6.Clear()
         TextBox6.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox7_doubleclick(sender As Object, e As EventArgs) Handles TextBox7.DoubleClick
+    Private Sub TextBox7_click(sender As Object, e As EventArgs) Handles TextBox7.Enter
         If TextBox7.Text = "Sonstiges" Then TextBox7.Clear()
         TextBox7.ForeColor = Color.Black
     End Sub
 
-    Private Sub TextBox8_doubleclick(sender As Object, e As EventArgs) Handles TextBox8.DoubleClick
+    Private Sub TextBox8_click(sender As Object, e As EventArgs) Handles TextBox8.Enter
         If TextBox8.Text = "Postleitzahl" Then TextBox8.Clear()
         TextBox8.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox9_doubleclick(sender As Object, e As EventArgs) Handles TextBox9.DoubleClick
+    Private Sub TextBox9_click(sender As Object, e As EventArgs) Handles TextBox9.Enter
         If TextBox9.Text = "Ort" Then TextBox9.Clear()
         TextBox9.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox10_doubleclick(sender As Object, e As EventArgs) Handles TextBox10.DoubleClick
+    Private Sub TextBox10_click(sender As Object, e As EventArgs) Handles TextBox10.Enter
         If TextBox10.Text = "Hausnummer" Then TextBox10.Clear()
         TextBox10.ForeColor = Color.Black
     End Sub
-    Private Sub TextBox11_doubleclick(sender As Object, e As EventArgs)
-        If TextBox11.Text = "Vorname" Then TextBox10.Clear()
+    Private Sub TextBox11_click(sender As Object, e As EventArgs) Handles TextBox11.Enter
+        If TextBox11.Text = "Vorname" Then TextBox11.Clear()
         TextBox11.ForeColor = Color.Black
     End Sub
 
