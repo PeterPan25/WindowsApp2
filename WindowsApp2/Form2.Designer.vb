@@ -23,35 +23,28 @@ Partial Class F_Aaliyah
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.KindKontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindKontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKontakteTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.KontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KontakteTableAdapter()
         Me.KontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText8 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText9 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText10 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText11 = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 51)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
         '
         'Button1
         '
@@ -61,69 +54,6 @@ Partial Class F_Aaliyah
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Kontakt hinzufügen"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 77)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 0
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 103)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 0
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 233)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 0
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(12, 129)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 0
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(12, 155)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 0
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(12, 181)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 0
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(12, 207)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 2
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(118, 207)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 3
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(118, 233)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 4
         '
         'DataSet1
         '
@@ -167,6 +97,7 @@ Partial Class F_Aaliyah
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
@@ -179,30 +110,144 @@ Partial Class F_Aaliyah
         Me.KontakteBindingSource.DataMember = "Kontakte"
         Me.KontakteBindingSource.DataSource = Me.DataSet1
         '
-        'TextBox11
+        'PlatzhalterText1
         '
-        Me.TextBox11.Location = New System.Drawing.Point(118, 51)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 5
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(12, 51)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Name"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText1.TabIndex = 7
+        Me.PlatzhalterText1.Text = "Hallo"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(118, 51)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Vorname"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText2.TabIndex = 8
+        Me.PlatzhalterText2.Text = "Vorname"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(12, 77)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = "Rolle"
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText3.TabIndex = 9
+        Me.PlatzhalterText3.Text = "Rolle"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(12, 103)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = "Kind"
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText4.TabIndex = 10
+        Me.PlatzhalterText4.Text = "Kind"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(12, 129)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Telefon"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText5.TabIndex = 11
+        Me.PlatzhalterText5.Text = "Telefon"
+        '
+        'PlatzhalterText6
+        '
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(12, 155)
+        Me.PlatzhalterText6.Name = "PlatzhalterText6"
+        Me.PlatzhalterText6.PlatzHalterText = "Mail"
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText6.TabIndex = 12
+        Me.PlatzhalterText6.Text = "Mail"
+        '
+        'PlatzhalterText7
+        '
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText7.Location = New System.Drawing.Point(12, 181)
+        Me.PlatzhalterText7.Name = "PlatzhalterText7"
+        Me.PlatzhalterText7.PlatzHalterText = "Sonstiges"
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText7.TabIndex = 13
+        Me.PlatzhalterText7.Text = "Sonstiges"
+        '
+        'PlatzhalterText8
+        '
+        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText8.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText8.Location = New System.Drawing.Point(12, 207)
+        Me.PlatzhalterText8.Name = "PlatzhalterText8"
+        Me.PlatzhalterText8.PlatzHalterText = "Postleitzahl"
+        Me.PlatzhalterText8.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText8.TabIndex = 14
+        Me.PlatzhalterText8.Text = "Postleitzahl"
+        '
+        'PlatzhalterText9
+        '
+        Me.PlatzhalterText9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText9.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText9.Location = New System.Drawing.Point(118, 207)
+        Me.PlatzhalterText9.Name = "PlatzhalterText9"
+        Me.PlatzhalterText9.PlatzHalterText = "Ort"
+        Me.PlatzhalterText9.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText9.TabIndex = 15
+        Me.PlatzhalterText9.Text = "Ort"
+        '
+        'PlatzhalterText10
+        '
+        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText10.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText10.Location = New System.Drawing.Point(12, 233)
+        Me.PlatzhalterText10.Name = "PlatzhalterText10"
+        Me.PlatzhalterText10.PlatzHalterText = "Straße"
+        Me.PlatzhalterText10.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText10.TabIndex = 16
+        Me.PlatzhalterText10.Text = "Straße"
+        '
+        'PlatzhalterText11
+        '
+        Me.PlatzhalterText11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText11.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText11.Location = New System.Drawing.Point(118, 233)
+        Me.PlatzhalterText11.Name = "PlatzhalterText11"
+        Me.PlatzhalterText11.PlatzHalterText = "Hausnummer"
+        Me.PlatzhalterText11.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText11.TabIndex = 17
+        Me.PlatzhalterText11.Text = "Hausnummer"
         '
         'F_Aaliyah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(867, 428)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.PlatzhalterText11)
+        Me.Controls.Add(Me.PlatzhalterText10)
+        Me.Controls.Add(Me.PlatzhalterText9)
+        Me.Controls.Add(Me.PlatzhalterText8)
+        Me.Controls.Add(Me.PlatzhalterText7)
+        Me.Controls.Add(Me.PlatzhalterText6)
+        Me.Controls.Add(Me.PlatzhalterText5)
+        Me.Controls.Add(Me.PlatzhalterText4)
+        Me.Controls.Add(Me.PlatzhalterText3)
+        Me.Controls.Add(Me.PlatzhalterText2)
+        Me.Controls.Add(Me.PlatzhalterText1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Name = "F_Aaliyah"
         Me.Text = "neuer Kontakt"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -212,23 +257,22 @@ Partial Class F_Aaliyah
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents KindKontakteBindingSource As BindingSource
     Friend WithEvents KindKontakteTableAdapter As DataSet1TableAdapters.KindKontakteTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents KontakteTableAdapter As DataSet1TableAdapters.KontakteTableAdapter
     Friend WithEvents KontakteBindingSource As BindingSource
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents PlatzhalterText1 As PlatzhalterText
+    Friend WithEvents PlatzhalterText2 As PlatzhalterText
+    Friend WithEvents PlatzhalterText3 As PlatzhalterText
+    Friend WithEvents PlatzhalterText4 As PlatzhalterText
+    Friend WithEvents PlatzhalterText5 As PlatzhalterText
+    Friend WithEvents PlatzhalterText6 As PlatzhalterText
+    Friend WithEvents PlatzhalterText7 As PlatzhalterText
+    Friend WithEvents PlatzhalterText8 As PlatzhalterText
+    Friend WithEvents PlatzhalterText9 As PlatzhalterText
+    Friend WithEvents PlatzhalterText10 As PlatzhalterText
+    Friend WithEvents PlatzhalterText11 As PlatzhalterText
 End Class

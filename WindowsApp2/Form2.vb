@@ -16,86 +16,86 @@
 
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
-        If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
-        If TextBox2.Text = Nothing Then TextBox2.Text = "Kind"
-        If TextBox3.Text = Nothing Then TextBox3.Text = "Rolle"
-        If TextBox4.Text = Nothing Then TextBox4.Text = "Straße"
-        If TextBox5.Text = Nothing Then TextBox5.Text = "Telefon"
-        If TextBox6.Text = Nothing Then TextBox6.Text = "Mail"
-        If TextBox7.Text = Nothing Then TextBox7.Text = "Sonstiges"
-        If TextBox8.Text = Nothing Then TextBox8.Text = "Postleitzahl"
-        If TextBox9.Text = Nothing Then TextBox9.Text = "Ort"
-        If TextBox10.Text = Nothing Then TextBox10.Text = "Hausnummer"
-        If TextBox11.Text = Nothing Then TextBox11.Text = "Vorname"
-        TextBox1.ForeColor = Color.Gray
-        TextBox2.ForeColor = Color.Gray
-        TextBox3.ForeColor = Color.Gray
-        TextBox4.ForeColor = Color.Gray
-        TextBox5.ForeColor = Color.Gray
-        TextBox6.ForeColor = Color.Gray
-        TextBox7.ForeColor = Color.Gray
-        TextBox8.ForeColor = Color.Gray
-        TextBox9.ForeColor = Color.Gray
-        TextBox10.ForeColor = Color.Gray
-        TextBox11.ForeColor = Color.Gray
+        'If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
+        'If TextBox2.Text = Nothing Then TextBox2.Text = "Kind"
+        'If TextBox3.Text = Nothing Then TextBox3.Text = "Rolle"
+        'If TextBox4.Text = Nothing Then TextBox4.Text = "Straße"
+        'If TextBox5.Text = Nothing Then TextBox5.Text = "Telefon"
+        'If TextBox6.Text = Nothing Then TextBox6.Text = "Mail"
+        'If TextBox7.Text = Nothing Then TextBox7.Text = "Sonstiges"
+        'If TextBox8.Text = Nothing Then TextBox8.Text = "Postleitzahl"
+        'If TextBox9.Text = Nothing Then TextBox9.Text = "Ort"
+        'If TextBox10.Text = Nothing Then TextBox10.Text = "Hausnummer"
+        'If TextBox11.Text = Nothing Then TextBox11.Text = "Vorname"
+        'TextBox1.ForeColor = Color.Gray
+        'TextBox2.ForeColor = Color.Gray
+        'TextBox3.ForeColor = Color.Gray
+        'TextBox4.ForeColor = Color.Gray
+        'TextBox5.ForeColor = Color.Gray
+        'TextBox6.ForeColor = Color.Gray
+        'TextBox7.ForeColor = Color.Gray
+        'TextBox8.ForeColor = Color.Gray
+        'TextBox9.ForeColor = Color.Gray
+        'TextBox10.ForeColor = Color.Gray
+        'TextBox11.ForeColor = Color.Gray
 
 
 
     End Sub
 
-    Private Sub TextBox1_click(sender As Object, e As EventArgs) Handles TextBox1.Enter
-        If TextBox1.Text = "Name" Then TextBox1.Clear()
-        TextBox1.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox1_leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
-        If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
-        TextBox1.ForeColor = Color.Gray
-        If TextBox1.Text <> Nothing Then TextBox1.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox2_click(sender As Object, e As EventArgs) Handles TextBox2.Enter
-        If TextBox2.Text = "Kind" Then TextBox2.Clear()
-        TextBox2.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox3_click(sender As Object, e As EventArgs) Handles TextBox3.Enter
-        If TextBox3.Text = "Rolle" Then TextBox3.Clear()
-        TextBox3.ForeColor = Color.Black
-    End Sub
+    'Private Sub TextBox1_click(sender As Object, e As EventArgs) Handles TextBox1.Enter
+    '    If TextBox1.Text = "Name" Then TextBox1.Clear()
+    '    TextBox1.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox1_leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
+    '    If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
+    '    TextBox1.ForeColor = Color.Gray
+    '    If TextBox1.Text <> Nothing Then TextBox1.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox2_click(sender As Object, e As EventArgs) Handles TextBox2.Enter
+    '    If TextBox2.Text = "Kind" Then TextBox2.Clear()
+    '    TextBox2.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox3_click(sender As Object, e As EventArgs) Handles TextBox3.Enter
+    '    If TextBox3.Text = "Rolle" Then TextBox3.Clear()
+    '    TextBox3.ForeColor = Color.Black
+    'End Sub
 
 
-    Private Sub TextBox4_click(sender As Object, e As EventArgs) Handles TextBox4.Enter
-        If TextBox4.Text = "Straße" Then TextBox4.Clear()
-        TextBox4.ForeColor = Color.Black
-    End Sub
+    'Private Sub TextBox4_click(sender As Object, e As EventArgs) Handles TextBox4.Enter
+    '    If TextBox4.Text = "Straße" Then TextBox4.Clear()
+    '    TextBox4.ForeColor = Color.Black
+    'End Sub
 
-    Private Sub TextBox5_click(sender As Object, e As EventArgs) Handles TextBox5.Enter
-        If TextBox5.Text = "Telefon" Then TextBox5.Clear()
-        TextBox5.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox6_click(sender As Object, e As EventArgs) Handles TextBox6.Enter
-        If TextBox6.Text = "Mail" Then TextBox6.Clear()
-        TextBox6.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox7_click(sender As Object, e As EventArgs) Handles TextBox7.Enter
-        If TextBox7.Text = "Sonstiges" Then TextBox7.Clear()
-        TextBox7.ForeColor = Color.Black
-    End Sub
+    'Private Sub TextBox5_click(sender As Object, e As EventArgs) Handles TextBox5.Enter
+    '    If TextBox5.Text = "Telefon" Then TextBox5.Clear()
+    '    TextBox5.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox6_click(sender As Object, e As EventArgs) Handles TextBox6.Enter
+    '    If TextBox6.Text = "Mail" Then TextBox6.Clear()
+    '    TextBox6.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox7_click(sender As Object, e As EventArgs) Handles TextBox7.Enter
+    '    If TextBox7.Text = "Sonstiges" Then TextBox7.Clear()
+    '    TextBox7.ForeColor = Color.Black
+    'End Sub
 
-    Private Sub TextBox8_click(sender As Object, e As EventArgs) Handles TextBox8.Enter
-        If TextBox8.Text = "Postleitzahl" Then TextBox8.Clear()
-        TextBox8.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox9_click(sender As Object, e As EventArgs) Handles TextBox9.Enter
-        If TextBox9.Text = "Ort" Then TextBox9.Clear()
-        TextBox9.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox10_click(sender As Object, e As EventArgs) Handles TextBox10.Enter
-        If TextBox10.Text = "Hausnummer" Then TextBox10.Clear()
-        TextBox10.ForeColor = Color.Black
-    End Sub
-    Private Sub TextBox11_click(sender As Object, e As EventArgs) Handles TextBox11.Enter
-        If TextBox11.Text = "Vorname" Then TextBox11.Clear()
-        TextBox11.ForeColor = Color.Black
-    End Sub
+    'Private Sub TextBox8_click(sender As Object, e As EventArgs) Handles TextBox8.Enter
+    '    If TextBox8.Text = "Postleitzahl" Then TextBox8.Clear()
+    '    TextBox8.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox9_click(sender As Object, e As EventArgs) Handles TextBox9.Enter
+    '    If TextBox9.Text = "Ort" Then TextBox9.Clear()
+    '    TextBox9.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox10_click(sender As Object, e As EventArgs) Handles TextBox10.Enter
+    '    If TextBox10.Text = "Hausnummer" Then TextBox10.Clear()
+    '    TextBox10.ForeColor = Color.Black
+    'End Sub
+    'Private Sub TextBox11_click(sender As Object, e As EventArgs) Handles TextBox11.Enter
+    '    If TextBox11.Text = "Vorname" Then TextBox11.Clear()
+    '    TextBox11.ForeColor = Color.Black
+    'End Sub
 
 
 
@@ -117,18 +117,18 @@
 
 
 
-        a("Ko_Name") = String.Concat(TextBox11.Text, " ", TextBox1.Text)
+        a("Ko_Name") = String.Concat(PlatzhalterText2.Text, " ", PlatzhalterText1.Text)
 
         ' a("Geburtsdatum") = CDate(TextBox2.Text)
 
-        a("Rolle") = TextBox3.Text
-        a("Straße") = TextBox4.Text
-        a("Telefon") = TextBox5.Text
-        a("Mail") = TextBox6.Text
-        a("Sonstiges") = TextBox7.Text
-        a("Ort") = TextBox9.Text
-        a("Hausnummer") = TextBox10.Text
-        a("PLZ") = TextBox8.Text
+        a("Rolle") = PlatzhalterText3.Text
+        a("Straße") = PlatzhalterText10.Text
+        a("Telefon") = PlatzhalterText5.Text
+        a("Mail") = PlatzhalterText6.Text
+        a("Sonstiges") = PlatzhalterText7.Text
+        a("Ort") = PlatzhalterText9.Text
+        a("Hausnummer") = PlatzhalterText11.Text
+        a("PLZ") = PlatzhalterText8.Text
 
         Me.DataSet1.Kontakte.AddKontakteRow(a)
 
@@ -159,7 +159,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindKontakte.NewRow()
 
-        b("Ko_Name") = String.Concat(TextBox11.Text, " ", TextBox1.Text)
+        b("Ko_Name") = String.Concat(PlatzhalterText2.Text, " ", PlatzhalterText1.Text)
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindKontakte.AddKindKontakteRow(b)
         Console.WriteLine("2")
