@@ -1,6 +1,9 @@
 ﻿Public Class F_Aaliyah
 
 
+
+
+
     Private Sub F_Aaliyah_Load(sender As Object, e As EventArgs) Handles Me.Load
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
@@ -17,16 +20,16 @@
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kontakte". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KontakteTableAdapter.Fill(Me.DataSet1.Kontakte)
         If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
-        If TextBox2.Text = Nothing Then TextBox2.Text = "Kind"
+        If TextBox2.Text = Nothing Then TextBox2.Text = "Vorname"
         If TextBox3.Text = Nothing Then TextBox3.Text = "Rolle"
         If TextBox4.Text = Nothing Then TextBox4.Text = "Straße"
-        If TextBox5.Text = Nothing Then TextBox5.Text = "Telefon"
-        If TextBox6.Text = Nothing Then TextBox6.Text = "Mail"
-        If TextBox7.Text = Nothing Then TextBox7.Text = "Sonstiges"
-        If TextBox8.Text = Nothing Then TextBox8.Text = "Postleitzahl"
-        If TextBox9.Text = Nothing Then TextBox9.Text = "Ort"
-        If TextBox10.Text = Nothing Then TextBox10.Text = "Hausnummer"
-        If TextBox11.Text = Nothing Then TextBox11.Text = "Vorname"
+        If TextBox5.Text = Nothing Then TextBox5.Text = "Hausnummer"
+        If TextBox6.Text = Nothing Then TextBox6.Text = "Postleitzahl"
+        If TextBox7.Text = Nothing Then TextBox7.Text = "Ort"
+        If TextBox8.Text = Nothing Then TextBox8.Text = "Telefon"
+        If TextBox9.Text = Nothing Then TextBox9.Text = "Mail"
+        If TextBox10.Text = Nothing Then TextBox10.Text = "Kind"
+        If TextBox11.Text = Nothing Then TextBox11.Text = "Sonstiges"
         TextBox1.ForeColor = Color.Gray
         TextBox2.ForeColor = Color.Gray
         TextBox3.ForeColor = Color.Gray
@@ -50,15 +53,25 @@
     Private Sub TextBox1_leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
         If TextBox1.Text = Nothing Then TextBox1.Text = "Name"
         TextBox1.ForeColor = Color.Gray
-        If TextBox1.Text <> Nothing Then TextBox1.ForeColor = Color.Black
+        If TextBox1.Text <> "Name" Then TextBox1.ForeColor = Color.Black
     End Sub
     Private Sub TextBox2_click(sender As Object, e As EventArgs) Handles TextBox2.Enter
-        If TextBox2.Text = "Kind" Then TextBox2.Clear()
+        If TextBox2.Text = "Vorname" Then TextBox2.Clear()
         TextBox2.ForeColor = Color.Black
+    End Sub
+    Private Sub TextBox2_leave(sender As Object, e As EventArgs) Handles TextBox2.Leave
+        If TextBox2.Text = Nothing Then TextBox2.Text = "Vorname"
+        TextBox2.ForeColor = Color.Gray
+        If TextBox2.Text <> "Vorname" Then TextBox2.ForeColor = Color.Black
     End Sub
     Private Sub TextBox3_click(sender As Object, e As EventArgs) Handles TextBox3.Enter
         If TextBox3.Text = "Rolle" Then TextBox3.Clear()
         TextBox3.ForeColor = Color.Black
+    End Sub
+    Private Sub TextBox3_leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
+        If TextBox3.Text = Nothing Then TextBox3.Text = "Rolle"
+        TextBox3.ForeColor = Color.Gray
+        If TextBox3.Text <> "Rolle" Then TextBox3.ForeColor = Color.Black
     End Sub
 
 

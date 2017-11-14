@@ -55,7 +55,7 @@ Partial Class F_Aaliyah
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(292, 262)
+        Me.Button1.Location = New System.Drawing.Point(277, 178)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 49)
         Me.Button1.TabIndex = 1
@@ -64,63 +64,63 @@ Partial Class F_Aaliyah
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 77)
+        Me.TextBox2.Location = New System.Drawing.Point(118, 51)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 0
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(12, 103)
+        Me.TextBox3.Location = New System.Drawing.Point(12, 77)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 0
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 233)
+        Me.TextBox4.Location = New System.Drawing.Point(12, 103)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
         Me.TextBox4.TabIndex = 0
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(12, 129)
+        Me.TextBox5.Location = New System.Drawing.Point(118, 103)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(100, 20)
         Me.TextBox5.TabIndex = 0
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(12, 155)
+        Me.TextBox6.Location = New System.Drawing.Point(12, 129)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 20)
         Me.TextBox6.TabIndex = 0
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(12, 181)
+        Me.TextBox7.Location = New System.Drawing.Point(118, 129)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 0
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(12, 207)
+        Me.TextBox8.Location = New System.Drawing.Point(12, 155)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(100, 20)
         Me.TextBox8.TabIndex = 2
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(118, 207)
+        Me.TextBox9.Location = New System.Drawing.Point(12, 181)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(100, 20)
         Me.TextBox9.TabIndex = 3
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(118, 233)
+        Me.TextBox10.Location = New System.Drawing.Point(12, 207)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(100, 20)
         Me.TextBox10.TabIndex = 4
@@ -167,6 +167,7 @@ Partial Class F_Aaliyah
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
@@ -181,7 +182,7 @@ Partial Class F_Aaliyah
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(118, 51)
+        Me.TextBox11.Location = New System.Drawing.Point(12, 233)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(100, 20)
         Me.TextBox11.TabIndex = 5
@@ -191,18 +192,18 @@ Partial Class F_Aaliyah
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(867, 428)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.TextBox11)
+        Me.Controls.Add(Me.Button1)
         Me.Name = "F_Aaliyah"
         Me.Text = "neuer Kontakt"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()

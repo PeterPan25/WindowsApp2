@@ -1,9 +1,4 @@
-﻿'Public Function Platzhalter()
-'    Dim x As Integer
-'    For x = 1 To x + 1
-'        If TextBox(x).Text = Nothing Then TextBox(x).Text = "Name"
-'    Next
-'End Function
+﻿
 
 
 Public Class Form1
@@ -33,7 +28,6 @@ Public Class Form1
         "Tagesbericht",
         "Formulare",
         "hinzufügen"}
-
 
 
 
