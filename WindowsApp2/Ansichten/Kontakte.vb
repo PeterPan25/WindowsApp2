@@ -25,6 +25,10 @@
         F_Hans.Show()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        F_Peter.Show()
+    End Sub
+
 
 
     'Private Sub KontakteBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MyBaseBindingNavigatorSaveItem.Click

@@ -1,4 +1,5 @@
 ﻿Public Class F_Aaliyah
+    Dim name3 As String() = {"a"}
 
 
     Private Sub F_Aaliyah_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -30,37 +31,52 @@
         a = Me.DataSet1.Kontakte.NewRow()
 
 
+        Try
+            a("Ko_Name") = String.Concat(PlatzhalterText2.Text, " ", PlatzhalterText1.Text)
+
+            ' a("Geburtsdatum") = CDate(TextBox2.Text)
+
+            a("Rolle") = PlatzhalterText3.Text
+            a("Straße") = PlatzhalterText10.Text
+            a("Telefon") = PlatzhalterText5.Text
+            a("Mail") = PlatzhalterText6.Text
+            a("Sonstiges") = PlatzhalterText7.Text
+            a("Ort") = PlatzhalterText9.Text
+            a("Hausnummer") = PlatzhalterText11.Text
+            a("PLZ") = PlatzhalterText8.Text
+
+            Me.DataSet1.Kontakte.AddKontakteRow(a)
+
+            Console.WriteLine("1")
+            'data2.AddKontakteRow(a)
+            'data3.AddKindKontakteRow(b)
+
+
+            Me.Validate()
+
+            'Me.KontakteTableAdapter.Update(data2)
+            'Me.KindKontakteTableAdapter.Update(data3)
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            Form1.Kontakte1.Daten_laden()
+            Me.daten_anlegen()
+            ' Form1.Kontakte1.KontakteDataGridView.Update()
+        Catch ex As Exception
+
+            ReDim name3(Me.DataSet1.Kontakte.Rows.Count - 1)
+
+
+            For z = 0 To (Me.DataSet1.Kontakte.Rows.Count - 1)
+                name3(z) = Me.DataSet1.Kontakte.Rows(z)("Ko_Name")
+                If a("Ko_Name") = name3(z) Then
+                    daten_anlegen()
+                End If
+            Next
+
+
+        End Try
 
 
 
-        a("Ko_Name") = String.Concat(PlatzhalterText2.Text, " ", PlatzhalterText1.Text)
-
-        ' a("Geburtsdatum") = CDate(TextBox2.Text)
-
-        a("Rolle") = PlatzhalterText3.Text
-        a("Straße") = PlatzhalterText10.Text
-        a("Telefon") = PlatzhalterText5.Text
-        a("Mail") = PlatzhalterText6.Text
-        a("Sonstiges") = PlatzhalterText7.Text
-        a("Ort") = PlatzhalterText9.Text
-        a("Hausnummer") = PlatzhalterText11.Text
-        a("PLZ") = PlatzhalterText8.Text
-
-        Me.DataSet1.Kontakte.AddKontakteRow(a)
-
-        Console.WriteLine("1")
-        'data2.AddKontakteRow(a)
-        'data3.AddKindKontakteRow(b)
-
-
-        Me.Validate()
-
-        'Me.KontakteTableAdapter.Update(data2)
-        'Me.KindKontakteTableAdapter.Update(data3)
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Form1.Kontakte1.Daten_laden()
-        Me.daten_anlegen()
-        ' Form1.Kontakte1.KontakteDataGridView.Update()
 
 
     End Sub
@@ -103,6 +119,7 @@
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
     End Sub
+
     'Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
     'Dim item As New ListViewItem
     'With Kontakte.ListView1.Items.add(Me.TextBox1.Text)
