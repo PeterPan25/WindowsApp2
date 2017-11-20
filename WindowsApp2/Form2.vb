@@ -47,19 +47,16 @@
 
             Me.DataSet1.Kontakte.AddKontakteRow(a)
 
-            Console.WriteLine("1")
-            'data2.AddKontakteRow(a)
-            'data3.AddKindKontakteRow(b)
+
 
 
             Me.Validate()
 
-            'Me.KontakteTableAdapter.Update(data2)
-            'Me.KindKontakteTableAdapter.Update(data3)
+
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
             Form1.Kontakte1.Daten_laden()
             Me.daten_anlegen()
-            ' Form1.Kontakte1.KontakteDataGridView.Update()
+
         Catch ex As Exception
 
             ReDim name3(Me.DataSet1.Kontakte.Rows.Count - 1)
