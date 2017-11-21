@@ -4,40 +4,33 @@ Public Class F_Peter
     Dim name3 As String() = {"a"}
 
     Private Sub DatenÄndern()
-        '  Dim a As DataRow = DataSet1.Kontakte.FindByKo_Name(ComboBox1.Text)
-        Dim z As Integer = 0
-        Dim a As DataRow
+
+        Dim a As DataSet1.KontakteRow
         a = DataSet1.Kontakte.FindByKo_Name(ComboBox1.Text)
-        Dim name1 As String = ComboBox1.Text
+
+        Try
+            ' kein Unterschied ob a.Ort oder a("Ort")
+
+            a.Hausnummer = PlatzhalterText4.Text
+            a.Ort = PlatzhalterText6.Text
+            a("Rolle") = PlatzhalterText7.Text
+            a("Straße") = PlatzhalterText3.Text
+            a("Telefon") = PlatzhalterText8.Text
+            a("Mail") = PlatzhalterText9.Text
+            a("Sonstiges") = PlatzhalterText10.Text
+            '   a("Ort") = PlatzhalterText6.Text
+            '  a("Hausnummer") = PlatzhalterText4.Text
+            a("PLZ") = PlatzhalterText5.Text
+
+            Me.KontakteTableAdapter.Update(Me.DataSet1.Kontakte)
+        Catch ex As Exception
+            MsgBox("Nöhö")
+
+        End Try
 
 
 
-        'For z = 0 To (DataSet1.Kontakte.Rows.Count - 1)
-        '    If name1 = DataSet1.Kontakte.Rows(z)("Ko_Name") Then
-        ' Me.DataSet1.Kontakte.Columns("Hausnummer").Expression = PlatzhalterText4.ToString()
-        'a("Hausnummer") = PlatzhalterText4.Text
-        PlatzhalterText1.Text = a("Ko_Name").ToString
-        'Me.DataSet1.Kontakte.AcceptChanges()
-        '    End If
-        'Next
 
-        'a("Rolle") = PlatzhalterText7.Text
-        'a("Straße") = PlatzhalterText3.Text
-        'a("Telefon") = PlatzhalterText8.Text
-        'a("Mail") = PlatzhalterText9.Text
-        'a("Sonstiges") = PlatzhalterText10.Text
-        'a("Ort") = PlatzhalterText6.Text
-        'a("Hausnummer") = PlatzhalterText4.Text
-        'a("PLZ") = PlatzhalterText5.Text
-        Me.DataSet1.AcceptChanges()
-        Me.KontakteTableAdapter.Update(Me.DataSet1.Kontakte)
-
-
-
-        Me.Validate()
-
-
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
         Form1.Kontakte1.Daten_laden()
         Me.Close()
 
@@ -69,9 +62,7 @@ Public Class F_Peter
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        'Dim name As String
-        '' Dim testzeile As DataRow = DataSet1.TestDataTable.Select
-        'name = ComboBox1.Text
+
         DatenAnzeigen()
 
     End Sub
