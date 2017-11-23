@@ -55,7 +55,7 @@
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
             Form1.Kontakte1.Daten_laden()
-            Me.daten_anlegen()
+            Me.Daten_anlegen()
 
         Catch ex As Exception
 
@@ -65,7 +65,7 @@
             For z = 0 To (Me.DataSet1.Kontakte.Rows.Count - 1)
                 name3(z) = Me.DataSet1.Kontakte.Rows(z)("Ko_Name")
                 If a("Ko_Name") = name3(z) Then
-                    daten_anlegen()
+                    Daten_anlegen()
                 End If
             Next
 
@@ -84,7 +84,7 @@
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
     End Sub
-    Private Sub daten_anlegen()
+    Private Sub Daten_anlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindKontakte.NewRow()
 

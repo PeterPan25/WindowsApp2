@@ -24,11 +24,6 @@ Partial Class Krankenhaus
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Überschrift = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.KindKontakteDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,7 +34,20 @@ Partial Class Krankenhaus
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.KrankenhausBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KrankenhausTableAdapter = New WindowsApp2.DataSet1TableAdapters.KrankenhausTableAdapter()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.KrankenhausDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -48,6 +56,7 @@ Partial Class Krankenhaus
         CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KrankenhausBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KrankenhausDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Überschrift
@@ -61,62 +70,6 @@ Partial Class Krankenhaus
         Me.Überschrift.Text = "Krankenhaus"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 1, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(835, 135)
-        Me.TableLayoutPanel1.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(161, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Station"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 67)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(161, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Anschrift"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(170, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.TextBox2.Location = New System.Drawing.Point(170, 70)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 62)
-        Me.TextBox2.TabIndex = 3
-        '
         'SplitContainer1
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -127,12 +80,19 @@ Partial Class Krankenhaus
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TableLayoutPanel1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText6)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText5)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText4)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText3)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Überschrift)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.AutoScroll = True
+        Me.SplitContainer1.Panel2.Controls.Add(Me.KrankenhausDataGridView)
         Me.SplitContainer1.Panel2.Controls.Add(Me.KindKontakteDataGridView)
         Me.SplitContainer1.Size = New System.Drawing.Size(835, 548)
         Me.SplitContainer1.SplitterDistance = 159
@@ -146,7 +106,7 @@ Partial Class Krankenhaus
         Me.KindKontakteDataGridView.DataSource = Me.KindKontakteBindingSource
         Me.KindKontakteDataGridView.Location = New System.Drawing.Point(29, 19)
         Me.KindKontakteDataGridView.Name = "KindKontakteDataGridView"
-        Me.KindKontakteDataGridView.Size = New System.Drawing.Size(642, 322)
+        Me.KindKontakteDataGridView.Size = New System.Drawing.Size(480, 111)
         Me.KindKontakteDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
@@ -216,6 +176,116 @@ Partial Class Krankenhaus
         '
         Me.KrankenhausTableAdapter.ClearBeforeFill = True
         '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(4, 44)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = Nothing
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(156, 20)
+        Me.PlatzhalterText1.TabIndex = 6
+        Me.PlatzhalterText1.Text = "Krankenhaus"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(4, 85)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = Nothing
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(156, 20)
+        Me.PlatzhalterText2.TabIndex = 7
+        Me.PlatzhalterText2.Text = "Station"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(166, 44)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = Nothing
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText3.TabIndex = 8
+        Me.PlatzhalterText3.Text = "Postleitzahl"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(284, 44)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = Nothing
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText4.TabIndex = 9
+        Me.PlatzhalterText4.Text = "Ort"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(436, 44)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = Nothing
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(204, 20)
+        Me.PlatzhalterText5.TabIndex = 10
+        Me.PlatzhalterText5.Text = "Aufenthaltsgrund"
+        '
+        'PlatzhalterText6
+        '
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(166, 85)
+        Me.PlatzhalterText6.Name = "PlatzhalterText6"
+        Me.PlatzhalterText6.PlatzHalterText = Nothing
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText6.TabIndex = 11
+        Me.PlatzhalterText6.Text = "Straße & HausNr."
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(565, 83)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Speichern"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'KrankenhausDataGridView
+        '
+        Me.KrankenhausDataGridView.AutoGenerateColumns = False
+        Me.KrankenhausDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.KrankenhausDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.KrankenhausDataGridView.DataSource = Me.KrankenhausBindingSource
+        Me.KrankenhausDataGridView.Location = New System.Drawing.Point(29, 147)
+        Me.KrankenhausDataGridView.Name = "KrankenhausDataGridView"
+        Me.KrankenhausDataGridView.Size = New System.Drawing.Size(667, 220)
+        Me.KrankenhausDataGridView.TabIndex = 1
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Kh_Name"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Kh_Name"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Ort"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Ort"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Plz"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Plz"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Station"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Station"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "Strasse"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "Strasse"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "Aufenthaltsgrund"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "Aufenthaltsgrund"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
         'Krankenhaus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -223,9 +293,8 @@ Partial Class Krankenhaus
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Krankenhaus"
         Me.Size = New System.Drawing.Size(835, 548)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -233,6 +302,7 @@ Partial Class Krankenhaus
         CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KrankenhausBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KrankenhausDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -250,11 +320,6 @@ Partial Class Krankenhaus
     Friend WithEvents BindingNavigatorSeparator2 As ToolStripSeparator
     Friend WithEvents KindKontakteBindingNavigatorSaveItem As ToolStripButton
     Friend WithEvents Überschrift As Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents KindKontakteBindingSource As BindingSource
@@ -266,4 +331,18 @@ Partial Class Krankenhaus
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents KrankenhausBindingSource As BindingSource
     Friend WithEvents KrankenhausTableAdapter As DataSet1TableAdapters.KrankenhausTableAdapter
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PlatzhalterText6 As PlatzhalterText
+    Friend WithEvents PlatzhalterText5 As PlatzhalterText
+    Friend WithEvents PlatzhalterText4 As PlatzhalterText
+    Friend WithEvents PlatzhalterText3 As PlatzhalterText
+    Friend WithEvents PlatzhalterText2 As PlatzhalterText
+    Friend WithEvents PlatzhalterText1 As PlatzhalterText
+    Friend WithEvents KrankenhausDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
 End Class
