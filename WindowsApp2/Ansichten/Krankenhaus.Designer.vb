@@ -30,22 +30,24 @@ Partial Class Krankenhaus
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.DataSet1 = New WindowsApp2.DataSet1()
-        Me.KindKontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KindKontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKontakteTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.KindKontakteDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.KindKontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
+        Me.KindKontakteTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKontakteTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.KrankenhausBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KrankenhausTableAdapter = New WindowsApp2.DataSet1TableAdapters.KrankenhausTableAdapter()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindKontakteDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KrankenhausBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Überschrift
@@ -136,15 +138,38 @@ Partial Class Krankenhaus
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
         '
-        'DataSet1
+        'KindKontakteDataGridView
         '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.KindKontakteDataGridView.AutoGenerateColumns = False
+        Me.KindKontakteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.KindKontakteDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
+        Me.KindKontakteDataGridView.DataSource = Me.KindKontakteBindingSource
+        Me.KindKontakteDataGridView.Location = New System.Drawing.Point(29, 19)
+        Me.KindKontakteDataGridView.Name = "KindKontakteDataGridView"
+        Me.KindKontakteDataGridView.Size = New System.Drawing.Size(642, 322)
+        Me.KindKontakteDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Ko_Name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Ko_Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
         '
         'KindKontakteBindingSource
         '
         Me.KindKontakteBindingSource.DataMember = "KindKontakte"
         Me.KindKontakteBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'KindKontakteTableAdapter
         '
@@ -178,37 +203,18 @@ Partial Class Krankenhaus
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'KindKontakteDataGridView
+        'KrankenhausBindingSource
         '
-        Me.KindKontakteDataGridView.AutoGenerateColumns = False
-        Me.KindKontakteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.KindKontakteDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
-        Me.KindKontakteDataGridView.DataSource = Me.KindKontakteBindingSource
-        Me.KindKontakteDataGridView.Location = New System.Drawing.Point(29, 19)
-        Me.KindKontakteDataGridView.Name = "KindKontakteDataGridView"
-        Me.KindKontakteDataGridView.Size = New System.Drawing.Size(642, 322)
-        Me.KindKontakteDataGridView.TabIndex = 0
+        Me.KrankenhausBindingSource.DataMember = "Krankenhaus"
+        Me.KrankenhausBindingSource.DataSource = Me.DataSet1
         '
-        'DataGridViewTextBoxColumn1
+        'KrankenhausTableAdapter
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Ko_Name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Ko_Name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Rolle"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Rolle"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.KrankenhausTableAdapter.ClearBeforeFill = True
         '
         'Krankenhaus
         '
@@ -223,9 +229,10 @@ Partial Class Krankenhaus
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindKontakteDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindKontakteBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KrankenhausBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -257,4 +264,6 @@ Partial Class Krankenhaus
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents KrankenhausBindingSource As BindingSource
+    Friend WithEvents KrankenhausTableAdapter As DataSet1TableAdapters.KrankenhausTableAdapter
 End Class
