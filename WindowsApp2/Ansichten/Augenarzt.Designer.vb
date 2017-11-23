@@ -23,35 +23,30 @@ Partial Class Augenarzt
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.AugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.AugenarztTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.AugenarztDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AugenarztDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 0)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(920, 387)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
         '
         'Überschrift
         '
@@ -74,72 +69,19 @@ Partial Class Augenarzt
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TableLayoutPanel1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText4)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText3)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Überschrift)
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.RichTextBox1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.AugenarztDataGridView)
         Me.SplitContainer1.Size = New System.Drawing.Size(920, 550)
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 6
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.AutoScroll = True
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 1, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(920, 135)
-        Me.TableLayoutPanel1.TabIndex = 6
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(270, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Name"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 70)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(270, 18)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Anschrift"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(279, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(279, 73)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 3
         '
         'DataSet1
         '
@@ -187,6 +129,86 @@ Partial Class Augenarzt
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
+        'AugenarztDataGridView
+        '
+        Me.AugenarztDataGridView.AutoGenerateColumns = False
+        Me.AugenarztDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.AugenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.AugenarztDataGridView.DataSource = Me.AugenarztBindingSource
+        Me.AugenarztDataGridView.Location = New System.Drawing.Point(47, 41)
+        Me.AugenarztDataGridView.Name = "AugenarztDataGridView"
+        Me.AugenarztDataGridView.Size = New System.Drawing.Size(502, 244)
+        Me.AugenarztDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "A_Name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "A_Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Ort"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Ort"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Plz"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Plz"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Strasse"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Strasse"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(53, 44)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = Nothing
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText1.TabIndex = 6
+        Me.PlatzhalterText1.Text = "Name"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(53, 70)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = Nothing
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText2.TabIndex = 7
+        Me.PlatzhalterText2.Text = "Postleitzahl"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(159, 70)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = Nothing
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText3.TabIndex = 8
+        Me.PlatzhalterText3.Text = "Ort"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(265, 70)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = Nothing
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText4.TabIndex = 9
+        Me.PlatzhalterText4.Text = "Straße und HausNr"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(78, 123)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Speichern"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Augenarzt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,27 +217,30 @@ Partial Class Augenarzt
         Me.Name = "Augenarzt"
         Me.Size = New System.Drawing.Size(920, 550)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AugenarztDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Überschrift As Label
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents AugenarztBindingSource As BindingSource
     Friend WithEvents AugenarztTableAdapter As DataSet1TableAdapters.AugenarztTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents Button1 As Button
+    Friend WithEvents PlatzhalterText4 As PlatzhalterText
+    Friend WithEvents PlatzhalterText3 As PlatzhalterText
+    Friend WithEvents PlatzhalterText2 As PlatzhalterText
+    Friend WithEvents PlatzhalterText1 As PlatzhalterText
+    Friend WithEvents AugenarztDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
 End Class
