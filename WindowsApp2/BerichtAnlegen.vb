@@ -183,7 +183,6 @@
                 TextBox3.Text = r1(k)(1)
                 TextBox4.Text = r1(k)(5)
             Catch ex As Exception
-                Label1.Text = "Henner mieft"
             End Try
 
 
@@ -211,7 +210,6 @@
                 TextBox4.Text = r1(k)(5)
 
             Catch ex As Exception
-                Label1.Text = "Henner mieft"
             End Try
 
 
@@ -268,7 +266,6 @@
                 TextBox4.Text = r1(k)(5)
 
             Catch ex As Exception
-                Label1.Text = "Henner mieft"
             End Try
 
 
@@ -296,7 +293,6 @@
                 TextBox4.Text = r1(k)(5)
 
             Catch ex As Exception
-                Label1.Text = "Henner mieft"
             End Try
 
 
@@ -323,7 +319,6 @@
                 TextBox4.Text = r1(k)(5)
 
             Catch ex As Exception
-                Label1.Text = "Henner mieft"
             End Try
 
 
@@ -350,7 +345,6 @@
                 TextBox4.Text = r1(k)(5)
 
             Catch ex As Exception
-                Label1.Text = "Henner mieft"
             End Try
 
 
