@@ -42,7 +42,7 @@
         ArztArt2()
 
     End Sub
-
+    ' Je nach Auswahl bei welcher Art Arzt das Kind war, kann man folgend die Praxis/den Arzt in der nächsten Box auswählen
     Private Sub ArztArt()
         Dim ArtText As String = ComboBox1.Text
 
@@ -124,7 +124,7 @@
 
 
     End Sub
-
+    'Bei Auswahl eines Arztes/einer Praxis werden die dazugehörigen Kontaktdaten in die Textfelder geladen
     Private Sub ArztArt2()
         Dim ArtText As String = ComboBox1.Text
 
@@ -162,7 +162,7 @@
 
 
     End Sub
-
+    ' Kontaktdaten der verschiedenen Ärzte
     Private Sub AArztDaten()
         Dim n1 As String
         Dim r1() As DataRow
