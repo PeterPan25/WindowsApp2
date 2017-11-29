@@ -25,8 +25,13 @@ Partial Class Augenarzt
         Me.components = New System.ComponentModel.Container()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.DataSet1 = New WindowsApp2.DataSet1()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.AugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.AugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.AugenarztTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.AugenarztDataGridView = New System.Windows.Forms.DataGridView()
@@ -34,17 +39,13 @@ Partial Class Augenarzt
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -83,15 +84,68 @@ Partial Class Augenarzt
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 6
         '
-        'DataSet1
+        'Button1
         '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.Button1.Location = New System.Drawing.Point(78, 123)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Speichern"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(265, 70)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = Nothing
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText4.TabIndex = 9
+        Me.PlatzhalterText4.Text = "Straße und HausNr"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(159, 70)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = Nothing
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText3.TabIndex = 8
+        Me.PlatzhalterText3.Text = "Ort"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(53, 70)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = Nothing
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText2.TabIndex = 7
+        Me.PlatzhalterText2.Text = "Postleitzahl"
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(53, 44)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = Nothing
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText1.TabIndex = 6
+        Me.PlatzhalterText1.Text = "Name"
         '
         'AugenarztBindingSource
         '
         Me.AugenarztBindingSource.DataMember = "Augenarzt"
         Me.AugenarztBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'AugenarztTableAdapter
         '
@@ -133,11 +187,11 @@ Partial Class Augenarzt
         '
         Me.AugenarztDataGridView.AutoGenerateColumns = False
         Me.AugenarztDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AugenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.AugenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.AugenarztDataGridView.DataSource = Me.AugenarztBindingSource
-        Me.AugenarztDataGridView.Location = New System.Drawing.Point(47, 41)
+        Me.AugenarztDataGridView.Location = New System.Drawing.Point(89, 74)
         Me.AugenarztDataGridView.Name = "AugenarztDataGridView"
-        Me.AugenarztDataGridView.Size = New System.Drawing.Size(502, 244)
+        Me.AugenarztDataGridView.Size = New System.Drawing.Size(587, 220)
         Me.AugenarztDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
@@ -164,50 +218,11 @@ Partial Class Augenarzt
         Me.DataGridViewTextBoxColumn4.HeaderText = "Strasse"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'PlatzhalterText1
+        'DataGridViewTextBoxColumn5
         '
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(53, 44)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = Nothing
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText1.TabIndex = 6
-        Me.PlatzhalterText1.Text = "Name"
-        '
-        'PlatzhalterText2
-        '
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(53, 70)
-        Me.PlatzhalterText2.Name = "PlatzhalterText2"
-        Me.PlatzhalterText2.PlatzHalterText = Nothing
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText2.TabIndex = 7
-        Me.PlatzhalterText2.Text = "Postleitzahl"
-        '
-        'PlatzhalterText3
-        '
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(159, 70)
-        Me.PlatzhalterText3.Name = "PlatzhalterText3"
-        Me.PlatzhalterText3.PlatzHalterText = Nothing
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText3.TabIndex = 8
-        Me.PlatzhalterText3.Text = "Ort"
-        '
-        'PlatzhalterText4
-        '
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(265, 70)
-        Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = Nothing
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText4.TabIndex = 9
-        Me.PlatzhalterText4.Text = "Straße und HausNr"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(78, 123)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Speichern"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Art"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Art"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'Augenarzt
         '
@@ -221,8 +236,8 @@ Partial Class Augenarzt
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AugenarztDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -243,4 +258,5 @@ Partial Class Augenarzt
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class

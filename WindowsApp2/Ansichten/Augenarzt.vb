@@ -9,6 +9,8 @@
             a("Plz") = PlatzhalterText2.Text
             a("Ort") = PlatzhalterText3.Text
             a("Strasse") = PlatzhalterText4.Text
+            a("Art") = Überschrift.Text
+
 
             Me.DataSet1.Augenarzt.AddAugenarztRow(a)
             Me.AugenarztTableAdapter.Update(Me.DataSet1)

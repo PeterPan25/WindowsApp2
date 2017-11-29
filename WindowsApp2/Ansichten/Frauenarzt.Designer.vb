@@ -24,9 +24,14 @@ Partial Class Frauenarzt
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.Überschrift = New System.Windows.Forms.Label()
-        Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.FrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.FrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.FrauenarztTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.FrauenarztDataGridView = New System.Windows.Forms.DataGridView()
@@ -34,17 +39,13 @@ Partial Class Frauenarzt
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,6 +74,59 @@ Partial Class Frauenarzt
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(41, 129)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 10
+        Me.Button1.Text = "Speichern"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(253, 88)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = Nothing
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText4.TabIndex = 9
+        Me.PlatzhalterText4.Text = "Straße & HausNr"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(147, 87)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = Nothing
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText3.TabIndex = 8
+        Me.PlatzhalterText3.Text = "Ort"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(41, 88)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = Nothing
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText2.TabIndex = 7
+        Me.PlatzhalterText2.Text = "Postleitzahl"
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(41, 53)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = Nothing
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText1.TabIndex = 6
+        Me.PlatzhalterText1.Text = "Name"
+        '
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
@@ -84,15 +138,15 @@ Partial Class Frauenarzt
         Me.Überschrift.Text = "Frauenarzt"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'FrauenarztBindingSource
         '
         Me.FrauenarztBindingSource.DataMember = "Frauenarzt"
         Me.FrauenarztBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'FrauenarztTableAdapter
         '
@@ -134,11 +188,11 @@ Partial Class Frauenarzt
         '
         Me.FrauenarztDataGridView.AutoGenerateColumns = False
         Me.FrauenarztDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.FrauenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
+        Me.FrauenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.FrauenarztDataGridView.DataSource = Me.FrauenarztBindingSource
-        Me.FrauenarztDataGridView.Location = New System.Drawing.Point(41, 18)
+        Me.FrauenarztDataGridView.Location = New System.Drawing.Point(79, 41)
         Me.FrauenarztDataGridView.Name = "FrauenarztDataGridView"
-        Me.FrauenarztDataGridView.Size = New System.Drawing.Size(580, 248)
+        Me.FrauenarztDataGridView.Size = New System.Drawing.Size(552, 220)
         Me.FrauenarztDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
@@ -165,50 +219,11 @@ Partial Class Frauenarzt
         Me.DataGridViewTextBoxColumn4.HeaderText = "Strasse"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         '
-        'PlatzhalterText1
+        'DataGridViewTextBoxColumn5
         '
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(41, 53)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = Nothing
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText1.TabIndex = 6
-        Me.PlatzhalterText1.Text = "Name"
-        '
-        'PlatzhalterText2
-        '
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(41, 88)
-        Me.PlatzhalterText2.Name = "PlatzhalterText2"
-        Me.PlatzhalterText2.PlatzHalterText = Nothing
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText2.TabIndex = 7
-        Me.PlatzhalterText2.Text = "Postleitzahl"
-        '
-        'PlatzhalterText3
-        '
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(147, 87)
-        Me.PlatzhalterText3.Name = "PlatzhalterText3"
-        Me.PlatzhalterText3.PlatzHalterText = Nothing
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText3.TabIndex = 8
-        Me.PlatzhalterText3.Text = "Ort"
-        '
-        'PlatzhalterText4
-        '
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(253, 88)
-        Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = Nothing
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText4.TabIndex = 9
-        Me.PlatzhalterText4.Text = "Straße & HausNr"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(41, 129)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Speichern"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Art"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Art"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
         'Frauenarzt
         '
@@ -222,8 +237,8 @@ Partial Class Frauenarzt
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrauenarztDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -245,4 +260,5 @@ Partial Class Frauenarzt
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
 End Class
