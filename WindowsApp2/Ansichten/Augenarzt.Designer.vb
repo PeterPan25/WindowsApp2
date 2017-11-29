@@ -34,12 +34,14 @@ Partial Class Augenarzt
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.AugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.AugenarztTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
         Me.AugenarztDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -70,6 +72,7 @@ Partial Class Augenarzt
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText5)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PlatzhalterText3)
@@ -155,6 +158,7 @@ Partial Class Augenarzt
         '
         Me.TableAdapterManager.AugenarztTableAdapter = Me.AugenarztTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -183,15 +187,26 @@ Partial Class Augenarzt
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(159, 44)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Telefon"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText5.TabIndex = 11
+        Me.PlatzhalterText5.Text = "Telefon"
+        '
         'AugenarztDataGridView
         '
         Me.AugenarztDataGridView.AutoGenerateColumns = False
         Me.AugenarztDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.AugenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.AugenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.AugenarztDataGridView.DataSource = Me.AugenarztBindingSource
-        Me.AugenarztDataGridView.Location = New System.Drawing.Point(89, 74)
+        Me.AugenarztDataGridView.Location = New System.Drawing.Point(65, 73)
         Me.AugenarztDataGridView.Name = "AugenarztDataGridView"
-        Me.AugenarztDataGridView.Size = New System.Drawing.Size(587, 220)
+        Me.AugenarztDataGridView.Size = New System.Drawing.Size(642, 220)
         Me.AugenarztDataGridView.TabIndex = 0
         '
         'DataGridViewTextBoxColumn1
@@ -224,6 +239,12 @@ Partial Class Augenarzt
         Me.DataGridViewTextBoxColumn5.HeaderText = "Art"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Telefon"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Telefon"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
         'Augenarzt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -253,10 +274,12 @@ Partial Class Augenarzt
     Friend WithEvents PlatzhalterText3 As PlatzhalterText
     Friend WithEvents PlatzhalterText2 As PlatzhalterText
     Friend WithEvents PlatzhalterText1 As PlatzhalterText
+    Friend WithEvents PlatzhalterText5 As PlatzhalterText
     Friend WithEvents AugenarztDataGridView As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
 End Class

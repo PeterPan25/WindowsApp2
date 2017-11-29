@@ -10,6 +10,8 @@
             a("Ort") = PlatzhalterText3.Text
             a("Strasse") = PlatzhalterText4.Text
             a("Art") = Überschrift.Text
+            a("Telefon") = PlatzhalterText5.Text
+
             Me.DataSet1.Frauenarzt.AddFrauenarztRow(a)
             Me.FrauenarztTableAdapter.Update(Me.DataSet1)
             Me.DatenLaden()

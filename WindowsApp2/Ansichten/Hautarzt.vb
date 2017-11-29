@@ -11,6 +11,8 @@
             a("Ort") = PlatzhalterText3.Text
             a("Strasse") = PlatzhalterText4.Text
             a("Art") = Überschrift.Text
+            a("Telefon") = PlatzhalterText5.Text
+
             Me.DataSet1.Hautarzt.AddHautarztRow(a)
             Me.HautarztTableAdapter.Update(DataSet1)
 

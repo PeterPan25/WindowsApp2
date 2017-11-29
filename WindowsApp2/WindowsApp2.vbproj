@@ -97,6 +97,12 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\Bericht.Designer.vb">
+      <DependentUpon>Bericht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Bericht.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\Tagesbericht.Designer.vb">
       <DependentUpon>Tagesbericht.vb</DependentUpon>
     </Compile>
@@ -279,6 +285,9 @@
   <ItemGroup>
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\Bericht.resx">
+      <DependentUpon>Bericht.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Tagesbericht.resx">
       <DependentUpon>Tagesbericht.vb</DependentUpon>
