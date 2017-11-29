@@ -32,7 +32,6 @@ Partial Class BerichtAnlegen
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.BerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.BerichtTableAdapter()
@@ -50,6 +49,7 @@ Partial Class BerichtAnlegen
         Me.KrankenhausBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,7 +74,7 @@ Partial Class BerichtAnlegen
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Speichern"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox1
@@ -130,17 +130,6 @@ Partial Class BerichtAnlegen
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 20)
         Me.TextBox3.TabIndex = 8
-        '
-        'PlatzhalterText1
-        '
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(42, 100)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = "Behandelnder Arzt"
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(121, 20)
-        Me.PlatzhalterText1.TabIndex = 9
-        Me.PlatzhalterText1.Text = "Behandelnder Arzt"
         '
         'DataSet1
         '
@@ -249,6 +238,17 @@ Partial Class BerichtAnlegen
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(100, 20)
         Me.TextBox4.TabIndex = 10
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(42, 100)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Behandelnder Arzt"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(121, 20)
+        Me.PlatzhalterText1.TabIndex = 9
+        Me.PlatzhalterText1.Text = "Behandelnder Arzt"
         '
         'BerichtAnlegen
         '

@@ -30,6 +30,25 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim a As DataRow = DataSet1.Bericht.NewRow()
+
+        a("Datum") = DateTimePicker1.Value
+        a("Praxis") = ComboBox2.Text
+        a("Art") = ComboBox1.Text
+        a("Arzt") = PlatzhalterText1.Text
+        a("Kind") = Label1.Text
+        a("Text") = RichTextBox1.Rtf
+        a("Strasse") = TextBox1.Text
+        a("Plz") = TextBox2.Text
+        a("Ort") = TextBox3.Text
+
+        DataSet1.Bericht.AddBerichtRow(a)
+        Me.BerichtTableAdapter.Update(DataSet1)
+        Form1.Bericht1.Daten_laden()
+
+
+        Me.Close()
+
 
     End Sub
 

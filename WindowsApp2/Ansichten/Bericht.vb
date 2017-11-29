@@ -5,6 +5,16 @@
     '    Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
     'End Sub
+    Public Sub Daten_laden()
+        Me.BerichtTableAdapter.Fill(DataSet1.Bericht)
+
+        Me.BerichtDataGridView.Update()
+
+
+    End Sub
+
+
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         BerichtAnlegen.Show()
