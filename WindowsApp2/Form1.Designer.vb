@@ -49,13 +49,15 @@ Partial Class Form1
         Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("HNO")
         Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
         Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
-        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26})
+        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Berichte")
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26, TreeNode30})
         Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
         Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Formulare")
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.UserControl11 = New WindowsApp2.UserControl1()
         Me.Tagesbericht1 = New WindowsApp2.Tagesbericht()
         Me.Formulare1 = New WindowsApp2.Formulare()
         Me.Augenarzt1 = New WindowsApp2.Augenarzt()
@@ -83,7 +85,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.UserControl11 = New WindowsApp2.UserControl1()
+        Me.Bericht1 = New WindowsApp2.Bericht()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -190,6 +192,7 @@ Partial Class Form1
         TreeNode28.Text = "Hobby"
         TreeNode29.Name = "Knoten0"
         TreeNode29.Text = "Formulare"
+        TreeNode30.Text = "Berichte"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode14, TreeNode15, TreeNode16, TreeNode17, TreeNode18, TreeNode19, TreeNode27, TreeNode28, TreeNode29})
         Me.TreeView1.Size = New System.Drawing.Size(145, 490)
         Me.TreeView1.TabIndex = 1
@@ -197,6 +200,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.UserControl11)
+        Me.Panel1.Controls.Add(Me.Bericht1)
         Me.Panel1.Controls.Add(Me.Tagesbericht1)
         Me.Panel1.Controls.Add(Me.Formulare1)
         Me.Panel1.Controls.Add(Me.Augenarzt1)
@@ -220,6 +224,13 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(978, 490)
         Me.Panel1.TabIndex = 0
+        '
+        'UserControl11
+        '
+        Me.UserControl11.Location = New System.Drawing.Point(0, 0)
+        Me.UserControl11.Name = "UserControl11"
+        Me.UserControl11.Size = New System.Drawing.Size(1127, 650)
+        Me.UserControl11.TabIndex = 10
         '
         'Tagesbericht1
         '
@@ -459,26 +470,42 @@ Partial Class Form1
         '
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
         Me.TableAdapterManager.HNOTableAdapter = Nothing
         Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
         Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
         Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'UserControl11
+        'Bericht1
         '
-        Me.UserControl11.Location = New System.Drawing.Point(0, 0)
-        Me.UserControl11.Name = "UserControl11"
-        Me.UserControl11.Size = New System.Drawing.Size(1127, 650)
-        Me.UserControl11.TabIndex = 10
+        Me.Bericht1.Location = New System.Drawing.Point(0, 0)
+        Me.Bericht1.Name = "Bericht1"
+        Me.Bericht1.Size = New System.Drawing.Size(978, 490)
+        Me.Bericht1.TabIndex = 19
+        Me.Bericht1.Visible = False
         '
         'Form1
         '
@@ -536,4 +563,5 @@ Partial Class Form1
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Label1 As Label
     Friend WithEvents UserControl11 As UserControl1
+    Friend WithEvents Bericht1 As Bericht
 End Class

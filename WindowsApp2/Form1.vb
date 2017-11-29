@@ -27,7 +27,8 @@ Public Class Form1
         "Hobby",
         "Tagesbericht",
         "Formulare",
-        "hinzufügen"}
+        "hinzufügen",
+        "Berichte"}
 
 
 
@@ -88,7 +89,7 @@ Public Class Form1
 
 
 
-        For i = 0 To 17
+        For i = 0 To 18
             If e.Node.Text = name2(i) Then
 
 
@@ -180,6 +181,10 @@ Public Class Form1
 
                         Panel1.Visible = True
                         Panel1.BringToFront()
+                    Case 18
+                        Bericht1.Visible = True
+                        Bericht1.BringToFront()
+
                 End Select
 
 

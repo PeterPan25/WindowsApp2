@@ -127,6 +127,12 @@
     <Compile Include="Ansichten\Übersicht.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="BerichtAnlegen.Designer.vb">
+      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BerichtAnlegen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Class1.vb" />
     <Compile Include="PlatzhalterText.vb">
       <SubType>Component</SubType>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Übersicht.resx">
       <DependentUpon>Übersicht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BerichtAnlegen.resx">
+      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
