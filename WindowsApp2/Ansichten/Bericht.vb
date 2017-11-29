@@ -22,4 +22,21 @@
 
 
     End Sub
+
+    Private Sub BerichtDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles BerichtDataGridView.RowHeaderMouseClick
+        Dim str As String
+        Dim str1 As String
+
+
+
+        '  Me.BerichtDataGridView.Rows(e.RowIndex).Selected = True
+
+        str = Me.BerichtDataGridView.Rows(e.RowIndex).Cells(1).Value
+        str1 = Me.BerichtDataGridView.Rows(e.RowIndex).Cells(2).Value
+
+        BerichtAnzeigen.Daten_laden(str, str1)
+        BerichtAnzeigen.Show()
+
+
+    End Sub
 End Class
