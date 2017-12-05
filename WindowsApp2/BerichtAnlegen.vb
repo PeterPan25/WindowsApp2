@@ -37,7 +37,7 @@
         a("Art") = ComboBox1.Text
         a("Arzt") = PlatzhalterText1.Text
         a("Kind") = Label1.Text
-        a("Text") = RichTextBox1.Rtf
+        a("Text") = RichTextBox1.Text
         a("Strasse") = TextBox1.Text
         a("Plz") = TextBox2.Text
         a("Ort") = TextBox3.Text

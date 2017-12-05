@@ -34,8 +34,8 @@
         str = Me.BerichtDataGridView.Rows(e.RowIndex).Cells(1).Value
         str1 = Me.BerichtDataGridView.Rows(e.RowIndex).Cells(2).Value
 
-        BerichtAnzeigen.Daten_laden(str, str1)
         BerichtAnzeigen.Show()
+        BerichtAnzeigen.Daten_laden(str, str1)
 
 
     End Sub

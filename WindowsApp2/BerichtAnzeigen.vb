@@ -13,7 +13,7 @@
     End Sub
 
     Public Sub Daten_laden(a As String, b As String)
-
+        ' Me.BerichtTableAdapter.Fill(Me.DataSet1.Bericht)
         Dim r1() As DataRow
         ' Dim c1 As DataColumn
 
@@ -26,8 +26,17 @@
         For k = 0 To r1.GetUpperBound(0)
 
             Try
-                Label1.Text = r1(k)(3)
-                Label2.Text = r1(k)(2)
+                Label1.Text = r1(k)(0)
+                Label2.Text = r1(k)(1)
+                Label3.Text = r1(k)(2)
+                Label4.Text = r1(k)(3)
+                Label5.Text = r1(k)(4)
+                Label6.Text = r1(k)(6)
+                Label7.Text = r1(k)(7)
+                Label8.Text = r1(k)(8)
+                RichTextBox1.Text = r1(k)(5)
+                ' RichTextBox1.Enabled = False
+
                 'TextBox3.Text = r1(k)(1)
                 'TextBox4.Text = r1(k)(5)
 
