@@ -24,17 +24,13 @@ Partial Class Frauenarzt
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.Überschrift = New System.Windows.Forms.Label()
-        Me.FrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New WindowsApp2.DataSet1()
-        Me.FrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.FrauenarztTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
         Me.FrauenarztDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,13 +38,17 @@ Partial Class Frauenarzt
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
+        Me.FrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.FrauenarztTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.FrauenarztDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FrauenarztDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -76,6 +76,17 @@ Partial Class Frauenarzt
         Me.SplitContainer1.Size = New System.Drawing.Size(803, 497)
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(147, 53)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Telefon"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText5.TabIndex = 11
+        Me.PlatzhalterText5.Text = "Telefon"
         '
         'Button1
         '
@@ -141,6 +152,54 @@ Partial Class Frauenarzt
         Me.Überschrift.Text = "Frauenarzt"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'FrauenarztDataGridView
+        '
+        Me.FrauenarztDataGridView.AutoGenerateColumns = False
+        Me.FrauenarztDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.FrauenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.FrauenarztDataGridView.DataSource = Me.FrauenarztBindingSource
+        Me.FrauenarztDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FrauenarztDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.FrauenarztDataGridView.Name = "FrauenarztDataGridView"
+        Me.FrauenarztDataGridView.Size = New System.Drawing.Size(803, 334)
+        Me.FrauenarztDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "F_Name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "F_Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Ort"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Ort"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Plz"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Plz"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Strasse"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Strasse"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Art"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Art"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Telefon"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "Telefon"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
         'FrauenarztBindingSource
         '
         Me.FrauenarztBindingSource.DataMember = "Frauenarzt"
@@ -188,64 +247,6 @@ Partial Class Frauenarzt
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'PlatzhalterText5
-        '
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(147, 53)
-        Me.PlatzhalterText5.Name = "PlatzhalterText5"
-        Me.PlatzhalterText5.PlatzHalterText = "Telefon"
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(100, 20)
-        Me.PlatzhalterText5.TabIndex = 11
-        Me.PlatzhalterText5.Text = "Telefon"
-        '
-        'FrauenarztDataGridView
-        '
-        Me.FrauenarztDataGridView.AutoGenerateColumns = False
-        Me.FrauenarztDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.FrauenarztDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.FrauenarztDataGridView.DataSource = Me.FrauenarztBindingSource
-        Me.FrauenarztDataGridView.Location = New System.Drawing.Point(41, 31)
-        Me.FrauenarztDataGridView.Name = "FrauenarztDataGridView"
-        Me.FrauenarztDataGridView.Size = New System.Drawing.Size(645, 220)
-        Me.FrauenarztDataGridView.TabIndex = 0
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "F_Name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "F_Name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Ort"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Ort"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Plz"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Plz"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "Strasse"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Strasse"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Art"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Art"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "Telefon"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "Telefon"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
         'Frauenarzt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -258,9 +259,9 @@ Partial Class Frauenarzt
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.FrauenarztDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FrauenarztDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
