@@ -33,18 +33,23 @@ Partial Class Bericht
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(171, 39)
+        Me.Button1.Location = New System.Drawing.Point(22, 54)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(112, 23)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Anlegen"
+        Me.Button1.Text = "Neuer EIntrag"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'DataSet1
@@ -100,9 +105,10 @@ Partial Class Bericht
         Me.BerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BerichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.BerichtDataGridView.DataSource = Me.BerichtBindingSource
-        Me.BerichtDataGridView.Location = New System.Drawing.Point(36, 126)
+        Me.BerichtDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.BerichtDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.BerichtDataGridView.Name = "BerichtDataGridView"
-        Me.BerichtDataGridView.Size = New System.Drawing.Size(341, 220)
+        Me.BerichtDataGridView.Size = New System.Drawing.Size(759, 358)
         Me.BerichtDataGridView.TabIndex = 2
         '
         'DataGridViewTextBoxColumn1
@@ -123,17 +129,38 @@ Partial Class Bericht
         Me.DataGridViewTextBoxColumn3.HeaderText = "Art"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.BerichtDataGridView)
+        Me.SplitContainer1.Size = New System.Drawing.Size(759, 453)
+        Me.SplitContainer1.SplitterDistance = 91
+        Me.SplitContainer1.TabIndex = 3
+        '
         'Bericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.BerichtDataGridView)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Bericht"
         Me.Size = New System.Drawing.Size(759, 453)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BerichtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -147,4 +174,5 @@ Partial Class Bericht
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents SplitContainer1 As SplitContainer
 End Class
