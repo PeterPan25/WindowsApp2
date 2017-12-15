@@ -23,16 +23,16 @@ Partial Class Hilfen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Überschrift = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Überschrift = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -61,6 +61,33 @@ Partial Class Hilfen
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(358, 104)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(123, 23)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Eintrag löschen"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(191, 104)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(125, 23)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Eintrag bearbeiten"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(13, 104)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(116, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Neuer Eintrag"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
@@ -71,15 +98,6 @@ Partial Class Hilfen
         Me.Überschrift.TabIndex = 5
         Me.Überschrift.Text = "Hilfen"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(13, 104)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Neuer Eintrag"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'ListView1
         '
@@ -95,40 +113,27 @@ Partial Class Hilfen
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "Datum"
+        Me.ColumnHeader1.Width = 202
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "Jugendamt"
+        Me.ColumnHeader2.Width = 126
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "Sachbearbeiter"
+        Me.ColumnHeader3.Width = 120
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "Thema"
+        Me.ColumnHeader4.Width = 165
         '
         'ColumnHeader5
         '
         Me.ColumnHeader5.Text = "Mitarbeiter"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(191, 104)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Eintrag bearbeiten"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(358, 104)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(123, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Eintrag löschen"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ColumnHeader5.Width = 128
         '
         'Hilfen
         '

@@ -171,7 +171,7 @@ Partial Class Formulare
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(432, 330)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
@@ -185,7 +185,6 @@ Partial Class Formulare
         Me.ImageList1.Images.SetKeyName(3, "Entwickllungsstufen.jpg")
         Me.ImageList1.Images.SetKeyName(4, "Messen u Wiegen.jpg")
         Me.ImageList1.Images.SetKeyName(5, "Vollmacht.jpg")
-
         '
         'Formulare
         '
@@ -201,7 +200,6 @@ Partial Class Formulare
         Me.SplitContainer2.Panel1.ResumeLayout(False)
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
-        Me.SplitContainer2.Panel2.PerformLayout()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
