@@ -24,7 +24,6 @@ Partial Class Bericht
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.BerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.BerichtTableAdapter()
@@ -38,19 +37,9 @@ Partial Class Bericht
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(22, 54)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(112, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Neuer EIntrag"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'DataSet1
         '
@@ -136,10 +125,6 @@ Partial Class Bericht
         Me.SplitContainer1.Name = "SplitContainer1"
         Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
-        '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.BerichtDataGridView)
@@ -157,15 +142,12 @@ Partial Class Bericht
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BerichtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents Button1 As Button
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents BerichtBindingSource As BindingSource
     Friend WithEvents BerichtTableAdapter As DataSet1TableAdapters.BerichtTableAdapter

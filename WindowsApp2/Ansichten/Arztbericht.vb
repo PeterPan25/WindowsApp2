@@ -1,4 +1,4 @@
-﻿Public Class BerichtAnlegen
+﻿Public Class Arztbericht
 
     Dim name3 As String() = {"a"}
 
@@ -11,11 +11,11 @@
 
     End Sub
 
-    Private Sub BerichtAnlegen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub BerichtAnlegen_Load()
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Zahnarzt". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.ZahnarztTableAdapter.Fill(Me.DataSet1.Zahnarzt)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Krankenhaus". Sie können sie bei Bedarf verschieben oder entfernen.
-        Me.KrankenhausTableAdapter.Fill(Me.DataSet1.Krankenhaus)
+        'Me.KrankenhausTableAdapter.Fill(Me.DataSet1.Krankenhaus)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Kinderarzt". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.KinderarztTableAdapter.Fill(Me.DataSet1.Kinderarzt)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Hautarzt". Sie können sie bei Bedarf verschieben oder entfernen.
@@ -46,8 +46,11 @@
         Me.BerichtTableAdapter.Update(DataSet1)
         Form1.Bericht1.Daten_laden()
 
+        MsgBox("Speichern erfolgreich")
 
-        Me.Close()
+
+
+
 
 
     End Sub

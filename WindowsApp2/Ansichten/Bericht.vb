@@ -16,12 +16,7 @@
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        BerichtAnlegen.Show()
 
-
-
-    End Sub
 
     Private Sub BerichtDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles BerichtDataGridView.RowHeaderMouseClick
         Dim str As String

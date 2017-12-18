@@ -97,6 +97,12 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\Arztbericht.Designer.vb">
+      <DependentUpon>Arztbericht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Arztbericht.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\Bericht.Designer.vb">
       <DependentUpon>Bericht.vb</DependentUpon>
     </Compile>
@@ -126,12 +132,6 @@
     </Compile>
     <Compile Include="Ansichten\Übersicht.vb">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="BerichtAnlegen.Designer.vb">
-      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BerichtAnlegen.vb">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BerichtAnzeigen.Designer.vb">
       <DependentUpon>BerichtAnzeigen.vb</DependentUpon>
@@ -230,9 +230,7 @@
     <Compile Include="Ansichten\Hilfen.Designer.vb">
       <DependentUpon>Hilfen.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Hilfen.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Ansichten\Hilfen.vb" />
     <Compile Include="Ansichten\HNO.Designer.vb">
       <DependentUpon>HNO.vb</DependentUpon>
     </Compile>
@@ -298,6 +296,9 @@
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\Arztbericht.resx">
+      <DependentUpon>Arztbericht.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>
     </EmbeddedResource>
@@ -312,9 +313,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Übersicht.resx">
       <DependentUpon>Übersicht.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BerichtAnlegen.resx">
-      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BerichtAnzeigen.resx">
       <DependentUpon>BerichtAnzeigen.vb</DependentUpon>
