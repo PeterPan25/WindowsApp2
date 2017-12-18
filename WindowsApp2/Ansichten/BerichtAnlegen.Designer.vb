@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class BerichtAnlegen
-    Inherits System.Windows.Forms.Form
+    Inherits System.Windows.Forms.UserControl
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
     <System.Diagnostics.DebuggerNonUserCode()> _

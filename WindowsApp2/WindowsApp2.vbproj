@@ -127,11 +127,11 @@
     <Compile Include="Ansichten\Übersicht.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BerichtAnlegen.Designer.vb">
+    <Compile Include="Ansichten\BerichtAnlegen.Designer.vb">
       <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </Compile>
-    <Compile Include="BerichtAnlegen.vb">
-      <SubType>Form</SubType>
+    <Compile Include="Ansichten\BerichtAnlegen.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="BerichtAnzeigen.Designer.vb">
       <DependentUpon>BerichtAnzeigen.vb</DependentUpon>
@@ -313,7 +313,7 @@
     <EmbeddedResource Include="Ansichten\Übersicht.resx">
       <DependentUpon>Übersicht.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BerichtAnlegen.resx">
+    <EmbeddedResource Include="Ansichten\BerichtAnlegen.resx">
       <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BerichtAnzeigen.resx">
