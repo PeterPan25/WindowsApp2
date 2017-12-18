@@ -47,7 +47,7 @@
         Form1.Bericht1.Daten_laden()
 
 
-        ' Me.Close()
+        Me.Close()
 
 
     End Sub
