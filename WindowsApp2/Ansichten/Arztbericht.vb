@@ -67,13 +67,13 @@
     ' Je nach Auswahl bei welcher Art Arzt das Kind war, kann man folgend die Praxis/den Arzt in der nächsten Box auswählen
     Private Sub ArztArt()
         Dim ArtText As String = ComboBox1.Text
-
         If ArtText = "Augenarzt" Then
             ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
 
             For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
                 name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
             Next
+            Label2.Text = "Augenarztbericht"
 
             ComboBox2.DataSource = name3
             Me.AArztDaten()
@@ -84,6 +84,7 @@
             For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
                 name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
             Next
+            Label2.Text = "Frauenarztbericht"
 
             ComboBox2.DataSource = name3
             Me.FArztDaten()
@@ -94,6 +95,7 @@
             For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
                 name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
             Next
+            Label2.Text = "Kinderarztbericht"
 
             ComboBox2.DataSource = name3
             Me.KArztDaten()
@@ -104,6 +106,7 @@
             For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
                 name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
             Next
+            Label2.Text = "Hautarztbericht"
 
             ComboBox2.DataSource = name3
             Me.HArztDaten()
@@ -114,6 +117,7 @@
             For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
                 name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
             Next
+            Label2.Text = "Zahnarztbericht"
 
             ComboBox2.DataSource = name3
             ZArztDaten()

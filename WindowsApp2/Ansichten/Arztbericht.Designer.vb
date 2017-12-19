@@ -49,6 +49,7 @@ Partial Class Arztbericht
         Me.HNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,6 +240,15 @@ Partial Class Arztbericht
         Me.KinderarztBindingSource.DataMember = "Kinderarzt"
         Me.KinderarztBindingSource.DataSource = Me.DataSet1
         '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(409, 29)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(180, 30)
+        Me.Label2.TabIndex = 11
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'PlatzhalterText1
         '
         Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
@@ -254,6 +264,7 @@ Partial Class Arztbericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button1)
@@ -307,4 +318,5 @@ Partial Class Arztbericht
     Friend WithEvents HNOBindingSource As BindingSource
     Friend WithEvents ZahnarztBindingSource As BindingSource
     Friend WithEvents KinderarztBindingSource As BindingSource
+    Friend WithEvents Label2 As Label
 End Class

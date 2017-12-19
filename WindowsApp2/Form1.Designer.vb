@@ -585,5 +585,6 @@ Partial Class Form1
     Friend WithEvents UserControl11 As UserControl1
     Friend WithEvents Bericht1 As Bericht
     Friend WithEvents Arztbericht1 As Arztbericht
-    'nö
+
+
 End Class
