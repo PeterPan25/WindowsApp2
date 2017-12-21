@@ -238,6 +238,7 @@ Public Class Form1
 
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
         Datentest()
+        Bericht1.BerichtKind()
 
     End Sub
 
