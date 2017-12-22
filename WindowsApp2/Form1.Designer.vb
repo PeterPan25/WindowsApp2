@@ -89,6 +89,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.ArztAnlegen1 = New WindowsApp2.ArztAnlegen()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -207,6 +208,7 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.ArztAnlegen1)
         Me.Panel1.Controls.Add(Me.UserControl11)
         Me.Panel1.Controls.Add(Me.Bericht1)
         Me.Panel1.Controls.Add(Me.Arztbericht1)
@@ -527,6 +529,14 @@ Partial Class Form1
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
+        'ArztAnlegen1
+        '
+        Me.ArztAnlegen1.Location = New System.Drawing.Point(0, 0)
+        Me.ArztAnlegen1.Name = "ArztAnlegen1"
+        Me.ArztAnlegen1.Size = New System.Drawing.Size(978, 490)
+        Me.ArztAnlegen1.TabIndex = 21
+        Me.ArztAnlegen1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -585,6 +595,6 @@ Partial Class Form1
     Friend WithEvents UserControl11 As UserControl1
     Friend WithEvents Bericht1 As Bericht
     Friend WithEvents Arztbericht1 As Arztbericht
-
+    Friend WithEvents ArztAnlegen1 As ArztAnlegen
 
 End Class

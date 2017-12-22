@@ -81,8 +81,8 @@ Public Class Form1
 
                     Case 1
 
-                        HNO1.Visible = True
-                        HNO1.BringToFront()
+                        ArztAnlegen1.Visible = True
+                        ArztAnlegen1.BringToFront()
 
                     Case 2
 

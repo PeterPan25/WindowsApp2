@@ -41,7 +41,7 @@
         Dim a As DataRow = Me.DataSet1.Hautarzt.NewRow()
 
         Try
-            a("A_Name") = PlatzhalterText1.Text
+            a("H_Name") = PlatzhalterText1.Text
             a("Plz") = PlatzhalterText3.Text
             a("Ort") = PlatzhalterText4.Text
             a("Strasse") = PlatzhalterText5.Text
@@ -81,7 +81,7 @@
         Dim a As DataRow = Me.DataSet1.Zahnarzt.NewRow()
 
         Try
-            a("A_Name") = PlatzhalterText1.Text
+            a("Z_Name") = PlatzhalterText1.Text
             a("Plz") = PlatzhalterText3.Text
             a("Ort") = PlatzhalterText4.Text
             a("Strasse") = PlatzhalterText5.Text
@@ -101,7 +101,7 @@
         Dim a As DataRow = Me.DataSet1.Kinderarzt.NewRow()
 
         Try
-            a("A_Name") = PlatzhalterText1.Text
+            a("K_Name") = PlatzhalterText1.Text
             a("Plz") = PlatzhalterText3.Text
             a("Ort") = PlatzhalterText4.Text
             a("Strasse") = PlatzhalterText5.Text
@@ -121,7 +121,7 @@
         Dim a As DataRow = Me.DataSet1.Frauenarzt.NewRow()
 
         Try
-            a("A_Name") = PlatzhalterText1.Text
+            a("F_Name") = PlatzhalterText1.Text
             a("Plz") = PlatzhalterText3.Text
             a("Ort") = PlatzhalterText4.Text
             a("Strasse") = PlatzhalterText5.Text
@@ -141,7 +141,7 @@
         Dim a As DataRow = Me.DataSet1.HNO.NewRow()
 
         Try
-            a("A_Name") = PlatzhalterText1.Text
+            a("HNO_Name") = PlatzhalterText1.Text
             a("Plz") = PlatzhalterText3.Text
             a("Ort") = PlatzhalterText4.Text
             a("Strasse") = PlatzhalterText5.Text
@@ -168,6 +168,7 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Reset()
 
 
     End Sub
@@ -182,6 +183,7 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Reset()
 
 
     End Sub
@@ -196,6 +198,7 @@
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
+        Reset()
 
 
     End Sub
@@ -210,6 +213,7 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Reset()
 
 
     End Sub
@@ -224,6 +228,7 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Reset()
 
 
     End Sub
@@ -238,6 +243,17 @@
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
+        Reset()
+    End Sub
+
+    Private Sub Reset()
+        MsgBox("Speichern erfolgreich")
+        ComboBox1.Text = ""
+        PlatzhalterText1.Clear()
+        PlatzhalterText2.Clear()
+        PlatzhalterText3.Clear()
+        PlatzhalterText4.Clear()
+        PlatzhalterText5.Clear()
 
     End Sub
 End Class
