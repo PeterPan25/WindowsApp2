@@ -32,14 +32,10 @@ Partial Class Form1
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6, TreeNode7})
         Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinderarzt")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hautarzt")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Augenarzt")
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Zahnarzt")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("HNO")
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt Übersicht")
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Frauenarzt")
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode12, TreeNode13, TreeNode14, TreeNode15, TreeNode16})
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt anlegen")
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode14, TreeNode15, TreeNode16})
         Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8, TreeNode9, TreeNode17})
         Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
         Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
@@ -59,27 +55,6 @@ Partial Class Form1
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.UserControl11 = New WindowsApp2.UserControl1()
-        Me.Bericht1 = New WindowsApp2.Bericht()
-        Me.Arztbericht1 = New WindowsApp2.Arztbericht()
-        Me.Tagesbericht1 = New WindowsApp2.Tagesbericht()
-        Me.Formulare1 = New WindowsApp2.Formulare()
-        Me.Augenarzt1 = New WindowsApp2.Augenarzt()
-        Me.Psycho1 = New WindowsApp2.Psycho()
-        Me.Zahnarzt1 = New WindowsApp2.Zahnarzt()
-        Me.Stammdaten1 = New WindowsApp2.Stammdaten()
-        Me.Schule1 = New WindowsApp2.Schule()
-        Me.Krankenhaus1 = New WindowsApp2.Krankenhaus()
-        Me.Kontakte1 = New WindowsApp2.Kontakte()
-        Me.Kinderarzt1 = New WindowsApp2.Kinderarzt()
-        Me.Hobby1 = New WindowsApp2.Hobby()
-        Me.HNO1 = New WindowsApp2.HNO()
-        Me.Hilfen1 = New WindowsApp2.Hilfen()
-        Me.Hautarzt1 = New WindowsApp2.Hautarzt()
-        Me.Frauenarzt1 = New WindowsApp2.Frauenarzt()
-        Me.Eltern1 = New WindowsApp2.Eltern()
-        Me.Doku1 = New WindowsApp2.Doku()
-        Me.Anlegen1 = New WindowsApp2.anlegen()
         Me.CB_name = New System.Windows.Forms.ComboBox()
         Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New WindowsApp2.DataSet1()
@@ -90,6 +65,21 @@ Partial Class Form1
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.ArztAnlegen1 = New WindowsApp2.ArztAnlegen()
+        Me.UserControl11 = New WindowsApp2.UserControl1()
+        Me.Bericht1 = New WindowsApp2.Bericht()
+        Me.Arztbericht1 = New WindowsApp2.Arztbericht()
+        Me.Tagesbericht1 = New WindowsApp2.Tagesbericht()
+        Me.Formulare1 = New WindowsApp2.Formulare()
+        Me.Psycho1 = New WindowsApp2.Psycho()
+        Me.Stammdaten1 = New WindowsApp2.Stammdaten()
+        Me.Schule1 = New WindowsApp2.Schule()
+        Me.Krankenhaus1 = New WindowsApp2.Krankenhaus()
+        Me.Kontakte1 = New WindowsApp2.Kontakte()
+        Me.Hobby1 = New WindowsApp2.Hobby()
+        Me.Hilfen1 = New WindowsApp2.Hilfen()
+        Me.Eltern1 = New WindowsApp2.Eltern()
+        Me.Doku1 = New WindowsApp2.Doku()
+        Me.Anlegen1 = New WindowsApp2.anlegen()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -156,20 +146,13 @@ Partial Class Form1
         TreeNode8.Text = "Benutzer"
         TreeNode9.Name = "Knoten1"
         TreeNode9.Text = "Mitarbeiter"
-        TreeNode10.Name = "Knoten12"
-        TreeNode10.Text = "Kinderarzt"
-        TreeNode11.Name = "Knoten13"
-        TreeNode11.Text = "Hautarzt"
-        TreeNode12.Name = "Knoten14"
-        TreeNode12.Text = "Augenarzt"
-        TreeNode13.Name = "Knoten15"
-        TreeNode13.Text = "Zahnarzt"
+
         TreeNode14.Name = "Knoten16"
-        TreeNode14.Text = "HNO"
+        TreeNode14.Text = "Arzt Übersicht"
         TreeNode15.Name = "Knoten19"
         TreeNode15.Text = "Krankenhaus"
         TreeNode16.Name = "Knoten20"
-        TreeNode16.Text = "Frauenarzt"
+        TreeNode16.Text = "Arzt anlegen"
         TreeNode17.Name = "Knoten33"
         TreeNode17.Text = "Ärzte"
         TreeNode18.Name = "Knoten27"
@@ -214,19 +197,13 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Arztbericht1)
         Me.Panel1.Controls.Add(Me.Tagesbericht1)
         Me.Panel1.Controls.Add(Me.Formulare1)
-        Me.Panel1.Controls.Add(Me.Augenarzt1)
         Me.Panel1.Controls.Add(Me.Psycho1)
-        Me.Panel1.Controls.Add(Me.Zahnarzt1)
         Me.Panel1.Controls.Add(Me.Stammdaten1)
         Me.Panel1.Controls.Add(Me.Schule1)
         Me.Panel1.Controls.Add(Me.Krankenhaus1)
         Me.Panel1.Controls.Add(Me.Kontakte1)
-        Me.Panel1.Controls.Add(Me.Kinderarzt1)
         Me.Panel1.Controls.Add(Me.Hobby1)
-        Me.Panel1.Controls.Add(Me.HNO1)
         Me.Panel1.Controls.Add(Me.Hilfen1)
-        Me.Panel1.Controls.Add(Me.Hautarzt1)
-        Me.Panel1.Controls.Add(Me.Frauenarzt1)
         Me.Panel1.Controls.Add(Me.Eltern1)
         Me.Panel1.Controls.Add(Me.Doku1)
         Me.Panel1.Controls.Add(Me.Anlegen1)
@@ -235,195 +212,6 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(978, 490)
         Me.Panel1.TabIndex = 0
-        '
-        'UserControl11
-        '
-        Me.UserControl11.BackColor = System.Drawing.SystemColors.Control
-        Me.UserControl11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.UserControl11.Location = New System.Drawing.Point(0, 0)
-        Me.UserControl11.Name = "UserControl11"
-        Me.UserControl11.Size = New System.Drawing.Size(978, 490)
-        Me.UserControl11.TabIndex = 10
-        '
-        'Bericht1
-        '
-        Me.Bericht1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Bericht1.Location = New System.Drawing.Point(0, 0)
-        Me.Bericht1.Name = "Bericht1"
-        Me.Bericht1.Size = New System.Drawing.Size(978, 490)
-        Me.Bericht1.TabIndex = 19
-        Me.Bericht1.Visible = False
-        '
-        'Arztbericht1
-        '
-        Me.Arztbericht1.Location = New System.Drawing.Point(0, 0)
-        Me.Arztbericht1.Name = "Arztbericht1"
-        Me.Arztbericht1.Size = New System.Drawing.Size(978, 490)
-        Me.Arztbericht1.TabIndex = 20
-        Me.Arztbericht1.Visible = False
-        '
-        'Tagesbericht1
-        '
-        Me.Tagesbericht1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Tagesbericht1.Location = New System.Drawing.Point(0, 0)
-        Me.Tagesbericht1.Name = "Tagesbericht1"
-        Me.Tagesbericht1.Size = New System.Drawing.Size(978, 490)
-        Me.Tagesbericht1.TabIndex = 17
-        Me.Tagesbericht1.Visible = False
-        '
-        'Formulare1
-        '
-        Me.Formulare1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Formulare1.Location = New System.Drawing.Point(0, 0)
-        Me.Formulare1.Name = "Formulare1"
-        Me.Formulare1.Size = New System.Drawing.Size(978, 490)
-        Me.Formulare1.TabIndex = 18
-        Me.Formulare1.Visible = False
-        '
-        'Augenarzt1
-        '
-        Me.Augenarzt1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Augenarzt1.Location = New System.Drawing.Point(0, 0)
-        Me.Augenarzt1.Name = "Augenarzt1"
-        Me.Augenarzt1.Size = New System.Drawing.Size(978, 490)
-        Me.Augenarzt1.TabIndex = 1
-        Me.Augenarzt1.Visible = False
-        '
-        'Psycho1
-        '
-        Me.Psycho1.BackColor = System.Drawing.SystemColors.Control
-        Me.Psycho1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Psycho1.Location = New System.Drawing.Point(0, 0)
-        Me.Psycho1.Name = "Psycho1"
-        Me.Psycho1.Size = New System.Drawing.Size(978, 490)
-        Me.Psycho1.TabIndex = 16
-        Me.Psycho1.Visible = False
-        '
-        'Zahnarzt1
-        '
-        Me.Zahnarzt1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Zahnarzt1.Location = New System.Drawing.Point(0, 0)
-        Me.Zahnarzt1.Name = "Zahnarzt1"
-        Me.Zahnarzt1.Size = New System.Drawing.Size(978, 490)
-        Me.Zahnarzt1.TabIndex = 15
-        Me.Zahnarzt1.Visible = False
-        '
-        'Stammdaten1
-        '
-        Me.Stammdaten1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Stammdaten1.Location = New System.Drawing.Point(0, 0)
-        Me.Stammdaten1.Name = "Stammdaten1"
-        Me.Stammdaten1.Size = New System.Drawing.Size(978, 490)
-        Me.Stammdaten1.TabIndex = 14
-        Me.Stammdaten1.Visible = False
-        '
-        'Schule1
-        '
-        Me.Schule1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Schule1.Location = New System.Drawing.Point(0, 0)
-        Me.Schule1.Name = "Schule1"
-        Me.Schule1.Size = New System.Drawing.Size(978, 490)
-        Me.Schule1.TabIndex = 13
-        Me.Schule1.Visible = False
-        '
-        'Krankenhaus1
-        '
-        Me.Krankenhaus1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Krankenhaus1.Location = New System.Drawing.Point(0, 0)
-        Me.Krankenhaus1.Name = "Krankenhaus1"
-        Me.Krankenhaus1.Size = New System.Drawing.Size(978, 490)
-        Me.Krankenhaus1.TabIndex = 12
-        Me.Krankenhaus1.Visible = False
-        '
-        'Kontakte1
-        '
-        Me.Kontakte1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Kontakte1.Location = New System.Drawing.Point(0, 0)
-        Me.Kontakte1.Name = "Kontakte1"
-        Me.Kontakte1.Size = New System.Drawing.Size(978, 490)
-        Me.Kontakte1.TabIndex = 11
-        Me.Kontakte1.Visible = False
-        '
-        'Kinderarzt1
-        '
-        Me.Kinderarzt1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Kinderarzt1.Location = New System.Drawing.Point(0, 0)
-        Me.Kinderarzt1.Name = "Kinderarzt1"
-        Me.Kinderarzt1.Size = New System.Drawing.Size(978, 490)
-        Me.Kinderarzt1.TabIndex = 10
-        Me.Kinderarzt1.Visible = False
-        '
-        'Hobby1
-        '
-        Me.Hobby1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Hobby1.Location = New System.Drawing.Point(0, 0)
-        Me.Hobby1.Name = "Hobby1"
-        Me.Hobby1.Size = New System.Drawing.Size(978, 490)
-        Me.Hobby1.TabIndex = 9
-        Me.Hobby1.Visible = False
-        '
-        'HNO1
-        '
-        Me.HNO1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.HNO1.Location = New System.Drawing.Point(0, 0)
-        Me.HNO1.Name = "HNO1"
-        Me.HNO1.Size = New System.Drawing.Size(978, 490)
-        Me.HNO1.TabIndex = 8
-        Me.HNO1.Visible = False
-        '
-        'Hilfen1
-        '
-        Me.Hilfen1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Hilfen1.Location = New System.Drawing.Point(0, 0)
-        Me.Hilfen1.Name = "Hilfen1"
-        Me.Hilfen1.Size = New System.Drawing.Size(978, 490)
-        Me.Hilfen1.TabIndex = 7
-        Me.Hilfen1.Visible = False
-        '
-        'Hautarzt1
-        '
-        Me.Hautarzt1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Hautarzt1.Location = New System.Drawing.Point(0, 0)
-        Me.Hautarzt1.Name = "Hautarzt1"
-        Me.Hautarzt1.Size = New System.Drawing.Size(978, 490)
-        Me.Hautarzt1.TabIndex = 6
-        Me.Hautarzt1.Visible = False
-        '
-        'Frauenarzt1
-        '
-        Me.Frauenarzt1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Frauenarzt1.Location = New System.Drawing.Point(0, 0)
-        Me.Frauenarzt1.Name = "Frauenarzt1"
-        Me.Frauenarzt1.Size = New System.Drawing.Size(978, 490)
-        Me.Frauenarzt1.TabIndex = 4
-        Me.Frauenarzt1.Visible = False
-        '
-        'Eltern1
-        '
-        Me.Eltern1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Eltern1.Location = New System.Drawing.Point(0, 0)
-        Me.Eltern1.Name = "Eltern1"
-        Me.Eltern1.Size = New System.Drawing.Size(978, 490)
-        Me.Eltern1.TabIndex = 3
-        Me.Eltern1.Visible = False
-        '
-        'Doku1
-        '
-        Me.Doku1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Doku1.Location = New System.Drawing.Point(0, 0)
-        Me.Doku1.Name = "Doku1"
-        Me.Doku1.Size = New System.Drawing.Size(978, 490)
-        Me.Doku1.TabIndex = 2
-        Me.Doku1.Visible = False
-        '
-        'Anlegen1
-        '
-        Me.Anlegen1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Anlegen1.Location = New System.Drawing.Point(0, 0)
-        Me.Anlegen1.Name = "Anlegen1"
-        Me.Anlegen1.Size = New System.Drawing.Size(978, 490)
-        Me.Anlegen1.TabIndex = 0
-        Me.Anlegen1.Visible = False
         '
         'CB_name
         '
@@ -537,6 +325,141 @@ Partial Class Form1
         Me.ArztAnlegen1.TabIndex = 21
         Me.ArztAnlegen1.Visible = False
         '
+        'UserControl11
+        '
+        Me.UserControl11.BackColor = System.Drawing.SystemColors.Control
+        Me.UserControl11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.UserControl11.Location = New System.Drawing.Point(0, 0)
+        Me.UserControl11.Name = "UserControl11"
+        Me.UserControl11.Size = New System.Drawing.Size(978, 490)
+        Me.UserControl11.TabIndex = 10
+        '
+        'Bericht1
+        '
+        Me.Bericht1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Bericht1.Location = New System.Drawing.Point(0, 0)
+        Me.Bericht1.Name = "Bericht1"
+        Me.Bericht1.Size = New System.Drawing.Size(978, 490)
+        Me.Bericht1.TabIndex = 19
+        Me.Bericht1.Visible = False
+        '
+        'Arztbericht1
+        '
+        Me.Arztbericht1.Location = New System.Drawing.Point(0, 0)
+        Me.Arztbericht1.Name = "Arztbericht1"
+        Me.Arztbericht1.Size = New System.Drawing.Size(978, 490)
+        Me.Arztbericht1.TabIndex = 20
+        Me.Arztbericht1.Visible = False
+        '
+        'Tagesbericht1
+        '
+        Me.Tagesbericht1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Tagesbericht1.Location = New System.Drawing.Point(0, 0)
+        Me.Tagesbericht1.Name = "Tagesbericht1"
+        Me.Tagesbericht1.Size = New System.Drawing.Size(978, 490)
+        Me.Tagesbericht1.TabIndex = 17
+        Me.Tagesbericht1.Visible = False
+        '
+        'Formulare1
+        '
+        Me.Formulare1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Formulare1.Location = New System.Drawing.Point(0, 0)
+        Me.Formulare1.Name = "Formulare1"
+        Me.Formulare1.Size = New System.Drawing.Size(978, 490)
+        Me.Formulare1.TabIndex = 18
+        Me.Formulare1.Visible = False
+        '
+        'Psycho1
+        '
+        Me.Psycho1.BackColor = System.Drawing.SystemColors.Control
+        Me.Psycho1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Psycho1.Location = New System.Drawing.Point(0, 0)
+        Me.Psycho1.Name = "Psycho1"
+        Me.Psycho1.Size = New System.Drawing.Size(978, 490)
+        Me.Psycho1.TabIndex = 16
+        Me.Psycho1.Visible = False
+        '
+        'Stammdaten1
+        '
+        Me.Stammdaten1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Stammdaten1.Location = New System.Drawing.Point(0, 0)
+        Me.Stammdaten1.Name = "Stammdaten1"
+        Me.Stammdaten1.Size = New System.Drawing.Size(978, 490)
+        Me.Stammdaten1.TabIndex = 14
+        Me.Stammdaten1.Visible = False
+        '
+        'Schule1
+        '
+        Me.Schule1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Schule1.Location = New System.Drawing.Point(0, 0)
+        Me.Schule1.Name = "Schule1"
+        Me.Schule1.Size = New System.Drawing.Size(978, 490)
+        Me.Schule1.TabIndex = 13
+        Me.Schule1.Visible = False
+        '
+        'Krankenhaus1
+        '
+        Me.Krankenhaus1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Krankenhaus1.Location = New System.Drawing.Point(0, 0)
+        Me.Krankenhaus1.Name = "Krankenhaus1"
+        Me.Krankenhaus1.Size = New System.Drawing.Size(978, 490)
+        Me.Krankenhaus1.TabIndex = 12
+        Me.Krankenhaus1.Visible = False
+        '
+        'Kontakte1
+        '
+        Me.Kontakte1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Kontakte1.Location = New System.Drawing.Point(0, 0)
+        Me.Kontakte1.Name = "Kontakte1"
+        Me.Kontakte1.Size = New System.Drawing.Size(978, 490)
+        Me.Kontakte1.TabIndex = 11
+        Me.Kontakte1.Visible = False
+        '
+        'Hobby1
+        '
+        Me.Hobby1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Hobby1.Location = New System.Drawing.Point(0, 0)
+        Me.Hobby1.Name = "Hobby1"
+        Me.Hobby1.Size = New System.Drawing.Size(978, 490)
+        Me.Hobby1.TabIndex = 9
+        Me.Hobby1.Visible = False
+        '
+        'Hilfen1
+        '
+        Me.Hilfen1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Hilfen1.Location = New System.Drawing.Point(0, 0)
+        Me.Hilfen1.Name = "Hilfen1"
+        Me.Hilfen1.Size = New System.Drawing.Size(978, 490)
+        Me.Hilfen1.TabIndex = 7
+        Me.Hilfen1.Visible = False
+        '
+        'Eltern1
+        '
+        Me.Eltern1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Eltern1.Location = New System.Drawing.Point(0, 0)
+        Me.Eltern1.Name = "Eltern1"
+        Me.Eltern1.Size = New System.Drawing.Size(978, 490)
+        Me.Eltern1.TabIndex = 3
+        Me.Eltern1.Visible = False
+        '
+        'Doku1
+        '
+        Me.Doku1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Doku1.Location = New System.Drawing.Point(0, 0)
+        Me.Doku1.Name = "Doku1"
+        Me.Doku1.Size = New System.Drawing.Size(978, 490)
+        Me.Doku1.TabIndex = 2
+        Me.Doku1.Visible = False
+        '
+        'Anlegen1
+        '
+        Me.Anlegen1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Anlegen1.Location = New System.Drawing.Point(0, 0)
+        Me.Anlegen1.Name = "Anlegen1"
+        Me.Anlegen1.Size = New System.Drawing.Size(978, 490)
+        Me.Anlegen1.TabIndex = 0
+        Me.Anlegen1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -570,20 +493,14 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents Psycho1 As Psycho
-    Friend WithEvents Zahnarzt1 As Zahnarzt
     Friend WithEvents Stammdaten1 As Stammdaten
     Friend WithEvents Schule1 As Schule
     Friend WithEvents Krankenhaus1 As Krankenhaus
     Friend WithEvents Kontakte1 As Kontakte
-    Friend WithEvents Kinderarzt1 As Kinderarzt
     Friend WithEvents Hobby1 As Hobby
-    Friend WithEvents HNO1 As HNO
     Friend WithEvents Hilfen1 As Hilfen
-    Friend WithEvents Hautarzt1 As Hautarzt
-    Friend WithEvents Frauenarzt1 As Frauenarzt
     Friend WithEvents Eltern1 As Eltern
     Friend WithEvents Doku1 As Doku
-    Friend WithEvents Augenarzt1 As Augenarzt
     Friend WithEvents Anlegen1 As anlegen
     Friend WithEvents DataSet11 As DataSet1
     Friend WithEvents Tagesbericht1 As Tagesbericht

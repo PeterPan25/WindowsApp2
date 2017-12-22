@@ -11,17 +11,12 @@ Public Class Form1
     Dim i As Integer
 
     Dim name2 As String() = {"Eltern",
-        "HNO",
-        "Doku",
+                "Arzt anlegen",
+                "Doku",
         "Stammdaten",
         "Schule",
         "Kontakte",
         "Hilfen",
-        "Kinderarzt",
-        "Hautarzt",
-        "Augenarzt",
-        "Zahnarzt",
-        "Frauenarzt",
         "Krankenhaus",
         "Psycho",
         "Hobby",
@@ -70,7 +65,7 @@ Public Class Form1
 
 
 
-        For i = 0 To 19
+        For i = 0 To 14
             If e.Node.Text = name2(i) Then
 
 
@@ -109,64 +104,41 @@ Public Class Form1
                         Hilfen1.Visible = True
                         Hilfen1.BringToFront()
 
+
+
                     Case 7
-
-                        Kinderarzt1.Visible = True
-                        Kinderarzt1.BringToFront()
-
-                    Case 8
-
-                        Hautarzt1.Visible = True
-                        Hautarzt1.BringToFront()
-
-                    Case 9
-
-                        Augenarzt1.Visible = True
-                        Augenarzt1.BringToFront()
-
-                    Case 10
-
-                        Zahnarzt1.Visible = True
-                        Zahnarzt1.BringToFront()
-
-                    Case 11
-
-                        Frauenarzt1.Visible = True
-                        Frauenarzt1.BringToFront()
-
-                    Case 12
 
                         Krankenhaus1.Visible = True
                         Krankenhaus1.BringToFront()
 
-                    Case 13
+                    Case 8
 
                         Psycho1.Visible = True
                         Psycho1.BringToFront()
 
-                    Case 14
+                    Case 9
 
                         Hobby1.Visible = True
                         Hobby1.BringToFront()
 
-                    Case 15
+                    Case 10
 
                         Tagesbericht1.Visible = True
                         Tagesbericht1.BringToFront()
 
-                    Case 16
+                    Case 11
 
                         Formulare1.Visible = True
                         Formulare1.BringToFront()
-                    Case 17
+                    Case 12
 
                         Panel1.Visible = True
                         Panel1.BringToFront()
-                    Case 18
+                    Case 13
                         Bericht1.Visible = True
                         Bericht1.BringToFront()
 
-                    Case 19
+                    Case 14
 
                         Arztbericht1.BerichtAnlegen_Load()
                         Arztbericht1.Visible = True
