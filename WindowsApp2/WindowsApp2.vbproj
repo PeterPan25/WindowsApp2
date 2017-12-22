@@ -308,6 +308,9 @@
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\ArztAnlegen.resx">
+      <DependentUpon>ArztAnlegen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Arztbericht.resx">
       <DependentUpon>Arztbericht.vb</DependentUpon>
     </EmbeddedResource>
