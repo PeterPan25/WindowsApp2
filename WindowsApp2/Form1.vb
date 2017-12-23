@@ -24,7 +24,8 @@ Public Class Form1
         "Formulare",
         "hinzufügen",
         "Berichte",
-        "Arztbericht anlegen"
+        "Arztbericht anlegen",
+        "Arzt Übersicht"
         }
 
 
@@ -65,7 +66,7 @@ Public Class Form1
 
 
 
-        For i = 0 To 14
+        For i = 0 To 15
             If e.Node.Text = name2(i) Then
 
 
@@ -143,6 +144,11 @@ Public Class Form1
                         Arztbericht1.BerichtAnlegen_Load()
                         Arztbericht1.Visible = True
                         Arztbericht1.BringToFront()
+
+                    Case 15
+                        ArztUebersicht1.Visible = True
+                        ArztUebersicht1.BringToFront()
+
 
                 End Select
 

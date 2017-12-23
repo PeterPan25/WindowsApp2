@@ -32,38 +32,29 @@ Partial Class Form1
         Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
         Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6, TreeNode7})
         Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt Übersicht")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt anlegen")
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode14, TreeNode15, TreeNode16})
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8, TreeNode9, TreeNode17})
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode20, TreeNode21})
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
-        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
-        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho")
-        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
-        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Berichte")
-        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztbericht anlegen")
-        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztberichte", New System.Windows.Forms.TreeNode() {TreeNode28, TreeNode29})
-        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
-        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Formulare")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt Übersicht")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt anlegen")
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11, TreeNode12})
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode8, TreeNode9, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
+        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode16, TreeNode17})
+        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
+        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
+        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
+        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho")
+        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
+        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Berichte")
+        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztbericht anlegen")
+        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztberichte", New System.Windows.Forms.TreeNode() {TreeNode24, TreeNode25})
+        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
+        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Formulare")
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CB_name = New System.Windows.Forms.ComboBox()
-        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet11 = New WindowsApp2.DataSet1()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.ArztAnlegen1 = New WindowsApp2.ArztAnlegen()
         Me.UserControl11 = New WindowsApp2.UserControl1()
         Me.Bericht1 = New WindowsApp2.Bericht()
@@ -80,6 +71,16 @@ Partial Class Form1
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
         Me.Anlegen1 = New WindowsApp2.anlegen()
+        Me.CB_name = New System.Windows.Forms.ComboBox()
+        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet11 = New WindowsApp2.DataSet1()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.ArztUebersicht1 = New WindowsApp2.ArztUebersicht()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -146,51 +147,51 @@ Partial Class Form1
         TreeNode8.Text = "Benutzer"
         TreeNode9.Name = "Knoten1"
         TreeNode9.Text = "Mitarbeiter"
-
-        TreeNode14.Name = "Knoten16"
-        TreeNode14.Text = "Arzt Übersicht"
-        TreeNode15.Name = "Knoten19"
-        TreeNode15.Text = "Krankenhaus"
-        TreeNode16.Name = "Knoten20"
-        TreeNode16.Text = "Arzt anlegen"
-        TreeNode17.Name = "Knoten33"
-        TreeNode17.Text = "Ärzte"
-        TreeNode18.Name = "Knoten27"
-        TreeNode18.Text = "admin"
-        TreeNode19.Name = "Knoten28"
-        TreeNode19.Text = "Tagesbericht"
-        TreeNode20.Name = "Knoten10"
-        TreeNode20.Text = "Stammdaten"
-        TreeNode21.Name = "Knoten11"
-        TreeNode21.Text = "Kontakte"
-        TreeNode22.Name = "Knoten9"
-        TreeNode22.Text = "allgemeine Daten"
-        TreeNode23.Name = "Knoten2"
-        TreeNode23.Text = "Hilfen"
-        TreeNode24.Name = "Knoten6"
-        TreeNode24.Text = "Doku"
-        TreeNode25.Name = "Knoten3"
-        TreeNode25.Text = "Schule"
-        TreeNode26.Name = "Knoten4"
-        TreeNode26.Text = "Psycho"
-        TreeNode27.Name = "Knoten5"
-        TreeNode27.Text = "Eltern"
-        TreeNode28.Name = ""
-        TreeNode28.Text = "Berichte"
-        TreeNode29.Name = "Knoten32"
-        TreeNode29.Text = "Arztbericht anlegen"
-        TreeNode30.Name = "Knoten8"
-        TreeNode30.Text = "Arztberichte"
-        TreeNode31.Name = "Knoten7"
-        TreeNode31.Text = "Hobby"
-        TreeNode32.Name = "Knoten0"
-        TreeNode32.Text = "Formulare"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode18, TreeNode19, TreeNode22, TreeNode23, TreeNode24, TreeNode25, TreeNode26, TreeNode27, TreeNode30, TreeNode31, TreeNode32})
+        TreeNode10.Name = "Knoten16"
+        TreeNode10.Text = "Arzt Übersicht"
+        TreeNode11.Name = "Knoten19"
+        TreeNode11.Text = "Krankenhaus"
+        TreeNode12.Name = "Knoten20"
+        TreeNode12.Text = "Arzt anlegen"
+        TreeNode13.Name = "Knoten33"
+        TreeNode13.Text = "Ärzte"
+        TreeNode14.Name = "Knoten27"
+        TreeNode14.Text = "admin"
+        TreeNode15.Name = "Knoten28"
+        TreeNode15.Text = "Tagesbericht"
+        TreeNode16.Name = "Knoten10"
+        TreeNode16.Text = "Stammdaten"
+        TreeNode17.Name = "Knoten11"
+        TreeNode17.Text = "Kontakte"
+        TreeNode18.Name = "Knoten9"
+        TreeNode18.Text = "allgemeine Daten"
+        TreeNode19.Name = "Knoten2"
+        TreeNode19.Text = "Hilfen"
+        TreeNode20.Name = "Knoten6"
+        TreeNode20.Text = "Doku"
+        TreeNode21.Name = "Knoten3"
+        TreeNode21.Text = "Schule"
+        TreeNode22.Name = "Knoten4"
+        TreeNode22.Text = "Psycho"
+        TreeNode23.Name = "Knoten5"
+        TreeNode23.Text = "Eltern"
+        TreeNode24.Name = ""
+        TreeNode24.Text = "Berichte"
+        TreeNode25.Name = "Knoten32"
+        TreeNode25.Text = "Arztbericht anlegen"
+        TreeNode26.Name = "Knoten8"
+        TreeNode26.Text = "Arztberichte"
+        TreeNode27.Name = "Knoten7"
+        TreeNode27.Text = "Hobby"
+        TreeNode28.Name = "Knoten0"
+        TreeNode28.Text = "Formulare"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode14, TreeNode15, TreeNode18, TreeNode19, TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode26, TreeNode27, TreeNode28})
         Me.TreeView1.Size = New System.Drawing.Size(145, 490)
         Me.TreeView1.TabIndex = 1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.ArztUebersicht1)
         Me.Panel1.Controls.Add(Me.ArztAnlegen1)
         Me.Panel1.Controls.Add(Me.UserControl11)
         Me.Panel1.Controls.Add(Me.Bericht1)
@@ -212,110 +213,6 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(978, 490)
         Me.Panel1.TabIndex = 0
-        '
-        'CB_name
-        '
-        Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
-        Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CB_name.FormattingEnabled = True
-        Me.CB_name.Location = New System.Drawing.Point(437, 61)
-        Me.CB_name.Name = "CB_name"
-        Me.CB_name.Size = New System.Drawing.Size(262, 21)
-        Me.CB_name.TabIndex = 8
-        '
-        'KindBindingSource
-        '
-        Me.KindBindingSource.DataMember = "Kind"
-        Me.KindBindingSource.DataSource = Me.DataSet11
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1040, 391)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(534, 358)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(45, 13)
-        Me.Label16.TabIndex = 7
-        Me.Label16.Text = "Label16"
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1127, 650)
-        Me.SplitContainer1.SplitterDistance = 156
-        Me.SplitContainer1.TabIndex = 9
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(964, 93)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 13)
-        Me.Label1.TabIndex = 9
-        '
-        'KindTableAdapter
-        '
-        Me.KindTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.BerichtTableAdapter = Nothing
-        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.HautarztTableAdapter = Nothing
-        Me.TableAdapterManager.HilfenTableAdapter = Nothing
-        Me.TableAdapterManager.HNOTableAdapter = Nothing
-        Me.TableAdapterManager.HobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
-        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
-        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
-        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
-        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
-        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
-        Me.TableAdapterManager.KontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
-        Me.TableAdapterManager.PsychoTableAdapter = Nothing
-        Me.TableAdapterManager.SchuleTableAdapter = Nothing
-        Me.TableAdapterManager.TableTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
         'ArztAnlegen1
         '
@@ -460,6 +357,118 @@ Partial Class Form1
         Me.Anlegen1.TabIndex = 0
         Me.Anlegen1.Visible = False
         '
+        'CB_name
+        '
+        Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
+        Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CB_name.FormattingEnabled = True
+        Me.CB_name.Location = New System.Drawing.Point(437, 61)
+        Me.CB_name.Name = "CB_name"
+        Me.CB_name.Size = New System.Drawing.Size(262, 21)
+        Me.CB_name.TabIndex = 8
+        '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet11
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1040, 391)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(534, 358)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 7
+        Me.Label16.Text = "Label16"
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1127, 650)
+        Me.SplitContainer1.SplitterDistance = 156
+        Me.SplitContainer1.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(964, 93)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 13)
+        Me.Label1.TabIndex = 9
+        '
+        'KindTableAdapter
+        '
+        Me.KindTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'ArztUebersicht1
+        '
+        Me.ArztUebersicht1.Location = New System.Drawing.Point(3, 0)
+        Me.ArztUebersicht1.Name = "ArztUebersicht1"
+        Me.ArztUebersicht1.Size = New System.Drawing.Size(972, 487)
+        Me.ArztUebersicht1.TabIndex = 22
+        Me.ArztUebersicht1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -513,5 +522,5 @@ Partial Class Form1
     Friend WithEvents Bericht1 As Bericht
     Friend WithEvents Arztbericht1 As Arztbericht
     Friend WithEvents ArztAnlegen1 As ArztAnlegen
-
+    Friend WithEvents ArztUebersicht1 As ArztUebersicht
 End Class

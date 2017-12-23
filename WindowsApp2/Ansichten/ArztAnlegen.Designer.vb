@@ -30,34 +30,40 @@ Partial Class ArztAnlegen
         Me.AugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.AugenarztTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.KindAugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KindAugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindAugenarztTableAdapter()
-        Me.FrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.FrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.FrauenarztTableAdapter()
-        Me.KindFrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KindFrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindFrauenarztTableAdapter()
-        Me.HautarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HautarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.HautarztTableAdapter()
-        Me.KindHautarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KindHautarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindHautarztTableAdapter()
-        Me.HNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.HNOTableAdapter = New WindowsApp2.DataSet1TableAdapters.HNOTableAdapter()
-        Me.KindHNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KindHNOTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindHNOTableAdapter()
-        Me.KinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindAugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindAugenarztTableAdapter()
         Me.KinderarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KinderarztTableAdapter()
-        Me.KindKinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindFrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindFrauenarztTableAdapter()
+        Me.KindHautarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindHautarztTableAdapter()
+        Me.KindHNOTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindHNOTableAdapter()
         Me.KindKinderarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKinderarztTableAdapter()
-        Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ZahnarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.ZahnarztTableAdapter()
-        Me.KindZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindZahnarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindZahnarztTableAdapter()
+        Me.ZahnarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.ZahnarztTableAdapter()
+        Me.KindAugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.FrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindFrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HautarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindHautarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.HNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindHNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindKinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,9 +85,9 @@ Partial Class ArztAnlegen
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(358, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(158, 25)
+        Me.Label1.Size = New System.Drawing.Size(67, 25)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Ärzte anlegen"
+        Me.Label1.Text = "Ärzte"
         '
         'ComboBox1
         '
@@ -149,104 +155,104 @@ Partial Class ArztAnlegen
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Me.ZahnarztTableAdapter
         '
-        'KindAugenarztBindingSource
+        'FrauenarztTableAdapter
         '
-        Me.KindAugenarztBindingSource.DataMember = "KindAugenarzt"
-        Me.KindAugenarztBindingSource.DataSource = Me.DataSet1
+        Me.FrauenarztTableAdapter.ClearBeforeFill = True
+        '
+        'HautarztTableAdapter
+        '
+        Me.HautarztTableAdapter.ClearBeforeFill = True
+        '
+        'HNOTableAdapter
+        '
+        Me.HNOTableAdapter.ClearBeforeFill = True
         '
         'KindAugenarztTableAdapter
         '
         Me.KindAugenarztTableAdapter.ClearBeforeFill = True
+        '
+        'KinderarztTableAdapter
+        '
+        Me.KinderarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindFrauenarztTableAdapter
+        '
+        Me.KindFrauenarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindHautarztTableAdapter
+        '
+        Me.KindHautarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindHNOTableAdapter
+        '
+        Me.KindHNOTableAdapter.ClearBeforeFill = True
+        '
+        'KindKinderarztTableAdapter
+        '
+        Me.KindKinderarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindZahnarztTableAdapter
+        '
+        Me.KindZahnarztTableAdapter.ClearBeforeFill = True
+        '
+        'ZahnarztTableAdapter
+        '
+        Me.ZahnarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindAugenarztBindingSource
+        '
+        Me.KindAugenarztBindingSource.DataMember = "KindAugenarzt"
+        Me.KindAugenarztBindingSource.DataSource = Me.DataSet1
         '
         'FrauenarztBindingSource
         '
         Me.FrauenarztBindingSource.DataMember = "Frauenarzt"
         Me.FrauenarztBindingSource.DataSource = Me.DataSet1
         '
-        'FrauenarztTableAdapter
-        '
-        Me.FrauenarztTableAdapter.ClearBeforeFill = True
-        '
         'KindFrauenarztBindingSource
         '
         Me.KindFrauenarztBindingSource.DataMember = "KindFrauenarzt"
         Me.KindFrauenarztBindingSource.DataSource = Me.DataSet1
-        '
-        'KindFrauenarztTableAdapter
-        '
-        Me.KindFrauenarztTableAdapter.ClearBeforeFill = True
         '
         'HautarztBindingSource
         '
         Me.HautarztBindingSource.DataMember = "Hautarzt"
         Me.HautarztBindingSource.DataSource = Me.DataSet1
         '
-        'HautarztTableAdapter
-        '
-        Me.HautarztTableAdapter.ClearBeforeFill = True
-        '
         'KindHautarztBindingSource
         '
         Me.KindHautarztBindingSource.DataMember = "KindHautarzt"
         Me.KindHautarztBindingSource.DataSource = Me.DataSet1
-        '
-        'KindHautarztTableAdapter
-        '
-        Me.KindHautarztTableAdapter.ClearBeforeFill = True
         '
         'HNOBindingSource
         '
         Me.HNOBindingSource.DataMember = "HNO"
         Me.HNOBindingSource.DataSource = Me.DataSet1
         '
-        'HNOTableAdapter
-        '
-        Me.HNOTableAdapter.ClearBeforeFill = True
-        '
         'KindHNOBindingSource
         '
         Me.KindHNOBindingSource.DataMember = "KindHNO"
         Me.KindHNOBindingSource.DataSource = Me.DataSet1
-        '
-        'KindHNOTableAdapter
-        '
-        Me.KindHNOTableAdapter.ClearBeforeFill = True
         '
         'KinderarztBindingSource
         '
         Me.KinderarztBindingSource.DataMember = "Kinderarzt"
         Me.KinderarztBindingSource.DataSource = Me.DataSet1
         '
-        'KinderarztTableAdapter
-        '
-        Me.KinderarztTableAdapter.ClearBeforeFill = True
-        '
         'KindKinderarztBindingSource
         '
         Me.KindKinderarztBindingSource.DataMember = "KindKinderarzt"
         Me.KindKinderarztBindingSource.DataSource = Me.DataSet1
-        '
-        'KindKinderarztTableAdapter
-        '
-        Me.KindKinderarztTableAdapter.ClearBeforeFill = True
         '
         'ZahnarztBindingSource
         '
         Me.ZahnarztBindingSource.DataMember = "Zahnarzt"
         Me.ZahnarztBindingSource.DataSource = Me.DataSet1
         '
-        'ZahnarztTableAdapter
-        '
-        Me.ZahnarztTableAdapter.ClearBeforeFill = True
-        '
         'KindZahnarztBindingSource
         '
         Me.KindZahnarztBindingSource.DataMember = "KindZahnarzt"
         Me.KindZahnarztBindingSource.DataSource = Me.DataSet1
-        '
-        'KindZahnarztTableAdapter
-        '
-        Me.KindZahnarztTableAdapter.ClearBeforeFill = True
         '
         'PlatzhalterText2
         '
@@ -312,10 +318,59 @@ Partial Class ArztAnlegen
         Me.Button1.Text = "Speichern"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(502, 170)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox1.TabIndex = 10
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(502, 212)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox2.TabIndex = 11
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(502, 247)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox3.TabIndex = 12
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(502, 287)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox4.TabIndex = 13
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(502, 331)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(249, 20)
+        Me.TextBox5.TabIndex = 14
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(502, 77)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(249, 21)
+        Me.ComboBox2.TabIndex = 15
+        '
         'ArztAnlegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PlatzhalterText1)
         Me.Controls.Add(Me.PlatzhalterText5)
@@ -380,4 +435,10 @@ Partial Class ArztAnlegen
     Friend WithEvents PlatzhalterText5 As PlatzhalterText
     Friend WithEvents PlatzhalterText1 As PlatzhalterText
     Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

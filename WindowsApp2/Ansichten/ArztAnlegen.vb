@@ -1,4 +1,7 @@
 ﻿Public Class ArztAnlegen
+    Dim name3 As String() = {"a"}
+
+
     Private Sub AugenarztBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.AugenarztBindingSource.EndEdit()
@@ -35,6 +38,7 @@
             HNOArztAnlegen()
 
         End If
+        Combotext()
     End Sub
 
     Private Sub HautarztAnlegen()
@@ -256,4 +260,161 @@
         PlatzhalterText5.Clear()
 
     End Sub
+    ' ********************************ab hier Daten ändern
+    Private Sub Anzeige() Handles ComboBox1.SelectedIndexChanged
+        Combotext()
+
+    End Sub
+
+    Private Sub Combotext()
+
+        Dim ArtText As String = ComboBox1.Text
+        If ArtText = "Augenarzt" Then
+            ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Frauenarzt" Then
+            ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Kinderarzt" Then
+            ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Hautarzt" Then
+            ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Zahnarzt" Then
+            ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "HNO-Arzt" Then
+
+            ReDim name3(DataSet1.HNO.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.HNO.Rows.Count - 1)
+                name3(z) = DataSet1.HNO.Rows(z)("HNO_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+
+        End If
+        DatenAnzeigen()
+
+
+    End Sub
+
+    Private Sub DatenAnzeigen() Handles ComboBox2.SelectedIndexChanged
+        Dim name As String = ComboBox2.Text
+
+        Dim ArtText As String = ComboBox1.Text
+        If ArtText = "Augenarzt" Then
+            ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
+                If name = DataSet1.Augenarzt.Rows(z)("A_Name") Then
+                    TextBox5.Text = DataSet1.Augenarzt.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.Augenarzt.Rows(z)("PLZ")
+                    TextBox4.Text = DataSet1.Augenarzt.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.Augenarzt.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.Augenarzt.Rows(z)("A_Name")
+
+                End If
+            Next
+
+        ElseIf ArtText = "Frauenarzt" Then
+            ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
+                If name = DataSet1.Frauenarzt.Rows(z)("F_Name") Then
+                    TextBox5.Text = DataSet1.Frauenarzt.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.Frauenarzt.Rows(z)("PLZ")
+                    TextBox4.Text = DataSet1.Frauenarzt.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.Frauenarzt.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.Frauenarzt.Rows(z)("F_Name")
+                End If
+            Next
+
+        ElseIf ArtText = "Kinderarzt" Then
+            ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
+                If name = DataSet1.Kinderarzt.Rows(z)("K_Name") Then
+                    TextBox5.Text = DataSet1.Kinderarzt.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.Kinderarzt.Rows(z)("PLZ")
+                    TextBox4.Text = DataSet1.Kinderarzt.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.Kinderarzt.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.Kinderarzt.Rows(z)("K_Name")
+                End If
+            Next
+
+        ElseIf ArtText = "Hautarzt" Then
+            ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
+                If name = DataSet1.Hautarzt.Rows(z)("H_Name") Then
+                    TextBox5.Text = DataSet1.Hautarzt.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.Hautarzt.Rows(z)("PLZ")
+                    TextBox4.Text = DataSet1.Hautarzt.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.Hautarzt.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.Hautarzt.Rows(z)("H_Name")
+                End If
+            Next
+
+        ElseIf ArtText = "Zahnarzt" Then
+            ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
+                If name = DataSet1.Zahnarzt.Rows(z)("Z_Name") Then
+                    TextBox5.Text = DataSet1.Zahnarzt.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.Zahnarzt.Rows(z)("PLZ")
+                    TextBox4.Text = DataSet1.Zahnarzt.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.Zahnarzt.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.Zahnarzt.Rows(z)("Z_Name")
+
+                End If
+            Next
+
+        ElseIf ArtText = "HNO-Arzt" Then
+            ReDim name3(DataSet1.HNO.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.HNO.Rows.Count - 1)
+                If name = DataSet1.HNO.Rows(z)("HNO_Name") Then
+                    TextBox5.Text = DataSet1.HNO.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.HNO.Rows(z)("PLZ")
+                    TextBox4.Text = DataSet1.HNO.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.HNO.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.HNO.Rows(z)("HNO_Name")
+
+                End If
+            Next
+
+
+
+        End If
+
+
+    End Sub
+
 End Class

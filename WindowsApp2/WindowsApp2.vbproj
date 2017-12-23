@@ -314,6 +314,9 @@
     <EmbeddedResource Include="Ansichten\Arztbericht.resx">
       <DependentUpon>Arztbericht.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\ArztUebersicht.resx">
+      <DependentUpon>ArztUebersicht.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>
     </EmbeddedResource>
