@@ -146,6 +146,7 @@ Public Class Form1
                         Arztbericht1.BringToFront()
 
                     Case 15
+                        ArztUebersicht1.Arzt_Load()
                         ArztUebersicht1.Visible = True
                         ArztUebersicht1.BringToFront()
 
