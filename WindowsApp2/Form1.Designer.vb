@@ -61,7 +61,6 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.UserControl11 = New WindowsApp2.UserControl1()
         Me.Bericht1 = New WindowsApp2.Bericht()
-        Me.Arztbericht1 = New WindowsApp2.Arztbericht()
         Me.Tagesbericht1 = New WindowsApp2.Tagesbericht()
         Me.Formulare1 = New WindowsApp2.Formulare()
         Me.Augenarzt1 = New WindowsApp2.Augenarzt()
@@ -89,6 +88,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.Arztbericht1 = New WindowsApp2.Arztbericht()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -208,8 +208,8 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.UserControl11)
-        Me.Panel1.Controls.Add(Me.Bericht1)
         Me.Panel1.Controls.Add(Me.Arztbericht1)
+        Me.Panel1.Controls.Add(Me.Bericht1)
         Me.Panel1.Controls.Add(Me.Tagesbericht1)
         Me.Panel1.Controls.Add(Me.Formulare1)
         Me.Panel1.Controls.Add(Me.Augenarzt1)
@@ -251,14 +251,6 @@ Partial Class Form1
         Me.Bericht1.Size = New System.Drawing.Size(978, 490)
         Me.Bericht1.TabIndex = 19
         Me.Bericht1.Visible = False
-        '
-        'Arztbericht1
-        '
-        Me.Arztbericht1.Location = New System.Drawing.Point(0, 0)
-        Me.Arztbericht1.Name = "Arztbericht1"
-        Me.Arztbericht1.Size = New System.Drawing.Size(978, 490)
-        Me.Arztbericht1.TabIndex = 20
-        Me.Arztbericht1.Visible = False
         '
         'Tagesbericht1
         '
@@ -527,6 +519,14 @@ Partial Class Form1
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
+        'Arztbericht1
+        '
+        Me.Arztbericht1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Arztbericht1.Location = New System.Drawing.Point(0, 0)
+        Me.Arztbericht1.Name = "Arztbericht1"
+        Me.Arztbericht1.Size = New System.Drawing.Size(978, 490)
+        Me.Arztbericht1.TabIndex = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -585,6 +585,5 @@ Partial Class Form1
     Friend WithEvents UserControl11 As UserControl1
     Friend WithEvents Bericht1 As Bericht
     Friend WithEvents Arztbericht1 As Arztbericht
-
 
 End Class
