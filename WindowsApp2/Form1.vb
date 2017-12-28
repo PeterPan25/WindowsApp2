@@ -25,7 +25,8 @@ Public Class Form1
         "hinzufügen",
         "Berichte",
         "Arztbericht anlegen",
-        "Arzt Übersicht"
+        "Arzt Übersicht",
+        "hinzufügen"
         }
 
 
@@ -66,7 +67,7 @@ Public Class Form1
 
 
 
-        For i = 0 To 15
+        For i = 0 To 16
             If e.Node.Text = name2(i) Then
 
 
@@ -87,8 +88,8 @@ Public Class Form1
 
                     Case 3
 
-                        Stammdaten1.Visible = True
-                        Stammdaten1.BringToFront()
+                        KindUebersicht1.Visible = True
+                        KindUebersicht1.BringToFront()
 
                     Case 4
 
@@ -150,6 +151,9 @@ Public Class Form1
                         ArztUebersicht1.Visible = True
                         ArztUebersicht1.BringToFront()
 
+                    Case 16
+                        Stammdaten1.Visible = True
+                        Stammdaten1.BringToFront()
 
                 End Select
 
