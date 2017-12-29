@@ -121,10 +121,10 @@
     <Compile Include="Ansichten\Bericht.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\KindUebersicht.Designer.vb">
-      <DependentUpon>KindUebersicht.vb</DependentUpon>
+    <Compile Include="Ansichten\KindHinzufuegen.Designer.vb">
+      <DependentUpon>KindHinzufuegen.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\KindUebersicht.vb">
+    <Compile Include="Ansichten\KindHinzufuegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\Tagesbericht.Designer.vb">
@@ -328,8 +328,8 @@
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\KindUebersicht.resx">
-      <DependentUpon>KindUebersicht.vb</DependentUpon>
+    <EmbeddedResource Include="Ansichten\KindHinzufuegen.resx">
+      <DependentUpon>KindHinzufuegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Tagesbericht.resx">
       <DependentUpon>Tagesbericht.vb</DependentUpon>

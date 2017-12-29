@@ -1,62 +1,53 @@
 ﻿Public Class Stammdaten
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim a As DataRow
+    Dim name3 As String() = {"a"}
 
-        Dim data2 As New DataSet1.KindDataTable
-        Dim myRow As DataRow
-        Dim myCol As DataColumn
-        TableAdapterManager.KindTableAdapter.Fill(data2)
-        a = data2.NewRow()
+    Public Sub Stammdaten_Load()
+        Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
 
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-
-
-
-
-
-        a("Name") = String.Concat(TextBox1.Text, " ", TextBox8.Text)
-        ' a("Geburtsdatum") = CDate(TextBox2.Text)
-        a("Nationalität") = TextBox3.Text
-        a("Geburtsdatum") = DateTimePicker1.Value
-        a("Jugendamt") = TextBox4.Text
-        a("Aufnahmedatum") = DateTimePicker2.Value
-        a("Schule") = TextBox6.Text
-        a("Besonderheiten") = TextBox7.Text
-        a("Geburtsort") = TextBox9.Text
-        a("Konfession") = TextBox10.Text
-        a("Hilfe_nach") = TextBox11.Text
-        a("Sorgerechtsstatus") = TextBox12.Text
-        a("Krankenversicherung") = TextBox13.Text
-
-
-        data2.AddKindRow(a)
-
-
-
-        Me.Validate()
-
-        Me.KindTableAdapter.Update(data2)
-        Me.TableAdapterManager.UpdateAll(Me.DataSet11)
-        Form1.Combotext()
-        TextBox1.Clear()
-        TextBox8.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
-        TextBox6.Clear()
-        TextBox7.Clear()
-        TextBox9.Clear()
-        TextBox10.Clear()
-        TextBox11.Clear()
-        TextBox12.Clear()
-        TextBox13.Clear()
-
-
-
-        For Each myRow In data2.Rows
-            For Each myCol In data2.Columns
-                Console.WriteLine(vbTab & myRow(myCol).ToString())
-            Next
-        Next
+        Daten_Anzeigen()
 
     End Sub
+
+
+
+
+    Public Sub Daten_Anzeigen()
+        Dim name As String = Form1.CB_name.Text
+
+        ReDim name3(DataSet1.Kind.Rows.Count - 1)
+
+        For z = 0 To (DataSet1.Kind.Rows.Count - 1)
+            If name = DataSet1.Kind.Rows(z)("Name") Then
+                Try
+                    DateTimePicker1.Value = DataSet1.Kind.Rows(z)("Geburtsdatum")
+                    DateTimePicker2.Value = DataSet1.Kind.Rows(z)("Aufnahmedatum")
+                    TextBox3.Text = DataSet1.Kind.Rows(z)("Nationalität")
+                    TextBox4.Text = DataSet1.Kind.Rows(z)("Jugendamt")
+                    TextBox6.Text = DataSet1.Kind.Rows(z)("Schule")
+                    TextBox7.Text = DataSet1.Kind.Rows(z)("Besonderheiten")
+                    TextBox9.Text = DataSet1.Kind.Rows(z)("Geburtsort")
+                    TextBox10.Text = DataSet1.Kind.Rows(z)("Konfession")
+                    TextBox11.Text = DataSet1.Kind.Rows(z)("Hilfe_nach")
+                    TextBox12.Text = DataSet1.Kind.Rows(z)("Sorgerechtsstatus")
+                    TextBox13.Text = DataSet1.Kind.Rows(z)("Krankenversicherung")
+                Catch ex As Exception
+                    MsgBox("Hoppla")
+                End Try
+
+
+
+            End If
+        Next
+
+
+    End Sub
+
+
+
+    'Private Sub KindBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+    '    Me.Validate()
+    '    Me.KindBindingSource.EndEdit()
+    '    Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+    'End Sub
 End Class

@@ -87,9 +87,10 @@ Public Class Form1
                         Doku1.BringToFront()
 
                     Case 3
+                        Stammdaten1.Stammdaten_Load()
+                        Stammdaten1.Visible = True
+                        Stammdaten1.BringToFront()
 
-                        KindUebersicht1.Visible = True
-                        KindUebersicht1.BringToFront()
 
                     Case 4
 
@@ -152,8 +153,8 @@ Public Class Form1
                         ArztUebersicht1.BringToFront()
 
                     Case 16
-                        Stammdaten1.Visible = True
-                        Stammdaten1.BringToFront()
+                        KindHinzufuegen1.Visible = True
+                        KindHinzufuegen1.BringToFront()
 
                 End Select
 
@@ -223,6 +224,7 @@ Public Class Form1
         Datentest()
         Bericht1.BerichtKind()
 
+        Stammdaten1.Daten_Anzeigen()
     End Sub
 
 

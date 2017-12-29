@@ -81,7 +81,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.KindUebersicht1 = New WindowsApp2.KindUebersicht()
+        Me.KindHinzufuegen1 = New WindowsApp2.KindHinzufuegen()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -192,7 +192,7 @@ Partial Class Form1
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.KindUebersicht1)
+        Me.Panel1.Controls.Add(Me.KindHinzufuegen1)
         Me.Panel1.Controls.Add(Me.ArztUebersicht1)
         Me.Panel1.Controls.Add(Me.ArztAnlegen1)
         Me.Panel1.Controls.Add(Me.UserControl11)
@@ -473,11 +473,11 @@ Partial Class Form1
         '
         'KindUebersicht1
         '
-        Me.KindUebersicht1.Location = New System.Drawing.Point(3, 0)
-        Me.KindUebersicht1.Name = "KindUebersicht1"
-        Me.KindUebersicht1.Size = New System.Drawing.Size(975, 487)
-        Me.KindUebersicht1.TabIndex = 23
-        Me.KindUebersicht1.Visible = False
+        Me.KindHinzufuegen1.Location = New System.Drawing.Point(3, 0)
+        Me.KindHinzufuegen1.Name = "KindHinzufuegen1"
+        Me.KindHinzufuegen1.Size = New System.Drawing.Size(975, 487)
+        Me.KindHinzufuegen1.TabIndex = 23
+        Me.KindHinzufuegen1.Visible = False
         '
         'Form1
         '
@@ -533,5 +533,5 @@ Partial Class Form1
     Friend WithEvents Arztbericht1 As Arztbericht
     Friend WithEvents ArztAnlegen1 As ArztAnlegen
     Friend WithEvents ArztUebersicht1 As ArztUebersicht
-    Friend WithEvents KindUebersicht1 As KindUebersicht
+    Friend WithEvents KindHinzufuegen1 As KindHinzufuegen
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Stammdaten
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,42 +20,40 @@ Partial Class Stammdaten
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DataSet1 = New WindowsApp2.DataSet1()
+        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.DataSet11 = New WindowsApp2.DataSet1()
         Me.TableLayoutPanel1.SuspendLayout()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Überschrift
@@ -76,31 +74,26 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label5, 0, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label6, 0, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.Label7, 0, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label8, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label9, 2, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label10, 2, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label11, 2, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 2, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 2, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox4, 1, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox6, 1, 5)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox7, 1, 6)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox8, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox9, 3, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox10, 3, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox11, 3, 3)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox12, 3, 4)
         Me.TableLayoutPanel1.Controls.Add(Me.TextBox13, 3, 5)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 3, 6)
         Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 1, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -118,17 +111,6 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(796, 473)
         Me.TableLayoutPanel1.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(153, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Vorname"
         '
         'Label2
         '
@@ -196,17 +178,6 @@ Partial Class Stammdaten
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Besonderheiten"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(400, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(153, 18)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Name"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -262,17 +233,10 @@ Partial Class Stammdaten
         Me.Label13.TabIndex = 12
         Me.Label13.Text = "Krankenversicherung"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBox1.Location = New System.Drawing.Point(162, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(232, 24)
-        Me.TextBox1.TabIndex = 13
-        '
         'TextBox3
         '
         Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox3.Enabled = False
         Me.TextBox3.Location = New System.Drawing.Point(162, 121)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(232, 24)
@@ -281,6 +245,7 @@ Partial Class Stammdaten
         'TextBox4
         '
         Me.TextBox4.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox4.Enabled = False
         Me.TextBox4.Location = New System.Drawing.Point(162, 180)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(232, 24)
@@ -289,6 +254,7 @@ Partial Class Stammdaten
         'TextBox6
         '
         Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox6.Enabled = False
         Me.TextBox6.Location = New System.Drawing.Point(162, 298)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(232, 24)
@@ -297,22 +263,16 @@ Partial Class Stammdaten
         'TextBox7
         '
         Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox7.Enabled = False
         Me.TextBox7.Location = New System.Drawing.Point(162, 357)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(232, 24)
         Me.TextBox7.TabIndex = 19
         '
-        'TextBox8
-        '
-        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Top
-        Me.TextBox8.Location = New System.Drawing.Point(559, 3)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(234, 24)
-        Me.TextBox8.TabIndex = 20
-        '
         'TextBox9
         '
         Me.TextBox9.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox9.Enabled = False
         Me.TextBox9.Location = New System.Drawing.Point(559, 62)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(234, 24)
@@ -321,6 +281,7 @@ Partial Class Stammdaten
         'TextBox10
         '
         Me.TextBox10.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox10.Enabled = False
         Me.TextBox10.Location = New System.Drawing.Point(559, 121)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(234, 24)
@@ -329,6 +290,7 @@ Partial Class Stammdaten
         'TextBox11
         '
         Me.TextBox11.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox11.Enabled = False
         Me.TextBox11.Location = New System.Drawing.Point(559, 180)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(234, 24)
@@ -337,6 +299,7 @@ Partial Class Stammdaten
         'TextBox12
         '
         Me.TextBox12.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox12.Enabled = False
         Me.TextBox12.Location = New System.Drawing.Point(559, 239)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(234, 24)
@@ -345,22 +308,15 @@ Partial Class Stammdaten
         'TextBox13
         '
         Me.TextBox13.Dock = System.Windows.Forms.DockStyle.Top
+        Me.TextBox13.Enabled = False
         Me.TextBox13.Location = New System.Drawing.Point(559, 298)
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(234, 24)
         Me.TextBox13.TabIndex = 25
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(559, 357)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 26
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(162, 62)
         Me.DateTimePicker1.Name = "DateTimePicker1"
@@ -369,11 +325,22 @@ Partial Class Stammdaten
         '
         'DateTimePicker2
         '
+        Me.DateTimePicker2.Enabled = False
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker2.Location = New System.Drawing.Point(162, 239)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(232, 24)
         Me.DateTimePicker2.TabIndex = 28
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet1
         '
         'KindTableAdapter
         '
@@ -412,11 +379,6 @@ Partial Class Stammdaten
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'Stammdaten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -427,40 +389,37 @@ Partial Class Stammdaten
         Me.Size = New System.Drawing.Size(796, 497)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Überschrift As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents TextBox10 As TextBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents TextBox12 As TextBox
     Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents KindTableAdapter As DataSet1TableAdapters.KindTableAdapter
-    Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataSet11 As DataSet1
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents DataSet1 As DataSet1
+    Friend WithEvents KindBindingSource As BindingSource
+    Friend WithEvents KindTableAdapter As DataSet1TableAdapters.KindTableAdapter
+    Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
 End Class
