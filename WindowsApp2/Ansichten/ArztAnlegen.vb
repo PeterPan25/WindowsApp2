@@ -39,6 +39,7 @@
 
         End If
         Combotext()
+        ResetTextbox()
     End Sub
 
     Private Sub HautarztAnlegen()
@@ -414,6 +415,24 @@
 
         End If
 
+
+    End Sub
+
+
+    Private Sub ResetTextbox()
+        PlatzhalterText1.Clear()
+        PlatzhalterText2.Clear()
+        PlatzhalterText3.Clear()
+        PlatzhalterText4.Clear()
+        PlatzhalterText5.Clear()
+
+
+
+        PlatzhalterText1.PlatzHalterText = PlatzhalterText1.PlatzHalterText
+        PlatzhalterText2.PlatzHalterText = PlatzhalterText2.PlatzHalterText
+        PlatzhalterText3.PlatzHalterText = PlatzhalterText3.PlatzHalterText
+        PlatzhalterText4.PlatzHalterText = PlatzhalterText4.PlatzHalterText
+        PlatzhalterText5.PlatzHalterText = PlatzhalterText5.PlatzHalterText
 
     End Sub
 
