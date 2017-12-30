@@ -121,6 +121,12 @@
     <Compile Include="Ansichten\Bericht.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\KindBearbeiten.Designer.vb">
+      <DependentUpon>KindBearbeiten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\KindBearbeiten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\KindHinzufuegen.Designer.vb">
       <DependentUpon>KindHinzufuegen.vb</DependentUpon>
     </Compile>
@@ -327,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\KindBearbeiten.resx">
+      <DependentUpon>KindBearbeiten.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\KindHinzufuegen.resx">
       <DependentUpon>KindHinzufuegen.vb</DependentUpon>

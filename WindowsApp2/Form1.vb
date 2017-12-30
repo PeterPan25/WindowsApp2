@@ -32,37 +32,6 @@ Public Class Form1
 
 
 
-
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-
-
-
-        'Me.TableAdapterManager.KindTableAdapter.Fill(data3)
-        'test = data3.NameColumn.ToString()
-
-        ''name per dropdown auswählen - funktioniert
-
-        'Dim name As String
-        'name = "F_" + CB_name.Text
-
-
-        'If name = My.Forms.F_Aaliyah.Name Then
-        '    F_Aaliyah.Show()
-        'ElseIf name = My.Forms.F_Peter.Name Then
-        '    F_Peter.Show()
-        'ElseIf name = My.Forms.F_Hans.Name Then
-        '    F_Hans.Show()
-
-        'Else
-
-
-        '    MessageBox.Show("Kind nicht vorhanden")
-
-        'End If
-    End Sub
-
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
 
 
@@ -223,6 +192,7 @@ Public Class Form1
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
         Datentest()
         Bericht1.BerichtKind()
+        KindBearbeiten1.Daten_Anzeigen()
 
         Stammdaten1.Daten_Anzeigen()
     End Sub
