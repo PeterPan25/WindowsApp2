@@ -166,37 +166,9 @@ Public Class Form1
         CB_name.DataSource = name3
     End Sub
 
-    Public Sub Datentest()
-        Dim n1 As String
-        Dim r1() As DataRow
-        ' Dim c1 As DataColumn
 
-        Me.TableAdapterManager.KindTableAdapter.Fill(data3)
-        n1 = CB_name.Text
-
-
-        r1 = data3.Select("Name  = '" & n1 & "'")
-
-        Dim k As Integer
-
-        ' 3/8 jeweilige Spalte für Name etc.
-        For k = 0 To r1.GetUpperBound(0)
-
-            Try
-                Console.WriteLine(r1(k)(3))
-                Label1.Text = r1(k)(8)
-            Catch ex As Exception
-                Label1.Text = "Henner mieft"
-            End Try
-
-
-        Next k
-
-
-    End Sub
 
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
-        Datentest()
         Bericht1.BerichtKind()
         KindBearbeiten1.DatenAnzeigen()
 
