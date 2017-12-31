@@ -55,6 +55,7 @@ Partial Class Form1
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.KindHinzufuegen1 = New WindowsApp2.KindHinzufuegen()
         Me.ArztUebersicht1 = New WindowsApp2.ArztUebersicht()
         Me.ArztAnlegen1 = New WindowsApp2.ArztAnlegen()
         Me.UserControl11 = New WindowsApp2.UserControl1()
@@ -81,7 +82,7 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.KindHinzufuegen1 = New WindowsApp2.KindHinzufuegen()
+        Me.KindBearbeiten1 = New WindowsApp2.KindBearbeiten()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -192,6 +193,7 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.KindBearbeiten1)
         Me.Panel1.Controls.Add(Me.KindHinzufuegen1)
         Me.Panel1.Controls.Add(Me.ArztUebersicht1)
         Me.Panel1.Controls.Add(Me.ArztAnlegen1)
@@ -215,6 +217,14 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(978, 490)
         Me.Panel1.TabIndex = 0
+        '
+        'KindHinzufuegen1
+        '
+        Me.KindHinzufuegen1.Location = New System.Drawing.Point(3, 0)
+        Me.KindHinzufuegen1.Name = "KindHinzufuegen1"
+        Me.KindHinzufuegen1.Size = New System.Drawing.Size(975, 487)
+        Me.KindHinzufuegen1.TabIndex = 23
+        Me.KindHinzufuegen1.Visible = False
         '
         'ArztUebersicht1
         '
@@ -471,13 +481,13 @@ Partial Class Form1
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'KindUebersicht1
+        'KindBearbeiten1
         '
-        Me.KindHinzufuegen1.Location = New System.Drawing.Point(3, 0)
-        Me.KindHinzufuegen1.Name = "KindHinzufuegen1"
-        Me.KindHinzufuegen1.Size = New System.Drawing.Size(975, 487)
-        Me.KindHinzufuegen1.TabIndex = 23
-        Me.KindHinzufuegen1.Visible = False
+        Me.KindBearbeiten1.Location = New System.Drawing.Point(0, 0)
+        Me.KindBearbeiten1.Name = "KindBearbeiten1"
+        Me.KindBearbeiten1.Size = New System.Drawing.Size(975, 487)
+        Me.KindBearbeiten1.TabIndex = 24
+        Me.KindBearbeiten1.Visible = False
         '
         'Form1
         '
@@ -534,4 +544,5 @@ Partial Class Form1
     Friend WithEvents ArztAnlegen1 As ArztAnlegen
     Friend WithEvents ArztUebersicht1 As ArztUebersicht
     Friend WithEvents KindHinzufuegen1 As KindHinzufuegen
+    Friend WithEvents KindBearbeiten1 As KindBearbeiten
 End Class

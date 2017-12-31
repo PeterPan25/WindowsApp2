@@ -26,7 +26,8 @@ Public Class Form1
         "Berichte",
         "Arztbericht anlegen",
         "Arzt Übersicht",
-        "hinzufügen"
+        "hinzufügen",
+        "bearbeiten"
         }
 
 
@@ -36,7 +37,7 @@ Public Class Form1
 
 
 
-        For i = 0 To 16
+        For i = 0 To 17
             If e.Node.Text = name2(i) Then
 
 
@@ -125,6 +126,11 @@ Public Class Form1
                         KindHinzufuegen1.Visible = True
                         KindHinzufuegen1.BringToFront()
 
+                    Case 17
+                        KindBearbeiten1.Daten_Load()
+                        KindBearbeiten1.Visible = True
+                        KindBearbeiten1.BringToFront()
+
                 End Select
 
 
@@ -192,7 +198,7 @@ Public Class Form1
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
         Datentest()
         Bericht1.BerichtKind()
-        KindBearbeiten1.Daten_Anzeigen()
+        KindBearbeiten1.DatenAnzeigen()
 
         Stammdaten1.Daten_Anzeigen()
     End Sub

@@ -7,6 +7,12 @@
     '    Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
     'End Sub
+    Public Sub Daten_Load()
+        Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
+
+        DatenAnzeigen()
+
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DatenÄndern()
@@ -43,6 +49,7 @@
 
     Public Sub DatenAnzeigen()
         Dim name As String = Form1.CB_name.Text
+        '   Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
 
         ReDim name3(DataSet1.Kind.Rows.Count - 1)
 

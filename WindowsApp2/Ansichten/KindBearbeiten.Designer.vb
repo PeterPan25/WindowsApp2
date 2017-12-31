@@ -92,7 +92,7 @@ Partial Class KindBearbeiten
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(646, 411)
+        Me.Button1.Location = New System.Drawing.Point(646, 387)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(187, 23)
         Me.Button1.TabIndex = 0
@@ -101,7 +101,7 @@ Partial Class KindBearbeiten
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(646, 466)
+        Me.Button2.Location = New System.Drawing.Point(646, 434)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(187, 23)
         Me.Button2.TabIndex = 1
