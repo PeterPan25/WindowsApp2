@@ -94,6 +94,7 @@
 
             Me.KindTableAdapter.Update(Me.DataSet1.Kind)
 
+
         Catch ex As Exception
             MsgBox("Nöhö")
 

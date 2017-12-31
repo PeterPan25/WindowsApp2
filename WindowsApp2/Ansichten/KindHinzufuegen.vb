@@ -3,7 +3,6 @@
         Dim a As DataRow
 
 
-
         a = Me.DataSet1.Kind.NewRow()
 
         ' DateTimePicker1.Format = DateTimePickerFormat.Short
@@ -39,6 +38,11 @@
 
 
     End Sub
+
+    Public Sub Datenkontrolle()
+        Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
+    End Sub
+
 
     Private Sub ResetTextbox()
         PlatzhalterText1.Clear()

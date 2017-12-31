@@ -123,6 +123,7 @@ Public Class Form1
                         ArztUebersicht1.BringToFront()
 
                     Case 16
+                        KindHinzufuegen1.Datenkontrolle()
                         KindHinzufuegen1.Visible = True
                         KindHinzufuegen1.BringToFront()
 
