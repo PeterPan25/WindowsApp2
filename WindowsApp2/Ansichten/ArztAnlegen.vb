@@ -55,6 +55,7 @@
 
 
             Me.DataSet1.Hautarzt.AddHautarztRow(a)
+
             Me.HautarztTableAdapter.Update(Me.DataSet1)
             KHDaten_anlegen()
         Catch ex As Exception
@@ -263,56 +264,59 @@
     End Sub
     ' ********************************ab hier Daten ändern
     Private Sub Anzeige() Handles ComboBox1.SelectedIndexChanged
+        ResetAnzeigeBoxen()
         Combotext()
 
     End Sub
 
     Private Sub Combotext()
-
+        Dim name5 As String = Form1.CB_name.Text
         Dim ArtText As String = ComboBox1.Text
         If ArtText = "Augenarzt" Then
+
             ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
 
             For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
                 name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+
             Next
 
-            ComboBox2.DataSource = name3
-        ElseIf ArtText = "Frauenarzt" Then
-            ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
+                ComboBox2.DataSource = name3
+            ElseIf ArtText = "Frauenarzt" Then
+                ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
 
-            For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
-            Next
+                For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
+                    name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
+                Next
 
-            ComboBox2.DataSource = name3
-        ElseIf ArtText = "Kinderarzt" Then
-            ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
+                ComboBox2.DataSource = name3
+            ElseIf ArtText = "Kinderarzt" Then
+                ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
 
-            For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
-            Next
+                For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
+                    name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
+                Next
 
-            ComboBox2.DataSource = name3
-        ElseIf ArtText = "Hautarzt" Then
-            ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
+                ComboBox2.DataSource = name3
+            ElseIf ArtText = "Hautarzt" Then
+                ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
 
-            For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
-            Next
+                For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
+                    name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
+                Next
 
-            ComboBox2.DataSource = name3
-        ElseIf ArtText = "Zahnarzt" Then
-            ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
+                ComboBox2.DataSource = name3
+            ElseIf ArtText = "Zahnarzt" Then
+                ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
 
-            For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
-            Next
+                For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
+                    name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
+                Next
 
-            ComboBox2.DataSource = name3
-        ElseIf ArtText = "HNO-Arzt" Then
+                ComboBox2.DataSource = name3
+            ElseIf ArtText = "HNO-Arzt" Then
 
-            ReDim name3(DataSet1.HNO.Rows.Count - 1)
+                ReDim name3(DataSet1.HNO.Rows.Count - 1)
 
             For z = 0 To (DataSet1.HNO.Rows.Count - 1)
                 name3(z) = DataSet1.HNO.Rows(z)("HNO_Name")
@@ -328,13 +332,25 @@
 
     Private Sub DatenAnzeigen() Handles ComboBox2.SelectedIndexChanged
         Dim name As String = ComboBox2.Text
+        Dim name5 As String = Form1.CB_name.Text
 
         Dim ArtText As String = ComboBox1.Text
         If ArtText = "Augenarzt" Then
-            ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
+            'ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
 
-            For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
-                If name = DataSet1.Augenarzt.Rows(z)("A_Name") Then
+            'For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
+            '    If name = DataSet1.Augenarzt.Rows(z)("A_Name") Then
+            '        TextBox5.Text = DataSet1.Augenarzt.Rows(z)("Straße")
+            '        TextBox3.Text = DataSet1.Augenarzt.Rows(z)("PLZ")
+            '        TextBox4.Text = DataSet1.Augenarzt.Rows(z)("Ort")
+            '        TextBox2.Text = DataSet1.Augenarzt.Rows(z)("Telefon")
+            '        TextBox1.Text = DataSet1.Augenarzt.Rows(z)("A_Name")
+
+            '    End If
+            'Next
+            ReDim name3(DataSet1.KindAugenarzt.Rows.Count - 1)
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = DataSet1.KindAugenarzt.Rows(z)("A_Name") And name5 = DataSet1.KindAugenarzt.Rows(z)("Name") Then
                     TextBox5.Text = DataSet1.Augenarzt.Rows(z)("Straße")
                     TextBox3.Text = DataSet1.Augenarzt.Rows(z)("PLZ")
                     TextBox4.Text = DataSet1.Augenarzt.Rows(z)("Ort")
@@ -342,6 +358,7 @@
                     TextBox1.Text = DataSet1.Augenarzt.Rows(z)("A_Name")
 
                 End If
+
             Next
 
         ElseIf ArtText = "Frauenarzt" Then
@@ -433,6 +450,16 @@
         PlatzhalterText3.PlatzHalterText = PlatzhalterText3.PlatzHalterText
         PlatzhalterText4.PlatzHalterText = PlatzhalterText4.PlatzHalterText
         PlatzhalterText5.PlatzHalterText = PlatzhalterText5.PlatzHalterText
+
+    End Sub
+
+    Private Sub ResetAnzeigeBoxen()
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+        TextBox5.Clear()
+        ComboBox2.Text = ""
 
     End Sub
 

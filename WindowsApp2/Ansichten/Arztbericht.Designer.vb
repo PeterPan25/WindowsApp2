@@ -51,6 +51,18 @@ Partial Class Arztbericht
         Me.KinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.KindAugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindAugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindAugenarztTableAdapter()
+        Me.KindFrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindFrauenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindFrauenarztTableAdapter()
+        Me.KindHautarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindHautarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindHautarztTableAdapter()
+        Me.KindHNOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindHNOTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindHNOTableAdapter()
+        Me.KindKinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindKinderarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKinderarztTableAdapter()
+        Me.KindZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindZahnarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindZahnarztTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,6 +71,12 @@ Partial Class Arztbericht
         CType(Me.HNOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KinderarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindFrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindHautarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindHNOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -260,6 +278,60 @@ Partial Class Arztbericht
         Me.PlatzhalterText1.TabIndex = 2
         Me.PlatzhalterText1.Text = "Behandelnder Arzt"
         '
+        'KindAugenarztBindingSource
+        '
+        Me.KindAugenarztBindingSource.DataMember = "KindAugenarzt"
+        Me.KindAugenarztBindingSource.DataSource = Me.DataSet1
+        '
+        'KindAugenarztTableAdapter
+        '
+        Me.KindAugenarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindFrauenarztBindingSource
+        '
+        Me.KindFrauenarztBindingSource.DataMember = "KindFrauenarzt"
+        Me.KindFrauenarztBindingSource.DataSource = Me.DataSet1
+        '
+        'KindFrauenarztTableAdapter
+        '
+        Me.KindFrauenarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindHautarztBindingSource
+        '
+        Me.KindHautarztBindingSource.DataMember = "KindHautarzt"
+        Me.KindHautarztBindingSource.DataSource = Me.DataSet1
+        '
+        'KindHautarztTableAdapter
+        '
+        Me.KindHautarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindHNOBindingSource
+        '
+        Me.KindHNOBindingSource.DataMember = "KindHNO"
+        Me.KindHNOBindingSource.DataSource = Me.DataSet1
+        '
+        'KindHNOTableAdapter
+        '
+        Me.KindHNOTableAdapter.ClearBeforeFill = True
+        '
+        'KindKinderarztBindingSource
+        '
+        Me.KindKinderarztBindingSource.DataMember = "KindKinderarzt"
+        Me.KindKinderarztBindingSource.DataSource = Me.DataSet1
+        '
+        'KindKinderarztTableAdapter
+        '
+        Me.KindKinderarztTableAdapter.ClearBeforeFill = True
+        '
+        'KindZahnarztBindingSource
+        '
+        Me.KindZahnarztBindingSource.DataMember = "KindZahnarzt"
+        Me.KindZahnarztBindingSource.DataSource = Me.DataSet1
+        '
+        'KindZahnarztTableAdapter
+        '
+        Me.KindZahnarztTableAdapter.ClearBeforeFill = True
+        '
         'Arztbericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -277,7 +349,7 @@ Partial Class Arztbericht
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "Arztbericht"
-        Me.Size = New System.Drawing.Size(978, 490)
+        Me.Size = New System.Drawing.Size(1017, 503)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -286,6 +358,12 @@ Partial Class Arztbericht
         CType(Me.HNOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KinderarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindFrauenarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindHautarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindHNOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -319,4 +397,16 @@ Partial Class Arztbericht
     Friend WithEvents ZahnarztBindingSource As BindingSource
     Friend WithEvents KinderarztBindingSource As BindingSource
     Friend WithEvents Label2 As Label
+    Friend WithEvents KindAugenarztBindingSource As BindingSource
+    Friend WithEvents KindAugenarztTableAdapter As DataSet1TableAdapters.KindAugenarztTableAdapter
+    Friend WithEvents KindFrauenarztBindingSource As BindingSource
+    Friend WithEvents KindFrauenarztTableAdapter As DataSet1TableAdapters.KindFrauenarztTableAdapter
+    Friend WithEvents KindHautarztBindingSource As BindingSource
+    Friend WithEvents KindHautarztTableAdapter As DataSet1TableAdapters.KindHautarztTableAdapter
+    Friend WithEvents KindHNOBindingSource As BindingSource
+    Friend WithEvents KindHNOTableAdapter As DataSet1TableAdapters.KindHNOTableAdapter
+    Friend WithEvents KindKinderarztBindingSource As BindingSource
+    Friend WithEvents KindKinderarztTableAdapter As DataSet1TableAdapters.KindKinderarztTableAdapter
+    Friend WithEvents KindZahnarztBindingSource As BindingSource
+    Friend WithEvents KindZahnarztTableAdapter As DataSet1TableAdapters.KindZahnarztTableAdapter
 End Class
