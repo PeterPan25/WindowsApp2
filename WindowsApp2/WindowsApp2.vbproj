@@ -109,6 +109,18 @@
     <Compile Include="Ansichten\Bericht.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\KindBearbeiten.Designer.vb">
+      <DependentUpon>KindBearbeiten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\KindBearbeiten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ansichten\KindHinzufuegen.Designer.vb">
+      <DependentUpon>KindHinzufuegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\KindHinzufuegen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\Tagesbericht.Designer.vb">
       <DependentUpon>Tagesbericht.vb</DependentUpon>
     </Compile>
@@ -230,7 +242,9 @@
     <Compile Include="Ansichten\Hilfen.Designer.vb">
       <DependentUpon>Hilfen.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Hilfen.vb" />
+    <Compile Include="Ansichten\Hilfen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\HNO.Designer.vb">
       <DependentUpon>HNO.vb</DependentUpon>
     </Compile>
@@ -301,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\KindBearbeiten.resx">
+      <DependentUpon>KindBearbeiten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\KindHinzufuegen.resx">
+      <DependentUpon>KindHinzufuegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Tagesbericht.resx">
       <DependentUpon>Tagesbericht.vb</DependentUpon>
@@ -395,6 +415,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="ToDo.txt" />
     <None Include="Resources\Ämterplan.jpg" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
