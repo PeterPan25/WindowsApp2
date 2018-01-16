@@ -11,17 +11,12 @@ Public Class Form1
     Dim i As Integer
 
     Dim name2 As String() = {"Eltern",
-        "HNO",
-        "Doku",
+                "Arzt anlegen",
+                "Doku",
         "Stammdaten",
         "Schule",
         "Kontakte",
         "Hilfen",
-        "Kinderarzt",
-        "Hautarzt",
-        "Augenarzt",
-        "Zahnarzt",
-        "Frauenarzt",
         "Krankenhaus",
         "Psycho",
         "Hobby",
@@ -29,48 +24,20 @@ Public Class Form1
         "Formulare",
         "hinzufügen",
         "Berichte",
-        "Arztbericht anlegen"
+        "Arztbericht anlegen",
+        "Arzt Übersicht",
+        "hinzufügen",
+        "bearbeiten"
         }
 
 
 
 
-
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-
-
-
-        'Me.TableAdapterManager.KindTableAdapter.Fill(data3)
-        'test = data3.NameColumn.ToString()
-
-        ''name per dropdown auswählen - funktioniert
-
-        'Dim name As String
-        'name = "F_" + CB_name.Text
-
-
-        'If name = My.Forms.F_Aaliyah.Name Then
-        '    F_Aaliyah.Show()
-        'ElseIf name = My.Forms.F_Peter.Name Then
-        '    F_Peter.Show()
-        'ElseIf name = My.Forms.F_Hans.Name Then
-        '    F_Hans.Show()
-
-        'Else
-
-
-        '    MessageBox.Show("Kind nicht vorhanden")
-
-        'End If
-    End Sub
-
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
 
 
 
-        For i = 0 To 19
+        For i = 0 To 17
             If e.Node.Text = name2(i) Then
 
 
@@ -81,8 +48,8 @@ Public Class Form1
 
                     Case 1
 
-                        HNO1.Visible = True
-                        HNO1.BringToFront()
+                        ArztAnlegen1.Visible = True
+                        ArztAnlegen1.BringToFront()
 
                     Case 2
 
@@ -90,9 +57,10 @@ Public Class Form1
                         Doku1.BringToFront()
 
                     Case 3
-
+                        Stammdaten1.Stammdaten_Load()
                         Stammdaten1.Visible = True
                         Stammdaten1.BringToFront()
+
 
                     Case 4
 
@@ -109,68 +77,60 @@ Public Class Form1
                         Hilfen1.Visible = True
                         Hilfen1.BringToFront()
 
+
+
                     Case 7
-
-                        Kinderarzt1.Visible = True
-                        Kinderarzt1.BringToFront()
-
-                    Case 8
-
-                        Hautarzt1.Visible = True
-                        Hautarzt1.BringToFront()
-
-                    Case 9
-
-                        Augenarzt1.Visible = True
-                        Augenarzt1.BringToFront()
-
-                    Case 10
-
-                        Zahnarzt1.Visible = True
-                        Zahnarzt1.BringToFront()
-
-                    Case 11
-
-                        Frauenarzt1.Visible = True
-                        Frauenarzt1.BringToFront()
-
-                    Case 12
 
                         Krankenhaus1.Visible = True
                         Krankenhaus1.BringToFront()
 
-                    Case 13
+                    Case 8
 
                         Psycho1.Visible = True
                         Psycho1.BringToFront()
 
-                    Case 14
+                    Case 9
 
                         Hobby1.Visible = True
                         Hobby1.BringToFront()
 
-                    Case 15
+                    Case 10
 
                         Tagesbericht1.Visible = True
                         Tagesbericht1.BringToFront()
 
-                    Case 16
+                    Case 11
 
                         Formulare1.Visible = True
                         Formulare1.BringToFront()
-                    Case 17
+                    Case 12
 
                         Panel1.Visible = True
                         Panel1.BringToFront()
-                    Case 18
+                    Case 13
                         Bericht1.Visible = True
                         Bericht1.BringToFront()
 
-                    Case 19
+                    Case 14
 
                         Arztbericht1.BerichtAnlegen_Load()
                         Arztbericht1.Visible = True
                         Arztbericht1.BringToFront()
+
+                    Case 15
+                        ArztUebersicht1.Arzt_Load()
+                        ArztUebersicht1.Visible = True
+                        ArztUebersicht1.BringToFront()
+
+                    Case 16
+                        KindHinzufuegen1.Datenkontrolle()
+                        KindHinzufuegen1.Visible = True
+                        KindHinzufuegen1.BringToFront()
+
+                    Case 17
+                        KindBearbeiten1.Daten_Load()
+                        KindBearbeiten1.Visible = True
+                        KindBearbeiten1.BringToFront()
 
                 End Select
 
@@ -207,41 +167,15 @@ Public Class Form1
         CB_name.DataSource = name3
     End Sub
 
-    Public Sub Datentest()
-        Dim n1 As String
-        Dim r1() As DataRow
-        ' Dim c1 As DataColumn
 
-        Me.TableAdapterManager.KindTableAdapter.Fill(data3)
-        n1 = CB_name.Text
-
-
-        r1 = data3.Select("Name  = '" & n1 & "'")
-
-        Dim k As Integer
-
-        ' 3/8 jeweilige Spalte für Name etc.
-        For k = 0 To r1.GetUpperBound(0)
-
-            Try
-                Console.WriteLine(r1(k)(3))
-                Label1.Text = r1(k)(8)
-            Catch ex As Exception
-                Label1.Text = "Henner mieft"
-            End Try
-
-
-        Next k
-
-
-    End Sub
 
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
-        Datentest()
+        Bericht1.BerichtKind()
+        KindBearbeiten1.DatenAnzeigen()
 
+        Stammdaten1.Daten_Anzeigen()
     End Sub
 
-    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
 
-    End Sub
+
 End Class

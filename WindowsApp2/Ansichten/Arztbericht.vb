@@ -26,6 +26,13 @@
         Me.FrauenarztTableAdapter.Fill(Me.DataSet1.Frauenarzt)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Bericht". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.BerichtTableAdapter.Fill(Me.DataSet1.Bericht)
+        Me.KindAugenarztTableAdapter.Fill(Me.DataSet1.KindAugenarzt)
+        Me.KindFrauenarztTableAdapter.Fill(Me.DataSet1.KindFrauenarzt)
+        Me.KindHautarztTableAdapter.Fill(Me.DataSet1.KindHautarzt)
+        Me.KinderarztTableAdapter.Fill(Me.DataSet1.Kinderarzt)
+        Me.KindHNOTableAdapter.Fill(Me.DataSet1.KindHNO)
+        Me.HNOTableAdapter.Fill(Me.DataSet1.HNO)
+
         Label1.Text = Form1.CB_name.Text
     End Sub
 
@@ -67,11 +74,20 @@
     ' Je nach Auswahl bei welcher Art Arzt das Kind war, kann man folgend die Praxis/den Arzt in der nächsten Box auswählen
     Private Sub ArztArt()
         Dim ArtText As String = ComboBox1.Text
+        Dim name As String = Form1.CB_name.Text
+
         If ArtText = "Augenarzt" Then
             ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
 
             For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+
+                    name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                Else
+                    name3(z) = ""
+                End If
+
             Next
             Label2.Text = "Augenarztbericht"
 
