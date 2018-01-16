@@ -15,7 +15,13 @@
 
 
     Public Sub BerichtKind()
+        Dim str2 As String
+        Dim r1() As DataRow
+        str2 = Form1.CB_name.Text
 
+
+        r1 = DataSet1.Bericht.Select("Kind = '" & str2 & "'")
+        Me.BerichtDataGridView.DataSource = r1
     End Sub
 
 
