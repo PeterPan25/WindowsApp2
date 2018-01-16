@@ -97,10 +97,22 @@
     <Compile Include="anlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\ArztAnlegen.Designer.vb">
+      <DependentUpon>ArztAnlegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\ArztAnlegen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\Arztbericht.Designer.vb">
       <DependentUpon>Arztbericht.vb</DependentUpon>
     </Compile>
     <Compile Include="Ansichten\Arztbericht.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ansichten\ArztUebersicht.Designer.vb">
+      <DependentUpon>ArztUebersicht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\ArztUebersicht.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\Bericht.Designer.vb">
@@ -310,8 +322,14 @@
     <EmbeddedResource Include="anlegen.resx">
       <DependentUpon>anlegen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\ArztAnlegen.resx">
+      <DependentUpon>ArztAnlegen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Arztbericht.resx">
       <DependentUpon>Arztbericht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\ArztUebersicht.resx">
+      <DependentUpon>ArztUebersicht.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>

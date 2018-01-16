@@ -14,7 +14,9 @@
     End Sub
 
 
+    Public Sub BerichtKind()
 
+    End Sub
 
 
 
