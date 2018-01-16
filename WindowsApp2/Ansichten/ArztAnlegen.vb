@@ -262,7 +262,7 @@
         PlatzhalterText5.Clear()
 
     End Sub
-    ' ********************************ab hier Daten ändern
+    ' ********************************ab hier Daten ändern********
     Private Sub Anzeige() Handles ComboBox1.SelectedIndexChanged
         ResetAnzeigeBoxen()
         Combotext()
