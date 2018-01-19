@@ -52,11 +52,6 @@ Partial Class ArztAnlegen
         Me.KindKinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -64,6 +59,12 @@ Partial Class ArztAnlegen
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -254,61 +255,6 @@ Partial Class ArztAnlegen
         Me.KindZahnarztBindingSource.DataMember = "KindZahnarzt"
         Me.KindZahnarztBindingSource.DataSource = Me.DataSet1
         '
-        'PlatzhalterText2
-        '
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(73, 212)
-        Me.PlatzhalterText2.Name = "PlatzhalterText2"
-        Me.PlatzhalterText2.PlatzHalterText = "Telefonnummer"
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(249, 20)
-        Me.PlatzhalterText2.TabIndex = 4
-        Me.PlatzhalterText2.Text = "Telefonnummer"
-        '
-        'PlatzhalterText3
-        '
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(73, 248)
-        Me.PlatzhalterText3.Name = "PlatzhalterText3"
-        Me.PlatzhalterText3.PlatzHalterText = "Postleitzahl"
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(249, 20)
-        Me.PlatzhalterText3.TabIndex = 5
-        Me.PlatzhalterText3.Text = "Postleitzahl"
-        '
-        'PlatzhalterText4
-        '
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(73, 287)
-        Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = "Ort"
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(249, 20)
-        Me.PlatzhalterText4.TabIndex = 6
-        Me.PlatzhalterText4.Text = "Ort"
-        '
-        'PlatzhalterText5
-        '
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(73, 331)
-        Me.PlatzhalterText5.Name = "PlatzhalterText5"
-        Me.PlatzhalterText5.PlatzHalterText = "Straße & Hausnummer"
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(249, 20)
-        Me.PlatzhalterText5.TabIndex = 7
-        Me.PlatzhalterText5.Text = "Straße und Hausnummer"
-        '
-        'PlatzhalterText1
-        '
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(73, 170)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = "Name der Praxis"
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(249, 20)
-        Me.PlatzhalterText1.TabIndex = 8
-        Me.PlatzhalterText1.Text = "Name der Praxis"
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(247, 406)
@@ -361,10 +307,75 @@ Partial Class ArztAnlegen
         Me.ComboBox2.Size = New System.Drawing.Size(249, 21)
         Me.ComboBox2.TabIndex = 15
         '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(73, 170)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Name der Praxis"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(249, 20)
+        Me.PlatzhalterText1.TabIndex = 8
+        Me.PlatzhalterText1.Text = "Name der Praxis"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(73, 331)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Straße & Hausnummer"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(249, 20)
+        Me.PlatzhalterText5.TabIndex = 7
+        Me.PlatzhalterText5.Text = "Straße und Hausnummer"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(73, 287)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = "Ort"
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(249, 20)
+        Me.PlatzhalterText4.TabIndex = 6
+        Me.PlatzhalterText4.Text = "Ort"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(73, 248)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = "Postleitzahl"
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(249, 20)
+        Me.PlatzhalterText3.TabIndex = 5
+        Me.PlatzhalterText3.Text = "Postleitzahl"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(73, 212)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Telefonnummer"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(249, 20)
+        Me.PlatzhalterText2.TabIndex = 4
+        Me.PlatzhalterText2.Text = "Telefonnummer"
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(675, 405)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Ändern"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'ArztAnlegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
@@ -441,4 +452,5 @@ Partial Class ArztAnlegen
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents Button2 As Button
 End Class
