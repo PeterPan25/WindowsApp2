@@ -501,9 +501,8 @@
             a("Telefon") = TextBox2.Text
 
 
-
-            Me.HautarztTableAdapter.Update(Me.DataSet1.Hautarzt)
             KHDaten_aendern()
+
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
         Catch ex As Exception
@@ -523,7 +522,6 @@
             a("Telefon") = TextBox2.Text
 
 
-            Me.AugenarztTableAdapter.Update(Me.DataSet1.Augenarzt)
             KADaten_aendern()
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
@@ -543,7 +541,6 @@
             a("Art") = ComboBox1.Text
             a("Telefon") = TextBox2.Text
 
-            Me.ZahnarztTableAdapter.Update(Me.DataSet1.Zahnarzt)
             KZDaten_aendern()
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
@@ -564,7 +561,6 @@
             a("Telefon") = TextBox2.Text
 
 
-            Me.KinderarztTableAdapter.Update(Me.DataSet1.Kinderarzt)
             KKDaten_aendern()
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
@@ -584,7 +580,6 @@
             a("Art") = ComboBox1.Text
             a("Telefon") = TextBox2.Text
 
-            Me.FrauenarztTableAdapter.Update(Me.DataSet1.Frauenarzt)
             KFDaten_aendern()
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
@@ -604,7 +599,6 @@
             a("Art") = ComboBox1.Text
             a("Telefon") = TextBox2.Text
 
-            Me.HNOTableAdapter.Update(Me.DataSet1.HNO)
             KHNODaten_aendern()
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
@@ -615,11 +609,15 @@
 
     Private Sub KADaten_aendern()
         Dim b As DataSet1.KindAugenarztRow
-        b = Me.DataSet1.KindAugenarzt.FindByNameA_Name(ComboBox1.Text, ComboBox2.Text)
-
-        b("A_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-
+        b = Me.DataSet1.KindAugenarzt.FindByNameA_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindAugenarzt.NewRow()
+        b.Delete()
+        Me.KindAugenarztTableAdapter.Update(Me.DataSet1.KindAugenarzt)
+        c("A_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.AugenarztTableAdapter.Update(Me.DataSet1.Augenarzt)
+        Me.DataSet1.KindAugenarzt.AddKindAugenarztRow(c)
         Me.KindAugenarztTableAdapter.Update(Me.DataSet1.KindAugenarzt)
         Me.Validate()
 
@@ -631,11 +629,17 @@
     End Sub
     Private Sub KKDaten_aendern()
         Dim b As DataSet1.KindKinderarztRow
-        b = Me.DataSet1.KindKinderarzt.FindByNameK_Name(ComboBox1.Text, ComboBox2.Text)
+        b = Me.DataSet1.KindKinderarzt.FindByNameK_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindKinderarzt.NewRow()
+        b.Delete()
+        Me.KindKinderarztTableAdapter.Update(Me.DataSet1.KindKinderarzt)
 
-        b("K_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
 
+        c("K_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.KinderarztTableAdapter.Update(Me.DataSet1.Kinderarzt)
+        Me.DataSet1.KindKinderarzt.AddKindKinderarztRow(c)
         Me.KindKinderarztTableAdapter.Update(Me.DataSet1.KindKinderarzt)
         Me.Validate()
 
@@ -646,11 +650,16 @@
     End Sub
     Private Sub KZDaten_aendern()
         Dim b As DataSet1.KindZahnarztRow
-        b = Me.DataSet1.KindZahnarzt.FindByNameZ_Name(ComboBox1.Text, ComboBox2.Text)
+        b = Me.DataSet1.KindZahnarzt.FindByNameZ_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindZahnarzt.NewRow()
+        b.Delete()
+        Me.KindZahnarztTableAdapter.Update(Me.DataSet1.KindZahnarzt)
 
-        b("Z_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-
+        c("Z_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.ZahnarztTableAdapter.Update(Me.DataSet1.Zahnarzt)
+        Me.DataSet1.KindZahnarzt.AddKindZahnarztRow(c)
         Me.KindZahnarztTableAdapter.Update(Me.DataSet1.KindZahnarzt)
         Me.Validate()
 
@@ -660,11 +669,17 @@
     End Sub
     Private Sub KFDaten_aendern()
         Dim b As DataSet1.KindFrauenarztRow
-        b = Me.DataSet1.KindFrauenarzt.FindByNameF_Name(ComboBox1.Text, ComboBox2.Text)
+        b = Me.DataSet1.KindFrauenarzt.FindByNameF_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindFrauenarzt.NewRow()
+        b.Delete()
+        Me.KindFrauenarztTableAdapter.Update(Me.DataSet1.KindFrauenarzt)
 
-        b("F_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
+        c("F_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.FrauenarztTableAdapter.Update(Me.DataSet1.Frauenarzt)
 
+        Me.DataSet1.KindFrauenarzt.AddKindFrauenarztRow(c)
         Me.KindFrauenarztTableAdapter.Update(Me.DataSet1.KindFrauenarzt)
         Me.Validate()
 
@@ -675,11 +690,18 @@
     End Sub
     Private Sub KHDaten_aendern()
         Dim b As DataSet1.KindHautarztRow
-        b = Me.DataSet1.KindHautarzt.FindByNameH_Name(ComboBox1.Text, ComboBox2.Text)
+        b = Me.DataSet1.KindHautarzt.FindByNameH_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindHautarzt.NewRow()
 
-        b("H_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
+        b.Delete()
+        Me.KindHautarztTableAdapter.Update(Me.DataSet1.KindHautarzt)
 
+        c("H_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.HautarztTableAdapter.Update(Me.DataSet1.Hautarzt)
+
+        Me.DataSet1.KindHautarzt.AddKindHautarztRow(c)
         Me.KindHautarztTableAdapter.Update(Me.DataSet1.KindHautarzt)
         Me.Validate()
 
@@ -690,11 +712,17 @@
     End Sub
     Private Sub KHNODaten_aendern()
         Dim b As DataSet1.KindHNORow
-        b = Me.DataSet1.KindHNO.FindByNameHNO_Name(ComboBox1.Text, ComboBox2.Text)
+        b = Me.DataSet1.KindHNO.FindByNameHNO_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindHautarzt.NewRow()
 
-        b("HNO_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
+        b.Delete()
+        Me.KindHautarztTableAdapter.Update(Me.DataSet1.KindHautarzt)
+        c("HNO_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.HNOTableAdapter.Update(Me.DataSet1.HNO)
 
+        Me.DataSet1.KindHNO.AddKindHNORow(c)
         Me.KindHNOTableAdapter.Update(Me.DataSet1.KindHNO)
         Me.Validate()
 
