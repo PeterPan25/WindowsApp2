@@ -467,23 +467,25 @@
         Dim ArtText As String = ComboBox1.Text
         If ArtText = "Augenarzt" Then
             AugenarztAendern()
+            DatenAnzeigen()
+
 
         ElseIf ArtText = "Frauenarzt" Then
             FrauenarztAendern()
-
+            DatenAnzeigen()
         ElseIf ArtText = "Kinderarzt" Then
             KinderarztAendern()
-
+            DatenAnzeigen()
         ElseIf ArtText = "Hautarzt" Then
             HautarztAendern()
-
+            DatenAnzeigen()
         ElseIf ArtText = "Zahnarzt" Then
             ZahnarztAendern()
-
+            DatenAnzeigen()
         ElseIf ArtText = "HNO-Arzt" Then
 
             HNOArztAendern()
-
+            DatenAnzeigen()
         End If
         Combotext()
         ResetTextbox()
@@ -623,7 +625,6 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
 
 
     End Sub
@@ -645,7 +646,6 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
 
     End Sub
     Private Sub KZDaten_aendern()
@@ -665,7 +665,6 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
     End Sub
     Private Sub KFDaten_aendern()
         Dim b As DataSet1.KindFrauenarztRow
@@ -685,7 +684,6 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
 
     End Sub
     Private Sub KHDaten_aendern()
@@ -707,7 +705,7 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
+
 
     End Sub
     Private Sub KHNODaten_aendern()
@@ -717,7 +715,7 @@
         c = Me.DataSet1.KindHautarzt.NewRow()
 
         b.Delete()
-        Me.KindHautarztTableAdapter.Update(Me.DataSet1.KindHautarzt)
+        Me.KindHNOTableAdapter.Update(Me.DataSet1.KindHNO)
         c("HNO_Name") = TextBox1.Text
         c("Name") = Form1.CB_name.Text
         Me.HNOTableAdapter.Update(Me.DataSet1.HNO)
@@ -728,6 +726,120 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
+    End Sub
+    '*****Daten löschen***
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim arztart As String = ComboBox1.Text
+        Dim c As DataRow
+        Dim d As DataRow
+
+        If arztart = "Augenarzt" Then
+            Try
+                c = Me.DataSet1.Augenarzt.FindByA_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindAugenarzt.FindByNameA_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindAugenarztTableAdapter.Update(DataSet1.KindAugenarzt)
+                Me.AugenarztTableAdapter.Update(DataSet1.Augenarzt)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+            Catch ex As Exception
+                MsgBox("Fehler")
+            End Try
+
+
+
+        ElseIf arztart = "Kinderarzt" Then
+            Try
+                c = Me.DataSet1.Kinderarzt.FindByK_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindKinderarzt.FindByNameK_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindKinderarztTableAdapter.Update(DataSet1.KindKinderarzt)
+                Me.KinderarztTableAdapter.Update(DataSet1.Kinderarzt)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+
+            Catch ex As Exception
+                MsgBox("Fehler")
+            End Try
+
+
+        ElseIf arztart = "Frauenarzt" Then
+            Try
+                c = Me.DataSet1.Frauenarzt.FindByF_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindFrauenarzt.FindByNameF_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindFrauenarztTableAdapter.Update(DataSet1.KindFrauenarzt)
+                Me.FrauenarztTableAdapter.Update(DataSet1.Frauenarzt)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+
+            Catch ex As Exception
+                MsgBox("Fehler")
+            End Try
+
+
+        ElseIf arztart = "Zahnarzt" Then
+            Try
+                c = Me.DataSet1.Zahnarzt.FindByZ_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindZahnarzt.FindByNameZ_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindZahnarztTableAdapter.Update(DataSet1.KindZahnarzt)
+                Me.ZahnarztTableAdapter.Update(DataSet1.Zahnarzt)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+
+            Catch ex As Exception
+                MsgBox("Fehler")
+            End Try
+
+
+        ElseIf arztart = "HNO-Arzt" Then
+            Try
+                c = Me.DataSet1.HNO.FindByHNO_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindHNO.FindByNameHNO_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindHNOTableAdapter.Update(DataSet1.KindHNO)
+                Me.HNOTableAdapter.Update(DataSet1.HNO)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+
+            Catch ex As Exception
+                MsgBox("Fehler")
+            End Try
+
+
+        ElseIf arztart = "Hautarzt" Then
+            Try
+                c = Me.DataSet1.Hautarzt.FindByH_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindHautarzt.FindByNameH_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindHautarztTableAdapter.Update(DataSet1.KindHautarzt)
+                Me.HautarztTableAdapter.Update(DataSet1.Hautarzt)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+
+            Catch ex As Exception
+                MsgBox("Fehler")
+
+            End Try
+
+
+
+
+
+        End If
+
     End Sub
 End Class

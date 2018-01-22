@@ -65,6 +65,7 @@ Partial Class ArztAnlegen
         Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,6 +129,7 @@ Partial Class ArztAnlegen
         Me.TableAdapterManager.AugenarztTableAdapter = Me.AugenarztTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Me.FrauenarztTableAdapter
         Me.TableAdapterManager.HautarztTableAdapter = Me.HautarztTableAdapter
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -151,6 +153,7 @@ Partial Class ArztAnlegen
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -364,17 +367,28 @@ Partial Class ArztAnlegen
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(675, 405)
+        Me.Button2.Location = New System.Drawing.Point(588, 406)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 16
         Me.Button2.Text = "Ändern"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.Location = New System.Drawing.Point(675, 405)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 17
+        Me.Button3.Text = "Entfernen"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'ArztAnlegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.TextBox5)
@@ -453,4 +467,5 @@ Partial Class ArztAnlegen
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
