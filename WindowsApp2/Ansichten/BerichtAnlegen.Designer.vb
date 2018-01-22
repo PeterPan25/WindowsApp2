@@ -27,8 +27,8 @@ Partial Class BerichtAnlegen
         Me.ElternBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ElternBerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.ElternBerichtTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.SchulBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SchulBerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulBerichtTableAdapter()
+        Me.SchulBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -94,14 +94,14 @@ Partial Class BerichtAnlegen
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
+        'SchulBerichtTableAdapter
+        '
+        Me.SchulBerichtTableAdapter.ClearBeforeFill = True
+        '
         'SchulBerichtBindingSource
         '
         Me.SchulBerichtBindingSource.DataMember = "SchulBericht"
         Me.SchulBerichtBindingSource.DataSource = Me.DataSet1
-        '
-        'SchulBerichtTableAdapter
-        '
-        Me.SchulBerichtTableAdapter.ClearBeforeFill = True
         '
         'Label1
         '
@@ -196,13 +196,13 @@ Partial Class BerichtAnlegen
         '
         Me.RichTextBox1.Location = New System.Drawing.Point(18, 197)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(913, 302)
+        Me.RichTextBox1.Size = New System.Drawing.Size(913, 247)
         Me.RichTextBox1.TabIndex = 10
         Me.RichTextBox1.Text = ""
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(855, 505)
+        Me.Button1.Location = New System.Drawing.Point(856, 450)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 11
@@ -225,7 +225,7 @@ Partial Class BerichtAnlegen
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "BerichtAnlegen"
-        Me.Size = New System.Drawing.Size(946, 540)
+        Me.Size = New System.Drawing.Size(946, 485)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElternBerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SchulBerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

@@ -91,12 +91,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ab.Designer.vb">
-      <DependentUpon>ab.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ab.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Ansichten\ArztAnlegen.Designer.vb">
       <DependentUpon>ArztAnlegen.vb</DependentUpon>
     </Compile>
@@ -325,9 +319,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ab.resx">
-      <DependentUpon>ab.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\ArztAnlegen.resx">
       <DependentUpon>ArztAnlegen.vb</DependentUpon>
     </EmbeddedResource>
