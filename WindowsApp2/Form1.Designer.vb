@@ -81,7 +81,7 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
-        Me.Anlegen1 = New WindowsApp2.anlegen()
+
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -210,7 +210,6 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Hilfen1)
         Me.Panel1.Controls.Add(Me.Eltern1)
         Me.Panel1.Controls.Add(Me.Doku1)
-        Me.Panel1.Controls.Add(Me.Anlegen1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -469,15 +468,7 @@ Partial Class Form1
         Me.Doku1.Size = New System.Drawing.Size(978, 490)
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
-        '
-        'Anlegen1
-        '
-        Me.Anlegen1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Anlegen1.Location = New System.Drawing.Point(0, 0)
-        Me.Anlegen1.Name = "Anlegen1"
-        Me.Anlegen1.Size = New System.Drawing.Size(978, 490)
-        Me.Anlegen1.TabIndex = 0
-        Me.Anlegen1.Visible = False
+
         '
         'Form1
         '
@@ -519,7 +510,7 @@ Partial Class Form1
     Friend WithEvents Hilfen1 As Hilfen
     Friend WithEvents Eltern1 As Eltern
     Friend WithEvents Doku1 As Doku
-    Friend WithEvents Anlegen1 As anlegen
+
     Friend WithEvents DataSet11 As DataSet1
     Friend WithEvents Tagesbericht1 As Tagesbericht
     Friend WithEvents Formulare1 As Formulare

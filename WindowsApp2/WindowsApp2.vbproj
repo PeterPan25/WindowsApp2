@@ -91,10 +91,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="anlegen.Designer.vb">
-      <DependentUpon>anlegen.vb</DependentUpon>
+    <Compile Include="BerichtAnlegen.Designer.vb">
+      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </Compile>
-    <Compile Include="anlegen.vb">
+    <Compile Include="BerichtAnlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\ArztAnlegen.Designer.vb">
@@ -319,8 +319,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="anlegen.resx">
-      <DependentUpon>anlegen.vb</DependentUpon>
+    <EmbeddedResource Include="BerichtAnlegen.resx">
+      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\ArztAnlegen.resx">
       <DependentUpon>ArztAnlegen.vb</DependentUpon>
