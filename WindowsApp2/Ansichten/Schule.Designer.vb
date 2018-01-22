@@ -33,7 +33,7 @@ Partial Class Schule
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Überschrift = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class Schule
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.RichTextBox2)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Size = New System.Drawing.Size(805, 509)
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 13
@@ -175,14 +175,14 @@ Partial Class Schule
         Me.Überschrift.Text = "Schule"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'RichTextBox2
+        'Button1
         '
-        Me.RichTextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox2.Location = New System.Drawing.Point(0, 0)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(805, 346)
-        Me.RichTextBox2.TabIndex = 0
-        Me.RichTextBox2.Text = ""
+        Me.Button1.Location = New System.Drawing.Point(349, 159)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Schule
         '
@@ -212,5 +212,5 @@ Partial Class Schule
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Überschrift As Label
-    Friend WithEvents RichTextBox2 As RichTextBox
+    Friend WithEvents Button1 As Button
 End Class

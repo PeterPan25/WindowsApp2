@@ -8,11 +8,30 @@
     Public Sub SchulBericht()
         Label1.Text = Form1.CB_name.Text
         Label2.Text = "Schulbericht"
+
+        PlatzhalterText2.Visible = True
+        PlatzhalterText2.Enabled = True
+        PlatzhalterText3.Visible = True
+        PlatzhalterText3.Enabled = True
+        PlatzhalterText4.Visible = True
+        PlatzhalterText4.Enabled = True
+        PlatzhalterText5.Visible = True
+        PlatzhalterText5.Enabled = True
+        ComboBox1.Visible = False
     End Sub
 
     Public Sub ElternBericht()
         Label1.Text = Form1.CB_name.Text
         Label2.Text = "Elternbericht"
+        PlatzhalterText2.Visible = False
+        PlatzhalterText2.Enabled = False
+        PlatzhalterText3.Visible = False
+        PlatzhalterText3.Enabled = False
+        PlatzhalterText4.Visible = False
+        PlatzhalterText4.Enabled = False
+        PlatzhalterText5.Visible = False
+        PlatzhalterText5.Enabled = False
+        ComboBox1.Visible = True
 
     End Sub
 
