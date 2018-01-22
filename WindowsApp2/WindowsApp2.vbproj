@@ -91,10 +91,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BerichtAnlegen.Designer.vb">
-      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
+    <Compile Include="ab.Designer.vb">
+      <DependentUpon>ab.vb</DependentUpon>
     </Compile>
-    <Compile Include="BerichtAnlegen.vb">
+    <Compile Include="ab.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\ArztAnlegen.Designer.vb">
@@ -119,6 +119,12 @@
       <DependentUpon>Bericht.vb</DependentUpon>
     </Compile>
     <Compile Include="Ansichten\Bericht.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ansichten\BerichtAnlegen.Designer.vb">
+      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\BerichtAnlegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\KindBearbeiten.Designer.vb">
@@ -319,8 +325,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BerichtAnlegen.resx">
-      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
+    <EmbeddedResource Include="ab.resx">
+      <DependentUpon>ab.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\ArztAnlegen.resx">
       <DependentUpon>ArztAnlegen.vb</DependentUpon>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\BerichtAnlegen.resx">
+      <DependentUpon>BerichtAnlegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\KindBearbeiten.resx">
       <DependentUpon>KindBearbeiten.vb</DependentUpon>

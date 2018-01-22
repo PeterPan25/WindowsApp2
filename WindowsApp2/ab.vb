@@ -1,4 +1,4 @@
-﻿Public Class BerichtAnlegen
+﻿Public Class ab
 
     Public Sub SchulBericht()
         Label1.Text = Form1.CB_name.Text
