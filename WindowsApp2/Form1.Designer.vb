@@ -55,14 +55,6 @@ Partial Class Form1
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.CB_name = New System.Windows.Forms.ComboBox()
-        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet11 = New WindowsApp2.DataSet1()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.KindBearbeiten1 = New WindowsApp2.KindBearbeiten()
         Me.KindHinzufuegen1 = New WindowsApp2.KindHinzufuegen()
         Me.ArztUebersicht1 = New WindowsApp2.ArztUebersicht()
@@ -81,7 +73,15 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
-        Me.Anlegen1 = New WindowsApp2.anlegen()
+        Me.CB_name = New System.Windows.Forms.ComboBox()
+        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet11 = New WindowsApp2.DataSet1()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.BerichtAnlegen1 = New WindowsApp2.BerichtAnlegen()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -192,6 +192,7 @@ Partial Class Form1
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.BerichtAnlegen1)
         Me.Panel1.Controls.Add(Me.KindBearbeiten1)
         Me.Panel1.Controls.Add(Me.KindHinzufuegen1)
         Me.Panel1.Controls.Add(Me.ArztUebersicht1)
@@ -210,107 +211,11 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Hilfen1)
         Me.Panel1.Controls.Add(Me.Eltern1)
         Me.Panel1.Controls.Add(Me.Doku1)
-        Me.Panel1.Controls.Add(Me.Anlegen1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(978, 490)
         Me.Panel1.TabIndex = 0
-        '
-        'CB_name
-        '
-        Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
-        Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CB_name.FormattingEnabled = True
-        Me.CB_name.Location = New System.Drawing.Point(437, 61)
-        Me.CB_name.Name = "CB_name"
-        Me.CB_name.Size = New System.Drawing.Size(262, 21)
-        Me.CB_name.TabIndex = 8
-        '
-        'KindBindingSource
-        '
-        Me.KindBindingSource.DataMember = "Kind"
-        Me.KindBindingSource.DataSource = Me.DataSet11
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1040, 391)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(534, 358)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(45, 13)
-        Me.Label16.TabIndex = 7
-        Me.Label16.Text = "Label16"
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1127, 650)
-        Me.SplitContainer1.SplitterDistance = 156
-        Me.SplitContainer1.TabIndex = 9
-        '
-        'KindTableAdapter
-        '
-        Me.KindTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.BerichtTableAdapter = Nothing
-        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.HautarztTableAdapter = Nothing
-        Me.TableAdapterManager.HilfenTableAdapter = Nothing
-        Me.TableAdapterManager.HNOTableAdapter = Nothing
-        Me.TableAdapterManager.HobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
-        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
-        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
-        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
-        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
-        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
-        Me.TableAdapterManager.KontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
-        Me.TableAdapterManager.PsychoTableAdapter = Nothing
-        Me.TableAdapterManager.SchuleTableAdapter = Nothing
-        Me.TableAdapterManager.TableTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
         'KindBearbeiten1
         '
@@ -470,14 +375,110 @@ Partial Class Form1
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
         '
-        'Anlegen1
+        'CB_name
         '
-        Me.Anlegen1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Anlegen1.Location = New System.Drawing.Point(0, 0)
-        Me.Anlegen1.Name = "Anlegen1"
-        Me.Anlegen1.Size = New System.Drawing.Size(978, 490)
-        Me.Anlegen1.TabIndex = 0
-        Me.Anlegen1.Visible = False
+        Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
+        Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CB_name.FormattingEnabled = True
+        Me.CB_name.Location = New System.Drawing.Point(437, 61)
+        Me.CB_name.Name = "CB_name"
+        Me.CB_name.Size = New System.Drawing.Size(262, 21)
+        Me.CB_name.TabIndex = 8
+        '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet11
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1040, 391)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(534, 358)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 7
+        Me.Label16.Text = "Label16"
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1127, 650)
+        Me.SplitContainer1.SplitterDistance = 156
+        Me.SplitContainer1.TabIndex = 9
+        '
+        'KindTableAdapter
+        '
+        Me.KindTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'BerichtAnlegen1
+        '
+        Me.BerichtAnlegen1.Location = New System.Drawing.Point(2, 0)
+        Me.BerichtAnlegen1.Name = "BerichtAnlegen1"
+        Me.BerichtAnlegen1.Size = New System.Drawing.Size(946, 485)
+        Me.BerichtAnlegen1.TabIndex = 25
+        Me.BerichtAnlegen1.Visible = False
         '
         'Form1
         '
@@ -519,7 +520,7 @@ Partial Class Form1
     Friend WithEvents Hilfen1 As Hilfen
     Friend WithEvents Eltern1 As Eltern
     Friend WithEvents Doku1 As Doku
-    Friend WithEvents Anlegen1 As anlegen
+
     Friend WithEvents DataSet11 As DataSet1
     Friend WithEvents Tagesbericht1 As Tagesbericht
     Friend WithEvents Formulare1 As Formulare
@@ -533,4 +534,5 @@ Partial Class Form1
     Friend WithEvents ArztUebersicht1 As arztuebersicht
     Friend WithEvents KindHinzufuegen1 As KindHinzufuegen
     Friend WithEvents KindBearbeiten1 As KindBearbeiten
+    Friend WithEvents BerichtAnlegen1 As BerichtAnlegen
 End Class

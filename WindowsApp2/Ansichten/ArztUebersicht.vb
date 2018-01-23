@@ -28,6 +28,8 @@
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Frauenarzt". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.FrauenarztTableAdapter.Fill(Me.DataSet1.Frauenarzt)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Bericht". Sie können sie bei Bedarf verschieben oder entfernen.
+        Reset()
+
     End Sub
 
 

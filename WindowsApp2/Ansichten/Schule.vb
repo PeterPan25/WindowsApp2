@@ -9,5 +9,10 @@
         TextBox6.ForeColor = Color.Black
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form1.BerichtAnlegen1.SchulBericht()
+        Form1.BerichtAnlegen1.Visible = True
+        Form1.BerichtAnlegen1.BringToFront()
 
+    End Sub
 End Class
