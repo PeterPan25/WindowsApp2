@@ -529,8 +529,8 @@ Partial Class Form1
     Friend WithEvents UserControl11 As UserControl1
     Friend WithEvents Bericht1 As Bericht
     Friend WithEvents Arztbericht1 As Arztbericht
-    Friend WithEvents ArztAnlegen1 As ArztAnlegen
-    Friend WithEvents ArztUebersicht1 As ArztUebersicht
+    Friend WithEvents ArztAnlegen1 As arztanlegen
+    Friend WithEvents ArztUebersicht1 As arztuebersicht
     Friend WithEvents KindHinzufuegen1 As KindHinzufuegen
     Friend WithEvents KindBearbeiten1 As KindBearbeiten
 End Class
