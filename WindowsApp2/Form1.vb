@@ -43,6 +43,8 @@ Public Class Form1
 
                 Select Case i
                     Case 0
+                        Eltern1.EBDaten_laden()
+
                         Eltern1.Visible = True
                         Eltern1.BringToFront()
 
@@ -109,6 +111,9 @@ Public Class Form1
                         Panel1.BringToFront()
                     Case 13
                         Bericht1.Visible = True
+                        Bericht1.BerichtKind()
+
+
                         Bericht1.BringToFront()
 
                     Case 14

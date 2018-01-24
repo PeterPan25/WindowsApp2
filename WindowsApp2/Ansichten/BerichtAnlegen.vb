@@ -48,7 +48,7 @@
 
             Try
                 a("Kind") = Label1.Text
-                a("Thema") = PlatzhalterText1
+                a("Thema") = PlatzhalterText1.Text
                 a("Schule") = PlatzhalterText2.Text
                 a("Klasse") = PlatzhalterText3.Text
                 a("Lehrer") = PlatzhalterText4.Text
@@ -68,7 +68,7 @@
 
             Try
                 a("Kind") = Label1.Text
-                a("Thema") = PlatzhalterText2
+                a("Thema") = PlatzhalterText1.Text
                 a("Elternteil") = ComboBox1.Text
                 a("Datum") = DateTimePicker1.Value
 

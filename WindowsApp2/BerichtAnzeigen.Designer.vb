@@ -36,8 +36,14 @@ Partial Class BerichtAnzeigen
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.ElternBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ElternBerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.ElternBerichtTableAdapter()
+        Me.SchulBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SchulBerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulBerichtTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ElternBerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchulBerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataSet1
@@ -59,6 +65,7 @@ Partial Class BerichtAnzeigen
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Me.BerichtTableAdapter
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -82,6 +89,7 @@ Partial Class BerichtAnzeigen
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -175,11 +183,29 @@ Partial Class BerichtAnzeigen
         Me.RichTextBox1.TabIndex = 8
         Me.RichTextBox1.Text = ""
         '
+        'ElternBerichtBindingSource
+        '
+        Me.ElternBerichtBindingSource.DataMember = "ElternBericht"
+        Me.ElternBerichtBindingSource.DataSource = Me.DataSet1
+        '
+        'ElternBerichtTableAdapter
+        '
+        Me.ElternBerichtTableAdapter.ClearBeforeFill = True
+        '
+        'SchulBerichtBindingSource
+        '
+        Me.SchulBerichtBindingSource.DataMember = "SchulBericht"
+        Me.SchulBerichtBindingSource.DataSource = Me.DataSet1
+        '
+        'SchulBerichtTableAdapter
+        '
+        Me.SchulBerichtTableAdapter.ClearBeforeFill = True
+        '
         'BerichtAnzeigen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(683, 418)
+        Me.ClientSize = New System.Drawing.Size(691, 426)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -193,6 +219,8 @@ Partial Class BerichtAnzeigen
         Me.Text = "BerichtAnzeigen"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ElternBerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchulBerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -211,4 +239,8 @@ Partial Class BerichtAnzeigen
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents ElternBerichtBindingSource As BindingSource
+    Friend WithEvents ElternBerichtTableAdapter As DataSet1TableAdapters.ElternBerichtTableAdapter
+    Friend WithEvents SchulBerichtBindingSource As BindingSource
+    Friend WithEvents SchulBerichtTableAdapter As DataSet1TableAdapters.SchulBerichtTableAdapter
 End Class
