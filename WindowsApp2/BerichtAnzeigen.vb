@@ -59,7 +59,6 @@
     '****Schulbericht
     Public Sub SBDaten_laden(a As String, b As String)
         Dim r1() As DataRow
-        Label2.Visible = False
 
         r1 = DataSet1.SchulBericht.Select("Thema  = '" & a & "'")
         ' And "Kind = '" & b & "'"
@@ -77,6 +76,7 @@
                 Label7.Text = r1(k)(3)
                 Label8.Text = r1(k)(6)
                 RichTextBox1.Text = r1(k)(7)
+
                 ' RichTextBox1.Enabled = False
 
                 'TextBox3.Text = r1(k)(1)
@@ -87,16 +87,15 @@
 
 
         Next k
+        Label2.Visible = False
+
     End Sub
 
     '***Elternbericht
     Public Sub EBDaten_laden(a As String, b As String)
         Dim r1() As DataRow
 
-        Label4.Visible = False
-        Label6.Visible = False
-        Label7.Visible = False
-        Label8.Visible = False
+
 
         r1 = DataSet1.ElternBericht.Select("Thema  = '" & a & "'")
         ' And "Kind = '" & b & "'"
@@ -118,9 +117,15 @@
                 'TextBox4.Text = r1(k)(5)
 
             Catch ex As Exception
+                MsgBox("nö")
             End Try
 
 
         Next k
+
+        Label4.Visible = False
+        Label6.Visible = False
+        Label7.Visible = False
+        Label8.Visible = False
     End Sub
 End Class

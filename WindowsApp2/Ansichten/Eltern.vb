@@ -19,9 +19,10 @@
         str = Me.ElternBerichtDataGridView.Rows(e.RowIndex).Cells(3).Value
         str1 = Me.ElternBerichtDataGridView.Rows(e.RowIndex).Cells(1).Value
 
+        BerichtAnzeigen.Show()
+
         BerichtAnzeigen.EBDaten_laden(str, str1)
 
-        BerichtAnzeigen.Show()
 
     End Sub
 

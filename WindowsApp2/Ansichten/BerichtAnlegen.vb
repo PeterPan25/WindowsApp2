@@ -54,6 +54,7 @@
                 a("Lehrer") = PlatzhalterText4.Text
                 a("Fach") = PlatzhalterText5.Text
                 a("Datum") = DateTimePicker1.Value
+                a("Bericht") = RichTextBox1.Text
 
                 Me.DataSet1.SchulBericht.AddSchulBerichtRow(a)
                 Me.SchulBerichtTableAdapter.Update(DataSet1.SchulBericht)
@@ -71,6 +72,7 @@
                 a("Thema") = PlatzhalterText1.Text
                 a("Elternteil") = ComboBox1.Text
                 a("Datum") = DateTimePicker1.Value
+                a("Bericht") = RichTextBox1.Text
 
                 Me.DataSet1.ElternBericht.AddElternBerichtRow(a)
                 Me.ElternBerichtTableAdapter.Update(DataSet1.ElternBericht)
