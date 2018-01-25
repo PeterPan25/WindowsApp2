@@ -15,4 +15,33 @@
         Form1.BerichtAnlegen1.BringToFront()
 
     End Sub
+
+    'Private Sub SchuleBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MyBaseBindingNavigatorSaveItem.Click
+    '    Me.Validate()
+    '    Me.SchuleBindingSource.EndEdit()
+    '    Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+    'End Sub
+
+    Private Sub SchulBerichtDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles SchulBerichtDataGridView.RowHeaderMouseClick
+        Dim str As String
+        Dim str1 As String
+
+
+
+
+        str = Me.SchulBerichtDataGridView.Rows(e.RowIndex).Cells(1).Value
+        str1 = Me.SchulBerichtDataGridView.Rows(e.RowIndex).Cells(0).Value
+
+        BerichtAnzeigen.Show()
+
+        BerichtAnzeigen.SBDaten_laden(str, str1)
+
+    End Sub
+
+    Public Sub SBDaten_laden()
+        Me.SchulBerichtTableAdapter.Fill(DataSet1.SchulBericht)
+        Me.SchulBerichtDataGridView.Update()
+    End Sub
+
 End Class

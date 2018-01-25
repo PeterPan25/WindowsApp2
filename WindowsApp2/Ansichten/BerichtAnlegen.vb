@@ -59,9 +59,12 @@
                 Me.DataSet1.SchulBericht.AddSchulBerichtRow(a)
                 Me.SchulBerichtTableAdapter.Update(DataSet1.SchulBericht)
                 Me.TableAdapterManager.UpdateAll(DataSet1)
+                Form1.Schule1.SBDaten_laden()
+
             Catch ex As Exception
                 MsgBox("Fehler")
             End Try
+            Me.Visible = False
 
 
         ElseIf Label2.Text = "Elternbericht" Then
@@ -77,6 +80,8 @@
                 Me.DataSet1.ElternBericht.AddElternBerichtRow(a)
                 Me.ElternBerichtTableAdapter.Update(DataSet1.ElternBericht)
                 Me.TableAdapterManager.UpdateAll(DataSet1)
+                Form1.Eltern1.EBDaten_laden()
+
             Catch ex As Exception
                 MsgBox("Fehler")
             End Try

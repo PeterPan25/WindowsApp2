@@ -65,7 +65,7 @@ Public Class Form1
 
 
                     Case 4
-
+                        Schule1.SBDaten_laden()
                         Schule1.Visible = True
                         Schule1.BringToFront()
 
