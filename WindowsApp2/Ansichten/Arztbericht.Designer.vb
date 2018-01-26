@@ -144,9 +144,9 @@ Partial Class Arztbericht
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(755, 29)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(712, 69)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(121, 20)
         Me.DateTimePicker1.TabIndex = 9
         '
         'Label1
@@ -176,6 +176,7 @@ Partial Class Arztbericht
         Me.TableAdapterManager.AugenarztTableAdapter = Me.AugenarztTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Me.BerichtTableAdapter
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Me.FrauenarztTableAdapter
         Me.TableAdapterManager.HautarztTableAdapter = Me.HautarztTableAdapter
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -199,6 +200,7 @@ Partial Class Arztbericht
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete

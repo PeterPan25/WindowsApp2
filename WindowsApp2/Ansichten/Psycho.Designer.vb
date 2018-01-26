@@ -24,23 +24,16 @@ Partial Class Psycho
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.PsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.PsychoTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PsychoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,13 +53,36 @@ Partial Class Psycho
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Überschrift)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.ListView1)
         Me.SplitContainer1.Size = New System.Drawing.Size(831, 521)
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(414, 113)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(131, 23)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Eintrag löschen"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(215, 113)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(126, 23)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Eintrag bearbeiten"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(32, 113)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(115, 23)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Neuer Eintrag"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Überschrift
         '
@@ -98,6 +114,7 @@ Partial Class Psycho
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -121,68 +138,11 @@ Partial Class Psycho
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Me.PsychoTableAdapter
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
-        '
-        'ListView1
-        '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
-        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ListView1.Location = New System.Drawing.Point(0, 0)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(831, 358)
-        Me.ListView1.TabIndex = 0
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "Datum"
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Psychologe"
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Praxis"
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Thema"
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Mitarbeiter"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(32, 113)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Neuer Eintrag"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(215, 113)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Eintrag bearbeiten"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(414, 113)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Eintrag löschen"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Psycho
         '
@@ -192,7 +152,6 @@ Partial Class Psycho
         Me.Name = "Psycho"
         Me.Size = New System.Drawing.Size(831, 521)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -207,12 +166,6 @@ Partial Class Psycho
     Friend WithEvents PsychoBindingSource As BindingSource
     Friend WithEvents PsychoTableAdapter As DataSet1TableAdapters.PsychoTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents ListView1 As ListView
-    Friend WithEvents ColumnHeader1 As ColumnHeader
-    Friend WithEvents ColumnHeader2 As ColumnHeader
-    Friend WithEvents ColumnHeader3 As ColumnHeader
-    Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents ColumnHeader5 As ColumnHeader
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button

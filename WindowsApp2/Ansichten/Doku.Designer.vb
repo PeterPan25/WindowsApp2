@@ -23,16 +23,12 @@ Partial Class Doku
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -45,7 +41,6 @@ Partial Class Doku
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TableLayoutPanel1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Überschrift)
         '
         'SplitContainer1.Panel2
@@ -54,40 +49,6 @@ Partial Class Doku
         Me.SplitContainer1.Size = New System.Drawing.Size(836, 557)
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox1, 1, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(836, 135)
-        Me.TableLayoutPanel1.TabIndex = 6
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(244, 18)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Name"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(253, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 2
         '
         'Überschrift
         '
@@ -120,16 +81,11 @@ Partial Class Doku
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Überschrift As Label
     Friend WithEvents RichTextBox2 As RichTextBox
 End Class
