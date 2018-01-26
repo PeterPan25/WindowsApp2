@@ -1,13 +1,13 @@
 ﻿Public Class Schule
-    Private Sub Schule1_Load(sender As Object, e As EventArgs) Handles Me.Load
-        If TextBox6.Text = Nothing Then TextBox6.Text = "Schule"
-        TextBox6.ForeColor = Color.Gray
-    End Sub
+    'Private Sub Schule1_Load(sender As Object, e As EventArgs) Handles Me.Load
+    '    If TextBox6.Text = Nothing Then TextBox6.Text = "Schule"
+    '    TextBox6.ForeColor = Color.Gray
+    'End Sub
 
-    Private Sub TextBox6_doubleclick(sender As Object, e As EventArgs) Handles TextBox6.DoubleClick
-        If TextBox6.Text = "Schule" Then TextBox6.Clear()
-        TextBox6.ForeColor = Color.Black
-    End Sub
+    'Private Sub TextBox6_doubleclick(sender As Object, e As EventArgs)
+    '    If TextBox6.Text = "Schule" Then TextBox6.Clear()
+    '    TextBox6.ForeColor = Color.Black
+    'End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form1.BerichtAnlegen1.SchulBericht()
@@ -44,4 +44,28 @@
         Me.SchulBerichtDataGridView.Update()
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim a As DataRow
+        a = Me.DataSet1.Schule.NewRow()
+
+        Try
+            a("S_Name") = PlatzhalterText1.Text
+            a("Schulart") = PlatzhalterText2.Text
+            a("Strasse") = PlatzhalterText3.Text
+            a("Plz") = PlatzhalterText4.Text
+            a("Ort") = PlatzhalterText5.Text
+            a("Klasse") = PlatzhalterText6.Text
+            a("Klassenlehrer") = PlatzhalterText7.Text
+
+            Me.DataSet1.Schule.AddSchuleRow(a)
+            Me.SchuleTableAdapter.Update(Me.DataSet1.Schule)
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+            MsgBox("Speichern erfolgreich")
+
+        Catch ex As Exception
+            MsgBox("Speichern fehlgeschlagen")
+
+        End Try
+    End Sub
 End Class
