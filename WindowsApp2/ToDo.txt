@@ -1,5 +1,18 @@
 ﻿Login
 Tagesbercht inkl.Verlinkung zur jeweiligen Kinderakte
+überflüssige Ärzteansichten löschen
+Arzt Übersicht alternativen überlegen
+Bericht anlegen für Psycho
+Doku: Tagesbericht mit namen des Kindes mit Spalte ob es gespeichert werden soll, wenn es wichtig ist in den Datensatz Doku des Kindes speichern
+speziellere Sachen kommen dort hinein: a la haben an einer Scheune gezündelt
+Stammdaten: Schulische Laufbahn mit unterbringen 
+Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepläne vorhanden sein, neu: hilfeplan bericht in der neuen ansicht schreiben
+ kann damit man in der listview einen älteren öffnen kann weil man einen neuen schreiben muss und so einfach ein paar alte sachen gegebenfalls übernommen werden
+ Design, Farbe etc. 
+ ? einbauen mit msg boxen für Instruktionen
+ schule und eltern anlegen (nicht die berichte) überlegen wo
+ imagebox oder so für ein bild des jeweiligen kindes in Stammdaten, neben das panel bei der form 1 combobox
+
 
 Buttongröße = 160;40
 Schriftgröße Überschriften	= 22
