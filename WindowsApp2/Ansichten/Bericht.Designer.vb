@@ -29,10 +29,10 @@ Partial Class Bericht
         Me.BerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.BerichtTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.BerichtDataGridView = New System.Windows.Forms.DataGridView()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,6 +60,7 @@ Partial Class Bericht
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Me.BerichtTableAdapter
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -83,6 +84,7 @@ Partial Class Bericht
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -91,6 +93,7 @@ Partial Class Bericht
         'BerichtDataGridView
         '
         Me.BerichtDataGridView.AutoGenerateColumns = False
+        Me.BerichtDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.BerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BerichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.BerichtDataGridView.DataSource = Me.BerichtBindingSource
@@ -99,24 +102,6 @@ Partial Class Bericht
         Me.BerichtDataGridView.Name = "BerichtDataGridView"
         Me.BerichtDataGridView.Size = New System.Drawing.Size(759, 358)
         Me.BerichtDataGridView.TabIndex = 2
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Datum"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Datum"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Praxis"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Praxis"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Art"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Art"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'SplitContainer1
         '
@@ -131,6 +116,27 @@ Partial Class Bericht
         Me.SplitContainer1.Size = New System.Drawing.Size(759, 453)
         Me.SplitContainer1.SplitterDistance = 91
         Me.SplitContainer1.TabIndex = 3
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "Datum"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Datum"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Praxis"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Praxis"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "Art"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Art"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
         'Bericht
         '
@@ -153,8 +159,8 @@ Partial Class Bericht
     Friend WithEvents BerichtTableAdapter As DataSet1TableAdapters.BerichtTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents BerichtDataGridView As DataGridView
+    Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents SplitContainer1 As SplitContainer
 End Class

@@ -1,3 +1,9 @@
 ﻿Login
 Tagesbercht inkl.Verlinkung zur jeweiligen Kinderakte
 
+Buttongröße = 160;40
+Schriftgröße Überschriften	= 22
+			 Buttontext		= 12
+			 Textfeldertext = 12
+			 Treeview		= 14
+			 Platzhalter	= 12

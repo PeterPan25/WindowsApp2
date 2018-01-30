@@ -151,8 +151,8 @@ Public Class Form1
         Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
 
         Combotext()
-
-
+        Me.WindowState = FormWindowState.Maximized
+        Me.StartPosition = FormStartPosition.CenterScreen
 
 
 

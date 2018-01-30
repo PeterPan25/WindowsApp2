@@ -59,27 +59,33 @@ Partial Class Psycho
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(414, 113)
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(592, 102)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 23)
+        Me.Button3.Size = New System.Drawing.Size(160, 40)
         Me.Button3.TabIndex = 6
         Me.Button3.Text = "Eintrag löschen"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(215, 113)
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(344, 102)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 23)
+        Me.Button2.Size = New System.Drawing.Size(160, 40)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Eintrag bearbeiten"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 113)
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(98, 102)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 23)
+        Me.Button1.Size = New System.Drawing.Size(160, 40)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Neuer Eintrag"
         Me.Button1.UseVisualStyleBackColor = True
@@ -87,10 +93,10 @@ Partial Class Psycho
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
-        Me.Überschrift.Size = New System.Drawing.Size(831, 24)
+        Me.Überschrift.Size = New System.Drawing.Size(831, 32)
         Me.Überschrift.TabIndex = 5
         Me.Überschrift.Text = "Psycho"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter

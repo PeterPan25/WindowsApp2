@@ -32,4 +32,13 @@
         End If
     End Sub
 
+    Private Sub InitializeComponent()
+        Me.SuspendLayout()
+        '
+        'PlatzhalterText
+        '
+        Me.Size = New System.Drawing.Size(120, 20)
+        Me.ResumeLayout(False)
+
+    End Sub
 End Class

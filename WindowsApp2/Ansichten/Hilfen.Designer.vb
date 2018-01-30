@@ -63,27 +63,33 @@ Partial Class Hilfen
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(358, 104)
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(562, 104)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(123, 23)
+        Me.Button3.Size = New System.Drawing.Size(160, 40)
         Me.Button3.TabIndex = 6
         Me.Button3.Text = "Eintrag löschen"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(191, 104)
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(341, 104)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 23)
+        Me.Button2.Size = New System.Drawing.Size(160, 40)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Eintrag bearbeiten"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 104)
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(113, 104)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(116, 23)
+        Me.Button1.Size = New System.Drawing.Size(160, 40)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Neuer Eintrag"
         Me.Button1.UseVisualStyleBackColor = True
@@ -91,18 +97,18 @@ Partial Class Hilfen
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
-        Me.Überschrift.Size = New System.Drawing.Size(829, 24)
+        Me.Überschrift.Size = New System.Drawing.Size(829, 35)
         Me.Überschrift.TabIndex = 5
         Me.Überschrift.Text = "Hilfen"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'ListView1
         '
+        Me.ListView1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
-        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(829, 367)

@@ -67,6 +67,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
@@ -421,6 +422,9 @@
     <EmbeddedResource Include="Ansichten\Zahnarzt.resx">
       <DependentUpon>Zahnarzt.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PlatzhalterText.resx">
+      <DependentUpon>PlatzhalterText.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
@@ -433,6 +437,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\IMG_5858 %281500x887%29.jpg" />
+    <None Include="Resources\Logo.jpg" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\Ämterplan.jpg" />
     <None Include="DataSet1.xsc">

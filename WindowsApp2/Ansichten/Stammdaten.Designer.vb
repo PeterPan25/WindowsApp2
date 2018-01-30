@@ -59,10 +59,10 @@ Partial Class Stammdaten
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
-        Me.Überschrift.Size = New System.Drawing.Size(796, 24)
+        Me.Überschrift.Size = New System.Drawing.Size(796, 33)
         Me.Überschrift.TabIndex = 1
         Me.Überschrift.Text = "Stammdaten"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -70,10 +70,10 @@ Partial Class Stammdaten
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 4
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.94975!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.89447!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.51256!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.39196!))
         Me.TableLayoutPanel1.Controls.Add(Me.Label2, 0, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.Label3, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.Label4, 0, 3)
@@ -97,8 +97,8 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker1, 1, 1)
         Me.TableLayoutPanel1.Controls.Add(Me.DateTimePicker2, 1, 4)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 24)
+        Me.TableLayoutPanel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 33)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 8
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
@@ -109,17 +109,17 @@ Partial Class Stammdaten
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(796, 473)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(796, 464)
         Me.TableLayoutPanel1.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(3, 59)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(3, 58)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(153, 18)
+        Me.Label2.Size = New System.Drawing.Size(113, 48)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Geburtsdatum"
         '
@@ -127,10 +127,10 @@ Partial Class Stammdaten
         '
         Me.Label3.AutoSize = True
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(3, 118)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(3, 116)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(153, 18)
+        Me.Label3.Size = New System.Drawing.Size(113, 24)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Nationalität"
         '
@@ -138,10 +138,10 @@ Partial Class Stammdaten
         '
         Me.Label4.AutoSize = True
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 177)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 174)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(153, 18)
+        Me.Label4.Size = New System.Drawing.Size(113, 24)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Jugendamt"
         '
@@ -149,10 +149,10 @@ Partial Class Stammdaten
         '
         Me.Label5.AutoSize = True
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(3, 236)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(3, 232)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(153, 18)
+        Me.Label5.Size = New System.Drawing.Size(113, 48)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Aufnahmedatum"
         '
@@ -160,10 +160,10 @@ Partial Class Stammdaten
         '
         Me.Label6.AutoSize = True
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(3, 295)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(3, 290)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(153, 18)
+        Me.Label6.Size = New System.Drawing.Size(113, 24)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Schule"
         '
@@ -171,10 +171,10 @@ Partial Class Stammdaten
         '
         Me.Label7.AutoSize = True
         Me.Label7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(3, 354)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(3, 348)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(153, 18)
+        Me.Label7.Size = New System.Drawing.Size(113, 48)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "Besonderheiten"
         '
@@ -182,10 +182,11 @@ Partial Class Stammdaten
         '
         Me.Label9.AutoSize = True
         Me.Label9.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(400, 59)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(449, 58)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(100, 0, 3, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(153, 18)
+        Me.Label9.Size = New System.Drawing.Size(116, 24)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Geburtsort"
         '
@@ -193,10 +194,11 @@ Partial Class Stammdaten
         '
         Me.Label10.AutoSize = True
         Me.Label10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(400, 118)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(449, 116)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(100, 0, 3, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(153, 18)
+        Me.Label10.Size = New System.Drawing.Size(116, 24)
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Konfession"
         '
@@ -204,21 +206,23 @@ Partial Class Stammdaten
         '
         Me.Label11.AutoSize = True
         Me.Label11.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(400, 177)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(449, 174)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(100, 0, 3, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(153, 18)
+        Me.Label11.Size = New System.Drawing.Size(116, 24)
         Me.Label11.TabIndex = 10
-        Me.Label11.Text = "Hilfe nach:"
+        Me.Label11.Text = "Hilfe nach"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(400, 236)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(449, 232)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(100, 0, 3, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(153, 18)
+        Me.Label12.Size = New System.Drawing.Size(116, 48)
         Me.Label12.TabIndex = 11
         Me.Label12.Text = "Sorgerechtsstatus"
         '
@@ -226,10 +230,11 @@ Partial Class Stammdaten
         '
         Me.Label13.AutoSize = True
         Me.Label13.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(400, 295)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(449, 290)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(100, 0, 3, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(153, 18)
+        Me.Label13.Size = New System.Drawing.Size(116, 48)
         Me.Label13.TabIndex = 12
         Me.Label13.Text = "Krankenversicherung"
         '
@@ -237,99 +242,99 @@ Partial Class Stammdaten
         '
         Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox3.Enabled = False
-        Me.TextBox3.Location = New System.Drawing.Point(162, 121)
+        Me.TextBox3.Location = New System.Drawing.Point(122, 119)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(232, 24)
+        Me.TextBox3.Size = New System.Drawing.Size(224, 29)
         Me.TextBox3.TabIndex = 15
         '
         'TextBox4
         '
         Me.TextBox4.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox4.Enabled = False
-        Me.TextBox4.Location = New System.Drawing.Point(162, 180)
+        Me.TextBox4.Location = New System.Drawing.Point(122, 177)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(232, 24)
+        Me.TextBox4.Size = New System.Drawing.Size(224, 29)
         Me.TextBox4.TabIndex = 16
         '
         'TextBox6
         '
         Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox6.Enabled = False
-        Me.TextBox6.Location = New System.Drawing.Point(162, 298)
+        Me.TextBox6.Location = New System.Drawing.Point(122, 293)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(232, 24)
+        Me.TextBox6.Size = New System.Drawing.Size(224, 29)
         Me.TextBox6.TabIndex = 18
         '
         'TextBox7
         '
         Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox7.Enabled = False
-        Me.TextBox7.Location = New System.Drawing.Point(162, 357)
+        Me.TextBox7.Location = New System.Drawing.Point(122, 351)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(232, 24)
+        Me.TextBox7.Size = New System.Drawing.Size(224, 29)
         Me.TextBox7.TabIndex = 19
         '
         'TextBox9
         '
         Me.TextBox9.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox9.Enabled = False
-        Me.TextBox9.Location = New System.Drawing.Point(559, 62)
+        Me.TextBox9.Location = New System.Drawing.Point(571, 61)
         Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(234, 24)
+        Me.TextBox9.Size = New System.Drawing.Size(222, 29)
         Me.TextBox9.TabIndex = 21
         '
         'TextBox10
         '
         Me.TextBox10.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(559, 121)
+        Me.TextBox10.Location = New System.Drawing.Point(571, 119)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(234, 24)
+        Me.TextBox10.Size = New System.Drawing.Size(222, 29)
         Me.TextBox10.TabIndex = 22
         '
         'TextBox11
         '
         Me.TextBox11.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox11.Enabled = False
-        Me.TextBox11.Location = New System.Drawing.Point(559, 180)
+        Me.TextBox11.Location = New System.Drawing.Point(571, 177)
         Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(234, 24)
+        Me.TextBox11.Size = New System.Drawing.Size(222, 29)
         Me.TextBox11.TabIndex = 23
         '
         'TextBox12
         '
         Me.TextBox12.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox12.Enabled = False
-        Me.TextBox12.Location = New System.Drawing.Point(559, 239)
+        Me.TextBox12.Location = New System.Drawing.Point(571, 235)
         Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(234, 24)
+        Me.TextBox12.Size = New System.Drawing.Size(222, 29)
         Me.TextBox12.TabIndex = 24
         '
         'TextBox13
         '
         Me.TextBox13.Dock = System.Windows.Forms.DockStyle.Top
         Me.TextBox13.Enabled = False
-        Me.TextBox13.Location = New System.Drawing.Point(559, 298)
+        Me.TextBox13.Location = New System.Drawing.Point(571, 293)
         Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(234, 24)
+        Me.TextBox13.Size = New System.Drawing.Size(222, 29)
         Me.TextBox13.TabIndex = 25
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Enabled = False
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(162, 62)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(122, 61)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(232, 24)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(224, 29)
         Me.DateTimePicker1.TabIndex = 27
         '
         'DateTimePicker2
         '
         Me.DateTimePicker2.Enabled = False
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(162, 239)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(122, 235)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(232, 24)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(224, 29)
         Me.DateTimePicker2.TabIndex = 28
         '
         'DataSet1
@@ -351,6 +356,7 @@ Partial Class Stammdaten
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -374,6 +380,7 @@ Partial Class Stammdaten
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete

@@ -23,11 +23,11 @@ Partial Class Hobby
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -56,13 +56,43 @@ Partial Class Hobby
         Me.SplitContainer1.SplitterDistance = 159
         Me.SplitContainer1.TabIndex = 7
         '
+        'Button3
+        '
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(557, 110)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(160, 40)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Eintrag löschen"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(333, 110)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(160, 40)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Eintrag bearbeiten"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(107, 110)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(160, 40)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Neuer Eintrag"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
-        Me.Überschrift.Size = New System.Drawing.Size(823, 24)
+        Me.Überschrift.Size = New System.Drawing.Size(823, 42)
         Me.Überschrift.TabIndex = 5
         Me.Überschrift.Text = "Hobby"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -76,33 +106,6 @@ Partial Class Hobby
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(36, 110)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Neuer Eintrag"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(192, 110)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(123, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Eintrag bearbeiten"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(356, 110)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(121, 23)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Eintrag löschen"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Hobby
         '
