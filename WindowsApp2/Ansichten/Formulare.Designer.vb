@@ -48,7 +48,7 @@ Partial Class Formulare
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.SplitContainer1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
@@ -102,10 +102,12 @@ Partial Class Formulare
         'LinkLabel6
         '
         Me.LinkLabel6.AutoSize = True
-        Me.LinkLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel6.ForeColor = System.Drawing.SystemColors.Info
+        Me.LinkLabel6.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel6.Location = New System.Drawing.Point(15, 110)
         Me.LinkLabel6.Name = "LinkLabel6"
-        Me.LinkLabel6.Size = New System.Drawing.Size(67, 16)
+        Me.LinkLabel6.Size = New System.Drawing.Size(79, 20)
         Me.LinkLabel6.TabIndex = 0
         Me.LinkLabel6.TabStop = True
         Me.LinkLabel6.Text = "Vollmacht"
@@ -113,10 +115,12 @@ Partial Class Formulare
         'LinkLabel5
         '
         Me.LinkLabel5.AutoSize = True
-        Me.LinkLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel5.ForeColor = System.Drawing.SystemColors.Info
+        Me.LinkLabel5.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel5.Location = New System.Drawing.Point(15, 90)
         Me.LinkLabel5.Name = "LinkLabel5"
-        Me.LinkLabel5.Size = New System.Drawing.Size(107, 16)
+        Me.LinkLabel5.Size = New System.Drawing.Size(123, 20)
         Me.LinkLabel5.TabIndex = 0
         Me.LinkLabel5.TabStop = True
         Me.LinkLabel5.Text = "Messen/Wiegen"
@@ -124,10 +128,12 @@ Partial Class Formulare
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel3.ForeColor = System.Drawing.SystemColors.Info
+        Me.LinkLabel3.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel3.Location = New System.Drawing.Point(15, 50)
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(49, 16)
+        Me.LinkLabel3.Size = New System.Drawing.Size(59, 20)
         Me.LinkLabel3.TabIndex = 0
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Bericht"
@@ -135,10 +141,12 @@ Partial Class Formulare
         'LinkLabel4
         '
         Me.LinkLabel4.AutoSize = True
-        Me.LinkLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel4.ForeColor = System.Drawing.SystemColors.Info
+        Me.LinkLabel4.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel4.Location = New System.Drawing.Point(15, 70)
         Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(120, 16)
+        Me.LinkLabel4.Size = New System.Drawing.Size(147, 20)
         Me.LinkLabel4.TabIndex = 0
         Me.LinkLabel4.TabStop = True
         Me.LinkLabel4.Text = "Entwicklungsstufen"
@@ -146,10 +154,12 @@ Partial Class Formulare
         'LinkLabel2
         '
         Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel2.ForeColor = System.Drawing.SystemColors.Info
+        Me.LinkLabel2.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel2.Location = New System.Drawing.Point(15, 30)
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(68, 16)
+        Me.LinkLabel2.Size = New System.Drawing.Size(83, 20)
         Me.LinkLabel2.TabIndex = 0
         Me.LinkLabel2.TabStop = True
         Me.LinkLabel2.Text = "Aufnahme"
@@ -157,10 +167,12 @@ Partial Class Formulare
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.ForeColor = System.Drawing.SystemColors.Info
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Red
         Me.LinkLabel1.Location = New System.Drawing.Point(15, 10)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(69, 16)
+        Me.LinkLabel1.Size = New System.Drawing.Size(82, 20)
         Me.LinkLabel1.TabIndex = 0
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Ämterplan"

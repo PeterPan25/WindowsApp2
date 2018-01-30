@@ -96,7 +96,7 @@ Partial Class Hilfen
         '
         'Überschrift
         '
-        Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Überschrift.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
@@ -107,8 +107,8 @@ Partial Class Hilfen
         '
         'ListView1
         '
-        Me.ListView1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5})
+        Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ListView1.Location = New System.Drawing.Point(0, 0)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(829, 367)

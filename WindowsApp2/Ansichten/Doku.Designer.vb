@@ -53,10 +53,10 @@ Partial Class Doku
         'Überschrift
         '
         Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
-        Me.Überschrift.Size = New System.Drawing.Size(836, 24)
+        Me.Überschrift.Size = New System.Drawing.Size(836, 39)
         Me.Überschrift.TabIndex = 5
         Me.Überschrift.Text = "Doku"
         Me.Überschrift.TextAlign = System.Drawing.ContentAlignment.TopCenter

@@ -116,6 +116,7 @@ Partial Class Eltern
         'ElternBerichtDataGridView
         '
         Me.ElternBerichtDataGridView.AutoGenerateColumns = False
+        Me.ElternBerichtDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
         Me.ElternBerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ElternBerichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.ElternBerichtDataGridView.DataSource = Me.ElternBerichtBindingSource
