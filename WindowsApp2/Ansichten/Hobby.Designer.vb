@@ -58,6 +58,7 @@ Partial Class Hobby
         '
         'Button3
         '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(557, 110)
         Me.Button3.Name = "Button3"
@@ -68,6 +69,7 @@ Partial Class Hobby
         '
         'Button2
         '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(333, 110)
         Me.Button2.Name = "Button2"
@@ -78,6 +80,7 @@ Partial Class Hobby
         '
         'Button1
         '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(107, 110)
         Me.Button1.Name = "Button1"

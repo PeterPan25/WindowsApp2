@@ -94,6 +94,7 @@ Partial Class ArztAnlegen
         '
         'ComboBox1
         '
+        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Augenarzt", "Kinderarzt", "HNO-Arzt", "Zahnarzt", "Frauenarzt", "Hautarzt"})
@@ -104,6 +105,7 @@ Partial Class ArztAnlegen
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 64)
         Me.Label2.Name = "Label2"
@@ -273,6 +275,7 @@ Partial Class ArztAnlegen
         '
         'TextBox1
         '
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(502, 170)
         Me.TextBox1.Name = "TextBox1"
@@ -281,6 +284,7 @@ Partial Class ArztAnlegen
         '
         'TextBox2
         '
+        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(502, 212)
         Me.TextBox2.Name = "TextBox2"
@@ -289,6 +293,7 @@ Partial Class ArztAnlegen
         '
         'TextBox3
         '
+        Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(502, 247)
         Me.TextBox3.Name = "TextBox3"
@@ -297,6 +302,7 @@ Partial Class ArztAnlegen
         '
         'TextBox4
         '
+        Me.TextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(502, 287)
         Me.TextBox4.Name = "TextBox4"
@@ -305,6 +311,7 @@ Partial Class ArztAnlegen
         '
         'TextBox5
         '
+        Me.TextBox5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox5.Location = New System.Drawing.Point(502, 331)
         Me.TextBox5.Name = "TextBox5"
@@ -313,6 +320,7 @@ Partial Class ArztAnlegen
         '
         'ComboBox2
         '
+        Me.ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(502, 77)
@@ -322,7 +330,8 @@ Partial Class ArztAnlegen
         '
         'PlatzhalterText1
         '
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText1.Location = New System.Drawing.Point(73, 170)
         Me.PlatzhalterText1.Name = "PlatzhalterText1"
@@ -333,7 +342,8 @@ Partial Class ArztAnlegen
         '
         'PlatzhalterText5
         '
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText5.Location = New System.Drawing.Point(73, 331)
         Me.PlatzhalterText5.Name = "PlatzhalterText5"
@@ -344,7 +354,8 @@ Partial Class ArztAnlegen
         '
         'PlatzhalterText4
         '
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText4.Location = New System.Drawing.Point(73, 287)
         Me.PlatzhalterText4.Name = "PlatzhalterText4"
@@ -355,7 +366,8 @@ Partial Class ArztAnlegen
         '
         'PlatzhalterText3
         '
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText3.Location = New System.Drawing.Point(73, 248)
         Me.PlatzhalterText3.Name = "PlatzhalterText3"
@@ -366,7 +378,8 @@ Partial Class ArztAnlegen
         '
         'PlatzhalterText2
         '
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText2.Location = New System.Drawing.Point(73, 212)
         Me.PlatzhalterText2.Name = "PlatzhalterText2"

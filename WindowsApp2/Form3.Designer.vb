@@ -45,119 +45,132 @@ Partial Class F_Peter
         '
         'PlatzhalterText1
         '
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText1.Location = New System.Drawing.Point(55, 93)
         Me.PlatzhalterText1.Name = "PlatzhalterText1"
         Me.PlatzhalterText1.PlatzHalterText = Nothing
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText1.TabIndex = 0
         '
         'PlatzhalterText2
         '
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(207, 93)
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(292, 93)
         Me.PlatzhalterText2.Name = "PlatzhalterText2"
         Me.PlatzhalterText2.PlatzHalterText = Nothing
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText2.TabIndex = 1
         '
         'PlatzhalterText3
         '
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(55, 119)
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(55, 125)
         Me.PlatzhalterText3.Name = "PlatzhalterText3"
         Me.PlatzhalterText3.PlatzHalterText = Nothing
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText3.TabIndex = 2
         '
         'PlatzhalterText4
         '
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(207, 119)
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(292, 125)
         Me.PlatzhalterText4.Name = "PlatzhalterText4"
         Me.PlatzhalterText4.PlatzHalterText = Nothing
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText4.TabIndex = 3
         '
         'PlatzhalterText5
         '
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(55, 145)
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(55, 157)
         Me.PlatzhalterText5.Name = "PlatzhalterText5"
         Me.PlatzhalterText5.PlatzHalterText = Nothing
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText5.TabIndex = 4
         '
         'PlatzhalterText6
         '
-        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText6.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText6.Location = New System.Drawing.Point(207, 145)
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(292, 157)
         Me.PlatzhalterText6.Name = "PlatzhalterText6"
         Me.PlatzhalterText6.PlatzHalterText = Nothing
-        Me.PlatzhalterText6.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText6.TabIndex = 5
         '
         'PlatzhalterText7
         '
-        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText7.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText7.Location = New System.Drawing.Point(55, 171)
+        Me.PlatzhalterText7.Location = New System.Drawing.Point(55, 189)
         Me.PlatzhalterText7.Name = "PlatzhalterText7"
         Me.PlatzhalterText7.PlatzHalterText = Nothing
-        Me.PlatzhalterText7.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText7.TabIndex = 6
         '
         'PlatzhalterText8
         '
-        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText8.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText8.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText8.Location = New System.Drawing.Point(55, 197)
+        Me.PlatzhalterText8.Location = New System.Drawing.Point(55, 221)
         Me.PlatzhalterText8.Name = "PlatzhalterText8"
         Me.PlatzhalterText8.PlatzHalterText = Nothing
-        Me.PlatzhalterText8.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText8.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText8.TabIndex = 7
         '
         'PlatzhalterText9
         '
-        Me.PlatzhalterText9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText9.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText9.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText9.Location = New System.Drawing.Point(55, 223)
+        Me.PlatzhalterText9.Location = New System.Drawing.Point(55, 253)
         Me.PlatzhalterText9.Name = "PlatzhalterText9"
         Me.PlatzhalterText9.PlatzHalterText = Nothing
-        Me.PlatzhalterText9.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText9.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText9.TabIndex = 8
         '
         'PlatzhalterText10
         '
-        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText10.BackColor = System.Drawing.SystemColors.Window
+        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText10.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText10.Location = New System.Drawing.Point(55, 249)
+        Me.PlatzhalterText10.Location = New System.Drawing.Point(55, 285)
         Me.PlatzhalterText10.Name = "PlatzhalterText10"
         Me.PlatzhalterText10.PlatzHalterText = Nothing
-        Me.PlatzhalterText10.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText10.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText10.TabIndex = 9
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(323, 273)
+        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.Location = New System.Drawing.Point(317, 316)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(160, 40)
         Me.Button1.TabIndex = 10
         Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ComboBox1
         '
+        Me.ComboBox1.BackColor = System.Drawing.SystemColors.Window
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(55, 13)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 28)
         Me.ComboBox1.TabIndex = 11
         '
         'DataSet1
@@ -178,6 +191,8 @@ Partial Class F_Peter
         '
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -201,6 +216,7 @@ Partial Class F_Peter
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -210,6 +226,7 @@ Partial Class F_Peter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(693, 593)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)

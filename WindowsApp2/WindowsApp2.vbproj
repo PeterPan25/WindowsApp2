@@ -222,10 +222,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Ansichten\Augenarzt.Designer.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Augenarzt.Designer.vb">
       <DependentUpon>Augenarzt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Augenarzt.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Augenarzt.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\Doku.Designer.vb">
@@ -240,16 +240,16 @@
     <Compile Include="Ansichten\Eltern.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\Frauenarzt.Designer.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Frauenarzt.Designer.vb">
       <DependentUpon>Frauenarzt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Frauenarzt.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Frauenarzt.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\Hautarzt.Designer.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Hautarzt.Designer.vb">
       <DependentUpon>Hautarzt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Hautarzt.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Hautarzt.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\Hilfen.Designer.vb">
@@ -258,10 +258,10 @@
     <Compile Include="Ansichten\Hilfen.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\HNO.Designer.vb">
+    <Compile Include="Ansichten\Alte Ansichten\HNO.Designer.vb">
       <DependentUpon>HNO.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\HNO.vb">
+    <Compile Include="Ansichten\Alte Ansichten\HNO.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\Hobby.Designer.vb">
@@ -270,10 +270,10 @@
     <Compile Include="Ansichten\Hobby.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\Kinderarzt.Designer.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Kinderarzt.Designer.vb">
       <DependentUpon>Kinderarzt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Kinderarzt.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Kinderarzt.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ansichten\Kontakte.Designer.vb">
@@ -306,10 +306,10 @@
     <Compile Include="Ansichten\Stammdaten.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Ansichten\Zahnarzt.Designer.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Zahnarzt.Designer.vb">
       <DependentUpon>Zahnarzt.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ansichten\Zahnarzt.vb">
+    <Compile Include="Ansichten\Alte Ansichten\Zahnarzt.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SplashScreen1.Designer.vb">
@@ -377,7 +377,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Augenarzt.resx">
+    <EmbeddedResource Include="Ansichten\Alte Ansichten\Augenarzt.resx">
       <DependentUpon>Augenarzt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Doku.resx">
@@ -386,22 +386,22 @@
     <EmbeddedResource Include="Ansichten\Eltern.resx">
       <DependentUpon>Eltern.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Frauenarzt.resx">
+    <EmbeddedResource Include="Ansichten\Alte Ansichten\Frauenarzt.resx">
       <DependentUpon>Frauenarzt.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Hautarzt.resx">
+    <EmbeddedResource Include="Ansichten\Alte Ansichten\Hautarzt.resx">
       <DependentUpon>Hautarzt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Hilfen.resx">
       <DependentUpon>Hilfen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\HNO.resx">
+    <EmbeddedResource Include="Ansichten\Alte Ansichten\HNO.resx">
       <DependentUpon>HNO.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Hobby.resx">
       <DependentUpon>Hobby.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Kinderarzt.resx">
+    <EmbeddedResource Include="Ansichten\Alte Ansichten\Kinderarzt.resx">
       <DependentUpon>Kinderarzt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Kontakte.resx">
@@ -419,7 +419,7 @@
     <EmbeddedResource Include="Ansichten\Stammdaten.resx">
       <DependentUpon>Stammdaten.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ansichten\Zahnarzt.resx">
+    <EmbeddedResource Include="Ansichten\Alte Ansichten\Zahnarzt.resx">
       <DependentUpon>Zahnarzt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlatzhalterText.resx">

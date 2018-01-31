@@ -105,95 +105,110 @@ Partial Class BerichtAnlegen
         '
         'Label1
         '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 70)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(23, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.Size = New System.Drawing.Size(57, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Label1"
         '
         'Label2
         '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(424, 20)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(57, 20)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Label2"
         '
         'ComboBox1
         '
+        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(178, 62)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(160, 28)
         Me.ComboBox1.TabIndex = 2
         '
         'PlatzhalterText1
         '
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(403, 63)
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(401, 103)
         Me.PlatzhalterText1.Name = "PlatzhalterText1"
         Me.PlatzhalterText1.PlatzHalterText = "Thema"
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(236, 20)
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText1.TabIndex = 3
         Me.PlatzhalterText1.Text = "Thema"
         '
         'DateTimePicker1
         '
+        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.DateTimePicker1.Location = New System.Drawing.Point(731, 64)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(160, 26)
         Me.DateTimePicker1.TabIndex = 4
         '
         'PlatzhalterText2
         '
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText2.Location = New System.Drawing.Point(18, 103)
         Me.PlatzhalterText2.Name = "PlatzhalterText2"
         Me.PlatzhalterText2.PlatzHalterText = "Schule"
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(170, 20)
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText2.TabIndex = 5
         Me.PlatzhalterText2.Text = "Schule"
         '
         'PlatzhalterText3
         '
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(18, 129)
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(18, 145)
         Me.PlatzhalterText3.Name = "PlatzhalterText3"
         Me.PlatzhalterText3.PlatzHalterText = "Klasse"
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(170, 20)
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText3.TabIndex = 6
         Me.PlatzhalterText3.Text = "Klasse"
         '
         'PlatzhalterText4
         '
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(18, 155)
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(210, 103)
         Me.PlatzhalterText4.Name = "PlatzhalterText4"
         Me.PlatzhalterText4.PlatzHalterText = "Lehrer/-in"
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(170, 20)
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText4.TabIndex = 7
         Me.PlatzhalterText4.Text = "Lehrer/-in"
         '
         'PlatzhalterText5
         '
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(195, 155)
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(210, 145)
         Me.PlatzhalterText5.Name = "PlatzhalterText5"
         Me.PlatzhalterText5.PlatzHalterText = "Fach"
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(170, 20)
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(160, 26)
         Me.PlatzhalterText5.TabIndex = 8
         Me.PlatzhalterText5.Text = "Fach"
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RichTextBox1.Location = New System.Drawing.Point(18, 197)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(913, 247)

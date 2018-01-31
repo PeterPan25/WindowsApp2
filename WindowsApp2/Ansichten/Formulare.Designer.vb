@@ -68,7 +68,7 @@ Partial Class Formulare
         '
         'Überschrift
         '
-        Me.Überschrift.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Überschrift.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
