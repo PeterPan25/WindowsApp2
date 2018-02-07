@@ -4900,6 +4900,10 @@ Partial Public Class DataSet1
         
         Private columnStrasse As Global.System.Data.DataColumn
         
+        Private columnTelefon As Global.System.Data.DataColumn
+        
+        Private columnArt As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -4968,6 +4972,22 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TelefonColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnTelefon
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property ArtColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnArt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -5004,9 +5024,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddPsychoRow(ByVal P_Name As String, ByVal Ort As String, ByVal Plz As Integer, ByVal Strasse As String) As PsychoRow
+        Public Overloads Function AddPsychoRow(ByVal P_Name As String, ByVal Ort As String, ByVal Plz As Integer, ByVal Strasse As String, ByVal Telefon As String, ByVal Art As String) As PsychoRow
             Dim rowPsychoRow As PsychoRow = CType(Me.NewRow,PsychoRow)
-            Dim columnValuesArray() As Object = New Object() {P_Name, Ort, Plz, Strasse}
+            Dim columnValuesArray() As Object = New Object() {P_Name, Ort, Plz, Strasse, Telefon, Art}
             rowPsychoRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowPsychoRow)
             Return rowPsychoRow
@@ -5039,6 +5059,8 @@ Partial Public Class DataSet1
             Me.columnOrt = MyBase.Columns("Ort")
             Me.columnPlz = MyBase.Columns("Plz")
             Me.columnStrasse = MyBase.Columns("Strasse")
+            Me.columnTelefon = MyBase.Columns("Telefon")
+            Me.columnArt = MyBase.Columns("Art")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5052,12 +5074,18 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnPlz)
             Me.columnStrasse = New Global.System.Data.DataColumn("Strasse", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnStrasse)
+            Me.columnTelefon = New Global.System.Data.DataColumn("Telefon", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnTelefon)
+            Me.columnArt = New Global.System.Data.DataColumn("Art", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnArt)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnP_Name}, true))
             Me.columnP_Name.AllowDBNull = false
             Me.columnP_Name.Unique = true
             Me.columnP_Name.MaxLength = 50
             Me.columnOrt.MaxLength = 50
             Me.columnStrasse.MaxLength = 50
+            Me.columnTelefon.MaxLength = 50
+            Me.columnArt.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13183,6 +13211,36 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Telefon() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePsycho.TelefonColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Telefon in Tabelle Psycho ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePsycho.TelefonColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Art() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tablePsycho.ArtColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Art in Tabelle Psycho ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tablePsycho.ArtColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Function IsOrtNull() As Boolean
             Return Me.IsNull(Me.tablePsycho.OrtColumn)
         End Function
@@ -13215,6 +13273,30 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetStrasseNull()
             Me(Me.tablePsycho.StrasseColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTelefonNull() As Boolean
+            Return Me.IsNull(Me.tablePsycho.TelefonColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTelefonNull()
+            Me(Me.tablePsycho.TelefonColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsArtNull() As Boolean
+            Return Me.IsNull(Me.tablePsycho.ArtColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetArtNull()
+            Me(Me.tablePsycho.ArtColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -21689,13 +21771,17 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("Ort", "Ort")
             tableMapping.ColumnMappings.Add("Plz", "Plz")
             tableMapping.ColumnMappings.Add("Strasse", "Strasse")
+            tableMapping.ColumnMappings.Add("Telefon", "Telefon")
+            tableMapping.ColumnMappings.Add("Art", "Art")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
             Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Psycho] WHERE (([P_Name] = @Original_P_Name) AND ((@IsNull_Ort = 1 A"& _ 
                 "ND [Ort] IS NULL) OR ([Ort] = @Original_Ort)) AND ((@IsNull_Plz = 1 AND [Plz] IS"& _ 
                 " NULL) OR ([Plz] = @Original_Plz)) AND ((@IsNull_Strasse = 1 AND [Strasse] IS NU"& _ 
-                "LL) OR ([Strasse] = @Original_Strasse)))"
+                "LL) OR ([Strasse] = @Original_Strasse)) AND ((@IsNull_Art = 1 AND [Art] IS NULL)"& _ 
+                " OR ([Art] = @Original_Art)) AND ((@IsNull_Telefon = 1 AND [Telefon] IS NULL) OR"& _ 
+                " ([Telefon] = @Original_Telefon)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_P_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "P_Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ort", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -21704,29 +21790,39 @@ Namespace DataSet1TableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strasse", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Art", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Art", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Art", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Art", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Telefon", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefon", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Telefon", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefon", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Psycho] ([P_Name], [Ort], [Plz], [Strasse]) VALUES (@P_Name, @Ort, @"& _ 
-                "Plz, @Strasse);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT P_Name, Ort, Plz, Strasse FROM Psycho WHERE (P_Name = @P"& _ 
-                "_Name)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Psycho] ([P_Name], [Ort], [Plz], [Strasse], [Art], [Telefon]) VALUES"& _ 
+                " (@P_Name, @Ort, @Plz, @Strasse, @Art, @Telefon);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT P_Name, Ort, Plz, Stra"& _ 
+                "sse, Art, Telefon FROM Psycho WHERE (P_Name = @P_Name)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@P_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "P_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Art", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Art", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Telefon", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefon", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [Psycho] SET [P_Name] = @P_Name, [Ort] = @Ort, [Plz] = @Plz, [Strasse] = @"& _ 
-                "Strasse WHERE (([P_Name] = @Original_P_Name) AND ((@IsNull_Ort = 1 AND [Ort] IS "& _ 
-                "NULL) OR ([Ort] = @Original_Ort)) AND ((@IsNull_Plz = 1 AND [Plz] IS NULL) OR (["& _ 
-                "Plz] = @Original_Plz)) AND ((@IsNull_Strasse = 1 AND [Strasse] IS NULL) OR ([Str"& _ 
-                "asse] = @Original_Strasse)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT P_Name, Ort, Plz, Strasse FROM Psycho WHER"& _ 
-                "E (P_Name = @P_Name)"
+                "Strasse, [Art] = @Art, [Telefon] = @Telefon WHERE (([P_Name] = @Original_P_Name)"& _ 
+                " AND ((@IsNull_Ort = 1 AND [Ort] IS NULL) OR ([Ort] = @Original_Ort)) AND ((@IsN"& _ 
+                "ull_Plz = 1 AND [Plz] IS NULL) OR ([Plz] = @Original_Plz)) AND ((@IsNull_Strasse"& _ 
+                " = 1 AND [Strasse] IS NULL) OR ([Strasse] = @Original_Strasse)) AND ((@IsNull_Ar"& _ 
+                "t = 1 AND [Art] IS NULL) OR ([Art] = @Original_Art)) AND ((@IsNull_Telefon = 1 A"& _ 
+                "ND [Telefon] IS NULL) OR ([Telefon] = @Original_Telefon)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT P_Name, Ort,"& _ 
+                " Plz, Strasse, Art, Telefon FROM Psycho WHERE (P_Name = @P_Name)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@P_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "P_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Ort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Art", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Art", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Telefon", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefon", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_P_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "P_Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Ort", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Ort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Ort", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -21734,6 +21830,10 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Plz", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Plz", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Strasse", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Strasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Strasse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Art", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Art", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Art", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Art", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Telefon", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefon", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Telefon", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Telefon", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -21749,7 +21849,7 @@ Namespace DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT P_Name, Ort, Plz, Strasse FROM Psycho"
+            Me._commandCollection(0).CommandText = "SELECT P_Name, Ort, Plz, Strasse, Art, Telefon FROM Psycho"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -21809,7 +21909,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_P_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_P_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String, ByVal Original_Art As String, ByVal Original_Telefon As String) As Integer
             If (Original_P_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_P_Name")
             Else
@@ -21836,6 +21936,20 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Strasse,String)
             End If
+            If (Original_Art Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Art,String)
+            End If
+            If (Original_Telefon Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Telefon,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -21855,7 +21969,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal P_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal P_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Art As String, ByVal Telefon As String) As Integer
             If (P_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("P_Name")
             Else
@@ -21876,6 +21990,16 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = CType(Strasse,String)
             End If
+            If (Art Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Art,String)
+            End If
+            If (Telefon Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Telefon,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -21895,7 +22019,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal P_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Original_P_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String) As Integer
+        Public Overloads Overridable Function Update(ByVal P_Name As String, ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Art As String, ByVal Telefon As String, ByVal Original_P_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String, ByVal Original_Art As String, ByVal Original_Telefon As String) As Integer
             If (P_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("P_Name")
             Else
@@ -21916,31 +22040,55 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Strasse,String)
             End If
+            If (Art Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Art,String)
+            End If
+            If (Telefon Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Telefon,String)
+            End If
             If (Original_P_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_P_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_P_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_P_Name,String)
             End If
             If (Original_Ort Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Ort,String)
-            End If
-            If (Original_Plz.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Plz.Value,Integer)
-            Else
                 Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Ort,String)
             End If
-            If (Original_Strasse Is Nothing) Then
+            If (Original_Plz.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Plz.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+            End If
+            If (Original_Strasse Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Strasse,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Strasse,String)
+            End If
+            If (Original_Art Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Art,String)
+            End If
+            If (Original_Telefon Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Telefon,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -21961,8 +22109,8 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Original_P_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String) As Integer
-            Return Me.Update(Original_P_Name, Ort, Plz, Strasse, Original_P_Name, Original_Ort, Original_Plz, Original_Strasse)
+        Public Overloads Overridable Function Update(ByVal Ort As String, ByVal Plz As Global.System.Nullable(Of Integer), ByVal Strasse As String, ByVal Art As String, ByVal Telefon As String, ByVal Original_P_Name As String, ByVal Original_Ort As String, ByVal Original_Plz As Global.System.Nullable(Of Integer), ByVal Original_Strasse As String, ByVal Original_Art As String, ByVal Original_Telefon As String) As Integer
+            Return Me.Update(Original_P_Name, Ort, Plz, Strasse, Art, Telefon, Original_P_Name, Original_Ort, Original_Plz, Original_Strasse, Original_Art, Original_Telefon)
         End Function
     End Class
     
