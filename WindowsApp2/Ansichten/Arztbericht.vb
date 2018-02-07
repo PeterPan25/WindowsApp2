@@ -157,7 +157,7 @@
             For z = 0 To (DataSet1.HNO.Rows.Count - 1)
                 name3(z) = DataSet1.HNO.Rows(z)("HNO_Name")
             Next
-
+            Label2.Text = "HNO"
             ComboBox2.DataSource = name3
             HNOArztDaten()
 
@@ -167,7 +167,7 @@
             For z = 0 To (DataSet1.Psycho.Rows.Count - 1)
                 name3(z) = DataSet1.Psycho.Rows(z)("P_Name")
             Next
-
+            Label2.Text = "Psychologe"
             ComboBox2.DataSource = name3
             PsychoArztDaten()
 

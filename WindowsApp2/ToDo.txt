@@ -2,7 +2,6 @@
 Tagesbercht inkl.Verlinkung zur jeweiligen Kinderakte
 überflüssige Ärzteansichten löschen
 Arzt Übersicht alternativen überlegen
-Bericht anlegen für Psycho
 Doku: Tagesbericht mit namen des Kindes mit Spalte ob es gespeichert werden soll, wenn es wichtig ist in den Datensatz Doku des Kindes speichern
 speziellere Sachen kommen dort hinein: a la haben an einer Scheune gezündelt
 Stammdaten: Schulische Laufbahn mit unterbringen 
