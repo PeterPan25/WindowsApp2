@@ -66,6 +66,10 @@ Partial Class ArztAnlegen
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.KindPsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindPsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindPsychoTableAdapter()
+        Me.PsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.PsychoTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +83,8 @@ Partial Class ArztAnlegen
         CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindPsychoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PsychoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -97,7 +103,7 @@ Partial Class ArztAnlegen
         Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Augenarzt", "Kinderarzt", "HNO-Arzt", "Zahnarzt", "Frauenarzt", "Hautarzt"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Augenarzt", "Hautarzt", "HNO-Arzt", "Frauenarzt", "Kinderarzt", "Psychologe", "Zahnarzt"})
         Me.ComboBox1.Location = New System.Drawing.Point(151, 77)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
@@ -411,6 +417,24 @@ Partial Class ArztAnlegen
         Me.Button3.Text = "Entfernen"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'KindPsychoBindingSource
+        '
+        Me.KindPsychoBindingSource.DataMember = "KindPsycho"
+        Me.KindPsychoBindingSource.DataSource = Me.DataSet1
+        '
+        'KindPsychoTableAdapter
+        '
+        Me.KindPsychoTableAdapter.ClearBeforeFill = True
+        '
+        'PsychoBindingSource
+        '
+        Me.PsychoBindingSource.DataMember = "Psycho"
+        Me.PsychoBindingSource.DataSource = Me.DataSet1
+        '
+        'PsychoTableAdapter
+        '
+        Me.PsychoTableAdapter.ClearBeforeFill = True
+        '
         'ArztAnlegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -448,6 +472,8 @@ Partial Class ArztAnlegen
         CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindPsychoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PsychoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -496,4 +522,8 @@ Partial Class ArztAnlegen
     Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents KindPsychoBindingSource As BindingSource
+    Friend WithEvents KindPsychoTableAdapter As DataSet1TableAdapters.KindPsychoTableAdapter
+    Friend WithEvents PsychoBindingSource As BindingSource
+    Friend WithEvents PsychoTableAdapter As DataSet1TableAdapters.PsychoTableAdapter
 End Class

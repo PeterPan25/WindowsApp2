@@ -36,6 +36,8 @@
         ElseIf ArtText = "HNO-Arzt" Then
 
             HNOArztAnlegen()
+        ElseIf ArtText = "Psychologe" Then
+            PsychoAnlegen()
 
         End If
         Combotext()
@@ -162,6 +164,27 @@
             MsgBox("Schade")
         End Try
     End Sub
+    Private Sub PsychoAnlegen()
+        Dim a As DataRow = Me.DataSet1.Psycho.NewRow()
+
+        Try
+            a("P_Name") = PlatzhalterText1.Text
+            a("Art") = ComboBox1.Text
+            a("Ort") = PlatzhalterText4.Text
+            a("Strasse") = PlatzhalterText5.Text
+            a("Plz") = PlatzhalterText3.Text
+            a("Telefon") = PlatzhalterText2.Text
+
+            Me.DataSet1.Psycho.AddPsychoRow(a)
+            Me.PsychoTableAdapter.Update(Me.DataSet1)
+            KPsychoAnlegen()
+
+
+        Catch ex As Exception
+            MsgBox("Schade")
+        End Try
+    End Sub
+
 
     Private Sub KADaten_anlegen()
         Dim b As DataRow
@@ -252,6 +275,21 @@
         Reset()
     End Sub
 
+    Private Sub KPsychoAnlegen()
+        Dim b As DataRow
+        b = Me.DataSet1.KindPsycho.NewRow()
+
+        b("P_Name") = PlatzhalterText1.Text
+        b("Name") = Form1.CB_name.Text
+        Me.DataSet1.KindPsycho.AddKindPsychoRow(b)
+        Me.Validate()
+
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+        Reset()
+
+    End Sub
+
     Private Sub Reset()
         MsgBox("Speichern erfolgreich")
         ComboBox1.Text = ""
@@ -281,45 +319,53 @@
 
             Next
 
-                ComboBox2.DataSource = name3
-            ElseIf ArtText = "Frauenarzt" Then
-                ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Frauenarzt" Then
+            ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
 
-                For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
-                    name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
-                Next
+            For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
+            Next
 
-                ComboBox2.DataSource = name3
-            ElseIf ArtText = "Kinderarzt" Then
-                ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Kinderarzt" Then
+            ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
 
-                For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
-                    name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
-                Next
+            For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
+            Next
 
-                ComboBox2.DataSource = name3
-            ElseIf ArtText = "Hautarzt" Then
-                ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Hautarzt" Then
+            ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
 
-                For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
-                    name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
-                Next
+            For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
+            Next
 
-                ComboBox2.DataSource = name3
-            ElseIf ArtText = "Zahnarzt" Then
-                ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "Zahnarzt" Then
+            ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
 
-                For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
-                    name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
-                Next
+            For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
+                name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
+            Next
 
-                ComboBox2.DataSource = name3
-            ElseIf ArtText = "HNO-Arzt" Then
+            ComboBox2.DataSource = name3
+        ElseIf ArtText = "HNO-Arzt" Then
 
-                ReDim name3(DataSet1.HNO.Rows.Count - 1)
+            ReDim name3(DataSet1.HNO.Rows.Count - 1)
 
             For z = 0 To (DataSet1.HNO.Rows.Count - 1)
                 name3(z) = DataSet1.HNO.Rows(z)("HNO_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+
+        ElseIf ArtText = "Psychologe" Then
+            ReDim name3(DataSet1.Psycho.Rows.Count - 1)
+            For z = 0 To (DataSet1.Psycho.Rows.Count - 1)
+                name3(z) = DataSet1.Psycho.Rows(z)("P_Name")
             Next
 
             ComboBox2.DataSource = name3
@@ -352,7 +398,7 @@
             For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
                 If name = DataSet1.KindAugenarzt.Rows(z)("A_Name") And name5 = DataSet1.KindAugenarzt.Rows(z)("Name") Then
                     TextBox5.Text = DataSet1.Augenarzt.Rows(z)("Straße")
-                    TextBox3.Text = DataSet1.Augenarzt.Rows(z)("PLZ")
+                    TextBox3.Text = DataSet1.Augenarzt.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.Augenarzt.Rows(z)("Ort")
                     TextBox2.Text = DataSet1.Augenarzt.Rows(z)("Telefon")
                     TextBox1.Text = DataSet1.Augenarzt.Rows(z)("A_Name")
@@ -367,7 +413,7 @@
             For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
                 If name = DataSet1.Frauenarzt.Rows(z)("F_Name") Then
                     TextBox5.Text = DataSet1.Frauenarzt.Rows(z)("Straße")
-                    TextBox3.Text = DataSet1.Frauenarzt.Rows(z)("PLZ")
+                    TextBox3.Text = DataSet1.Frauenarzt.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.Frauenarzt.Rows(z)("Ort")
                     TextBox2.Text = DataSet1.Frauenarzt.Rows(z)("Telefon")
                     TextBox1.Text = DataSet1.Frauenarzt.Rows(z)("F_Name")
@@ -380,7 +426,7 @@
             For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
                 If name = DataSet1.Kinderarzt.Rows(z)("K_Name") Then
                     TextBox5.Text = DataSet1.Kinderarzt.Rows(z)("Straße")
-                    TextBox3.Text = DataSet1.Kinderarzt.Rows(z)("PLZ")
+                    TextBox3.Text = DataSet1.Kinderarzt.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.Kinderarzt.Rows(z)("Ort")
                     TextBox2.Text = DataSet1.Kinderarzt.Rows(z)("Telefon")
                     TextBox1.Text = DataSet1.Kinderarzt.Rows(z)("K_Name")
@@ -393,7 +439,7 @@
             For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
                 If name = DataSet1.Hautarzt.Rows(z)("H_Name") Then
                     TextBox5.Text = DataSet1.Hautarzt.Rows(z)("Straße")
-                    TextBox3.Text = DataSet1.Hautarzt.Rows(z)("PLZ")
+                    TextBox3.Text = DataSet1.Hautarzt.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.Hautarzt.Rows(z)("Ort")
                     TextBox2.Text = DataSet1.Hautarzt.Rows(z)("Telefon")
                     TextBox1.Text = DataSet1.Hautarzt.Rows(z)("H_Name")
@@ -406,7 +452,7 @@
             For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
                 If name = DataSet1.Zahnarzt.Rows(z)("Z_Name") Then
                     TextBox5.Text = DataSet1.Zahnarzt.Rows(z)("Straße")
-                    TextBox3.Text = DataSet1.Zahnarzt.Rows(z)("PLZ")
+                    TextBox3.Text = DataSet1.Zahnarzt.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.Zahnarzt.Rows(z)("Ort")
                     TextBox2.Text = DataSet1.Zahnarzt.Rows(z)("Telefon")
                     TextBox1.Text = DataSet1.Zahnarzt.Rows(z)("Z_Name")
@@ -420,7 +466,7 @@
             For z = 0 To (DataSet1.HNO.Rows.Count - 1)
                 If name = DataSet1.HNO.Rows(z)("HNO_Name") Then
                     TextBox5.Text = DataSet1.HNO.Rows(z)("Straße")
-                    TextBox3.Text = DataSet1.HNO.Rows(z)("PLZ")
+                    TextBox3.Text = DataSet1.HNO.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.HNO.Rows(z)("Ort")
                     TextBox2.Text = DataSet1.HNO.Rows(z)("Telefon")
                     TextBox1.Text = DataSet1.HNO.Rows(z)("HNO_Name")
@@ -428,6 +474,18 @@
                 End If
             Next
 
+        ElseIf ArtText = "Psychologe" Then
+            ReDim name3(DataSet1.Psycho.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Psycho.Rows.Count - 1)
+                If name = DataSet1.Psycho.Rows(z)("P_Name") Then
+                    TextBox5.Text = DataSet1.Psycho.Rows(z)("Straße")
+                    TextBox3.Text = DataSet1.Psycho.Rows(z)("Plz")
+                    TextBox4.Text = DataSet1.Psycho.Rows(z)("Ort")
+                    TextBox2.Text = DataSet1.Psycho.Rows(z)("Telefon")
+                    TextBox1.Text = DataSet1.Psycho.Rows(z)("P_Name")
+                End If
+            Next
 
 
         End If
@@ -485,6 +543,10 @@
         ElseIf ArtText = "HNO-Arzt" Then
 
             HNOArztAendern()
+            DatenAnzeigen()
+
+        ElseIf ArtText = "Psychologe" Then
+            PsychoAendern()
             DatenAnzeigen()
         End If
         Combotext()
@@ -609,6 +671,25 @@
         End Try
     End Sub
 
+    Private Sub PsychoAendern()
+        Dim a As DataSet1.PsychoRow
+        a = DataSet1.Psycho.FindByP_Name(ComboBox2.Text)
+        Try
+            a("P_Name") = TextBox1.Text
+            a("Plz") = TextBox3.Text
+            a("Ort") = TextBox4.Text
+            a("Strasse") = TextBox5.Text
+            a("Art") = ComboBox1.Text
+            a("Telefon") = TextBox2.Text
+
+            KPsychoDaten_aendern()
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+        Catch ex As Exception
+            MsgBox("Schade")
+        End Try
+    End Sub
+
     Private Sub KADaten_aendern()
         Dim b As DataSet1.KindAugenarztRow
         b = Me.DataSet1.KindAugenarzt.FindByNameA_Name(Form1.CB_name.Text, ComboBox2.Text)
@@ -712,7 +793,7 @@
         Dim b As DataSet1.KindHNORow
         b = Me.DataSet1.KindHNO.FindByNameHNO_Name(Form1.CB_name.Text, ComboBox2.Text)
         Dim c As DataRow
-        c = Me.DataSet1.KindHautarzt.NewRow()
+        c = Me.DataSet1.KindHNO.NewRow()
 
         b.Delete()
         Me.KindHNOTableAdapter.Update(Me.DataSet1.KindHNO)
@@ -726,6 +807,27 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+    End Sub
+
+    Private Sub KPsychoDaten_aendern()
+        Dim b As DataSet1.KindPsychoRow
+        b = Me.DataSet1.KindPsycho.FindByNameP_Name(Form1.CB_name.Text, ComboBox2.Text)
+        Dim c As DataRow
+        c = Me.DataSet1.KindPsycho.NewRow()
+
+        b.Delete()
+        Me.KindPsychoTableAdapter.Update(Me.DataSet1.KindPsycho)
+        c("P_Name") = TextBox1.Text
+        c("Name") = Form1.CB_name.Text
+        Me.PsychoTableAdapter.Update(Me.DataSet1.Psycho)
+
+        Me.DataSet1.KindPsycho.AddKindPsychoRow(c)
+        Me.KindPsychoTableAdapter.Update(Me.DataSet1.KindPsycho)
+        Me.Validate()
+
+        '
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
     End Sub
     '*****Daten löschen***
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -835,7 +937,23 @@
 
             End Try
 
+        ElseIf arztart = "Psychologe" Then
 
+            Try
+                c = Me.DataSet1.Psycho.FindByP_Name(ComboBox2.Text)
+                c.Delete()
+                d = Me.DataSet1.KindPsycho.FindByNameP_Name(Form1.CB_name.Text, ComboBox2.Text)
+                d.Delete()
+                Me.KindPsychoTableAdapter.Update(DataSet1.KindPsycho)
+                Me.PsychoTableAdapter.Update(DataSet1.Psycho)
+                Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+                MsgBox("Erfolgreich entfernt")
+                ResetAnzeigeBoxen()
+
+            Catch ex As Exception
+                MsgBox("Fehler")
+
+            End Try
 
 
 
