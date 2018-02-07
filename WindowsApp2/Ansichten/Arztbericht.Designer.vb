@@ -63,6 +63,10 @@ Partial Class Arztbericht
         Me.KindKinderarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKinderarztTableAdapter()
         Me.KindZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindZahnarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindZahnarztTableAdapter()
+        Me.KindPsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindPsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindPsychoTableAdapter()
+        Me.PsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.PsychoTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -77,6 +81,8 @@ Partial Class Arztbericht
         CType(Me.KindHNOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindPsychoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PsychoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -84,7 +90,7 @@ Partial Class Arztbericht
         Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Kinderarzt", "HNO", "Zahnarzt", "Frauenarzt", "Hautarzt", "Augenarzt", "Krankenhaus"})
+        Me.ComboBox1.Items.AddRange(New Object() {"Augenarzt", "Frauenarzt", "Hautarzt", "HNO", "Kinderarzt", "Krankenhaus", "Psychologe", "Zahnarzt", "", "", ""})
         Me.ComboBox1.Location = New System.Drawing.Point(97, 68)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
@@ -288,7 +294,7 @@ Partial Class Arztbericht
         'PlatzhalterText1
         '
         Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText1.Location = New System.Drawing.Point(97, 142)
         Me.PlatzhalterText1.Name = "PlatzhalterText1"
@@ -351,6 +357,24 @@ Partial Class Arztbericht
         '
         Me.KindZahnarztTableAdapter.ClearBeforeFill = True
         '
+        'KindPsychoBindingSource
+        '
+        Me.KindPsychoBindingSource.DataMember = "KindPsycho"
+        Me.KindPsychoBindingSource.DataSource = Me.DataSet1
+        '
+        'KindPsychoTableAdapter
+        '
+        Me.KindPsychoTableAdapter.ClearBeforeFill = True
+        '
+        'PsychoBindingSource
+        '
+        Me.PsychoBindingSource.DataMember = "Psycho"
+        Me.PsychoBindingSource.DataSource = Me.DataSet1
+        '
+        'PsychoTableAdapter
+        '
+        Me.PsychoTableAdapter.ClearBeforeFill = True
+        '
         'Arztbericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -383,6 +407,8 @@ Partial Class Arztbericht
         CType(Me.KindHNOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindPsychoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PsychoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -428,4 +454,8 @@ Partial Class Arztbericht
     Friend WithEvents KindKinderarztTableAdapter As DataSet1TableAdapters.KindKinderarztTableAdapter
     Friend WithEvents KindZahnarztBindingSource As BindingSource
     Friend WithEvents KindZahnarztTableAdapter As DataSet1TableAdapters.KindZahnarztTableAdapter
+    Friend WithEvents KindPsychoBindingSource As BindingSource
+    Friend WithEvents KindPsychoTableAdapter As DataSet1TableAdapters.KindPsychoTableAdapter
+    Friend WithEvents PsychoBindingSource As BindingSource
+    Friend WithEvents PsychoTableAdapter As DataSet1TableAdapters.PsychoTableAdapter
 End Class

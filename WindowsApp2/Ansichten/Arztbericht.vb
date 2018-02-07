@@ -32,7 +32,8 @@
         Me.KinderarztTableAdapter.Fill(Me.DataSet1.Kinderarzt)
         Me.KindHNOTableAdapter.Fill(Me.DataSet1.KindHNO)
         Me.HNOTableAdapter.Fill(Me.DataSet1.HNO)
-
+        Me.PsychoTableAdapter.Fill(Me.DataSet1.Psycho)
+        Me.KindPsychoTableAdapter.Fill(Me.DataSet1.KindPsycho)
         Label1.Text = Form1.CB_name.Text
     End Sub
 
@@ -160,6 +161,15 @@
             ComboBox2.DataSource = name3
             HNOArztDaten()
 
+        ElseIf ArtText = "Psychologe" Then
+            ReDim name3(DataSet1.Psycho.Rows.Count - 1)
+
+            For z = 0 To (DataSet1.Psycho.Rows.Count - 1)
+                name3(z) = DataSet1.Psycho.Rows(z)("P_Name")
+            Next
+
+            ComboBox2.DataSource = name3
+            PsychoArztDaten()
 
 
         End If
@@ -199,6 +209,9 @@
         ElseIf ArtText = "HNO" Then
 
             HNOArztDaten()
+
+        ElseIf ArtText = "Psychologe" Then
+            PsychoArztDaten()
 
         End If
 
@@ -391,5 +404,33 @@
 
 
         Next k
+    End Sub
+
+    Private Sub PsychoArztDaten()
+        Dim n1 As String
+        Dim r1() As DataRow
+        ' Dim c1 As DataColumn
+
+        n1 = ComboBox2.Text
+
+        r1 = DataSet1.Psycho.Select("P_Name  = '" & n1 & "'")
+
+        Dim k As Integer
+
+        ' 3/8 jeweilige Spalte für Name etc.
+        For k = 0 To r1.GetUpperBound(0)
+
+            Try
+                TextBox1.Text = r1(k)(3)
+                TextBox2.Text = r1(k)(2)
+                TextBox3.Text = r1(k)(1)
+                TextBox4.Text = r1(k)(4)
+
+            Catch ex As Exception
+            End Try
+
+
+        Next k
+
     End Sub
 End Class
