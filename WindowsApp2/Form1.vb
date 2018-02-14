@@ -181,5 +181,7 @@ Public Class Form1
         Stammdaten1.Daten_Anzeigen()
     End Sub
 
+    Private Sub SplitContainer3_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel1.Paint
 
+    End Sub
 End Class
