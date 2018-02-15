@@ -5,7 +5,7 @@ Arzt Übersicht alternativen überlegen
 Doku: Tagesbericht mit namen des Kindes mit Spalte ob es gespeichert werden soll, wenn es wichtig ist in den Datensatz Doku des Kindes speichern
 speziellere Sachen kommen dort hinein: a la haben an einer Scheune gezündelt
 Stammdaten: Schulische Laufbahn mit unterbringen 
-Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepläne vorhanden sein, neu: hilfeplan bericht in der neuen ansicht schreiben
+Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepläne vorhanden sein, neu: hilfeplan bericht in der neuen ansicht schreiben --> Statusanzeige im Datagridview (schreiben, in bearbeitung usw.)
  kann damit man in der listview einen älteren öffnen kann weil man einen neuen schreiben muss und so einfach ein paar alte sachen gegebenfalls übernommen werden
  Design, Farbe etc. 
  ? einbauen mit msg boxen für Instruktionen
