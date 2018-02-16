@@ -161,6 +161,8 @@ Public Class Form1
 
 
     Public Sub Combotext()
+        Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
+
         Me.TableAdapterManager.KindTableAdapter.Fill(data3)
 
         ReDim name3(data3.Rows.Count - 1)
@@ -170,6 +172,7 @@ Public Class Form1
         Next
 
         CB_name.DataSource = name3
+        KinderDaten()
     End Sub
 
 
@@ -177,11 +180,33 @@ Public Class Form1
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
         Bericht1.BerichtKind()
         KindBearbeiten1.DatenAnzeigen()
-
+        KinderDaten()
         Stammdaten1.Daten_Anzeigen()
     End Sub
 
     Private Sub SplitContainer3_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel1.Paint
 
+    End Sub
+
+    Private Sub KinderDaten()
+        Dim Kind As String = CB_name.Text
+
+        Try
+
+
+            For z = 0 To (data3.Rows.Count - 1)
+                If Kind = data3.Rows(z)("Name") Then
+                    Label1.Text = data3.Rows(z)("Geburtsdatum")
+                    Label2.Text = data3.Rows(z)("Sorgerechtsstatus")
+                    Label4.Text = data3.Rows(z)("Jugendamt")
+                    Label5.Text = data3.Rows(z)("Aufnahmedatum")
+
+                End If
+
+            Next
+        Catch ex As Exception
+            MsgBox("nenene")
+
+        End Try
     End Sub
 End Class
