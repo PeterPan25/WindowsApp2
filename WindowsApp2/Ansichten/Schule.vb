@@ -56,10 +56,14 @@
             a("Ort") = PlatzhalterText5.Text
             a("Klasse") = PlatzhalterText6.Text
             a("Klassenlehrer") = PlatzhalterText7.Text
+            a("vDatum") = DateTimePicker1.Value
+            a("bDatum") = DateTimePicker2.Value
 
             Me.DataSet1.Schule.AddSchuleRow(a)
             Me.SchuleTableAdapter.Update(Me.DataSet1.Schule)
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            Me.SchuleDataGridView.Update()
+
 
             MsgBox("Speichern erfolgreich")
 
@@ -68,4 +72,6 @@
 
         End Try
     End Sub
+
+
 End Class
