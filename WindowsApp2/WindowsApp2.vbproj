@@ -439,6 +439,12 @@
     </Content>
     <None Include="Resources\IMG_5858 %281500x887%29.jpg" />
     <None Include="Resources\Logo.jpg" />
+    <None Include="Resources\mulleimer.jpg" />
+    <None Include="Resources\neu.png" />
+    <None Include="Resources\stift.png" />
+    <None Include="Resources\mulleimer_size.jpg" />
+    <None Include="Resources\neu_size.jpg" />
+    <None Include="Resources\stift_size.jpg" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\Ämterplan.jpg" />
     <None Include="DataSet1.xsc">
