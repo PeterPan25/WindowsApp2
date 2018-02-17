@@ -32,7 +32,14 @@ Partial Class Schule
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
         Me.SchuleDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -54,13 +61,6 @@ Partial Class Schule
         Me.SchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchuleTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.SchulBerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulBerichtTableAdapter()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -92,6 +92,7 @@ Partial Class Schule
         Me.SplitContainer1.Panel2.AutoScroll = True
         Me.SplitContainer1.Panel2.Controls.Add(Me.Berichte)
         Me.SplitContainer1.Panel2.Controls.Add(Me.SchulBerichtDataGridView)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1208, 655)
         Me.SplitContainer1.SplitterDistance = 732
         Me.SplitContainer1.TabIndex = 13
@@ -109,7 +110,6 @@ Partial Class Schule
         Me.SplitContainer2.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer2.Panel1.Controls.Add(Me.DateTimePicker2)
         Me.SplitContainer2.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.Button1)
         Me.SplitContainer2.Panel1.Controls.Add(Me.PlatzhalterText2)
         Me.SplitContainer2.Panel1.Controls.Add(Me.PlatzhalterText1)
         Me.SplitContainer2.Panel1.Controls.Add(Me.Button2)
@@ -170,22 +170,99 @@ Partial Class Schule
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(326, 170)
+        Me.Button1.Location = New System.Drawing.Point(3, 102)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(160, 40)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Bericht anlegen"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(326, 36)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Schulart"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText2.TabIndex = 7
+        Me.PlatzhalterText2.Text = "Schulart"
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(6, 36)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Schule"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(301, 26)
+        Me.PlatzhalterText1.TabIndex = 6
+        Me.PlatzhalterText1.Text = "Schule"
         '
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(539, 170)
+        Me.Button2.Location = New System.Drawing.Point(384, 180)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(160, 40)
         Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Speichern"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(6, 68)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = "Straße & Hausnummer"
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(195, 26)
+        Me.PlatzhalterText3.TabIndex = 8
+        Me.PlatzhalterText3.Text = "Straße & Hausnummer"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(207, 68)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = "Postleitzahl"
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 26)
+        Me.PlatzhalterText4.TabIndex = 9
+        Me.PlatzhalterText4.Text = "Postleitzahl"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(326, 68)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Ort"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText5.TabIndex = 10
+        Me.PlatzhalterText5.Text = "Ort"
+        '
+        'PlatzhalterText6
+        '
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(6, 132)
+        Me.PlatzhalterText6.Name = "PlatzhalterText6"
+        Me.PlatzhalterText6.PlatzHalterText = "Klasse"
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(102, 26)
+        Me.PlatzhalterText6.TabIndex = 11
+        Me.PlatzhalterText6.Text = "Klasse"
+        '
+        'PlatzhalterText7
+        '
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText7.Location = New System.Drawing.Point(114, 132)
+        Me.PlatzhalterText7.Name = "PlatzhalterText7"
+        Me.PlatzhalterText7.PlatzHalterText = "Klassenlehrer/-in"
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(193, 26)
+        Me.PlatzhalterText7.TabIndex = 12
+        Me.PlatzhalterText7.Text = "Klassenlehrer/-in"
         '
         'SchuleDataGridView
         '
@@ -275,7 +352,7 @@ Partial Class Schule
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.SchulBerichtDataGridView.DefaultCellStyle = DataGridViewCellStyle1
-        Me.SchulBerichtDataGridView.Location = New System.Drawing.Point(3, 100)
+        Me.SchulBerichtDataGridView.Location = New System.Drawing.Point(3, 166)
         Me.SchulBerichtDataGridView.Name = "SchulBerichtDataGridView"
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
@@ -287,7 +364,7 @@ Partial Class Schule
         Me.SchulBerichtDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.SchulBerichtDataGridView.RowHeadersWidth = 40
         Me.SchulBerichtDataGridView.RowTemplate.Height = 40
-        Me.SchulBerichtDataGridView.Size = New System.Drawing.Size(500, 555)
+        Me.SchulBerichtDataGridView.Size = New System.Drawing.Size(500, 489)
         Me.SchulBerichtDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -377,83 +454,6 @@ Partial Class Schule
         'SchulBerichtTableAdapter
         '
         Me.SchulBerichtTableAdapter.ClearBeforeFill = True
-        '
-        'PlatzhalterText2
-        '
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(326, 36)
-        Me.PlatzhalterText2.Name = "PlatzhalterText2"
-        Me.PlatzhalterText2.PlatzHalterText = "Schulart"
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(218, 26)
-        Me.PlatzhalterText2.TabIndex = 7
-        Me.PlatzhalterText2.Text = "Schulart"
-        '
-        'PlatzhalterText1
-        '
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(6, 36)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = "Schule"
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(301, 26)
-        Me.PlatzhalterText1.TabIndex = 6
-        Me.PlatzhalterText1.Text = "Schule"
-        '
-        'PlatzhalterText3
-        '
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(6, 68)
-        Me.PlatzhalterText3.Name = "PlatzhalterText3"
-        Me.PlatzhalterText3.PlatzHalterText = "Straße & Hausnummer"
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(195, 26)
-        Me.PlatzhalterText3.TabIndex = 8
-        Me.PlatzhalterText3.Text = "Straße & Hausnummer"
-        '
-        'PlatzhalterText4
-        '
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(207, 68)
-        Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = "Postleitzahl"
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 26)
-        Me.PlatzhalterText4.TabIndex = 9
-        Me.PlatzhalterText4.Text = "Postleitzahl"
-        '
-        'PlatzhalterText5
-        '
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(326, 68)
-        Me.PlatzhalterText5.Name = "PlatzhalterText5"
-        Me.PlatzhalterText5.PlatzHalterText = "Ort"
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(218, 26)
-        Me.PlatzhalterText5.TabIndex = 10
-        Me.PlatzhalterText5.Text = "Ort"
-        '
-        'PlatzhalterText6
-        '
-        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText6.Location = New System.Drawing.Point(6, 132)
-        Me.PlatzhalterText6.Name = "PlatzhalterText6"
-        Me.PlatzhalterText6.PlatzHalterText = "Klasse"
-        Me.PlatzhalterText6.Size = New System.Drawing.Size(102, 26)
-        Me.PlatzhalterText6.TabIndex = 11
-        Me.PlatzhalterText6.Text = "Klasse"
-        '
-        'PlatzhalterText7
-        '
-        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText7.Location = New System.Drawing.Point(114, 132)
-        Me.PlatzhalterText7.Name = "PlatzhalterText7"
-        Me.PlatzhalterText7.PlatzHalterText = "Klassenlehrer/-in"
-        Me.PlatzhalterText7.Size = New System.Drawing.Size(193, 26)
-        Me.PlatzhalterText7.TabIndex = 12
-        Me.PlatzhalterText7.Text = "Klassenlehrer/-in"
         '
         'Schule
         '
