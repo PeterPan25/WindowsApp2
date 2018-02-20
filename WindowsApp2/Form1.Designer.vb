@@ -54,16 +54,27 @@ Partial Class Form1
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CB_name = New System.Windows.Forms.ComboBox()
         Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New WindowsApp2.DataSet1()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
         Me.BerichtAnlegen1 = New WindowsApp2.BerichtAnlegen()
         Me.KindBearbeiten1 = New WindowsApp2.KindBearbeiten()
         Me.KindHinzufuegen1 = New WindowsApp2.KindHinzufuegen()
@@ -83,33 +94,28 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
         Me.Splitcontainer2.SuspendLayout()
         Me.Panel15.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Splitcontainer2
@@ -127,7 +133,7 @@ Partial Class Form1
         'Splitcontainer2.Panel2
         '
         Me.Splitcontainer2.Panel2.Controls.Add(Me.SplitContainer3)
-        Me.Splitcontainer2.Size = New System.Drawing.Size(1584, 702)
+        Me.Splitcontainer2.Size = New System.Drawing.Size(1484, 632)
         Me.Splitcontainer2.SplitterDistance = 145
         Me.Splitcontainer2.TabIndex = 7
         '
@@ -138,7 +144,7 @@ Partial Class Form1
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel15.Location = New System.Drawing.Point(0, 0)
         Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(145, 702)
+        Me.Panel15.Size = New System.Drawing.Size(145, 632)
         Me.Panel15.TabIndex = 7
         '
         'TreeView1
@@ -210,8 +216,167 @@ Partial Class Form1
         TreeNode28.Name = "Knoten0"
         TreeNode28.Text = "Formulare"
         Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode14, TreeNode15, TreeNode18, TreeNode19, TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode26, TreeNode27, TreeNode28})
-        Me.TreeView1.Size = New System.Drawing.Size(145, 702)
+        Me.TreeView1.Size = New System.Drawing.Size(145, 632)
         Me.TreeView1.TabIndex = 1
+        '
+        'SplitContainer3
+        '
+        Me.SplitContainer3.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer3.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer3.Name = "SplitContainer3"
+        Me.SplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer3.Panel1
+        '
+        Me.SplitContainer3.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label9)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label8)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label7)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label6)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label3)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.TextBox1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label5)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label4)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label2)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.PictureBox1)
+        Me.SplitContainer3.Panel1.Controls.Add(Me.CB_name)
+        '
+        'SplitContainer3.Panel2
+        '
+        Me.SplitContainer3.Panel2.Controls.Add(Me.Panel1)
+        Me.SplitContainer3.Size = New System.Drawing.Size(1335, 632)
+        Me.SplitContainer3.SplitterDistance = 175
+        Me.SplitContainer3.TabIndex = 26
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(320, 111)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(57, 20)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Label6"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(320, 82)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(57, 20)
+        Me.Label8.TabIndex = 13
+        Me.Label8.Text = "Label6"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(320, 53)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(57, 20)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "Label6"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(320, 23)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(57, 20)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "Label6"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(1041, 23)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(64, 20)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Hinweis"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(1044, 50)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(230, 113)
+        Me.TextBox1.TabIndex = 11
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(144, 111)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 20)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Aufnahme"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(144, 82)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(89, 20)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Jugendamt"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(145, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(88, 20)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Sorgerecht"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(144, 23)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(112, 20)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Geburtsdatum"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(38, 23)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 108)
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'CB_name
+        '
+        Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
+        Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CB_name.FormattingEnabled = True
+        Me.CB_name.Location = New System.Drawing.Point(492, 77)
+        Me.CB_name.Name = "CB_name"
+        Me.CB_name.Size = New System.Drawing.Size(262, 21)
+        Me.CB_name.TabIndex = 8
+        '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet11
+        '
+        'DataSet11
+        '
+        Me.DataSet11.DataSetName = "DataSet1"
+        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Panel1
         '
@@ -238,29 +403,8 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1435, 523)
+        Me.Panel1.Size = New System.Drawing.Size(1335, 453)
         Me.Panel1.TabIndex = 0
-        '
-        'CB_name
-        '
-        Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
-        Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CB_name.FormattingEnabled = True
-        Me.CB_name.Location = New System.Drawing.Point(542, 77)
-        Me.CB_name.Name = "CB_name"
-        Me.CB_name.Size = New System.Drawing.Size(262, 21)
-        Me.CB_name.TabIndex = 8
-        '
-        'KindBindingSource
-        '
-        Me.KindBindingSource.DataMember = "Kind"
-        Me.KindBindingSource.DataSource = Me.DataSet11
-        '
-        'DataSet11
-        '
-        Me.DataSet11.DataSetName = "DataSet1"
-        Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Button1
         '
@@ -293,13 +437,17 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.SplitContainer1.Panel1.BackgroundImage = Global.WindowsApp2.My.Resources.Resources.Logo
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SplitContainer1.Panel1.Controls.Add(Me.MonthCalendar1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label11)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label10)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1584, 862)
-        Me.SplitContainer1.SplitterDistance = 156
+        Me.SplitContainer1.Size = New System.Drawing.Size(1484, 812)
+        Me.SplitContainer1.SplitterDistance = 176
         Me.SplitContainer1.TabIndex = 9
         '
         'KindTableAdapter
@@ -341,44 +489,12 @@ Partial Class Form1
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'SplitContainer3
-        '
-        Me.SplitContainer3.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer3.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer3.Name = "SplitContainer3"
-        Me.SplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer3.Panel1
-        '
-        Me.SplitContainer3.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label9)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label8)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label7)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label6)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label3)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.TextBox1)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label5)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label4)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label2)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.Label1)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.PictureBox1)
-        Me.SplitContainer3.Panel1.Controls.Add(Me.CB_name)
-        '
-        'SplitContainer3.Panel2
-        '
-        Me.SplitContainer3.Panel2.Controls.Add(Me.Panel1)
-        Me.SplitContainer3.Size = New System.Drawing.Size(1435, 702)
-        Me.SplitContainer3.SplitterDistance = 175
-        Me.SplitContainer3.TabIndex = 26
-        '
         'BerichtAnlegen1
         '
         Me.BerichtAnlegen1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.BerichtAnlegen1.Location = New System.Drawing.Point(0, 0)
         Me.BerichtAnlegen1.Name = "BerichtAnlegen1"
-        Me.BerichtAnlegen1.Size = New System.Drawing.Size(1435, 523)
+        Me.BerichtAnlegen1.Size = New System.Drawing.Size(1335, 453)
         Me.BerichtAnlegen1.TabIndex = 25
         Me.BerichtAnlegen1.Visible = False
         '
@@ -387,7 +503,7 @@ Partial Class Form1
         Me.KindBearbeiten1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.KindBearbeiten1.Location = New System.Drawing.Point(0, 0)
         Me.KindBearbeiten1.Name = "KindBearbeiten1"
-        Me.KindBearbeiten1.Size = New System.Drawing.Size(1435, 523)
+        Me.KindBearbeiten1.Size = New System.Drawing.Size(1335, 453)
         Me.KindBearbeiten1.TabIndex = 24
         Me.KindBearbeiten1.Visible = False
         '
@@ -397,7 +513,7 @@ Partial Class Form1
         Me.KindHinzufuegen1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.KindHinzufuegen1.Location = New System.Drawing.Point(0, 0)
         Me.KindHinzufuegen1.Name = "KindHinzufuegen1"
-        Me.KindHinzufuegen1.Size = New System.Drawing.Size(1435, 523)
+        Me.KindHinzufuegen1.Size = New System.Drawing.Size(1335, 453)
         Me.KindHinzufuegen1.TabIndex = 23
         Me.KindHinzufuegen1.Visible = False
         '
@@ -406,7 +522,7 @@ Partial Class Form1
         Me.ArztUebersicht1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ArztUebersicht1.Location = New System.Drawing.Point(0, 0)
         Me.ArztUebersicht1.Name = "ArztUebersicht1"
-        Me.ArztUebersicht1.Size = New System.Drawing.Size(1435, 523)
+        Me.ArztUebersicht1.Size = New System.Drawing.Size(1335, 453)
         Me.ArztUebersicht1.TabIndex = 22
         Me.ArztUebersicht1.Visible = False
         '
@@ -416,7 +532,7 @@ Partial Class Form1
         Me.ArztAnlegen1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ArztAnlegen1.Location = New System.Drawing.Point(0, 0)
         Me.ArztAnlegen1.Name = "ArztAnlegen1"
-        Me.ArztAnlegen1.Size = New System.Drawing.Size(1435, 523)
+        Me.ArztAnlegen1.Size = New System.Drawing.Size(1335, 453)
         Me.ArztAnlegen1.TabIndex = 21
         Me.ArztAnlegen1.Visible = False
         '
@@ -426,7 +542,7 @@ Partial Class Form1
         Me.UserControl11.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UserControl11.Location = New System.Drawing.Point(0, 0)
         Me.UserControl11.Name = "UserControl11"
-        Me.UserControl11.Size = New System.Drawing.Size(1435, 523)
+        Me.UserControl11.Size = New System.Drawing.Size(1335, 453)
         Me.UserControl11.TabIndex = 10
         '
         'Bericht1
@@ -434,7 +550,7 @@ Partial Class Form1
         Me.Bericht1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Bericht1.Location = New System.Drawing.Point(0, 0)
         Me.Bericht1.Name = "Bericht1"
-        Me.Bericht1.Size = New System.Drawing.Size(1435, 523)
+        Me.Bericht1.Size = New System.Drawing.Size(1335, 453)
         Me.Bericht1.TabIndex = 19
         Me.Bericht1.Visible = False
         '
@@ -443,7 +559,7 @@ Partial Class Form1
         Me.Arztbericht1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Arztbericht1.Location = New System.Drawing.Point(0, 0)
         Me.Arztbericht1.Name = "Arztbericht1"
-        Me.Arztbericht1.Size = New System.Drawing.Size(1435, 523)
+        Me.Arztbericht1.Size = New System.Drawing.Size(1335, 453)
         Me.Arztbericht1.TabIndex = 20
         Me.Arztbericht1.Visible = False
         '
@@ -452,7 +568,7 @@ Partial Class Form1
         Me.Tagesbericht1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Tagesbericht1.Location = New System.Drawing.Point(0, 0)
         Me.Tagesbericht1.Name = "Tagesbericht1"
-        Me.Tagesbericht1.Size = New System.Drawing.Size(1435, 523)
+        Me.Tagesbericht1.Size = New System.Drawing.Size(1335, 453)
         Me.Tagesbericht1.TabIndex = 17
         Me.Tagesbericht1.Visible = False
         '
@@ -461,7 +577,7 @@ Partial Class Form1
         Me.Formulare1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Formulare1.Location = New System.Drawing.Point(0, 0)
         Me.Formulare1.Name = "Formulare1"
-        Me.Formulare1.Size = New System.Drawing.Size(1435, 523)
+        Me.Formulare1.Size = New System.Drawing.Size(1335, 453)
         Me.Formulare1.TabIndex = 18
         Me.Formulare1.Visible = False
         '
@@ -471,7 +587,7 @@ Partial Class Form1
         Me.Psycho1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Psycho1.Location = New System.Drawing.Point(0, 0)
         Me.Psycho1.Name = "Psycho1"
-        Me.Psycho1.Size = New System.Drawing.Size(1435, 523)
+        Me.Psycho1.Size = New System.Drawing.Size(1335, 453)
         Me.Psycho1.TabIndex = 16
         Me.Psycho1.Visible = False
         '
@@ -480,7 +596,7 @@ Partial Class Form1
         Me.Stammdaten1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Stammdaten1.Location = New System.Drawing.Point(0, 0)
         Me.Stammdaten1.Name = "Stammdaten1"
-        Me.Stammdaten1.Size = New System.Drawing.Size(1435, 523)
+        Me.Stammdaten1.Size = New System.Drawing.Size(1335, 453)
         Me.Stammdaten1.TabIndex = 14
         Me.Stammdaten1.Visible = False
         '
@@ -490,7 +606,7 @@ Partial Class Form1
         Me.Schule1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Schule1.Location = New System.Drawing.Point(0, 0)
         Me.Schule1.Name = "Schule1"
-        Me.Schule1.Size = New System.Drawing.Size(1435, 523)
+        Me.Schule1.Size = New System.Drawing.Size(1335, 453)
         Me.Schule1.TabIndex = 13
         Me.Schule1.Visible = False
         '
@@ -499,7 +615,7 @@ Partial Class Form1
         Me.Krankenhaus1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Krankenhaus1.Location = New System.Drawing.Point(0, 0)
         Me.Krankenhaus1.Name = "Krankenhaus1"
-        Me.Krankenhaus1.Size = New System.Drawing.Size(1435, 523)
+        Me.Krankenhaus1.Size = New System.Drawing.Size(1335, 453)
         Me.Krankenhaus1.TabIndex = 12
         Me.Krankenhaus1.Visible = False
         '
@@ -508,7 +624,7 @@ Partial Class Form1
         Me.Kontakte1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Kontakte1.Location = New System.Drawing.Point(0, 0)
         Me.Kontakte1.Name = "Kontakte1"
-        Me.Kontakte1.Size = New System.Drawing.Size(1435, 523)
+        Me.Kontakte1.Size = New System.Drawing.Size(1335, 453)
         Me.Kontakte1.TabIndex = 11
         Me.Kontakte1.Visible = False
         '
@@ -517,7 +633,7 @@ Partial Class Form1
         Me.Hobby1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Hobby1.Location = New System.Drawing.Point(0, 0)
         Me.Hobby1.Name = "Hobby1"
-        Me.Hobby1.Size = New System.Drawing.Size(1435, 523)
+        Me.Hobby1.Size = New System.Drawing.Size(1335, 453)
         Me.Hobby1.TabIndex = 9
         Me.Hobby1.Visible = False
         '
@@ -526,7 +642,7 @@ Partial Class Form1
         Me.Hilfen1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Hilfen1.Location = New System.Drawing.Point(0, 0)
         Me.Hilfen1.Name = "Hilfen1"
-        Me.Hilfen1.Size = New System.Drawing.Size(1435, 523)
+        Me.Hilfen1.Size = New System.Drawing.Size(1335, 453)
         Me.Hilfen1.TabIndex = 7
         Me.Hilfen1.Visible = False
         '
@@ -535,7 +651,7 @@ Partial Class Form1
         Me.Eltern1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Eltern1.Location = New System.Drawing.Point(0, 0)
         Me.Eltern1.Name = "Eltern1"
-        Me.Eltern1.Size = New System.Drawing.Size(1435, 523)
+        Me.Eltern1.Size = New System.Drawing.Size(1335, 453)
         Me.Eltern1.TabIndex = 3
         Me.Eltern1.Visible = False
         '
@@ -544,115 +660,44 @@ Partial Class Form1
         Me.Doku1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Doku1.Location = New System.Drawing.Point(0, 0)
         Me.Doku1.Name = "Doku1"
-        Me.Doku1.Size = New System.Drawing.Size(1435, 523)
+        Me.Doku1.Size = New System.Drawing.Size(1335, 453)
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
         '
-        'PictureBox1
+        'Label10
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(38, 23)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 108)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(1074, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(113, 20)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Eingeloggt als:"
         '
-        'Label1
+        'Label11
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(144, 23)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 20)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Geburtsdatum"
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(1208, 14)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Label11"
         '
-        'Label2
+        'PictureBox2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(145, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 20)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Sorgerecht"
+        Me.PictureBox2.Location = New System.Drawing.Point(1388, 9)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 118)
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
         '
-        'TextBox1
+        'MonthCalendar1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(1044, 50)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(230, 113)
-        Me.TextBox1.TabIndex = 11
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1041, 23)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 20)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Hinweis"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(144, 82)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(89, 20)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Jugendamt"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(144, 111)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 20)
-        Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Aufnahme"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(320, 23)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 20)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "Label6"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(320, 53)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(57, 20)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Label6"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(320, 82)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(57, 20)
-        Me.Label8.TabIndex = 13
-        Me.Label8.Text = "Label6"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(320, 111)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(57, 20)
-        Me.Label9.TabIndex = 13
-        Me.Label9.Text = "Label6"
+        Me.MonthCalendar1.Location = New System.Drawing.Point(176, 5)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 3
         '
         'Form1
         '
@@ -660,7 +705,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.ClientSize = New System.Drawing.Size(1584, 862)
+        Me.ClientSize = New System.Drawing.Size(1484, 812)
         Me.Controls.Add(Me.SplitContainer1)
         Me.MaximizeBox = False
         Me.Name = "Form1"
@@ -670,19 +715,22 @@ Partial Class Form1
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Splitcontainer2.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel1.PerformLayout()
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel1.PerformLayout()
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -730,4 +778,8 @@ Partial Class Form1
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
 End Class
