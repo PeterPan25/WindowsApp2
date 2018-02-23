@@ -11,7 +11,7 @@
         ButtonName.InitialDelay = 500 'wie lange bis sichtbar
         ButtonName.ReshowDelay = 500 'einblenden nächster Text
         ButtonName.ShowAlways = True
-        ButtonName.SetToolTip(Me.Button1, "1")
+        ButtonName.SetToolTip(Me.Button1, "Neu")
 
     End Sub
 
@@ -20,7 +20,7 @@
         ButtonName.InitialDelay = 500 'wie lange bis sichtbar
         ButtonName.ReshowDelay = 500 'einblenden nächster Text
         ButtonName.ShowAlways = True
-        ButtonName.SetToolTip(Me.Button3, "3")
+        ButtonName.SetToolTip(Me.Button3, "Löschen")
     End Sub
 
     Private Sub Button2_MouseEnter(sender As Object, e As EventArgs) Handles Button2.MouseEnter
@@ -28,8 +28,10 @@
         ButtonName.InitialDelay = 500 'wie lange bis sichtbar
         ButtonName.ReshowDelay = 500 'einblenden nächster Text
         ButtonName.ShowAlways = True
-        ButtonName.SetToolTip(Me.Button2, "2")
+        ButtonName.SetToolTip(Me.Button2, "Bearbeiten")
     End Sub
+
+
     'Private Sub PsychoBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles MyBaseBindingNavigatorSaveItem.Click
     '    Me.Validate()
     '    Me.PsychoBindingSource.EndEdit()

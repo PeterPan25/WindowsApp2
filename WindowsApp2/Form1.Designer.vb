@@ -73,6 +73,10 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.BerichtAnlegen1 = New WindowsApp2.BerichtAnlegen()
@@ -94,10 +98,6 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -450,6 +450,41 @@ Partial Class Form1
         Me.SplitContainer1.SplitterDistance = 176
         Me.SplitContainer1.TabIndex = 9
         '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(176, 5)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 3
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(1388, 9)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 118)
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(1208, 14)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Label11"
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(1074, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(113, 20)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Eingeloggt als:"
+        '
         'KindTableAdapter
         '
         Me.KindTableAdapter.ClearBeforeFill = True
@@ -663,41 +698,6 @@ Partial Class Form1
         Me.Doku1.Size = New System.Drawing.Size(1335, 453)
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1074, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(113, 20)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Eingeloggt als:"
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(1208, 14)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(45, 13)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Label11"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(1388, 9)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 118)
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(176, 5)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 3
         '
         'Form1
         '
