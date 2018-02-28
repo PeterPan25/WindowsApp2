@@ -31,124 +31,175 @@ Public Class Form1
         }
 
 
+    'Public Sub HighlightCheckedNodes()
+    '    Dim countIndex As Integer = 0
+    '    Dim selectedNode As String = "Selected customer nodes are : "
+    '    Dim myNode As TreeNode
+    '    For Each myNode In TreeView1.Nodes(0).Nodes
+    '        ' Check whether the tree node is checked.
+    '        If myNode.Checked Then
+    '            ' Set the node's backColor.
+    '            myNode.BackColor = Color.Yellow
+    '            selectedNode += myNode.Text + " "
+    '            countIndex += 1
+    '        Else
+    '            myNode.BackColor = Color.White
+    '        End If
+    '    Next myNode
 
+    '    If countIndex > 0 Then
+    '        MessageBox.Show(selectedNode)
+    '    Else
+    '        MessageBox.Show("No nodes are selected")
+    '    End If
+    'End Sub
 
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
 
 
-
         For i = 0 To 17
+
+
+
+
             If e.Node.Text = name2(i) Then
-                'TreeView1.Nodes(i).BackColor = Color.DarkRed
+                '  TreeView1.Nodes(i).BackColor = Color.DarkRed
+                'Dim countIndex As Integer = 0
+                'Dim selectedNode As String = "Selected customer nodes are : "
+                'countIndex = TreeView1.Nodes.Count
+                '   TreeView1.SelectedNode = e.Node
+                '  TreeView1.SelectedNode.BackColor = Color.DarkRed
+                ' e.Node.BackColor = Color.Red
+                'Dim myNode As TreeNode
+                'myNode = e.Node
+                'For Each myNode In TreeView1.Nodes(0).Nodes
+                '    ' Check whether the tree node is checked.
+                '    If myNode.Checked = True Then
+                '        ' Set the node's backColor.
+                '        myNode.BackColor = Color.Yellow
+                '        selectedNode += myNode.Text + " "
+                '        countIndex += 1
+                '    Else
+                '        myNode.BackColor = Color.White
+                '    End If
+                'Next myNode
+
+                'If countIndex > 0 Then
+                ' MessageBox.Show(countIndex)
+                'Else
+                '    MessageBox.Show("No nodes are selected")
+                'End If
 
                 Select Case i
 
-                    Case 0
-                        Eltern1.EBDaten_laden()
+                        Case 0
+                            Eltern1.EBDaten_laden()
 
-                        Eltern1.Visible = True
+                            Eltern1.Visible = True
                         Eltern1.BringToFront()
+
 
                     Case 1
 
-                        ArztAnlegen1.Visible = True
-                        ArztAnlegen1.BringToFront()
+                            ArztAnlegen1.Visible = True
+                            ArztAnlegen1.BringToFront()
 
-                    Case 2
+                        Case 2
 
-                        Doku1.Visible = True
-                        Doku1.BringToFront()
+                            Doku1.Visible = True
+                            Doku1.BringToFront()
 
-                    Case 3
-                        Stammdaten1.Stammdaten_Load()
-                        Stammdaten1.Visible = True
-                        Stammdaten1.BringToFront()
-
-
-                    Case 4
-                        Schule1.SBDaten_laden()
-                        Schule1.Visible = True
-                        Schule1.BringToFront()
-
-                    Case 5
-
-                        Kontakte1.Visible = True
-                        Kontakte1.BringToFront()
-
-                    Case 6
-
-                        Hilfen1.Visible = True
-                        Hilfen1.BringToFront()
+                        Case 3
+                            Stammdaten1.Stammdaten_Load()
+                            Stammdaten1.Visible = True
+                            Stammdaten1.BringToFront()
 
 
+                        Case 4
+                            Schule1.SBDaten_laden()
+                            Schule1.Visible = True
+                            Schule1.BringToFront()
 
-                    Case 7
+                        Case 5
 
-                        Krankenhaus1.Visible = True
-                        Krankenhaus1.BringToFront()
+                            Kontakte1.Visible = True
+                            Kontakte1.BringToFront()
 
-                    Case 8
+                        Case 6
 
-                        Psycho1.Visible = True
-                        Psycho1.BringToFront()
-
-                    Case 9
-
-                        Hobby1.Visible = True
-                        Hobby1.BringToFront()
-
-                    Case 10
-
-                        Tagesbericht1.Visible = True
-                        Tagesbericht1.BringToFront()
-
-                    Case 11
-
-                        Formulare1.Visible = True
-                        Formulare1.BringToFront()
-                    Case 12
-
-                        Panel1.Visible = True
-                        Panel1.BringToFront()
-                    Case 13
-                        Bericht1.Visible = True
-                        Bericht1.BerichtKind()
+                            Hilfen1.Visible = True
+                            Hilfen1.BringToFront()
 
 
-                        Bericht1.BringToFront()
 
-                    Case 14
+                        Case 7
 
-                        Arztbericht1.BerichtAnlegen_Load()
-                        Arztbericht1.Visible = True
-                        Arztbericht1.BringToFront()
+                            Krankenhaus1.Visible = True
+                            Krankenhaus1.BringToFront()
 
-                    Case 15
-                        ArztUebersicht1.Arzt_Load()
-                        ArztUebersicht1.Visible = True
-                        ArztUebersicht1.BringToFront()
+                        Case 8
 
-                    Case 16
-                        KindHinzufuegen1.Datenkontrolle()
-                        KindHinzufuegen1.Visible = True
-                        KindHinzufuegen1.BringToFront()
+                            Psycho1.Visible = True
+                            Psycho1.BringToFront()
 
-                    Case 17
-                        KindBearbeiten1.Daten_Load()
-                        KindBearbeiten1.Visible = True
-                        KindBearbeiten1.BringToFront()
+                        Case 9
 
-                        'For Each case In TreeView1
-                        '    TreeView1.Nodes(i).BackColor = Color.DarkRed
-                        'Next
-                End Select
+                            Hobby1.Visible = True
+                            Hobby1.BringToFront()
 
+                        Case 10
+
+                            Tagesbericht1.Visible = True
+                            Tagesbericht1.BringToFront()
+
+                        Case 11
+
+                            Formulare1.Visible = True
+                            Formulare1.BringToFront()
+                        Case 12
+
+                            Panel1.Visible = True
+                            Panel1.BringToFront()
+                        Case 13
+                            Bericht1.Visible = True
+                            Bericht1.BerichtKind()
+
+
+                            Bericht1.BringToFront()
+
+                        Case 14
+
+                            Arztbericht1.BerichtAnlegen_Load()
+                            Arztbericht1.Visible = True
+                            Arztbericht1.BringToFront()
+
+                        Case 15
+                            ArztUebersicht1.Arzt_Load()
+                            ArztUebersicht1.Visible = True
+                            ArztUebersicht1.BringToFront()
+
+                        Case 16
+                            KindHinzufuegen1.Datenkontrolle()
+                            KindHinzufuegen1.Visible = True
+                            KindHinzufuegen1.BringToFront()
+
+                        Case 17
+                            KindBearbeiten1.Daten_Load()
+                            KindBearbeiten1.Visible = True
+                            KindBearbeiten1.BringToFront()
+
+                            ' For Each case In TreeView1
+                            'TreeView1.Nodes(i).BackColor = Color.DarkRed
+                            'Next
+                    End Select
+
+                '                HighlightCheckedNodes()
 
 
 
             End If
 
-        Next
+            Next
 
     End Sub
 
@@ -216,4 +267,20 @@ Public Class Form1
         End Try
     End Sub
 
+    'Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
+    '    '  TreeView1.SelectedNode = e.Node
+
+    '    TreeView1.SelectedNode.BackColor = Color.DarkGray
+
+    '    'If TreeView1.SelectedNode.IsSelected = True Then
+    '    '    TreeView1.SelectedNode.BackColor = Color.DarkGreen
+    '    'Else
+    '    '    TreeView1.SelectedNode.BackColor = Color.Black
+
+    '    'End If
+    'End Sub
+
+    'Private Sub TreeView1_BeforeSelect(sender As Object, e As TreeViewCancelEventArgs) Handles TreeView1.BeforeSelect
+    '    '    e.Node.BackColor = Color.DarkRed
+    'End Sub
 End Class
