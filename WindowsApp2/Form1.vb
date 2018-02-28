@@ -39,9 +39,10 @@ Public Class Form1
 
         For i = 0 To 17
             If e.Node.Text = name2(i) Then
-
+                'TreeView1.Nodes(i).BackColor = Color.DarkRed
 
                 Select Case i
+
                     Case 0
                         Eltern1.EBDaten_laden()
 
@@ -137,7 +138,12 @@ Public Class Form1
                         KindBearbeiten1.Visible = True
                         KindBearbeiten1.BringToFront()
 
+                        'For Each case In TreeView1
+                        '    TreeView1.Nodes(i).BackColor = Color.DarkRed
+                        'Next
                 End Select
+
+
 
 
             End If
@@ -209,4 +215,5 @@ Public Class Form1
 
         End Try
     End Sub
+
 End Class
