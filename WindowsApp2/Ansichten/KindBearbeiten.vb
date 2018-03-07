@@ -59,9 +59,9 @@
 
 
                     TextBox1.Text = DataSet1.Kind.Rows(z)("Schule")
-                    TextBox2.Text = DataSet1.Kind.Rows(z)("Besonderheiten")
+                    TextBox3.Text = DataSet1.Kind.Rows(z)("Besonderheiten")
 
-                    TextBox3.Text = DataSet1.Kind.Rows(z)("Sorgerechtsstatus")
+                    TextBox2.Text = DataSet1.Kind.Rows(z)("Sorgerechtsstatus")
 
                 Catch ex As Exception
                     MsgBox("Hoppla")
