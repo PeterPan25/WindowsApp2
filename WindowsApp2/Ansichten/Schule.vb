@@ -44,7 +44,7 @@
         Me.SchulBerichtDataGridView.Update()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Dim a As DataRow
         a = Me.DataSet1.Schule.NewRow()
 
@@ -73,5 +73,7 @@
         End Try
     End Sub
 
+    Private Sub SplitContainer2_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer2.Panel1.Paint
 
+    End Sub
 End Class

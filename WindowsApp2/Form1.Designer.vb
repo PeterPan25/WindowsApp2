@@ -70,6 +70,15 @@ Partial Class Form1
         Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New WindowsApp2.DataSet1()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.BerichtAnlegen1 = New WindowsApp2.BerichtAnlegen()
         Me.KindBearbeiten1 = New WindowsApp2.KindBearbeiten()
         Me.KindHinzufuegen1 = New WindowsApp2.KindHinzufuegen()
@@ -89,15 +98,6 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -406,6 +406,124 @@ Partial Class Form1
         Me.Panel1.Size = New System.Drawing.Size(1335, 453)
         Me.Panel1.TabIndex = 0
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1040, 391)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(534, 358)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 7
+        Me.Label16.Text = "Label16"
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.SplitContainer1.Panel1.BackgroundImage = Global.WindowsApp2.My.Resources.Resources.Logo
+        Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SplitContainer1.Panel1.Controls.Add(Me.MonthCalendar1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label11)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label10)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1484, 812)
+        Me.SplitContainer1.SplitterDistance = 176
+        Me.SplitContainer1.TabIndex = 9
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.Location = New System.Drawing.Point(176, 5)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 3
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(1388, 9)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(100, 118)
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(1208, 14)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.TabIndex = 1
+        Me.Label11.Text = "Label11"
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(1074, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(113, 20)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Eingeloggt als:"
+        '
+        'KindTableAdapter
+        '
+        Me.KindTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
         'BerichtAnlegen1
         '
         Me.BerichtAnlegen1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -580,124 +698,6 @@ Partial Class Form1
         Me.Doku1.Size = New System.Drawing.Size(1335, 453)
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(1040, 391)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(534, 358)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(45, 13)
-        Me.Label16.TabIndex = 7
-        Me.Label16.Text = "Label16"
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.SplitContainer1.Panel1.BackgroundImage = Global.WindowsApp2.My.Resources.Resources.Logo
-        Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.SplitContainer1.Panel1.Controls.Add(Me.MonthCalendar1)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox2)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label11)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label10)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1484, 812)
-        Me.SplitContainer1.SplitterDistance = 176
-        Me.SplitContainer1.TabIndex = 9
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(176, 5)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 3
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(1388, 9)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 118)
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
-        'Label11
-        '
-        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(1208, 14)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(45, 13)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Label11"
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1074, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(113, 20)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Eingeloggt als:"
-        '
-        'KindTableAdapter
-        '
-        Me.KindTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.BerichtTableAdapter = Nothing
-        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
-        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.HautarztTableAdapter = Nothing
-        Me.TableAdapterManager.HilfenTableAdapter = Nothing
-        Me.TableAdapterManager.HNOTableAdapter = Nothing
-        Me.TableAdapterManager.HobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
-        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
-        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
-        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
-        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
-        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
-        Me.TableAdapterManager.KontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
-        Me.TableAdapterManager.PsychoTableAdapter = Nothing
-        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
-        Me.TableAdapterManager.SchuleTableAdapter = Nothing
-        Me.TableAdapterManager.TableTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
         'Form1
         '

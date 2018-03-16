@@ -134,6 +134,12 @@
     <Compile Include="Ansichten\KindHinzufuegen.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\Schuleanlegen.Designer.vb">
+      <DependentUpon>Schuleanlegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Schuleanlegen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\Tagesbericht.Designer.vb">
       <DependentUpon>Tagesbericht.vb</DependentUpon>
     </Compile>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\KindHinzufuegen.resx">
       <DependentUpon>KindHinzufuegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\Schuleanlegen.resx">
+      <DependentUpon>Schuleanlegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Tagesbericht.resx">
       <DependentUpon>Tagesbericht.vb</DependentUpon>
