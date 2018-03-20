@@ -27,7 +27,7 @@
         Try
             ' kein Unterschied ob a.Ort oder a("Ort")
 
-            a.Schule = TextBox1.Text
+
             a.Besonderheiten = TextBox2.Text
             a.Sorgerechtsstatus = TextBox3.Text
 
@@ -58,7 +58,7 @@
                 Try
 
 
-                    TextBox1.Text = DataSet1.Kind.Rows(z)("Schule")
+
                     TextBox3.Text = DataSet1.Kind.Rows(z)("Besonderheiten")
 
                     TextBox2.Text = DataSet1.Kind.Rows(z)("Sorgerechtsstatus")
@@ -104,5 +104,34 @@
 
 
         Form1.Combotext()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim a As DataRow
+        a = Me.DataSet1.Schule.NewRow()
+
+        Try
+            a("S_Name") = PlatzhalterText1.Text
+            a("Schulart") = PlatzhalterText4.Text
+            a("Strasse") = PlatzhalterText2.Text
+            a("Plz") = PlatzhalterText3.Text
+            a("Ort") = PlatzhalterText5.Text
+            a("Klasse") = PlatzhalterText6.Text
+            a("Klassenlehrer") = PlatzhalterText7.Text
+            a("vDatum") = DateTimePicker1.Value
+            a("bDatum") = DateTimePicker2.Value
+
+            Me.DataSet1.Schule.AddSchuleRow(a)
+            Me.SchuleTableAdapter.Update(Me.DataSet1.Schule)
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            Me.SchuleDataGridView.Update()
+
+
+            MsgBox("Speichern erfolgreich")
+
+        Catch ex As Exception
+            MsgBox("Speichern fehlgeschlagen")
+
+        End Try
     End Sub
 End Class

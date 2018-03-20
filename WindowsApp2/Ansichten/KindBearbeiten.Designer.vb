@@ -30,17 +30,36 @@ Partial Class KindBearbeiten
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
+        Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchuleTableAdapter()
+        Me.SchuleDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataSet1
@@ -96,7 +115,7 @@ Partial Class KindBearbeiten
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(256, 403)
+        Me.Button1.Location = New System.Drawing.Point(18, 460)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(202, 40)
         Me.Button1.TabIndex = 0
@@ -107,7 +126,7 @@ Partial Class KindBearbeiten
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(494, 403)
+        Me.Button2.Location = New System.Drawing.Point(254, 460)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(213, 40)
         Me.Button2.TabIndex = 1
@@ -122,20 +141,11 @@ Partial Class KindBearbeiten
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
-        'TextBox1
-        '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(401, 188)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(162, 26)
-        Me.TextBox1.TabIndex = 4
-        '
         'TextBox2
         '
         Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(401, 242)
+        Me.TextBox2.Location = New System.Drawing.Point(254, 294)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(162, 26)
         Me.TextBox2.TabIndex = 5
@@ -144,7 +154,7 @@ Partial Class KindBearbeiten
         '
         Me.TextBox3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(401, 294)
+        Me.TextBox3.Location = New System.Drawing.Point(254, 349)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(162, 26)
         Me.TextBox3.TabIndex = 6
@@ -153,28 +163,17 @@ Partial Class KindBearbeiten
         '
         Me.TextBox4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(401, 346)
+        Me.TextBox4.Location = New System.Drawing.Point(254, 397)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(162, 26)
         Me.TextBox4.TabIndex = 7
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(252, 188)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 20)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Schule"
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(252, 242)
+        Me.Label2.Location = New System.Drawing.Point(51, 294)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(140, 20)
         Me.Label2.TabIndex = 9
@@ -185,7 +184,7 @@ Partial Class KindBearbeiten
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(252, 294)
+        Me.Label3.Location = New System.Drawing.Point(51, 352)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 20)
         Me.Label3.TabIndex = 10
@@ -196,32 +195,227 @@ Partial Class KindBearbeiten
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(252, 346)
+        Me.Label4.Location = New System.Drawing.Point(51, 403)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 20)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Label4"
         '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(595, 55)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = Nothing
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText1.TabIndex = 21
+        Me.PlatzhalterText1.Text = "Schule"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(595, 123)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Straße & Hausnummer"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(195, 26)
+        Me.PlatzhalterText2.TabIndex = 8
+        Me.PlatzhalterText2.Text = "Straße & Hausnummer"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(796, 123)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = "Postleitzahl"
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 26)
+        Me.PlatzhalterText3.TabIndex = 9
+        Me.PlatzhalterText3.Text = "Postleitzahl"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(902, 55)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = "Schulart"
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText4.TabIndex = 7
+        Me.PlatzhalterText4.Text = "Schulart"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(902, 123)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Ort"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText5.TabIndex = 10
+        Me.PlatzhalterText5.Text = "Ort"
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(592, 181)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(28, 13)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "von:"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(626, 174)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(150, 22)
+        Me.DateTimePicker1.TabIndex = 16
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(818, 174)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(35, 20)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "Bis:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(902, 174)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(181, 22)
+        Me.DateTimePicker2.TabIndex = 17
+        '
+        'PlatzhalterText6
+        '
+        Me.PlatzhalterText6.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(595, 221)
+        Me.PlatzhalterText6.Name = "PlatzhalterText6"
+        Me.PlatzhalterText6.PlatzHalterText = "Klasse"
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(102, 26)
+        Me.PlatzhalterText6.TabIndex = 11
+        Me.PlatzhalterText6.Text = "Klasse"
+        '
+        'PlatzhalterText7
+        '
+        Me.PlatzhalterText7.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText7.Location = New System.Drawing.Point(730, 221)
+        Me.PlatzhalterText7.Name = "PlatzhalterText7"
+        Me.PlatzhalterText7.PlatzHalterText = "Klassenlehrer/-in"
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(193, 26)
+        Me.PlatzhalterText7.TabIndex = 12
+        Me.PlatzhalterText7.Text = "Klassenlehrer/-in"
+        '
+        'SchuleBindingSource
+        '
+        Me.SchuleBindingSource.DataMember = "Schule"
+        Me.SchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'SchuleTableAdapter
+        '
+        Me.SchuleTableAdapter.ClearBeforeFill = True
+        '
+        'SchuleDataGridView
+        '
+        Me.SchuleDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.SchuleDataGridView.AutoGenerateColumns = False
+        Me.SchuleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SchuleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.SchuleDataGridView.DataSource = Me.SchuleBindingSource
+        Me.SchuleDataGridView.Location = New System.Drawing.Point(595, 294)
+        Me.SchuleDataGridView.Name = "SchuleDataGridView"
+        Me.SchuleDataGridView.Size = New System.Drawing.Size(440, 220)
+        Me.SchuleDataGridView.TabIndex = 21
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "S_Name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "S_Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Schulart"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Schulart"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "vDatum"
+        Me.DataGridViewTextBoxColumn8.HeaderText = "vDatum"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        '
+        'DataGridViewTextBoxColumn9
+        '
+        Me.DataGridViewTextBoxColumn9.DataPropertyName = "bDatum"
+        Me.DataGridViewTextBoxColumn9.HeaderText = "bDatum"
+        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button3.Location = New System.Drawing.Point(1070, 443)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 22
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'KindBearbeiten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.SchuleDataGridView)
+        Me.Controls.Add(Me.DateTimePicker2)
+        Me.Controls.Add(Me.PlatzhalterText7)
+        Me.Controls.Add(Me.PlatzhalterText6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PlatzhalterText1)
+        Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PlatzhalterText4)
+        Me.Controls.Add(Me.PlatzhalterText5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.PlatzhalterText3)
+        Me.Controls.Add(Me.PlatzhalterText2)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "KindBearbeiten"
-        Me.Size = New System.Drawing.Size(920, 550)
+        Me.Size = New System.Drawing.Size(1231, 600)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -234,12 +428,29 @@ Partial Class KindBearbeiten
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents PlatzhalterText1 As PlatzhalterText
+    Friend WithEvents PlatzhalterText2 As PlatzhalterText
+    Friend WithEvents PlatzhalterText3 As PlatzhalterText
+    Friend WithEvents PlatzhalterText4 As PlatzhalterText
+    Friend WithEvents PlatzhalterText5 As PlatzhalterText
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Label5 As Label
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents PlatzhalterText6 As PlatzhalterText
+    Friend WithEvents PlatzhalterText7 As PlatzhalterText
+    Friend WithEvents SchuleBindingSource As BindingSource
+    Friend WithEvents SchuleTableAdapter As DataSet1TableAdapters.SchuleTableAdapter
+    Friend WithEvents SchuleDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
+    Friend WithEvents Button3 As Button
 End Class
