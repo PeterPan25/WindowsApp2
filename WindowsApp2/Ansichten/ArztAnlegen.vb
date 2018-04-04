@@ -59,7 +59,6 @@
             Me.DataSet1.Hautarzt.AddHautarztRow(a)
 
             Me.HautarztTableAdapter.Update(Me.DataSet1)
-            KHDaten_anlegen()
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -79,7 +78,6 @@
 
             Me.DataSet1.Augenarzt.AddAugenarztRow(a)
             Me.AugenarztTableAdapter.Update(Me.DataSet1)
-            KADaten_anlegen()
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -99,7 +97,6 @@
 
             Me.DataSet1.Zahnarzt.AddZahnarztRow(a)
             Me.ZahnarztTableAdapter.Update(Me.DataSet1)
-            KZDaten_anlegen()
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -119,7 +116,6 @@
 
             Me.DataSet1.Kinderarzt.AddKinderarztRow(a)
             Me.KinderarztTableAdapter.Update(Me.DataSet1)
-            KKDaten_anlegen()
         Catch ex As Exception
             MsgBox("Schade123")
         End Try
@@ -139,7 +135,6 @@
 
             Me.DataSet1.Frauenarzt.AddFrauenarztRow(a)
             Me.FrauenarztTableAdapter.Update(Me.DataSet1)
-            KFDaten_anlegen()
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -159,7 +154,6 @@
 
             Me.DataSet1.HNO.AddHNORow(a)
             Me.HNOTableAdapter.Update(Me.DataSet1)
-            KHNODaten_anlegen()
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -177,7 +171,6 @@
 
             Me.DataSet1.Psycho.AddPsychoRow(a)
             Me.PsychoTableAdapter.Update(Me.DataSet1)
-            KPsychoAnlegen()
 
 
         Catch ex As Exception
@@ -190,7 +183,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindAugenarzt.NewRow()
 
-        b("A_Name") = PlatzhalterText1.Text
+        b("A_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindAugenarzt.AddKindAugenarztRow(b)
         Me.Validate()
@@ -205,7 +198,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindKinderarzt.NewRow()
 
-        b("K_Name") = PlatzhalterText1.Text
+        b("K_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindKinderarzt.AddKindKinderarztRow(b)
         Me.Validate()
@@ -220,7 +213,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindZahnarzt.NewRow()
 
-        b("Z_Name") = PlatzhalterText1.Text
+        b("Z_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindZahnarzt.AddKindZahnarztRow(b)
         Me.Validate()
@@ -235,7 +228,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindFrauenarzt.NewRow()
 
-        b("F_Name") = PlatzhalterText1.Text
+        b("F_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindFrauenarzt.AddKindFrauenarztRow(b)
         Me.Validate()
@@ -250,7 +243,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindHautarzt.NewRow()
 
-        b("H_Name") = PlatzhalterText1.Text
+        b("H_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindHautarzt.AddKindHautarztRow(b)
         Me.Validate()
@@ -265,7 +258,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindHNO.NewRow()
 
-        b("HNO_Name") = PlatzhalterText1.Text
+        b("HNO_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindHNO.AddKindHNORow(b)
         Me.Validate()
@@ -279,7 +272,7 @@
         Dim b As DataRow
         b = Me.DataSet1.KindPsycho.NewRow()
 
-        b("P_Name") = PlatzhalterText1.Text
+        b("P_Name") = TextBox1.Text
         b("Name") = Form1.CB_name.Text
         Me.DataSet1.KindPsycho.AddKindPsychoRow(b)
         Me.Validate()
@@ -394,9 +387,9 @@
 
             '    End If
             'Next
-            ReDim name3(DataSet1.KindAugenarzt.Rows.Count - 1)
-            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
-                If name = DataSet1.KindAugenarzt.Rows(z)("A_Name") And name5 = DataSet1.KindAugenarzt.Rows(z)("Name") Then
+            ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
+            For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
+                If name = DataSet1.Augenarzt.Rows(z)("A_Name") Then 'And name5 = DataSet1.KindAugenarzt.Rows(z)("Name") Then
                     TextBox5.Text = DataSet1.Augenarzt.Rows(z)("Straße")
                     TextBox3.Text = DataSet1.Augenarzt.Rows(z)("Plz")
                     TextBox4.Text = DataSet1.Augenarzt.Rows(z)("Ort")
@@ -959,5 +952,40 @@
 
         End If
 
+    End Sub
+    'Einen bereits in der Datenbank vorhandenen Arzt einem Kind zuweisen
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim ArtText As String = ComboBox1.Text
+
+        If ArtText = "Augenarzt" Then
+            KADaten_anlegen()
+
+
+        ElseIf ArtText = "Frauenarzt" Then
+            KFDaten_anlegen()
+
+
+        ElseIf ArtText = "Kinderarzt" Then
+            KKDaten_anlegen()
+
+
+        ElseIf ArtText = "Hautarzt" Then
+            KHDaten_anlegen()
+
+
+        ElseIf ArtText = "Zahnarzt" Then
+            KZDaten_anlegen()
+
+
+        ElseIf ArtText = "HNO-Arzt" Then
+
+            KHNODaten_anlegen()
+
+        ElseIf ArtText = "Psychologe" Then
+
+            KPsychoAnlegen()
+
+
+        End If
     End Sub
 End Class

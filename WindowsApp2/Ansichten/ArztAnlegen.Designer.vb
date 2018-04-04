@@ -59,17 +59,18 @@ Partial Class ArztAnlegen
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.KindPsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindPsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindPsychoTableAdapter()
         Me.PsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.PsychoTableAdapter()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindAugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -334,6 +335,57 @@ Partial Class ArztAnlegen
         Me.ComboBox2.Size = New System.Drawing.Size(249, 28)
         Me.ComboBox2.TabIndex = 15
         '
+        'Button2
+        '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(502, 405)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(160, 40)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Ändern"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(698, 405)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(160, 40)
+        Me.Button3.TabIndex = 17
+        Me.Button3.Text = "Entfernen"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'KindPsychoBindingSource
+        '
+        Me.KindPsychoBindingSource.DataMember = "KindPsycho"
+        Me.KindPsychoBindingSource.DataSource = Me.DataSet1
+        '
+        'KindPsychoTableAdapter
+        '
+        Me.KindPsychoTableAdapter.ClearBeforeFill = True
+        '
+        'PsychoBindingSource
+        '
+        Me.PsychoBindingSource.DataMember = "Psycho"
+        Me.PsychoBindingSource.DataSource = Me.DataSet1
+        '
+        'PsychoTableAdapter
+        '
+        Me.PsychoTableAdapter.ClearBeforeFill = True
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(502, 464)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(160, 40)
+        Me.Button4.TabIndex = 18
+        Me.Button4.Text = "Zuweisen"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'PlatzhalterText1
         '
         Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -394,52 +446,12 @@ Partial Class ArztAnlegen
         Me.PlatzhalterText2.TabIndex = 4
         Me.PlatzhalterText2.Text = "Telefonnummer"
         '
-        'Button2
-        '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(502, 405)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(160, 40)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Ändern"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(698, 405)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(160, 40)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Entfernen"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'KindPsychoBindingSource
-        '
-        Me.KindPsychoBindingSource.DataMember = "KindPsycho"
-        Me.KindPsychoBindingSource.DataSource = Me.DataSet1
-        '
-        'KindPsychoTableAdapter
-        '
-        Me.KindPsychoTableAdapter.ClearBeforeFill = True
-        '
-        'PsychoBindingSource
-        '
-        Me.PsychoBindingSource.DataMember = "Psycho"
-        Me.PsychoBindingSource.DataSource = Me.DataSet1
-        '
-        'PsychoTableAdapter
-        '
-        Me.PsychoTableAdapter.ClearBeforeFill = True
-        '
         'ArztAnlegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox2)
@@ -526,4 +538,5 @@ Partial Class ArztAnlegen
     Friend WithEvents KindPsychoTableAdapter As DataSet1TableAdapters.KindPsychoTableAdapter
     Friend WithEvents PsychoBindingSource As BindingSource
     Friend WithEvents PsychoTableAdapter As DataSet1TableAdapters.PsychoTableAdapter
+    Friend WithEvents Button4 As Button
 End Class

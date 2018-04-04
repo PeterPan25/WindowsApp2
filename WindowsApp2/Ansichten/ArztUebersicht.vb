@@ -92,6 +92,7 @@
 
     End Sub
     Private Sub Reset()
+        name3 = {}
         ComboBox2.Text = ""
         Label6.Text = ""
         Label4.Text = ""
