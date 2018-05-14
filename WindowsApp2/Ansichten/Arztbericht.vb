@@ -77,29 +77,65 @@
         Dim ArtText As String = ComboBox1.Text
         Dim name As String = Form1.CB_name.Text
 
-        If ArtText = "Augenarzt" Then
-            ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
+        'If ArtText = "Augenarzt" Then
+        '    ReDim name3(DataSet1.Augenarzt.Rows.Count - 1)
 
-            For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
+        '    For z = 0 To (DataSet1.Augenarzt.Rows.Count - 1)
+        '        If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+
+        '            name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+        '        Else
+        '            name3(z) = ""
+        '        End If
+
+        '    Next
+
+        If ArtText = "Augenarzt" Then
+            ReDim name3(DataSet1.KindAugenarzt.Rows.Count - 1)
+            Dim name4() As String = {}
+            '  ReDim name3() = {}
+
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
                 If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
 
+                    ReDim Preserve name4(0)
 
-                    name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
-                Else
-                    name3(z) = ""
+                    name4(0) = DataSet1.KindAugenarzt.Rows(z)("A_Name")
+                    'If name4.Count = 0 Then
+
+
+                    '    name4.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    'Else
+                    '    Dim anzahl As Integer = name4.Count
+                    '    name4.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), anzahl)
+
+
+                    'End If
+
                 End If
 
             Next
             Label2.Text = "Augenarztbericht"
 
-            ComboBox2.DataSource = name3
+            ComboBox2.DataSource = name4
             Me.AArztDaten()
 
         ElseIf ArtText = "Frauenarzt" Then
-            ReDim name3(DataSet1.Frauenarzt.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.Frauenarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Frauenarzt.Rows(z)("F_Name")
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+                    name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    ' name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                    '  Else
+                    '     name3(z) = ""
+
+                End If
+
             Next
             Label2.Text = "Frauenarztbericht"
 
@@ -107,10 +143,19 @@
             Me.FArztDaten()
 
         ElseIf ArtText = "Kinderarzt" Then
-            ReDim name3(DataSet1.Kinderarzt.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.Kinderarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Kinderarzt.Rows(z)("K_Name")
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+                    name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    ' name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                    '  Else
+                    '     name3(z) = ""
+
+                End If
+
             Next
             Label2.Text = "Kinderarztbericht"
 
@@ -118,10 +163,19 @@
             Me.KArztDaten()
 
         ElseIf ArtText = "Hautarzt" Then
-            ReDim name3(DataSet1.Hautarzt.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.Hautarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Hautarzt.Rows(z)("H_Name")
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+                    name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    ' name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                    '  Else
+                    '     name3(z) = ""
+
+                End If
+
             Next
             Label2.Text = "Hautarztbericht"
 
@@ -129,10 +183,19 @@
             Me.HArztDaten()
 
         ElseIf ArtText = "Zahnarzt" Then
-            ReDim name3(DataSet1.Zahnarzt.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.Zahnarzt.Rows.Count - 1)
-                name3(z) = DataSet1.Zahnarzt.Rows(z)("Z_Name")
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+                    name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    ' name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                    '  Else
+                    '     name3(z) = ""
+
+                End If
+
             Next
             Label2.Text = "Zahnarztbericht"
 
@@ -141,31 +204,60 @@
 
 
         ElseIf ArtText = "Krankenhaus" Then
-            ReDim name3(DataSet1.Krankenhaus.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.Krankenhaus.Rows.Count - 1)
-                name3(z) = DataSet1.Krankenhaus.Rows(z)("Kh_Name")
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+                    name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    ' name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                    '  Else
+                    '     name3(z) = ""
+
+                End If
+
             Next
-
             ComboBox2.DataSource = name3
             KhArztDaten()
 
 
         ElseIf ArtText = "HNO" Then
-            ReDim name3(DataSet1.HNO.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.HNO.Rows.Count - 1)
-                name3(z) = DataSet1.HNO.Rows(z)("HNO_Name")
+            For z = 0 To (DataSet1.KindAugenarzt.Rows.Count - 1)
+                If name = (DataSet1.KindAugenarzt.Rows(z)("Name")) Then
+
+                    If name3.Count = 0 Then
+
+
+                        name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
+
+                    Else
+                        Dim anzahl As Integer = name3.Count
+                        name3.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), anzahl)
+
+                        ' name3(z) = DataSet1.Augenarzt.Rows(z)("A_Name")
+                        '  Else
+                        '     name3(z) = ""
+                    End If
+                End If
+
             Next
             Label2.Text = "HNO"
             ComboBox2.DataSource = name3
             HNOArztDaten()
 
         ElseIf ArtText = "Psychologe" Then
-            ReDim name3(DataSet1.Psycho.Rows.Count - 1)
+            ReDim name3(0)
 
-            For z = 0 To (DataSet1.Psycho.Rows.Count - 1)
-                name3(z) = DataSet1.Psycho.Rows(z)("P_Name")
+            For z = 0 To (DataSet1.KindPsycho.Rows.Count - 1)
+                If name = (DataSet1.KindPsycho.Rows(z)("Name")) Then
+
+                    name3.SetValue(DataSet1.KindPsycho.Rows(z)("P_Name"), 0)
+
+                End If
+
             Next
             Label2.Text = "Psychologe"
             ComboBox2.DataSource = name3
