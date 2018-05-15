@@ -190,7 +190,9 @@
 
         '
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
+        'Reset()
+        ResetTextbox()
+
 
 
     End Sub
@@ -205,7 +207,8 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
+        'Reset()
+        ResetTextbox()
 
 
     End Sub
@@ -220,7 +223,8 @@
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
-        Reset()
+        'Reset()
+        ResetTextbox()
 
 
     End Sub
@@ -235,8 +239,8 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
-
+        'Reset()
+        ResetTextbox()
 
     End Sub
     Private Sub KHDaten_anlegen()
@@ -250,7 +254,8 @@
 
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-        Reset()
+        'Reset()
+        ResetTextbox()
 
 
     End Sub
@@ -265,7 +270,8 @@
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
-        Reset()
+        'Reset()
+        ResetTextbox()
     End Sub
 
     Private Sub KPsychoAnlegen()
@@ -279,8 +285,8 @@
 
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
-        Reset()
-
+        'Reset()
+        ResetTextbox()
     End Sub
 
     Private Sub Reset()
