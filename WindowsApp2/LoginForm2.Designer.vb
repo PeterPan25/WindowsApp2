@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 <Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")>
-Partial Class LoginForm1
+Partial Class LoginForm2
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -14,7 +14,6 @@ Partial Class LoginForm1
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents LogoPictureBox As System.Windows.Forms.PictureBox
     Friend WithEvents UsernameLabel As System.Windows.Forms.Label
     Friend WithEvents PasswordLabel As System.Windows.Forms.Label
     Friend WithEvents UsernameTextBox As System.Windows.Forms.TextBox
@@ -31,14 +30,17 @@ Partial Class LoginForm1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm2))
         Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.MitarbeiterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MitarbeiterTableAdapter = New WindowsApp2.DataSet1TableAdapters.MitarbeiterTableAdapter()
@@ -50,7 +52,7 @@ Partial Class LoginForm1
         '
         'UsernameLabel
         '
-        Me.UsernameLabel.Location = New System.Drawing.Point(172, 24)
+        Me.UsernameLabel.Location = New System.Drawing.Point(175, 60)
         Me.UsernameLabel.Name = "UsernameLabel"
         Me.UsernameLabel.Size = New System.Drawing.Size(220, 23)
         Me.UsernameLabel.TabIndex = 0
@@ -59,7 +61,7 @@ Partial Class LoginForm1
         '
         'PasswordLabel
         '
-        Me.PasswordLabel.Location = New System.Drawing.Point(172, 81)
+        Me.PasswordLabel.Location = New System.Drawing.Point(172, 109)
         Me.PasswordLabel.Name = "PasswordLabel"
         Me.PasswordLabel.Size = New System.Drawing.Size(220, 23)
         Me.PasswordLabel.TabIndex = 2
@@ -68,14 +70,14 @@ Partial Class LoginForm1
         '
         'UsernameTextBox
         '
-        Me.UsernameTextBox.Location = New System.Drawing.Point(174, 44)
+        Me.UsernameTextBox.Location = New System.Drawing.Point(175, 86)
         Me.UsernameTextBox.Name = "UsernameTextBox"
         Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
         Me.UsernameTextBox.TabIndex = 1
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Location = New System.Drawing.Point(174, 101)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(175, 135)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
@@ -98,6 +100,28 @@ Partial Class LoginForm1
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Abbrechen"
         '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(175, 37)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Vorname"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText1.TabIndex = 6
+        Me.PlatzhalterText1.Text = "Vorname"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(295, 37)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Name"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(100, 20)
+        Me.PlatzhalterText2.TabIndex = 7
+        Me.PlatzhalterText2.Text = "Name"
+        '
         'LogoPictureBox
         '
         Me.LogoPictureBox.Image = CType(resources.GetObject("LogoPictureBox.Image"), System.Drawing.Image)
@@ -106,6 +130,15 @@ Partial Class LoginForm1
         Me.LogoPictureBox.Size = New System.Drawing.Size(165, 193)
         Me.LogoPictureBox.TabIndex = 0
         Me.LogoPictureBox.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(265, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(64, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Neues Profil"
         '
         'DataSet1
         '
@@ -156,13 +189,16 @@ Partial Class LoginForm1
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'LoginForm1
+        'LoginForm2
         '
         Me.AcceptButton = Me.OK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(567, 313)
+        Me.ClientSize = New System.Drawing.Size(455, 214)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PlatzhalterText2)
+        Me.Controls.Add(Me.PlatzhalterText1)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.PasswordTextBox)
@@ -173,10 +209,10 @@ Partial Class LoginForm1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "LoginForm1"
+        Me.Name = "LoginForm2"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "LoginForm1"
+        Me.Text = "LoginForm2"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MitarbeiterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -185,6 +221,10 @@ Partial Class LoginForm1
 
     End Sub
 
+    Friend WithEvents PlatzhalterText1 As PlatzhalterText
+    Friend WithEvents PlatzhalterText2 As PlatzhalterText
+    Friend WithEvents LogoPictureBox As PictureBox
+    Friend WithEvents Label1 As Label
     Friend WithEvents DataSet1 As DataSet1
     Friend WithEvents MitarbeiterBindingSource As BindingSource
     Friend WithEvents MitarbeiterTableAdapter As DataSet1TableAdapters.MitarbeiterTableAdapter
