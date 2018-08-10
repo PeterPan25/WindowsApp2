@@ -272,6 +272,15 @@ Public Class Form1
         End Try
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim ab As New AktuellerBenutzer
+        Dim name As String
+        name = ab.Benutzer_nennen()
+        Me.Label6.Text = name
+        Console.WriteLine(name)
+
+    End Sub
+
     'Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
     '    '  TreeView1.SelectedNode = e.Node
 

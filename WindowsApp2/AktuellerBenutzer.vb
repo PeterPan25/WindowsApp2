@@ -1,5 +1,5 @@
 ﻿Public Class AktuellerBenutzer
-    Dim Benutzer As String
+    Public Shared Property Benutzer As String
 
     Public Sub Benutzer_angemeldet(AB As String)
         Benutzer = AB
@@ -10,9 +10,9 @@
 
     End Sub
 
-    Public Function Benutzer_nennen()
+    Public Function Benutzer_nennen() As String
         Dim B As String = Benutzer
-
+        B = Benutzer
         Return B
     End Function
 
