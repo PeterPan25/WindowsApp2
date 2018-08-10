@@ -10,5 +10,11 @@
 
     End Sub
 
+    Public Function Benutzer_nennen()
+        Dim B As String = Benutzer
+
+        Return B
+    End Function
+
 
 End Class
