@@ -211,12 +211,14 @@ Public Class Form1
         Me.WindowState = FormWindowState.Maximized
         Me.StartPosition = FormStartPosition.CenterScreen
         Me.TreeView1.Enabled = False
+        Me.CB_name.Enabled = False
 
 
     End Sub
 
     Public Sub Anmelden_erfolgreich()
         Me.TreeView1.Enabled = True
+        Me.CB_name.Enabled = True
     End Sub
 
 

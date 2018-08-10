@@ -1,6 +1,7 @@
 ﻿'''Login
-Nach erflogreichem Login den Mitarbeiter als aktuellen Benutzer setzen
-Vor Login sollte nichts anwählbar sein....erst nach erfolgreichem login sollte was möglich sein
+'''Nach erflogreichem Login den Mitarbeiter als aktuellen Benutzer setzen
+'''Vor Login sollte nichts anwählbar sein....erst nach erfolgreichem login sollte was möglich sein
+Logout hinzufügen
 Tagesbercht inkl.Verlinkung zur jeweiligen Kinderakte
 ''''überflüssige Ärzteansichten löschen
 Arzt Übersicht alternativen überlegen

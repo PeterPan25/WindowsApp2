@@ -18,7 +18,7 @@ Public Class LoginForm1
     Private Sub Anmelden()
         Dim name As String = UsernameTextBox.Text
         Dim passwort As String = PasswordTextBox.Text
-
+        Dim ab As New AktuellerBenutzer
 
         ReDim name3(DataSet1.Mitarbeiter.Rows.Count - 1)
         For z = 0 To (DataSet1.Mitarbeiter.Rows.Count - 1)
@@ -26,6 +26,7 @@ Public Class LoginForm1
                 Me.Close()
                 Form1.UserControl11.Visible = False
                 Form1.Anmelden_erfolgreich()
+                ab.Benutzer_angemeldet(name)
 
             Else
 

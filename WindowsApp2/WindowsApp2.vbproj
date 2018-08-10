@@ -92,6 +92,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AktuellerBenutzer.vb" />
     <Compile Include="Ansichten\ArztAnlegen.Designer.vb">
       <DependentUpon>ArztAnlegen.vb</DependentUpon>
     </Compile>
