@@ -25,6 +25,7 @@ Public Class LoginForm1
             If name = DataSet1.Mitarbeiter.Rows(z)("Benutzername") And passwort = DataSet1.Mitarbeiter.Rows(z)("passwort") Then
                 Me.Close()
                 Form1.UserControl11.Visible = False
+                Form1.Anmelden_erfolgreich()
 
             Else
 

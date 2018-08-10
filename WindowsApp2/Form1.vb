@@ -210,11 +210,14 @@ Public Class Form1
         Combotext()
         Me.WindowState = FormWindowState.Maximized
         Me.StartPosition = FormStartPosition.CenterScreen
-
+        Me.TreeView1.Enabled = False
 
 
     End Sub
 
+    Public Sub Anmelden_erfolgreich()
+        Me.TreeView1.Enabled = True
+    End Sub
 
 
     Public Sub Combotext()
