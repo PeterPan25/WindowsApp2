@@ -30,3 +30,4 @@ Schriftgröße Überschriften	= 22
 			 Treeview		= 14
 			 Platzhalter	= 12
 			 
+Tooltip(Info wenn Zeiger über der Fläche) Beispiel in Eltern.vb
