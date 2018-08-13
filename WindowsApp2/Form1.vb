@@ -56,6 +56,8 @@ Public Class Form1
 
     Private Sub TreeView1_NodeMouseClick(ByVal sender As Object, ByVal e As TreeNodeMouseClickEventArgs) Handles TreeView1.NodeMouseClick
 
+        Dim ab As New AktuellerBenutzer
+        Dim b As String
 
         For i = 0 To 17
 
@@ -101,10 +103,18 @@ Public Class Form1
 
                     Case 1
 
+                        b = ab.Benutzer_nennen
+                        If b = "ABC" Then
                             ArztAnlegen1.Visible = True
                             ArztAnlegen1.BringToFront()
+                        Else
+                            MsgBox("Keine Berechtigung")
 
-                        Case 2
+                        End If
+
+
+
+                    Case 2
 
                             Doku1.Visible = True
                             Doku1.BringToFront()
