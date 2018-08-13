@@ -55,7 +55,6 @@ Partial Class Form1
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
-        Me.LogoutButton = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -90,6 +89,7 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
+        Me.LogoutButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
@@ -251,16 +251,6 @@ Partial Class Form1
         Me.SplitContainer3.Size = New System.Drawing.Size(1335, 632)
         Me.SplitContainer3.SplitterDistance = 175
         Me.SplitContainer3.TabIndex = 26
-        '
-        'LogoutButton
-        '
-        Me.LogoutButton.AutoSize = True
-        Me.LogoutButton.Location = New System.Drawing.Point(1112, 51)
-        Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(75, 23)
-        Me.LogoutButton.TabIndex = 14
-        Me.LogoutButton.Text = "Abmelden"
-        Me.LogoutButton.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -591,6 +581,18 @@ Partial Class Form1
         Me.Doku1.Size = New System.Drawing.Size(1335, 453)
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
+        '
+        'LogoutButton
+        '
+        Me.LogoutButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LogoutButton.AutoSize = True
+        Me.LogoutButton.Location = New System.Drawing.Point(1112, 51)
+        Me.LogoutButton.Name = "LogoutButton"
+        Me.LogoutButton.Size = New System.Drawing.Size(75, 23)
+        Me.LogoutButton.TabIndex = 14
+        Me.LogoutButton.Text = "Abmelden"
+        Me.LogoutButton.UseVisualStyleBackColor = True
+        Me.LogoutButton.Visible = False
         '
         'Button1
         '

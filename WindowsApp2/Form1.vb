@@ -212,7 +212,7 @@ Public Class Form1
         Me.StartPosition = FormStartPosition.CenterScreen
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
-
+        ' Me.LogoutButton.Visible = False
 
     End Sub
 
