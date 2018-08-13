@@ -5,6 +5,10 @@
     '    Me.TableAdapterManager.UpdateAll(Me.DataSet1)***********
 
     'End Sub
+
+
+
+
     Public Sub Daten_laden()
         Me.BerichtTableAdapter.Fill(DataSet1.Bericht)
 

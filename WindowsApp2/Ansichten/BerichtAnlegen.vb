@@ -44,6 +44,8 @@
         Dim a As DataRow
 
         If Label2.Text = "Schulbericht" Then
+            Dim SB As New Bericht
+
             a = Me.DataSet1.SchulBericht.NewRow()
 
             Try
@@ -64,6 +66,9 @@
             Catch ex As Exception
                 MsgBox("Fehler")
             End Try
+            SB.Daten_laden()
+            SB.BerichtKind()
+
             Me.Visible = False
 
 

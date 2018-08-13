@@ -220,6 +220,7 @@ Public Class Form1
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
         Me.LogoutButton.Visible = True
+
     End Sub
 
 
