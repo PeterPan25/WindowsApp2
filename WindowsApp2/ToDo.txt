@@ -1,7 +1,7 @@
 ﻿'''Login
 '''Nach erflogreichem Login den Mitarbeiter als aktuellen Benutzer setzen
 '''Vor Login sollte nichts anwählbar sein....erst nach erfolgreichem login sollte was möglich sein
-Logout hinzufügen
+''''Logout hinzufügen
 Tagesbercht inkl.Verlinkung zur jeweiligen Kinderakte
 ''''überflüssige Ärzteansichten löschen
 Arzt Übersicht alternativen überlegen
@@ -19,7 +19,8 @@ Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepl�
  ''''arztbericht anlegen anpassung der größe der felder und label
  Alle Ansichten zum Anlegen und Verwalten der Daten (Ärzte, Schulen, Psychologen) unter admin zugängig machen und nur die bearbeitungsseiten für die Mitarbeiter öffentlich
  Datagridview mit Übersicht über alle Einträge in der gesamten Kinderakte. Je nach Kategorie Schriftfarbe anders. bspw. alle Arztberichte in roter Schrift
- 
+ Mitarbeiter Ansicht weitere Daten anlegen, bisher nur Benutzername, Name, Vorname
+ Möglichkeit zum Passwort ändern
 
 
 Buttongröße = 42;42
