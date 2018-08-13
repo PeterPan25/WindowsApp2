@@ -17,6 +17,7 @@
         Form1.TreeView1.Enabled = False
         Form1.LogoutButton.Visible = False
         Form1.UserControl11.Visible = True
+        Form1.UserControl11.BringToFront()
         Form1.Label11.Text = Benutzer
 
 

@@ -23,14 +23,14 @@ Partial Class Arztbericht
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.ArztArtComboBox = New System.Windows.Forms.ComboBox()
+        Me.ArztNameCombobox = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.SpeichernButton = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataSet1 = New WindowsApp2.DataSet1()
@@ -50,7 +50,6 @@ Partial Class Arztbericht
         Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.KindAugenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindAugenarztTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindAugenarztTableAdapter()
         Me.KindFrauenarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -67,6 +66,8 @@ Partial Class Arztbericht
         Me.KindPsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindPsychoTableAdapter()
         Me.PsychoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PsychoTableAdapter = New WindowsApp2.DataSet1TableAdapters.PsychoTableAdapter()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.KindKrankenhausTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindKrankenhausTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,26 +86,26 @@ Partial Class Arztbericht
         CType(Me.PsychoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'ArztArtComboBox
         '
-        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Augenarzt", "Frauenarzt", "Hautarzt", "HNO", "Kinderarzt", "Krankenhaus", "Psychologe", "Zahnarzt"})
-        Me.ComboBox1.Location = New System.Drawing.Point(97, 68)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox1.TabIndex = 0
+        Me.ArztArtComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ArztArtComboBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ArztArtComboBox.FormattingEnabled = True
+        Me.ArztArtComboBox.Items.AddRange(New Object() {"Augenarzt", "Frauenarzt", "Hautarzt", "HNO", "Kinderarzt", "Krankenhaus", "Psychologe", "Zahnarzt"})
+        Me.ArztArtComboBox.Location = New System.Drawing.Point(97, 68)
+        Me.ArztArtComboBox.Name = "ArztArtComboBox"
+        Me.ArztArtComboBox.Size = New System.Drawing.Size(121, 28)
+        Me.ArztArtComboBox.TabIndex = 0
         '
-        'ComboBox2
+        'ArztNameCombobox
         '
-        Me.ComboBox2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.ComboBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(97, 104)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 28)
-        Me.ComboBox2.TabIndex = 1
+        Me.ArztNameCombobox.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ArztNameCombobox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ArztNameCombobox.FormattingEnabled = True
+        Me.ArztNameCombobox.Location = New System.Drawing.Point(97, 104)
+        Me.ArztNameCombobox.Name = "ArztNameCombobox"
+        Me.ArztNameCombobox.Size = New System.Drawing.Size(121, 28)
+        Me.ArztNameCombobox.TabIndex = 1
         '
         'TextBox1
         '
@@ -151,14 +152,14 @@ Partial Class Arztbericht
         Me.RichTextBox1.TabIndex = 7
         Me.RichTextBox1.Text = ""
         '
-        'Button1
+        'SpeichernButton
         '
-        Me.Button1.Location = New System.Drawing.Point(880, 460)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Speichern"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.SpeichernButton.Location = New System.Drawing.Point(880, 460)
+        Me.SpeichernButton.Name = "SpeichernButton"
+        Me.SpeichernButton.Size = New System.Drawing.Size(75, 23)
+        Me.SpeichernButton.TabIndex = 8
+        Me.SpeichernButton.Text = "Speichern"
+        Me.SpeichernButton.UseVisualStyleBackColor = True
         '
         'DateTimePicker1
         '
@@ -291,18 +292,6 @@ Partial Class Arztbericht
         Me.Label2.TabIndex = 11
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'PlatzhalterText1
-        '
-        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(97, 142)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = "Behandelnder Arzt"
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(121, 26)
-        Me.PlatzhalterText1.TabIndex = 2
-        Me.PlatzhalterText1.Text = "Behandelnder Arzt"
-        '
         'KindAugenarztBindingSource
         '
         Me.KindAugenarztBindingSource.DataMember = "KindAugenarzt"
@@ -375,6 +364,22 @@ Partial Class Arztbericht
         '
         Me.PsychoTableAdapter.ClearBeforeFill = True
         '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(97, 142)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Behandelnder Arzt"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(121, 26)
+        Me.PlatzhalterText1.TabIndex = 2
+        Me.PlatzhalterText1.Text = "Behandelnder Arzt"
+        '
+        'KindKrankenhausTableAdapter
+        '
+        Me.KindKrankenhausTableAdapter.ClearBeforeFill = True
+        '
         'Arztbericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -382,15 +387,15 @@ Partial Class Arztbericht
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.SpeichernButton)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PlatzhalterText1)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.ArztNameCombobox)
+        Me.Controls.Add(Me.ArztArtComboBox)
         Me.Name = "Arztbericht"
         Me.Size = New System.Drawing.Size(1017, 503)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -414,15 +419,15 @@ Partial Class Arztbericht
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents ArztArtComboBox As ComboBox
+    Friend WithEvents ArztNameCombobox As ComboBox
     Friend WithEvents PlatzhalterText1 As PlatzhalterText
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents RichTextBox1 As RichTextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents SpeichernButton As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents DataSet1 As DataSet1
@@ -458,4 +463,5 @@ Partial Class Arztbericht
     Friend WithEvents KindPsychoTableAdapter As DataSet1TableAdapters.KindPsychoTableAdapter
     Friend WithEvents PsychoBindingSource As BindingSource
     Friend WithEvents PsychoTableAdapter As DataSet1TableAdapters.PsychoTableAdapter
+    Friend WithEvents KindKrankenhausTableAdapter As DataSet1TableAdapters.KindKrankenhausTableAdapter
 End Class
