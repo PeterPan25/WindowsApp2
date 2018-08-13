@@ -15,22 +15,33 @@ Public Class LoginForm1
 
     End Sub
 
+    ' Ok gedrückt,  Prüft ob Mitarbeiter und Passwort vorhanden sind, test Variable sorgt dafür, dass die MsgBox nur einmal geworfen wird 
+    ' und nicht bei jeder misslungenen Prüfung der Datenbank ausgelöst wird
+
     Private Sub Anmelden()
         Dim name As String = UsernameTextBox.Text
         Dim passwort As String = PasswordTextBox.Text
         Dim ab As New AktuellerBenutzer
+        Dim test As Integer = 0
 
-        ReDim name3(DataSet1.Mitarbeiter.Rows.Count - 1)
+
+        ' ReDim name3(DataSet1.Mitarbeiter.Rows.Count - 1)
         For z = 0 To (DataSet1.Mitarbeiter.Rows.Count - 1)
             If name = DataSet1.Mitarbeiter.Rows(z)("Benutzername") And passwort = DataSet1.Mitarbeiter.Rows(z)("passwort") Then
                 Me.Close()
                 Form1.UserControl11.Visible = False
+
                 Form1.Anmelden_erfolgreich()
                 ab.Benutzer_angemeldet(name)
-
+                test = 0
             Else
 
-                MsgBox("Schade Benutzer nicht vorhanden oder falsches Passwort")
+                test = test + 1
+                If test = DataSet1.Mitarbeiter.Rows.Count Then
+                    MsgBox("Schade Benutzer nicht vorhanden oder falsches Passwort")
+
+                End If
+
 
             End If
 

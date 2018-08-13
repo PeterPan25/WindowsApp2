@@ -219,6 +219,7 @@ Public Class Form1
     Public Sub Anmelden_erfolgreich()
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
+        Me.LogoutButton.Visible = True
     End Sub
 
 
@@ -272,12 +273,15 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles LogoutButton.Click
         Dim ab As New AktuellerBenutzer
         Dim name As String
+
+        ab.Benutzer_abgemeldet()
+
+
         name = ab.Benutzer_nennen()
         Me.Label6.Text = name
-        Console.WriteLine(name)
 
     End Sub
 
