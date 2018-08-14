@@ -103,6 +103,20 @@
 
     End Sub
 
+    Private Sub BildWahlButton_Click(sender As Object, e As EventArgs) Handles BildWahlButton.Click
+        Dim a As New OpenFileDialog
+        Dim b As String = ""
+
+        a.InitialDirectory = "C:"
+        a.ShowDialog()
+
+        b = a.FileName
+
+        PictureBox1.ImageLocation = b
+
+        Pfad = b
+    End Sub
+
 
     'Private Sub KindBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
     '    Me.Validate()

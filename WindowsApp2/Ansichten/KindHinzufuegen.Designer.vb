@@ -44,6 +44,7 @@ Partial Class KindHinzufuegen
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.BildWahlButton = New System.Windows.Forms.Button()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -292,11 +293,21 @@ Partial Class KindHinzufuegen
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
+        'BildWahlButton
+        '
+        Me.BildWahlButton.Location = New System.Drawing.Point(49, 445)
+        Me.BildWahlButton.Name = "BildWahlButton"
+        Me.BildWahlButton.Size = New System.Drawing.Size(104, 23)
+        Me.BildWahlButton.TabIndex = 17
+        Me.BildWahlButton.Text = "Bild auswählen"
+        Me.BildWahlButton.UseVisualStyleBackColor = True
+        '
         'KindHinzufuegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.BildWahlButton)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
@@ -345,4 +356,5 @@ Partial Class KindHinzufuegen
     Friend WithEvents KindTableAdapter As DataSet1TableAdapters.KindTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BildWahlButton As Button
 End Class
