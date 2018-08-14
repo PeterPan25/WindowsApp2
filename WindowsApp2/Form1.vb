@@ -296,6 +296,23 @@ Public Class Form1
 
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim a As New OpenFileDialog
+        Dim b As String = ""
+
+        a.InitialDirectory = "E:"
+        a.ShowDialog()
+
+        b = a.FileName
+
+        PictureBox1.ImageLocation = b
+
+
+
+
+
+    End Sub
+
     'Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
     '    '  TreeView1.SelectedNode = e.Node
 
