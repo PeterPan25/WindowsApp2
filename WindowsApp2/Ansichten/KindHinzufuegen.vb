@@ -83,6 +83,9 @@
         PlatzhalterText10.PlatzHalterText = PlatzhalterText10.PlatzHalterText
         PlatzhalterText11.PlatzHalterText = PlatzhalterText11.PlatzHalterText
 
+        PictureBox1.Image = Nothing
+        Pfad = ""
+
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click

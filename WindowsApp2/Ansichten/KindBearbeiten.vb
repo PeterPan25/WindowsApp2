@@ -1,5 +1,6 @@
 ﻿Public Class KindBearbeiten
     Dim name3 As String() = {"a"}
+    Public Shared Property nBild = ""
 
     'Private Sub KindBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
     '    Me.Validate()
@@ -30,7 +31,7 @@
 
             a.Besonderheiten = TextBox2.Text
             a.Sorgerechtsstatus = TextBox3.Text
-
+            a.Bild = nBild
 
             Me.KindTableAdapter.Update(Me.DataSet1.Kind)
 
@@ -49,6 +50,7 @@
 
     Public Sub DatenAnzeigen()
         Dim name As String = Form1.CB_name.Text
+        Dim Pfad As String
         '   Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
 
         ReDim name3(DataSet1.Kind.Rows.Count - 1)
@@ -57,7 +59,15 @@
             If name = DataSet1.Kind.Rows(z)("Name") Then
                 Try
 
+                    Pfad = DataSet1.Kind.Rows(z)("Bild")
+                    If Pfad IsNot "" Then
 
+                        PictureBox1.ImageLocation = Pfad
+                    Else
+
+                        PictureBox1.Image = Nothing
+
+                    End If
 
                     TextBox3.Text = DataSet1.Kind.Rows(z)("Besonderheiten")
 
@@ -133,5 +143,19 @@
             MsgBox("Speichern fehlgeschlagen")
 
         End Try
+    End Sub
+
+    Private Sub BildÄndernButton_Click(sender As Object, e As EventArgs) Handles NeuesBildButton.Click
+        Dim a As New OpenFileDialog
+        Dim b As String = ""
+
+        a.InitialDirectory = "C:"
+        a.ShowDialog()
+
+        b = a.FileName
+
+        PictureBox1.ImageLocation = b
+
+        nBild = b
     End Sub
 End Class

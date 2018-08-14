@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class KindBearbeiten
     Inherits System.Windows.Forms.UserControl
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class KindBearbeiten
     'Hinweis: Die folgende Prozedur ist für den Windows Form-Designer erforderlich.
     'Das Bearbeiten ist mit dem Windows Form-Designer möglich.  
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DataSet1 = New WindowsApp2.DataSet1()
@@ -55,6 +55,7 @@ Partial Class KindBearbeiten
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.NeuesBildButton = New System.Windows.Forms.Button()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -383,10 +384,20 @@ Partial Class KindBearbeiten
         Me.Button3.Text = "Button3"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'NeuesBildButton
+        '
+        Me.NeuesBildButton.Location = New System.Drawing.Point(254, 143)
+        Me.NeuesBildButton.Name = "NeuesBildButton"
+        Me.NeuesBildButton.Size = New System.Drawing.Size(104, 23)
+        Me.NeuesBildButton.TabIndex = 23
+        Me.NeuesBildButton.Text = "Neues Bild"
+        Me.NeuesBildButton.UseVisualStyleBackColor = True
+        '
         'KindBearbeiten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.NeuesBildButton)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.SchuleDataGridView)
         Me.Controls.Add(Me.DateTimePicker2)
@@ -453,4 +464,5 @@ Partial Class KindBearbeiten
     Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents Button3 As Button
+    Friend WithEvents NeuesBildButton As Button
 End Class
