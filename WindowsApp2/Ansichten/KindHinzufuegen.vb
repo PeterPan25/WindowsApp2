@@ -1,4 +1,8 @@
 ﻿Public Class KindHinzufuegen
+
+    Public Shared Property Pfad As String = ""
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim a As DataRow
 
@@ -7,33 +11,41 @@
 
         ' DateTimePicker1.Format = DateTimePickerFormat.Short
 
+        Try
+
+            a("Name") = String.Concat(PlatzhalterText1.Text, " ", PlatzhalterText2.Text)
+            ' a("Geburtsdatum") = CDate(TextBox2.Text)
+            a("Nationalität") = PlatzhalterText4.Text
+            a("Geburtsdatum") = DateTimePicker1.Value
+            a("Jugendamt") = PlatzhalterText6.Text
+            a("Aufnahmedatum") = DateTimePicker2.Value
+            a("Schule") = PlatzhalterText9.Text
+            a("Besonderheiten") = PlatzhalterText11.Text
+            a("Geburtsort") = PlatzhalterText3.Text
+            a("Konfession") = PlatzhalterText5.Text
+            a("Hilfe_nach") = PlatzhalterText7.Text
+            a("Sorgerechtsstatus") = PlatzhalterText8.Text
+            a("Krankenversicherung") = PlatzhalterText10.Text
+            a("Bild") = Pfad
 
 
-        a("Name") = String.Concat(PlatzhalterText1.Text, " ", PlatzhalterText2.Text)
-        ' a("Geburtsdatum") = CDate(TextBox2.Text)
-        a("Nationalität") = PlatzhalterText4.Text
-        a("Geburtsdatum") = DateTimePicker1.Value
-        a("Jugendamt") = PlatzhalterText6.Text
-        a("Aufnahmedatum") = DateTimePicker2.Value
-        a("Schule") = PlatzhalterText9.Text
-        a("Besonderheiten") = PlatzhalterText11.Text
-        a("Geburtsort") = PlatzhalterText3.Text
-        a("Konfession") = PlatzhalterText5.Text
-        a("Hilfe_nach") = PlatzhalterText7.Text
-        a("Sorgerechtsstatus") = PlatzhalterText8.Text
-        a("Krankenversicherung") = PlatzhalterText10.Text
 
-        Me.DataSet1.Kind.AddKindRow(a)
-        Me.KindTableAdapter.Update(DataSet1)
+            Me.DataSet1.Kind.AddKindRow(a)
+            Me.KindTableAdapter.Update(DataSet1)
+
+            ResetText()
+            Me.Validate()
 
 
-        ResetText()
-        Me.Validate()
+            Form1.Combotext()
+
+            ResetTextbox()
+
+        Catch ex As Exception
+            MsgBox("Da ist was schief gegangen")
+        End Try
 
 
-        Form1.Combotext()
-
-        ResetTextbox()
 
 
 
@@ -72,6 +84,22 @@
         PlatzhalterText11.PlatzHalterText = PlatzhalterText11.PlatzHalterText
 
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Dim a As New OpenFileDialog
+        Dim b As String = ""
+
+        a.InitialDirectory = "C:"
+        a.ShowDialog()
+
+        b = a.FileName
+
+        PictureBox1.ImageLocation = b
+
+        Pfad = b
+
+    End Sub
+
 
     'Private Sub KindBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
     '    Me.Validate()

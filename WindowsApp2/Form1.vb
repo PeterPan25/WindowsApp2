@@ -264,6 +264,7 @@ Public Class Form1
 
     Private Sub KinderDaten()
         Dim Kind As String = CB_name.Text
+        Dim Pfad As String
 
         Try
 
@@ -274,6 +275,21 @@ Public Class Form1
                     Label2.Text = data3.Rows(z)("Sorgerechtsstatus")
                     Label4.Text = data3.Rows(z)("Jugendamt")
                     Label5.Text = data3.Rows(z)("Aufnahmedatum")
+                    Pfad = data3.Rows(z)("Bild")
+
+                    If Pfad IsNot "" Then
+                        PictureBox1.ImageLocation = Pfad
+
+                    ElseIf Pfad Is "" Then
+
+                        PictureBox1.Image = Nothing
+
+
+
+                    End If
+
+
+
 
                 End If
 
@@ -296,22 +312,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Dim a As New OpenFileDialog
-        Dim b As String = ""
 
-        a.InitialDirectory = "E:"
-        a.ShowDialog()
-
-        b = a.FileName
-
-        PictureBox1.ImageLocation = b
-
-
-
-
-
-    End Sub
 
     'Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
     '    '  TreeView1.SelectedNode = e.Node
