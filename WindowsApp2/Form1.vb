@@ -153,8 +153,8 @@ Public Class Form1
                             Psycho1.BringToFront()
 
                         Case 9
-
-                            Hobby1.Visible = True
+                        Hobby1.Daten_laden()
+                        Hobby1.Visible = True
                             Hobby1.BringToFront()
 
                         Case 10
