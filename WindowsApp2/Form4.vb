@@ -1,124 +1,65 @@
-﻿Public Class F_Hans
-    Dim vorname As String
-    Dim nachname As String
-    Dim datum As String
-    Dim schule As String
-    Dim daten As New Dictionary(Of String, String)
-    ' Dim testDataTable As New DataSet1.TestDataTable
-    ' Dim testDataset As New DataSet1
-
-
-    ' Dim testRow2 As DataSet1.TestRow = testDataTable.NewRow()
-
-    Dim myCol As DataColumn
-    Dim myRow As DataRow
-
-    ' Dim testColumn As DataColumn = testDataTable.Columns.Add
+﻿Public Class Nachrichten
 
 
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles SendenButton.Click
 
-    'Dim currRows() As DataRow = testDataTable.Select("vorname", "nachname", DataViewRowState.CurrentRows)
+        Dim NeueNachricht As DataRow
 
-    'https://msdn.microsoft.com/de-de/library/system.data.datatable.newrow(v=vs.110).aspx
+        Try
+            NeueNachricht = DataSet11.Nachricht.NewRow
+            NeueNachricht("Empfänger") = ComboBox1.Text
+            NeueNachricht("Verfasser") = AbsenderLabel.Text
+            NeueNachricht("Datum") = DateTimePicker1.Value
+            NeueNachricht("Text") = RichTextBox1.Text
+            NeueNachricht("Gelesen") = 0
+            NeueNachricht("Betreff") = BetreffTextbox.Text
+
+            DataSet11.Nachricht.AddNachrichtRow(NeueNachricht)
+            NachrichtTableAdapter.Update(Me.DataSet11)
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'testColumn.AutoIncrement = True
-        'testColumn.AutoIncrementSeed = 0
-        'testColumn.AutoIncrementStep = 1
-        AcceptChanges()
+            MsgBox("Erfolgreich versendet")
+        Catch ex As Exception
+            MsgBox("Hoppla da ist was schief gelaufen")
+        End Try
 
-        'For Each myRow In currRows
-        'For Each myCol In testDataTable.Columns
-        'Console.Write(vbTab & myRow(myCol).ToString())
-        'Next
-        '
-        'Dim rowState As String = System.Enum.GetName(myRow.RowState.GetType(), myRow.RowState)
-        'Console.WriteLine(vbTab & rowState)
-        'Next
 
-        TextBox1.Clear()
-        TextBox2.Clear()
-        TextBox3.Clear()
-        TextBox4.Clear()
-
+        Me.Close()
     End Sub
 
-    Private Function AcceptChanges()
-        ' Dim testDataSet As DataSet1
-        'testDataSet = New DataSet1()
 
-        'Dim testDataTable As DataTable
-        'testDataTable = testDataSet.Tables("Test")
-
-        Dim testRow As DataRow
-        '  testRow = testDataTable.NewRow()
-        ' Dim testRow As DataSet1.TestRow = testDataTable.NewRow()
-
-        vorname = TextBox1.Text
-        nachname = TextBox4.Text
-        schule = TextBox2.Text
-        datum = TextBox3.Text
-
-
-        ' daten.Add(key:="schule", value:=schule)
-
-        testRow("vorname") = vorname
-        testRow("nachname") = nachname
-        testRow("datum") = datum
-        testRow("schule") = schule
-
-        'testRow("vorname") = vorname
-        'testRow("nachname") = nachname
-        'testRow("schule") = schule
-        'testRow("datum") = datum
-
-        '  testDataTable.Rows.Add(testRow)
-        ' testDataTable.AcceptChanges()
-
-
-
-
-        ' For Each myCol In testDataTable.Columns
-        '  Console.Write(testRow.vorname & vbTab & testRow.nachname) '& testRow.datum & testRow.schule)
-        'Next
-
-        Console.WriteLine(vbTab & "Hallo")
-        '  Return testDataTable
-
-    End Function
-
-    Private Sub JaKlar()
-
-
-
-
-
-
-
-        'For Each myRow In testDataTable.Rows
-        '    For Each myCol In testDataTable.Columns
-        '        Console.WriteLine(myRow(myCol))
-        '    Next
-        'Next
-
-        'Label1.Text = testDataTable.Rows(1)("vorname").ToString()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles AbbruchButton.Click
+        Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        jaklar()
-    End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Close()
+    Private Sub Nachrichten_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Nachricht". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.NachrichtTableAdapter.Fill(Me.DataSet11.Nachricht)
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Mitarbeiter". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.MitarbeiterTableAdapter.Fill(Me.DataSet11.Mitarbeiter)
 
-
-        F_Peter.Show()
+        Empfänger()
 
 
 
     End Sub
 
+    Private Sub Empfänger()
+        Dim EmpfängerArray As String()
+        ReDim EmpfängerArray(Me.DataSet11.Mitarbeiter.Rows.Count - 1)
+        Dim AbsenderInfo As New AktuellerBenutzer
+
+        For a = 0 To (DataSet11.Mitarbeiter.Rows.Count - 1)
+            EmpfängerArray(a) = DataSet11.Mitarbeiter.Rows(a)("Name")
+        Next
+
+        ComboBox1.DataSource = EmpfängerArray
+
+        AbsenderLabel.Text = AbsenderInfo.Benutzer_nennen
+
+
+    End Sub
 
 End Class

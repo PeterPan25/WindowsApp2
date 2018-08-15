@@ -312,6 +312,11 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Nachrichten.Show()
+
+    End Sub
+
 
 
     'Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect

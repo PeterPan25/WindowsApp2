@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class F_Hans
+Partial Class Nachrichten
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -22,115 +22,172 @@ Partial Class F_Hans
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
+        Me.AbsenderLabel = New System.Windows.Forms.Label()
+        Me.SendenButton = New System.Windows.Forms.Button()
+        Me.AbbruchButton = New System.Windows.Forms.Button()
+        Me.BetreffTextbox = New WindowsApp2.PlatzhalterText()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.MitarbeiterTableAdapter = New WindowsApp2.DataSet1TableAdapters.MitarbeiterTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.NachrichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.NachrichtTableAdapter()
         Me.DataSet11 = New WindowsApp2.DataSet1()
+        Me.NachrichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'AbsenderLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(132, 104)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Label1"
+        Me.AbsenderLabel.AutoSize = True
+        Me.AbsenderLabel.Location = New System.Drawing.Point(9, 9)
+        Me.AbsenderLabel.Name = "AbsenderLabel"
+        Me.AbsenderLabel.Size = New System.Drawing.Size(39, 13)
+        Me.AbsenderLabel.TabIndex = 0
+        Me.AbsenderLabel.Text = "Label1"
         '
-        'TextBox1
+        'SendenButton
         '
-        Me.TextBox1.Location = New System.Drawing.Point(470, 167)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.SendenButton.Location = New System.Drawing.Point(433, 348)
+        Me.SendenButton.Name = "SendenButton"
+        Me.SendenButton.Size = New System.Drawing.Size(75, 23)
+        Me.SendenButton.TabIndex = 5
+        Me.SendenButton.Text = "Senden"
+        Me.SendenButton.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'AbbruchButton
         '
-        Me.TextBox2.Location = New System.Drawing.Point(470, 299)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.AbbruchButton.Location = New System.Drawing.Point(340, 348)
+        Me.AbbruchButton.Name = "AbbruchButton"
+        Me.AbbruchButton.Size = New System.Drawing.Size(75, 23)
+        Me.AbbruchButton.TabIndex = 6
+        Me.AbbruchButton.Text = "Abbrechen"
+        Me.AbbruchButton.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'BetreffTextbox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(509, 371)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 3
+        Me.BetreffTextbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.BetreffTextbox.ForeColor = System.Drawing.Color.Gray
+        Me.BetreffTextbox.Location = New System.Drawing.Point(12, 105)
+        Me.BetreffTextbox.Name = "BetreffTextbox"
+        Me.BetreffTextbox.PlatzHalterText = "Betreff"
+        Me.BetreffTextbox.Size = New System.Drawing.Size(271, 20)
+        Me.BetreffTextbox.TabIndex = 7
+        Me.BetreffTextbox.Text = "Betreff"
         '
-        'TextBox4
+        'ComboBox1
         '
-        Me.TextBox4.Location = New System.Drawing.Point(457, 437)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 4
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 49)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(270, 21)
+        Me.ComboBox1.TabIndex = 8
         '
-        'Button1
+        'RichTextBox1
         '
-        Me.Button1.Location = New System.Drawing.Point(768, 284)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.RichTextBox1.Location = New System.Drawing.Point(13, 171)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(495, 158)
+        Me.RichTextBox1.TabIndex = 9
+        Me.RichTextBox1.Text = ""
         '
-        'Button2
+        'MitarbeiterTableAdapter
         '
-        Me.Button2.Location = New System.Drawing.Point(417, 67)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.MitarbeiterTableAdapter.ClearBeforeFill = True
         '
-        'Button3
+        'TableAdapterManager
         '
-        Me.Button3.Location = New System.Drawing.Point(752, 125)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Nothing
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Me.MitarbeiterTableAdapter
+        Me.TableAdapterManager.NachrichtTableAdapter = Me.NachrichtTableAdapter
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'NachrichtTableAdapter
+        '
+        Me.NachrichtTableAdapter.ClearBeforeFill = True
         '
         'DataSet11
         '
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'F_Hans
+        'NachrichtBindingSource
+        '
+        Me.NachrichtBindingSource.DataMember = "Nachricht"
+        Me.NachrichtBindingSource.DataSource = Me.DataSet11
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Enabled = False
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(308, 105)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
+        Me.DateTimePicker1.TabIndex = 10
+        '
+        'Nachrichten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(869, 509)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "F_Hans"
-        Me.Text = "Hans"
+        Me.ClientSize = New System.Drawing.Size(536, 391)
+        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.BetreffTextbox)
+        Me.Controls.Add(Me.AbbruchButton)
+        Me.Controls.Add(Me.SendenButton)
+        Me.Controls.Add(Me.AbsenderLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Name = "Nachrichten"
+        Me.Text = "Nachricht"
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents AbsenderLabel As Label
+    Friend WithEvents SendenButton As Button
+    Friend WithEvents AbbruchButton As Button
+    Friend WithEvents BetreffTextbox As PlatzhalterText
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents MitarbeiterTableAdapter As DataSet1TableAdapters.MitarbeiterTableAdapter
+    Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents NachrichtTableAdapter As DataSet1TableAdapters.NachrichtTableAdapter
     Friend WithEvents DataSet11 As DataSet1
+    Friend WithEvents NachrichtBindingSource As BindingSource
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
