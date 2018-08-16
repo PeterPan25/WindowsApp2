@@ -27,7 +27,8 @@ Public Class Form1
         "Arztbericht anlegen",
         "Arzt Übersicht",
         "hinzufügen",
-        "bearbeiten"
+        "bearbeiten",
+        "Übersicht"
         }
 
 
@@ -59,7 +60,7 @@ Public Class Form1
         Dim ab As New AktuellerBenutzer
         Dim b As String
 
-        For i = 0 To 17
+        For i = 0 To 18
 
 
 
@@ -94,10 +95,10 @@ Public Class Form1
 
                 Select Case i
 
-                        Case 0
-                            Eltern1.EBDaten_laden()
+                    Case 0
+                        Eltern1.EBDaten_laden()
 
-                            Eltern1.Visible = True
+                        Eltern1.Visible = True
                         Eltern1.BringToFront()
 
 
@@ -116,92 +117,98 @@ Public Class Form1
 
                     Case 2
 
-                            Doku1.Visible = True
-                            Doku1.BringToFront()
+                        Doku1.Visible = True
+                        Doku1.BringToFront()
 
-                        Case 3
-                            Stammdaten1.Stammdaten_Load()
-                            Stammdaten1.Visible = True
-                            Stammdaten1.BringToFront()
-
-
-                        Case 4
-                            Schule1.SBDaten_laden()
-                            Schule1.Visible = True
-                            Schule1.BringToFront()
-
-                        Case 5
-
-                            Kontakte1.Visible = True
-                            Kontakte1.BringToFront()
-
-                        Case 6
-
-                            Hilfen1.Visible = True
-                            Hilfen1.BringToFront()
+                    Case 3
+                        Stammdaten1.Stammdaten_Load()
+                        Stammdaten1.Visible = True
+                        Stammdaten1.BringToFront()
 
 
+                    Case 4
+                        Schule1.SBDaten_laden()
+                        Schule1.Visible = True
+                        Schule1.BringToFront()
 
-                        Case 7
+                    Case 5
 
-                            Krankenhaus1.Visible = True
-                            Krankenhaus1.BringToFront()
+                        Kontakte1.Visible = True
+                        Kontakte1.BringToFront()
 
-                        Case 8
+                    Case 6
 
-                            Psycho1.Visible = True
-                            Psycho1.BringToFront()
+                        Hilfen1.Visible = True
+                        Hilfen1.BringToFront()
 
-                        Case 9
+
+
+                    Case 7
+
+                        Krankenhaus1.Visible = True
+                        Krankenhaus1.BringToFront()
+
+                    Case 8
+
+                        Psycho1.Visible = True
+                        Psycho1.BringToFront()
+
+                    Case 9
                         Hobby1.Daten_laden()
                         Hobby1.Visible = True
-                            Hobby1.BringToFront()
+                        Hobby1.BringToFront()
 
-                        Case 10
+                    Case 10
 
-                            Tagesbericht1.Visible = True
-                            Tagesbericht1.BringToFront()
+                        Tagesbericht1.Visible = True
+                        Tagesbericht1.BringToFront()
 
-                        Case 11
+                    Case 11
 
-                            Formulare1.Visible = True
-                            Formulare1.BringToFront()
-                        Case 12
+                        Formulare1.Visible = True
+                        Formulare1.BringToFront()
+                    Case 12
 
-                            Panel1.Visible = True
-                            Panel1.BringToFront()
-                        Case 13
-                            Bericht1.Visible = True
-                            Bericht1.BerichtKind()
+                        Panel1.Visible = True
+                        Panel1.BringToFront()
+                    Case 13
+                        Bericht1.Visible = True
+                        Bericht1.BerichtKind()
 
 
-                            Bericht1.BringToFront()
+                        Bericht1.BringToFront()
 
-                        Case 14
+                    Case 14
 
-                            Arztbericht1.BerichtAnlegen_Load()
-                            Arztbericht1.Visible = True
-                            Arztbericht1.BringToFront()
+                        Arztbericht1.BerichtAnlegen_Load()
+                        Arztbericht1.Visible = True
+                        Arztbericht1.BringToFront()
 
-                        Case 15
-                            ArztUebersicht1.Arzt_Load()
-                            ArztUebersicht1.Visible = True
-                            ArztUebersicht1.BringToFront()
+                    Case 15
+                        ArztUebersicht1.Arzt_Load()
+                        ArztUebersicht1.Visible = True
+                        ArztUebersicht1.BringToFront()
 
-                        Case 16
-                            KindHinzufuegen1.Datenkontrolle()
-                            KindHinzufuegen1.Visible = True
-                            KindHinzufuegen1.BringToFront()
+                    Case 16
+                        KindHinzufuegen1.Datenkontrolle()
+                        KindHinzufuegen1.Visible = True
+                        KindHinzufuegen1.BringToFront()
 
-                        Case 17
-                            KindBearbeiten1.Daten_Load()
-                            KindBearbeiten1.Visible = True
-                            KindBearbeiten1.BringToFront()
+                    Case 17
+                        KindBearbeiten1.Daten_Load()
+                        KindBearbeiten1.Visible = True
+                        KindBearbeiten1.BringToFront()
 
-                            ' For Each case In TreeView1
-                            'TreeView1.Nodes(i).BackColor = Color.DarkRed
-                            'Next
-                    End Select
+                    Case 18
+
+                        Übersicht1.Daten()
+                        Übersicht1.Visible = True
+                        Übersicht1.BringToFront()
+
+                        ' For Each case In TreeView1
+                        'TreeView1.Nodes(i).BackColor = Color.DarkRed
+                        'Next
+                End Select
 
                 '                HighlightCheckedNodes()
 
@@ -209,7 +216,7 @@ Public Class Form1
 
             End If
 
-            Next
+        Next
 
     End Sub
 
@@ -230,7 +237,9 @@ Public Class Form1
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
         Me.LogoutButton.Visible = True
-
+        Übersicht1.Daten()
+        Übersicht1.Visible = True
+        Übersicht1.BringToFront()
     End Sub
 
 

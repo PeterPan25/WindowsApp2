@@ -1,5 +1,9 @@
 ﻿Public Class Übersicht
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
+
+    Public Sub Daten()
+        Dim AB As New AktuellerBenutzer
+
+        Label1.Text = "Moin " + AB.Benutzer_nennen
     End Sub
 End Class

@@ -25,6 +25,7 @@ Partial Class Übersicht
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -40,6 +41,7 @@ Partial Class Übersicht
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox1)
         Me.SplitContainer1.Size = New System.Drawing.Size(938, 518)
         Me.SplitContainer1.SplitterDistance = 195
@@ -65,6 +67,15 @@ Partial Class Übersicht
         Me.ComboBox1.Size = New System.Drawing.Size(736, 21)
         Me.ComboBox1.TabIndex = 0
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(318, 103)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Label1"
+        '
         'Übersicht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -73,6 +84,7 @@ Partial Class Übersicht
         Me.Name = "Übersicht"
         Me.Size = New System.Drawing.Size(938, 518)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
@@ -83,4 +95,5 @@ Partial Class Übersicht
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label1 As Label
 End Class
