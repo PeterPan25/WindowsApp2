@@ -35,16 +35,19 @@ Partial Class Hobby
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MitarbeiterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MitarbeiterTableAdapter = New WindowsApp2.DataSet1TableAdapters.MitarbeiterTableAdapter()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NachrichtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MitarbeiterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Überschrift
         '
         Me.Überschrift.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Überschrift.Location = New System.Drawing.Point(10, 0)
+        Me.Überschrift.Location = New System.Drawing.Point(15, 0)
         Me.Überschrift.Name = "Überschrift"
         Me.Überschrift.Size = New System.Drawing.Size(823, 42)
         Me.Überschrift.TabIndex = 5
@@ -103,12 +106,15 @@ Partial Class Hobby
         '
         'NachrichtDataGridView
         '
+        Me.NachrichtDataGridView.AllowUserToAddRows = False
         Me.NachrichtDataGridView.AutoGenerateColumns = False
         Me.NachrichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NachrichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.NachrichtDataGridView.DataSource = Me.NachrichtBindingSource
         Me.NachrichtDataGridView.Location = New System.Drawing.Point(82, 125)
+        Me.NachrichtDataGridView.MultiSelect = False
         Me.NachrichtDataGridView.Name = "NachrichtDataGridView"
+        Me.NachrichtDataGridView.ReadOnly = True
         Me.NachrichtDataGridView.Size = New System.Drawing.Size(641, 256)
         Me.NachrichtDataGridView.TabIndex = 6
         '
@@ -148,6 +154,15 @@ Partial Class Hobby
         Me.DataGridViewTextBoxColumn6.HeaderText = "Empfänger"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
+        'MitarbeiterBindingSource
+        '
+        Me.MitarbeiterBindingSource.DataMember = "Mitarbeiter"
+        Me.MitarbeiterBindingSource.DataSource = Me.DataSet1
+        '
+        'MitarbeiterTableAdapter
+        '
+        Me.MitarbeiterTableAdapter.ClearBeforeFill = True
+        '
         'Hobby
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,10 +170,11 @@ Partial Class Hobby
         Me.Controls.Add(Me.NachrichtDataGridView)
         Me.Controls.Add(Me.Überschrift)
         Me.Name = "Hobby"
-        Me.Size = New System.Drawing.Size(843, 457)
+        Me.Size = New System.Drawing.Size(853, 457)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NachrichtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MitarbeiterBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -175,4 +191,6 @@ Partial Class Hobby
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents MitarbeiterBindingSource As BindingSource
+    Friend WithEvents MitarbeiterTableAdapter As DataSet1TableAdapters.MitarbeiterTableAdapter
 End Class

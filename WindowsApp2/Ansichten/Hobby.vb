@@ -21,17 +21,39 @@
     End Sub
 
     Public Sub Daten_laden()
+        Dim EmpfängerInfo As New AktuellerBenutzer
+        Dim Empfänger As String
+        Dim k As Integer
+        Dim Name As String = ""
+
+        Dim r2() As DataRow
+
+        MitarbeiterTableAdapter.Fill(DataSet1.Mitarbeiter)
+
+        Empfänger = EmpfängerInfo.Benutzer_nennen
+
+        r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
+
+        For k = 0 To r2.GetUpperBound(0)
+            Name = r2(k)(1)
+        Next
+
+
+
+        ' NachrichtDataGridView.DataSource = NachrichtBindingSource.Filter
 
         NachrichtTableAdapter.Fill(DataSet1.Nachricht)
-        NachrichtDataGridView.Update()
 
+        NachrichtBindingSource.Filter = "Empfänger = '" & Name & "'"
 
-        ' Nachrichten je nach Nutzer
+        ''Nachrichten je nach Nutzer
         'Dim r1() As DataRow
 
-
-        'r1 = DataSet1.Nachricht.Select("Kind = '" & str2 & "'")
+        'r1 =
+        'r1 = DataSet1.Nachricht.Select("Empfänger = '" & Name & "'")
         'Me.NachrichtDataGridView.DataSource = r1
+
+        NachrichtDataGridView.Update()
 
     End Sub
 
