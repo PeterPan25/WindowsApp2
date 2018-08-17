@@ -226,6 +226,8 @@ Public Class Form1
         Combotext()
         Me.WindowState = FormWindowState.Maximized
         Me.StartPosition = FormStartPosition.CenterScreen
+
+
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
         ' Me.LogoutButton.Visible = False
@@ -322,6 +324,16 @@ Public Class Form1
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         Nachrichten.Show()
+
+    End Sub
+
+    Private Sub TreeView1_EnabledChanged(sender As Object, e As EventArgs) Handles TreeView1.EnabledChanged
+        Dim tn As TreeNode
+
+        For Each tn In TreeView1.Nodes
+            tn.BackColor = Color.RoyalBlue
+        Next
+
 
     End Sub
 
