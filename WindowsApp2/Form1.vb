@@ -154,7 +154,6 @@ Public Class Form1
                         Psycho1.BringToFront()
 
                     Case 9
-                        Hobby1.Daten_laden()
                         Hobby1.Visible = True
                         Hobby1.BringToFront()
 
@@ -201,7 +200,7 @@ Public Class Form1
 
                     Case 18
 
-                        Übersicht1.Daten()
+                        Übersicht1.Daten_laden()
                         Übersicht1.Visible = True
                         Übersicht1.BringToFront()
 
@@ -237,7 +236,7 @@ Public Class Form1
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
         Me.LogoutButton.Visible = True
-        Übersicht1.Daten()
+        Übersicht1.Daten_laden()
         Übersicht1.Visible = True
         Übersicht1.BringToFront()
     End Sub
