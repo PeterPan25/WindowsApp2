@@ -1,6 +1,9 @@
 ﻿Public Class Übersicht
 
-
+    Private Shared Property Empfänger As String
+    Dim k As Integer
+    Private Shared Property r2 As DataRow()
+    Private Shared Property name As String = ""
 
 
     Private Sub NachrichtDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles NachrichtDataGridView.RowHeaderMouseClick
@@ -22,49 +25,92 @@
         Form5.Nachricht_laden(str, str1, str2, str3)
     End Sub
 
+
+    Private Sub Filtern()
+        Dim EmpfängerInfo As New AktuellerBenutzer
+        'Dim Empfänger As String
+
+        '   Dim Name As String = ""
+
+        '   Dim r2() As DataRow
+
+        '   MitarbeiterTableAdapter.Fill(DataSet1.Mitarbeiter)
+
+        ' Empfänger = EmpfängerInfo.Benutzer_nennen
+
+
+        If Me.RadioButton1.Checked = True Then
+            'r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
+
+            'For k = 0 To r2.GetUpperBound(0)
+            '    Name = r2(k)(1)
+            'Next
+
+            NachrichtTableAdapter.Fill(DataSet1.Nachricht)
+
+            NachrichtBindingSource.Filter = "Empfänger = '" & Name & "' AND Gelesen = '" & 0 & "'"
+            NachrichtDataGridView.Update()
+
+        ElseIf RadioButton2.Checked = True Then
+            'r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
+
+            'For k = 0 To r2.GetUpperBound(0)
+            '    Name = r2(k)(1)
+            'Next
+
+            NachrichtTableAdapter.Fill(DataSet1.Nachricht)
+
+
+            NachrichtBindingSource.Filter = "Empfänger = '" & Name & "'"
+
+
+            NachrichtDataGridView.Update()
+        End If
+
+
+
+    End Sub
+
     Public Sub Daten_laden()
         Dim EmpfängerInfo As New AktuellerBenutzer
-        Dim Empfänger As String
-        Dim k As Integer
-        Dim Name As String = ""
+        'Dim Empfänger As String
+        ' Dim k As Integer
+        ' Dim Name As String = ""
 
-        Dim r2() As DataRow
+        ' Dim r2() As DataRow
 
         MitarbeiterTableAdapter.Fill(DataSet1.Mitarbeiter)
 
         Empfänger = EmpfängerInfo.Benutzer_nennen
         Label1.Text = "Moin " + Empfänger
 
+        Me.RadioButton1.Checked = True
 
         r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
 
-        For k = 0 To r2.GetUpperBound(0)
-            Name = r2(k)(1)
-        Next
+            For k = 0 To r2.GetUpperBound(0)
+                Name = r2(k)(1)
+            Next
 
+            NachrichtTableAdapter.Fill(DataSet1.Nachricht)
 
+            NachrichtBindingSource.Filter = "Empfänger = '" & Name & "' AND Gelesen = '" & 0 & "'"
+            NachrichtDataGridView.Update()
 
-        ' NachrichtDataGridView.DataSource = NachrichtBindingSource.Filter
-
-        NachrichtTableAdapter.Fill(DataSet1.Nachricht)
-
-        NachrichtBindingSource.Filter = "Empfänger = '" & Name & "'"
-
-        ''Nachrichten je nach Nutzer
-        'Dim r1() As DataRow
-
-        'r1 =
-        'r1 = DataSet1.Nachricht.Select("Empfänger = '" & Name & "'")
-        'Me.NachrichtDataGridView.DataSource = r1
-
-        NachrichtDataGridView.Update()
 
     End Sub
+
+
 
     Private Sub MitarbeiterBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.MitarbeiterBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        Filtern()
 
     End Sub
 End Class
