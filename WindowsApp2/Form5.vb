@@ -1,4 +1,7 @@
 ﻿Public Class Form5
+    Dim NachrichtRow1 As DataSet1.NachrichtRow
+
+
     Private Sub NachrichtBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.NachrichtBindingSource.EndEdit()
@@ -14,18 +17,8 @@
 
     Public Sub Nachricht_laden(a As String, b As String, c As String, d As Date)
         Dim NachrichtRow() As DataRow
-        Dim e1 As String
-        Dim e2 As String
-        Dim e3 As String
-        Dim e4 As String
-
-        e1 = "Empfänger  = '" & a & "'"
-        e2 = "Verfasser  = '" & b & "'"
-        e3 = "Betreff  = '" & c & "'"
-        e4 = "Datum  = '" & d & "'"
-
         NachrichtRow = DataSet1.Nachricht.Select("Empfänger  = '" & a & "' AND Verfasser  = '" & b & "' AND Betreff  = '" & c & "' AND Datum  = '" & d & "'")
-        '  NachrichtRow = DataSet1.Nachricht.Select(e1 & e2 & e3 & e4)
+
 
         Dim k As Integer
 
@@ -44,6 +37,8 @@
 
 
         Next k
+        Gelesen_Markieren(a, b, c, d)
+
     End Sub
 
 
@@ -52,4 +47,19 @@
         Me.Close()
 
     End Sub
+
+    Private Sub Gelesen_Markieren(a As String, b As String, c As String, d As Date)
+        Dim NachrichtRow1 As DataSet1.NachrichtRow
+
+
+        Try
+            NachrichtRow1 = DataSet1.Nachricht.FindByBetreffDatumVerfasserEmpfänger(c, d, b, a)
+            NachrichtRow1.Gelesen = 1
+            Me.NachrichtTableAdapter.Update(DataSet1)
+
+        Catch ex As Exception
+            MsgBox("Ne")
+        End Try
+    End Sub
+
 End Class
