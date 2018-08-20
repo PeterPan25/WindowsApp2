@@ -3,7 +3,7 @@
     Private Shared Property Empfänger As String
     Dim k As Integer
     Private Shared Property r2 As DataRow()
-    Private Shared Property name As String = ""
+    Private Shared Property BenutzerName As String = ""
 
 
     Private Sub NachrichtDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles NachrichtDataGridView.RowHeaderMouseClick
@@ -48,7 +48,7 @@
 
             NachrichtTableAdapter.Fill(DataSet1.Nachricht)
 
-            NachrichtBindingSource.Filter = "Empfänger = '" & Name & "' AND Gelesen = '" & 0 & "'"
+            NachrichtBindingSource.Filter = "Empfänger = '" & BenutzerName & "' AND Gelesen = '" & 0 & "'"
             NachrichtDataGridView.Update()
 
         ElseIf RadioButton2.Checked = True Then
@@ -61,7 +61,7 @@
             NachrichtTableAdapter.Fill(DataSet1.Nachricht)
 
 
-            NachrichtBindingSource.Filter = "Empfänger = '" & Name & "'"
+            NachrichtBindingSource.Filter = "Empfänger = '" & BenutzerName & "'"
 
 
             NachrichtDataGridView.Update()
@@ -89,13 +89,13 @@
         r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
 
             For k = 0 To r2.GetUpperBound(0)
-                Name = r2(k)(1)
-            Next
+            BenutzerName = r2(k)(1)
+        Next
 
             NachrichtTableAdapter.Fill(DataSet1.Nachricht)
 
-            NachrichtBindingSource.Filter = "Empfänger = '" & Name & "' AND Gelesen = '" & 0 & "'"
-            NachrichtDataGridView.Update()
+        NachrichtBindingSource.Filter = "Empfänger = '" & BenutzerName & "' AND Gelesen = '" & 0 & "'"
+        NachrichtDataGridView.Update()
 
 
     End Sub
