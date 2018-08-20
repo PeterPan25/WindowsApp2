@@ -21,6 +21,8 @@
     End Sub
 
     Public Sub ElternBericht()
+        Dim Eltern() As String = {"Vater", "Mutter", "Vater + Mutter", "Erziehungsberechtigter"}
+
         Label1.Text = Form1.CB_name.Text
         Label2.Text = "Elternbericht"
         PlatzhalterText2.Visible = False
@@ -32,7 +34,7 @@
         PlatzhalterText5.Visible = False
         PlatzhalterText5.Enabled = False
         ComboBox1.Visible = True
-
+        ComboBox1.DataSource = Eltern
     End Sub
 
 

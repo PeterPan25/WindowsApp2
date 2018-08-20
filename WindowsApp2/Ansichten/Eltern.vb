@@ -1,5 +1,6 @@
 ﻿Public Class Eltern
     Dim ButtonName As New ToolTip
+    Dim KindName As DataSet1.KindRow
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Form1.BerichtAnlegen1.ElternBericht()
@@ -28,8 +29,23 @@
     End Sub
 
     Public Sub EBDaten_laden()
+
+        Me.KindTableAdapter.Fill(DataSet1.Kind)
         Me.ElternBerichtTableAdapter.Fill(Me.DataSet1.ElternBericht)
         Me.ElternBerichtDataGridView.Update()
+
+        Try
+            KindName = DataSet1.Kind.FindByName(Form1.CB_name.Text)
+            Label5.Text = KindName.Vater
+            Label6.Text = KindName.Mutter
+            '  KindName.Erziehungsberechtigter
+
+        Catch ex As Exception
+            MsgBox("Fehler")
+
+        End Try
+
+
     End Sub
 
     Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
