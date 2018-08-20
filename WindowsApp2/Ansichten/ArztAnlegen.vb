@@ -183,13 +183,19 @@
         Dim b As DataRow
         b = Me.DataSet1.KindAugenarzt.NewRow()
 
-        b("A_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindAugenarzt.AddKindAugenarztRow(b)
-        Me.Validate()
+        Try
 
-        '
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            b("A_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindAugenarzt.AddKindAugenarztRow(b)
+            Me.Validate()
+
+            '
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Fehler")
+        End Try
+
         'Reset()
         ResetTextbox()
 
@@ -199,14 +205,19 @@
     Private Sub KKDaten_anlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindKinderarzt.NewRow()
+        Try
+            b("K_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindKinderarzt.AddKindKinderarztRow(b)
+            Me.Validate()
 
-        b("K_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindKinderarzt.AddKindKinderarztRow(b)
-        Me.Validate()
 
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Fehler")
 
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        End Try
+
         'Reset()
         ResetTextbox()
 
@@ -215,13 +226,17 @@
     Private Sub KZDaten_anlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindZahnarzt.NewRow()
+        Try
+            b("Z_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindZahnarzt.AddKindZahnarztRow(b)
+            Me.Validate()
 
-        b("Z_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindZahnarzt.AddKindZahnarztRow(b)
-        Me.Validate()
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Schade")
+        End Try
 
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
         'Reset()
         ResetTextbox()
@@ -231,14 +246,18 @@
     Private Sub KFDaten_anlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindFrauenarzt.NewRow()
+        Try
+            b("F_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindFrauenarzt.AddKindFrauenarztRow(b)
+            Me.Validate()
 
-        b("F_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindFrauenarzt.AddKindFrauenarztRow(b)
-        Me.Validate()
 
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Fehler")
+        End Try
 
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
         'Reset()
         ResetTextbox()
 
@@ -246,14 +265,18 @@
     Private Sub KHDaten_anlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindHautarzt.NewRow()
+        Try
+            b("H_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindHautarzt.AddKindHautarztRow(b)
+            Me.Validate()
 
-        b("H_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindHautarzt.AddKindHautarztRow(b)
-        Me.Validate()
 
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Fehler")
+        End Try
 
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
         'Reset()
         ResetTextbox()
 
@@ -262,13 +285,17 @@
     Private Sub KHNODaten_anlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindHNO.NewRow()
+        Try
+            b("HNO_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindHNO.AddKindHNORow(b)
+            Me.Validate()
 
-        b("HNO_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindHNO.AddKindHNORow(b)
-        Me.Validate()
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Schade")
+        End Try
 
         'Reset()
         ResetTextbox()
@@ -277,13 +304,17 @@
     Private Sub KPsychoAnlegen()
         Dim b As DataRow
         b = Me.DataSet1.KindPsycho.NewRow()
+        Try
+            b("P_Name") = TextBox1.Text
+            b("Name") = Form1.CB_name.Text
+            Me.DataSet1.KindPsycho.AddKindPsychoRow(b)
+            Me.Validate()
 
-        b("P_Name") = TextBox1.Text
-        b("Name") = Form1.CB_name.Text
-        Me.DataSet1.KindPsycho.AddKindPsychoRow(b)
-        Me.Validate()
+            Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
-        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+        Catch ex As Exception
+            MsgBox("Schade")
+        End Try
 
         'Reset()
         ResetTextbox()
