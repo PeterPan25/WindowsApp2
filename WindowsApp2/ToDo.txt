@@ -14,7 +14,7 @@ Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepl�
  kann damit man in der listview einen älteren öffnen kann weil man einen neuen schreiben muss und so einfach ein paar alte sachen gegebenfalls übernommen werden
  Design, Farbe etc. 
  ? einbauen mit msg boxen für Instruktionen
- schule und eltern anlegen (nicht die berichte) überlegen wo 
+''''schule und eltern anlegen (nicht die berichte) überlegen wo 
  ''''--> Eltern anlegen braucht man denke ich nicht, da die ja nunmal für jedes Kind fix sind und nich bei mehreren Kindern zutreffen können 
  ''''imagebox oder so für ein bild des jeweiligen kindes in Stammdaten, neben das panel bei der form 1 combobox
  größe der picturebox anpassen und "Ort" verbessern
