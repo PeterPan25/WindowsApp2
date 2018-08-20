@@ -481,6 +481,7 @@ Partial Class Form1
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Nachricht"
         Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.Visible = False
         '
         'MonthCalendar1
         '

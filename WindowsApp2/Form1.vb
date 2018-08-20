@@ -230,6 +230,8 @@ Public Class Form1
 
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
+
+
         ' Me.LogoutButton.Visible = False
 
     End Sub
@@ -241,6 +243,7 @@ Public Class Form1
         Übersicht1.Daten_laden()
         Übersicht1.Visible = True
         Übersicht1.BringToFront()
+        Me.Button2.Visible = True
     End Sub
 
 

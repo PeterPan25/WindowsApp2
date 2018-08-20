@@ -30,6 +30,11 @@
                 TextBox1.Text = NachrichtRow(k)(0) 'Betreff
                 RichTextBox1.Text = NachrichtRow(k)(2)
 
+                If NachrichtRow(k)(3) = 0 Then
+                    Gelesen_Markieren(a, b, c, d)
+
+                End If
+
 
             Catch ex As Exception
                 MsgBox("nö")
@@ -37,7 +42,9 @@
 
 
         Next k
-        Gelesen_Markieren(a, b, c, d)
+
+
+
 
     End Sub
 
