@@ -27,9 +27,9 @@
             a("Sorgerechtsstatus") = PlatzhalterText8.Text
             a("Krankenversicherung") = PlatzhalterText10.Text
             a("Bild") = Pfad
-
-
-
+            a("Vater") = PlatzhalterText12.Text
+            a("Mutter") = PlatzhalterText13.Text
+            a("Erziehungsberechtigter") = PlatzhalterText14.Text
             Me.DataSet1.Kind.AddKindRow(a)
             Me.KindTableAdapter.Update(DataSet1)
 
@@ -69,6 +69,9 @@
 
         PlatzhalterText10.Clear()
         PlatzhalterText11.Clear()
+        PlatzhalterText12.Clear()
+        PlatzhalterText13.Clear()
+        PlatzhalterText14.Clear()
         DateTimePicker1.ResetText()
         DateTimePicker2.ResetText()
         PlatzhalterText1.PlatzHalterText = PlatzhalterText1.PlatzHalterText
@@ -82,7 +85,9 @@
         PlatzhalterText9.PlatzHalterText = PlatzhalterText9.PlatzHalterText
         PlatzhalterText10.PlatzHalterText = PlatzhalterText10.PlatzHalterText
         PlatzhalterText11.PlatzHalterText = PlatzhalterText11.PlatzHalterText
-
+        PlatzhalterText12.PlatzHalterText = PlatzhalterText12.PlatzHalterText
+        PlatzhalterText13.PlatzHalterText = PlatzhalterText13.PlatzHalterText
+        PlatzhalterText14.PlatzHalterText = PlatzhalterText14.PlatzHalterText
         PictureBox1.Image = Nothing
         Pfad = ""
 

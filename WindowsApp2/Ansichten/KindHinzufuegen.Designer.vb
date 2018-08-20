@@ -45,6 +45,9 @@ Partial Class KindHinzufuegen
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BildWahlButton = New System.Windows.Forms.Button()
+        Me.PlatzhalterText12 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText13 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText14 = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -277,6 +280,7 @@ Partial Class KindHinzufuegen
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
@@ -302,11 +306,47 @@ Partial Class KindHinzufuegen
         Me.BildWahlButton.Text = "Bild auswählen"
         Me.BildWahlButton.UseVisualStyleBackColor = True
         '
+        'PlatzhalterText12
+        '
+        Me.PlatzhalterText12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText12.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText12.Location = New System.Drawing.Point(269, 419)
+        Me.PlatzhalterText12.Name = "PlatzhalterText12"
+        Me.PlatzhalterText12.PlatzHalterText = "Vater"
+        Me.PlatzhalterText12.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText12.TabIndex = 18
+        Me.PlatzhalterText12.Text = "Vater"
+        '
+        'PlatzhalterText13
+        '
+        Me.PlatzhalterText13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText13.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText13.Location = New System.Drawing.Point(269, 459)
+        Me.PlatzhalterText13.Name = "PlatzhalterText13"
+        Me.PlatzhalterText13.PlatzHalterText = "Mutter"
+        Me.PlatzhalterText13.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText13.TabIndex = 19
+        Me.PlatzhalterText13.Text = "Mutter"
+        '
+        'PlatzhalterText14
+        '
+        Me.PlatzhalterText14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText14.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText14.Location = New System.Drawing.Point(269, 494)
+        Me.PlatzhalterText14.Name = "PlatzhalterText14"
+        Me.PlatzhalterText14.PlatzHalterText = "Erziehungsberechtigte /-r"
+        Me.PlatzhalterText14.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText14.TabIndex = 20
+        Me.PlatzhalterText14.Text = "Erziehungsberechtigte /-r"
+        '
         'KindHinzufuegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Controls.Add(Me.PlatzhalterText14)
+        Me.Controls.Add(Me.PlatzhalterText13)
+        Me.Controls.Add(Me.PlatzhalterText12)
         Me.Controls.Add(Me.BildWahlButton)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
@@ -357,4 +397,7 @@ Partial Class KindHinzufuegen
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BildWahlButton As Button
+    Friend WithEvents PlatzhalterText12 As PlatzhalterText
+    Friend WithEvents PlatzhalterText13 As PlatzhalterText
+    Friend WithEvents PlatzhalterText14 As PlatzhalterText
 End Class
