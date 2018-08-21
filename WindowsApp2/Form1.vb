@@ -4,10 +4,9 @@
 Public Class Form1
     Dim form As Form
 
-    Dim data3 As New DataSet1.KindDataTable
     Dim name3 As String() = {"a"}
     Dim z As Integer
-
+    Public Shared Property NameKind As String
     Dim i As Integer
 
     Dim name2 As String() = {"Eltern",
@@ -250,15 +249,25 @@ Public Class Form1
     Public Sub Combotext()
         Me.KindTableAdapter.Fill(Me.DataSet11.Kind)
 
-        Me.TableAdapterManager.KindTableAdapter.Fill(data3)
 
-        ReDim name3(data3.Rows.Count - 1)
 
-        For z = 0 To (data3.Rows.Count - 1)
-            name3(z) = data3.Rows(z)("Name")
+        ReDim name3(DataSet11.Kind.Rows.Count - 1)
+
+
+        For z = 0 To (DataSet11.Kind.Rows.Count - 1)
+            name3(z) = DataSet11.Kind.Rows(z)("Name")
         Next
 
-        CB_name.DataSource = name3
+
+
+        If name3.Count > 0 Then
+            NameKind = name3.ElementAt(0)
+
+            CB_name.DataSource = name3
+            '  NameKind = name3(0)
+        End If
+
+
         KinderDaten()
     End Sub
 
@@ -267,8 +276,17 @@ Public Class Form1
     Private Sub CB_name_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CB_name.SelectedIndexChanged
         Bericht1.BerichtKind()
         KindBearbeiten1.DatenAnzeigen()
-        KinderDaten()
+
         Stammdaten1.Daten_Anzeigen()
+        Schule1.SBDaten_laden()
+
+
+
+        KinderDaten()
+
+
+        Arztbericht1.KindWechsel()
+
     End Sub
 
     Private Sub SplitContainer3_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel1.Paint
@@ -276,19 +294,19 @@ Public Class Form1
     End Sub
 
     Private Sub KinderDaten()
-        Dim Kind As String = CB_name.Text
+        Dim Kind As String = NameKind
         Dim Pfad As String
 
         Try
 
 
-            For z = 0 To (data3.Rows.Count - 1)
-                If Kind = data3.Rows(z)("Name") Then
-                    Label1.Text = data3.Rows(z)("Geburtsdatum")
-                    Label2.Text = data3.Rows(z)("Sorgerechtsstatus")
-                    Label4.Text = data3.Rows(z)("Jugendamt")
-                    Label5.Text = data3.Rows(z)("Aufnahmedatum")
-                    Pfad = data3.Rows(z)("Bild")
+            For z = 0 To (DataSet11.Kind.Rows.Count - 1)
+                If Kind = DataSet11.Kind.Rows(z)("Name") Then
+                    Label1.Text = DataSet11.Kind.Rows(z)("Geburtsdatum")
+                    Label2.Text = DataSet11.Kind.Rows(z)("Sorgerechtsstatus")
+                    Label4.Text = DataSet11.Kind.Rows(z)("Jugendamt")
+                    Label5.Text = DataSet11.Kind.Rows(z)("Aufnahmedatum")
+                    Pfad = DataSet11.Kind.Rows(z)("Bild")
 
                     If Pfad IsNot "" Then
                         PictureBox1.ImageLocation = Pfad
@@ -336,6 +354,26 @@ Public Class Form1
         For Each tn In TreeView1.Nodes
             tn.BackColor = Color.RoyalBlue
         Next
+
+
+    End Sub
+
+
+
+    Public Function NameKindNennen()
+        Return NameKind
+    End Function
+
+    Private Sub CB_name_TextChanged(sender As Object, e As EventArgs) Handles CB_name.TextChanged
+
+        If CB_name.Text IsNot "" Then
+            NameKind = CB_name.Text
+            Eltern1.EBDaten_laden()
+        End If
+
+
+
+
 
 
     End Sub

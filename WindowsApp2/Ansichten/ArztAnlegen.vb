@@ -192,6 +192,8 @@
 
             '
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            MsgBox("Erfolgreich zugewiesen")
+
         Catch ex As Exception
             MsgBox("Fehler")
         End Try
@@ -213,6 +215,7 @@
 
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            MsgBox("Erfolgreich zugewiesen")
         Catch ex As Exception
             MsgBox("Fehler")
 
@@ -233,6 +236,7 @@
             Me.Validate()
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            MsgBox("Erfolgreich zugewiesen")
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -254,6 +258,7 @@
 
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            MsgBox("Erfolgreich zugewiesen")
         Catch ex As Exception
             MsgBox("Fehler")
         End Try
@@ -273,6 +278,7 @@
 
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
+            MsgBox("Erfolgreich zugewiesen")
         Catch ex As Exception
             MsgBox("Fehler")
         End Try
@@ -292,7 +298,7 @@
             Me.Validate()
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-
+            MsgBox("Erfolgreich zugewiesen")
         Catch ex As Exception
             MsgBox("Schade")
         End Try
@@ -311,7 +317,7 @@
             Me.Validate()
 
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)
-
+            MsgBox("Erfolgreich zugewiesen")
         Catch ex As Exception
             MsgBox("Schade")
         End Try

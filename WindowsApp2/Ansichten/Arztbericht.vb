@@ -66,6 +66,20 @@
 
     End Sub
 
+    Public Sub KindWechsel()
+        DateTimePicker1.Value = Date.Now
+        RichTextBox1.ResetText()
+        Label1.Text = Form1.CB_name.Text
+        TextBox1.ResetText()
+        TextBox2.ResetText()
+        TextBox3.ResetText()
+        TextBox4.ResetText()
+        ArztArtComboBox.ResetText()
+        ArztNameCombobox.ResetText()
+
+
+    End Sub
+
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ArztArtComboBox.SelectedIndexChanged
         ArztArt()
 
@@ -76,7 +90,7 @@
 
     End Sub
     ' Je nach Auswahl bei welcher Art Arzt das Kind war, kann man folgend die Praxis/den Arzt in der nächsten Box auswählen
-    Private Sub ArztArt()
+    Public Sub ArztArt()
         Dim ArtText As String = ArztArtComboBox.Text
         Dim name As String = Form1.CB_name.Text
 

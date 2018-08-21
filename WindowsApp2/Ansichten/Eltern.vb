@@ -29,13 +29,16 @@
     End Sub
 
     Public Sub EBDaten_laden()
+        Dim KindName1 As String
 
+        KindName1 = Form1.NameKindNennen
         Me.KindTableAdapter.Fill(DataSet1.Kind)
         Me.ElternBerichtTableAdapter.Fill(Me.DataSet1.ElternBericht)
+        Me.ElternBerichtBindingSource.Filter = "Kind = '" & KindName1 & "'"
         Me.ElternBerichtDataGridView.Update()
 
         Try
-            KindName = DataSet1.Kind.FindByName(Form1.CB_name.Text)
+            KindName = DataSet1.Kind.FindByName(KindName1)
             Label5.Text = KindName.Vater
             Label6.Text = KindName.Mutter
             '  KindName.Erziehungsberechtigter

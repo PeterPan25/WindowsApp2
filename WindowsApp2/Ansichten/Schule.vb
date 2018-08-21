@@ -41,6 +41,7 @@
 
     Public Sub SBDaten_laden()
         Me.SchulBerichtTableAdapter.Fill(DataSet1.SchulBericht)
+        Me.SchulBerichtBindingSource.Filter = "Kind = '" & Form1.CB_name.Text & "'"
         Me.SchulBerichtDataGridView.Update()
     End Sub
 
