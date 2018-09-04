@@ -23,6 +23,7 @@ Partial Class ArztUebersicht
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -57,6 +58,11 @@ Partial Class ArztUebersicht
         Me.KindKinderarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ZahnarztBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.ANameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.HNameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.OrtDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AugenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrauenarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +76,8 @@ Partial Class ArztUebersicht
         CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ZahnarztBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -168,6 +176,7 @@ Partial Class ArztUebersicht
         Me.TableAdapterManager.AugenarztTableAdapter = Me.AugenarztTableAdapter
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Me.FrauenarztTableAdapter
         Me.TableAdapterManager.HautarztTableAdapter = Me.HautarztTableAdapter
         Me.TableAdapterManager.HilfenTableAdapter = Nothing
@@ -190,8 +199,11 @@ Partial Class ArztUebersicht
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.SchulHistorieTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Me.ZahnarztTableAdapter
@@ -295,10 +307,59 @@ Partial Class ArztUebersicht
         Me.ZahnarztBindingSource.DataMember = "Zahnarzt"
         Me.ZahnarztBindingSource.DataSource = Me.DataSet1
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ANameDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.AugenarztBindingSource
+        Me.DataGridView1.Location = New System.Drawing.Point(246, 190)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(142, 150)
+        Me.DataGridView1.TabIndex = 8
+        '
+        'ANameDataGridViewTextBoxColumn
+        '
+        Me.ANameDataGridViewTextBoxColumn.DataPropertyName = "A_Name"
+        Me.ANameDataGridViewTextBoxColumn.HeaderText = "A_Name"
+        Me.ANameDataGridViewTextBoxColumn.Name = "ANameDataGridViewTextBoxColumn"
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AutoGenerateColumns = False
+        Me.DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.HNameDataGridViewTextBoxColumn, Me.OrtDataGridViewTextBoxColumn})
+        Me.DataGridView2.DataSource = Me.HautarztBindingSource
+        Me.DataGridView2.Location = New System.Drawing.Point(385, 190)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.Size = New System.Drawing.Size(201, 150)
+        Me.DataGridView2.TabIndex = 9
+        '
+        'HNameDataGridViewTextBoxColumn
+        '
+        Me.HNameDataGridViewTextBoxColumn.DataPropertyName = "H_Name"
+        Me.HNameDataGridViewTextBoxColumn.HeaderText = "H_Name"
+        Me.HNameDataGridViewTextBoxColumn.Name = "HNameDataGridViewTextBoxColumn"
+        '
+        'OrtDataGridViewTextBoxColumn
+        '
+        Me.OrtDataGridViewTextBoxColumn.DataPropertyName = "Ort"
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Symbol", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red
+        Me.OrtDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.OrtDataGridViewTextBoxColumn.HeaderText = "Ort"
+        Me.OrtDataGridViewTextBoxColumn.Name = "OrtDataGridViewTextBoxColumn"
+        '
         'ArztUebersicht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -322,6 +383,8 @@ Partial Class ArztUebersicht
         CType(Me.KindKinderarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ZahnarztBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -361,4 +424,9 @@ Partial Class ArztUebersicht
     Friend WithEvents KindKinderarztBindingSource As BindingSource
     Friend WithEvents KindZahnarztBindingSource As BindingSource
     Friend WithEvents ZahnarztBindingSource As BindingSource
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents ANameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents HNameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents OrtDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

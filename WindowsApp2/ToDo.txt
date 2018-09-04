@@ -35,3 +35,5 @@ Schriftgröße Überschriften	= 22
 			 Platzhalter	= 12
 			 
 Tooltip(Info wenn Zeiger über der Fläche) Beispiel in Eltern.vb
+
+schule in dataset nochmal komplett neu bearbeiten

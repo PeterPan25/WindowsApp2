@@ -42,6 +42,10 @@ Partial Class Schule
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.KindSchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindSchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindSchuleTableAdapter()
+        Me.SchulHistorieBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SchulHistorieTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulHistorieTableAdapter()
         CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchulBerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,6 +58,8 @@ Partial Class Schule
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
+        CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchulHistorieBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SchuleBindingSource
@@ -114,9 +120,11 @@ Partial Class Schule
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Me.SchulBerichtTableAdapter
         Me.TableAdapterManager.SchuleTableAdapter = Me.SchuleTableAdapter
+        Me.TableAdapterManager.SchulHistorieTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
@@ -214,6 +222,7 @@ Partial Class Schule
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.AutoScroll = True
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         '
         'SplitContainer1.Panel2
@@ -253,6 +262,24 @@ Partial Class Schule
         Me.SplitContainer2.SplitterDistance = 164
         Me.SplitContainer2.TabIndex = 3
         '
+        'KindSchuleBindingSource
+        '
+        Me.KindSchuleBindingSource.DataMember = "KindSchule"
+        Me.KindSchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'KindSchuleTableAdapter
+        '
+        Me.KindSchuleTableAdapter.ClearBeforeFill = True
+        '
+        'SchulHistorieBindingSource
+        '
+        Me.SchulHistorieBindingSource.DataMember = "SchulHistorie"
+        Me.SchulHistorieBindingSource.DataSource = Me.DataSet1
+        '
+        'SchulHistorieTableAdapter
+        '
+        Me.SchulHistorieTableAdapter.ClearBeforeFill = True
+        '
         'Schule
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -276,6 +303,8 @@ Partial Class Schule
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
+        CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchulHistorieBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -296,4 +325,8 @@ Partial Class Schule
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents SplitContainer2 As SplitContainer
     Friend WithEvents Label1 As Label
+    Friend WithEvents KindSchuleBindingSource As BindingSource
+    Friend WithEvents KindSchuleTableAdapter As DataSet1TableAdapters.KindSchuleTableAdapter
+    Friend WithEvents SchulHistorieBindingSource As BindingSource
+    Friend WithEvents SchulHistorieTableAdapter As DataSet1TableAdapters.SchulHistorieTableAdapter
 End Class
