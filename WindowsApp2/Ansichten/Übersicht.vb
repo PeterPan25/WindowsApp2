@@ -44,11 +44,20 @@
 
             'For k = 0 To r2.GetUpperBound(0)
             '    Name = r2(k)(1)
-            'Next
+            'Next 
+
 
             NachrichtTableAdapter.Fill(DataSet1.Nachricht)
 
             NachrichtBindingSource.Filter = "Empfänger = '" & BenutzerName & "' AND Gelesen = '" & 0 & "'"
+            If NachrichtBindingSource.Count > 0 Then
+
+                NotifyIcon1.Icon = SystemIcons.Exclamation
+
+                NotifyIcon1.BalloonTipText = "Sie haben ungelesene Nachrichten!"
+                NotifyIcon1.ShowBalloonTip(3)
+
+            End If
             NachrichtDataGridView.Update()
 
         ElseIf RadioButton2.Checked = True Then

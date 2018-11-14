@@ -40,6 +40,7 @@ Partial Class Übersicht
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MitarbeiterBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,8 +101,8 @@ Partial Class Übersicht
         Me.TableAdapterManager.NachrichtTableAdapter = Me.NachrichtTableAdapter
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
-
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
@@ -193,6 +194,12 @@ Partial Class Übersicht
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipTitle = "Nachricht!"
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
         'Übersicht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -229,4 +236,5 @@ Partial Class Übersicht
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents ToolStrip1 As ToolStrip
+    Friend WithEvents NotifyIcon1 As NotifyIcon
 End Class
