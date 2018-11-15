@@ -4673,8 +4673,6 @@ Partial Public Class DataSet1
         
         Private columnBenutzername As Global.System.Data.DataColumn
         
-        Private columnName As Global.System.Data.DataColumn
-        
         Private columnPasswort As Global.System.Data.DataColumn
         
         Private columnGeburtsdatum As Global.System.Data.DataColumn
@@ -4688,6 +4686,10 @@ Partial Public Class DataSet1
         Private columnProjekt As Global.System.Data.DataColumn
         
         Private columnFortbildung As Global.System.Data.DataColumn
+        
+        Private columnNachname As Global.System.Data.DataColumn
+        
+        Private columnVorname As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -4729,14 +4731,6 @@ Partial Public Class DataSet1
         Public ReadOnly Property BenutzernameColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnBenutzername
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property NameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnName
             End Get
         End Property
         
@@ -4797,6 +4791,22 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property NachnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNachname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property VornameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnVorname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -4833,9 +4843,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddMitarbeiterRow(ByVal Benutzername As String, ByVal Name As String, ByVal Passwort As String, ByVal Geburtsdatum As Date, ByVal Z_Schule As String, ByVal Z_Psycho As String, ByVal Zusatzqualifikation As String, ByVal Projekt As String, ByVal Fortbildung As String) As MitarbeiterRow
+        Public Overloads Function AddMitarbeiterRow(ByVal Benutzername As String, ByVal Passwort As String, ByVal Geburtsdatum As Date, ByVal Z_Schule As String, ByVal Z_Psycho As String, ByVal Zusatzqualifikation As String, ByVal Projekt As String, ByVal Fortbildung As String, ByVal Nachname As String, ByVal Vorname As String) As MitarbeiterRow
             Dim rowMitarbeiterRow As MitarbeiterRow = CType(Me.NewRow,MitarbeiterRow)
-            Dim columnValuesArray() As Object = New Object() {Benutzername, Name, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt, Fortbildung}
+            Dim columnValuesArray() As Object = New Object() {Benutzername, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt, Fortbildung, Nachname, Vorname}
             rowMitarbeiterRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowMitarbeiterRow)
             Return rowMitarbeiterRow
@@ -4843,8 +4853,8 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function FindByName(ByVal Name As String) As MitarbeiterRow
-            Return CType(Me.Rows.Find(New Object() {Name}),MitarbeiterRow)
+        Public Function FindByNachnameVorname(ByVal Nachname As String, ByVal Vorname As String) As MitarbeiterRow
+            Return CType(Me.Rows.Find(New Object() {Nachname, Vorname}),MitarbeiterRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4865,7 +4875,6 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnBenutzername = MyBase.Columns("Benutzername")
-            Me.columnName = MyBase.Columns("Name")
             Me.columnPasswort = MyBase.Columns("Passwort")
             Me.columnGeburtsdatum = MyBase.Columns("Geburtsdatum")
             Me.columnZ_Schule = MyBase.Columns("Z_Schule")
@@ -4873,6 +4882,8 @@ Partial Public Class DataSet1
             Me.columnZusatzqualifikation = MyBase.Columns("Zusatzqualifikation")
             Me.columnProjekt = MyBase.Columns("Projekt")
             Me.columnFortbildung = MyBase.Columns("Fortbildung")
+            Me.columnNachname = MyBase.Columns("Nachname")
+            Me.columnVorname = MyBase.Columns("Vorname")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4880,8 +4891,6 @@ Partial Public Class DataSet1
         Private Sub InitClass()
             Me.columnBenutzername = New Global.System.Data.DataColumn("Benutzername", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnBenutzername)
-            Me.columnName = New Global.System.Data.DataColumn("Name", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnName)
             Me.columnPasswort = New Global.System.Data.DataColumn("Passwort", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPasswort)
             Me.columnGeburtsdatum = New Global.System.Data.DataColumn("Geburtsdatum", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
@@ -4896,17 +4905,22 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnProjekt)
             Me.columnFortbildung = New Global.System.Data.DataColumn("Fortbildung", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnFortbildung)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnName}, true))
+            Me.columnNachname = New Global.System.Data.DataColumn("Nachname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNachname)
+            Me.columnVorname = New Global.System.Data.DataColumn("Vorname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnVorname)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnNachname, Me.columnVorname}, true))
             Me.columnBenutzername.MaxLength = 50
-            Me.columnName.AllowDBNull = false
-            Me.columnName.Unique = true
-            Me.columnName.MaxLength = 50
             Me.columnPasswort.MaxLength = 50
             Me.columnZ_Schule.MaxLength = 50
             Me.columnZ_Psycho.MaxLength = 50
             Me.columnZusatzqualifikation.MaxLength = 50
             Me.columnProjekt.MaxLength = 50
             Me.columnFortbildung.MaxLength = 50
+            Me.columnNachname.AllowDBNull = false
+            Me.columnNachname.MaxLength = 50
+            Me.columnVorname.AllowDBNull = false
+            Me.columnVorname.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -13827,17 +13841,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Name() As String
-            Get
-                Return CType(Me(Me.tableMitarbeiter.NameColumn),String)
-            End Get
-            Set
-                Me(Me.tableMitarbeiter.NameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Passwort() As String
             Get
                 Try 
@@ -13938,6 +13941,28 @@ Partial Public Class DataSet1
             End Get
             Set
                 Me(Me.tableMitarbeiter.FortbildungColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Nachname() As String
+            Get
+                Return CType(Me(Me.tableMitarbeiter.NachnameColumn),String)
+            End Get
+            Set
+                Me(Me.tableMitarbeiter.NachnameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Vorname() As String
+            Get
+                Return CType(Me(Me.tableMitarbeiter.VornameColumn),String)
+            End Get
+            Set
+                Me(Me.tableMitarbeiter.VornameColumn) = value
             End Set
         End Property
         
@@ -22484,7 +22509,6 @@ Namespace DataSet1TableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Mitarbeiter"
             tableMapping.ColumnMappings.Add("Benutzername", "Benutzername")
-            tableMapping.ColumnMappings.Add("Name", "Name")
             tableMapping.ColumnMappings.Add("Passwort", "Passwort")
             tableMapping.ColumnMappings.Add("Geburtsdatum", "Geburtsdatum")
             tableMapping.ColumnMappings.Add("Z_Schule", "Z_Schule")
@@ -22492,24 +22516,26 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("Zusatzqualifikation", "Zusatzqualifikation")
             tableMapping.ColumnMappings.Add("Projekt", "Projekt")
             tableMapping.ColumnMappings.Add("Fortbildung", "Fortbildung")
+            tableMapping.ColumnMappings.Add("Nachname", "Nachname")
+            tableMapping.ColumnMappings.Add("Vorname", "Vorname")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Mitarbeiter] WHERE (((@IsNull_Benutzername = 1 AND [Benutzerna"& _ 
-                "me] IS NULL) OR ([Benutzername] = @Original_Benutzername)) AND ([Name] = @Origin"& _ 
-                "al_Name) AND ((@IsNull_Passwort = 1 AND [Passwort] IS NULL) OR ([Passwort] = @Or"& _ 
-                "iginal_Passwort)) AND ((@IsNull_Geburtsdatum = 1 AND [Geburtsdatum] IS NULL) OR "& _ 
-                "([Geburtsdatum] = @Original_Geburtsdatum)) AND ((@IsNull_Z_Schule = 1 AND [Z_Sch"& _ 
-                "ule] IS NULL) OR ([Z_Schule] = @Original_Z_Schule)) AND ((@IsNull_Z_Psycho = 1 A"& _ 
-                "ND [Z_Psycho] IS NULL) OR ([Z_Psycho] = @Original_Z_Psycho)) AND ((@IsNull_Zusat"& _ 
-                "zqualifikation = 1 AND [Zusatzqualifikation] IS NULL) OR ([Zusatzqualifikation] "& _ 
-                "= @Original_Zusatzqualifikation)) AND ((@IsNull_Projekt = 1 AND [Projekt] IS NUL"& _ 
-                "L) OR ([Projekt] = @Original_Projekt)) AND ((@IsNull_Fortbildung = 1 AND [Fortbi"& _ 
-                "ldung] IS NULL) OR ([Fortbildung] = @Original_Fortbildung)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Mitarbeiter] WHERE (((@IsNull_Benutzername = 1 AND [Benutzername] IS"& _ 
+                " NULL) OR ([Benutzername] = @Original_Benutzername)) AND ((@IsNull_Passwort = 1 "& _ 
+                "AND [Passwort] IS NULL) OR ([Passwort] = @Original_Passwort)) AND ((@IsNull_Gebu"& _ 
+                "rtsdatum = 1 AND [Geburtsdatum] IS NULL) OR ([Geburtsdatum] = @Original_Geburtsd"& _ 
+                "atum)) AND ((@IsNull_Z_Schule = 1 AND [Z_Schule] IS NULL) OR ([Z_Schule] = @Orig"& _ 
+                "inal_Z_Schule)) AND ((@IsNull_Z_Psycho = 1 AND [Z_Psycho] IS NULL) OR ([Z_Psycho"& _ 
+                "] = @Original_Z_Psycho)) AND ((@IsNull_Zusatzqualifikation = 1 AND [Zusatzqualif"& _ 
+                "ikation] IS NULL) OR ([Zusatzqualifikation] = @Original_Zusatzqualifikation)) AN"& _ 
+                "D ((@IsNull_Projekt = 1 AND [Projekt] IS NULL) OR ([Projekt] = @Original_Projekt"& _ 
+                ")) AND ((@IsNull_Fortbildung = 1 AND [Fortbildung] IS NULL) OR ([Fortbildung] = "& _ 
+                "@Original_Fortbildung)) AND ([Nachname] = @Original_Nachname) AND ([Vorname] = @"& _ 
+                "Original_Vorname))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Benutzername", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Benutzername", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Benutzername", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Benutzername", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Passwort", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Passwort", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Passwort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Passwort", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Geburtsdatum", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -22524,17 +22550,19 @@ Namespace DataSet1TableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Projekt", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Projekt", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fortbildung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fortbildung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fortbildung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fortbildung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nachname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nachname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Vorname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Vorname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Mitarbeiter] ([Benutzername], [Name], [Passwort], [Geburtsdatu"& _ 
-                "m], [Z_Schule], [Z_Psycho], [Zusatzqualifikation], [Projekt], [Fortbildung]) VAL"& _ 
-                "UES (@Benutzername, @Name, @Passwort, @Geburtsdatum, @Z_Schule, @Z_Psycho, @Zusa"& _ 
-                "tzqualifikation, @Projekt, @Fortbildung);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Benutzername, Name, Passwort, "& _ 
-                "Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt, Fortbildung FROM"& _ 
-                " Mitarbeiter WHERE (Name = @Name)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Mitarbeiter] ([Benutzername], [Passwort], [Geburtsdatum], [Z_Schule]"& _ 
+                ", [Z_Psycho], [Zusatzqualifikation], [Projekt], [Fortbildung], [Nachname], [Vorn"& _ 
+                "ame]) VALUES (@Benutzername, @Passwort, @Geburtsdatum, @Z_Schule, @Z_Psycho, @Zu"& _ 
+                "satzqualifikation, @Projekt, @Fortbildung, @Nachname, @Vorname);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Benutze"& _ 
+                "rname, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt,"& _ 
+                " Fortbildung, Nachname, Vorname FROM Mitarbeiter WHERE (Nachname = @Nachname) AN"& _ 
+                "D (Vorname = @Vorname)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Benutzername", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Benutzername", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Passwort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Passwort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Geburtsdatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Z_Schule", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Z_Schule", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -22542,27 +22570,30 @@ Namespace DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Zusatzqualifikation", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Zusatzqualifikation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Projekt", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Projekt", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fortbildung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fortbildung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nachname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nachname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Vorname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Vorname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Mitarbeiter] SET [Benutzername] = @Benutzername, [Name] = @Name, [P"& _ 
-                "asswort] = @Passwort, [Geburtsdatum] = @Geburtsdatum, [Z_Schule] = @Z_Schule, [Z"& _ 
-                "_Psycho] = @Z_Psycho, [Zusatzqualifikation] = @Zusatzqualifikation, [Projekt] = "& _ 
-                "@Projekt, [Fortbildung] = @Fortbildung WHERE (((@IsNull_Benutzername = 1 AND [Be"& _ 
-                "nutzername] IS NULL) OR ([Benutzername] = @Original_Benutzername)) AND ([Name] ="& _ 
-                " @Original_Name) AND ((@IsNull_Passwort = 1 AND [Passwort] IS NULL) OR ([Passwor"& _ 
-                "t] = @Original_Passwort)) AND ((@IsNull_Geburtsdatum = 1 AND [Geburtsdatum] IS N"& _ 
-                "ULL) OR ([Geburtsdatum] = @Original_Geburtsdatum)) AND ((@IsNull_Z_Schule = 1 AN"& _ 
-                "D [Z_Schule] IS NULL) OR ([Z_Schule] = @Original_Z_Schule)) AND ((@IsNull_Z_Psyc"& _ 
-                "ho = 1 AND [Z_Psycho] IS NULL) OR ([Z_Psycho] = @Original_Z_Psycho)) AND ((@IsNu"& _ 
-                "ll_Zusatzqualifikation = 1 AND [Zusatzqualifikation] IS NULL) OR ([Zusatzqualifi"& _ 
-                "kation] = @Original_Zusatzqualifikation)) AND ((@IsNull_Projekt = 1 AND [Projekt"& _ 
-                "] IS NULL) OR ([Projekt] = @Original_Projekt)) AND ((@IsNull_Fortbildung = 1 AND"& _ 
-                " [Fortbildung] IS NULL) OR ([Fortbildung] = @Original_Fortbildung)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Be"& _ 
-                "nutzername, Name, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikatio"& _ 
-                "n, Projekt, Fortbildung FROM Mitarbeiter WHERE (Name = @Name)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Mitarbeiter] SET [Benutzername] = @Benutzername, [Passwort] = @Passwort, "& _ 
+                "[Geburtsdatum] = @Geburtsdatum, [Z_Schule] = @Z_Schule, [Z_Psycho] = @Z_Psycho, "& _ 
+                "[Zusatzqualifikation] = @Zusatzqualifikation, [Projekt] = @Projekt, [Fortbildung"& _ 
+                "] = @Fortbildung, [Nachname] = @Nachname, [Vorname] = @Vorname WHERE (((@IsNull_"& _ 
+                "Benutzername = 1 AND [Benutzername] IS NULL) OR ([Benutzername] = @Original_Benu"& _ 
+                "tzername)) AND ((@IsNull_Passwort = 1 AND [Passwort] IS NULL) OR ([Passwort] = @"& _ 
+                "Original_Passwort)) AND ((@IsNull_Geburtsdatum = 1 AND [Geburtsdatum] IS NULL) O"& _ 
+                "R ([Geburtsdatum] = @Original_Geburtsdatum)) AND ((@IsNull_Z_Schule = 1 AND [Z_S"& _ 
+                "chule] IS NULL) OR ([Z_Schule] = @Original_Z_Schule)) AND ((@IsNull_Z_Psycho = 1"& _ 
+                " AND [Z_Psycho] IS NULL) OR ([Z_Psycho] = @Original_Z_Psycho)) AND ((@IsNull_Zus"& _ 
+                "atzqualifikation = 1 AND [Zusatzqualifikation] IS NULL) OR ([Zusatzqualifikation"& _ 
+                "] = @Original_Zusatzqualifikation)) AND ((@IsNull_Projekt = 1 AND [Projekt] IS N"& _ 
+                "ULL) OR ([Projekt] = @Original_Projekt)) AND ((@IsNull_Fortbildung = 1 AND [Fort"& _ 
+                "bildung] IS NULL) OR ([Fortbildung] = @Original_Fortbildung)) AND ([Nachname] = "& _ 
+                "@Original_Nachname) AND ([Vorname] = @Original_Vorname));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Benutzername, "& _ 
+                "Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt, Fortbi"& _ 
+                "ldung, Nachname, Vorname FROM Mitarbeiter WHERE (Nachname = @Nachname) AND (Vorn"& _ 
+                "ame = @Vorname)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Benutzername", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Benutzername", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Passwort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Passwort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Geburtsdatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Z_Schule", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Z_Schule", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -22570,9 +22601,10 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Zusatzqualifikation", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Zusatzqualifikation", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Projekt", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Projekt", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Fortbildung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fortbildung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nachname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nachname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Vorname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Vorname", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Benutzername", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Benutzername", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Benutzername", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Benutzername", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Passwort", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Passwort", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Passwort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Passwort", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Geburtsdatum", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -22587,6 +22619,8 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Projekt", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Projekt", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Fortbildung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fortbildung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Fortbildung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Fortbildung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nachname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nachname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Vorname", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Vorname", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -22602,8 +22636,8 @@ Namespace DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Benutzername, Name, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqual"& _ 
-                "ifikation, Projekt, Fortbildung FROM dbo.Mitarbeiter"
+            Me._commandCollection(0).CommandText = "SELECT Benutzername, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikat"& _ 
+                "ion, Projekt, Fortbildung, Nachname, Vorname FROM Mitarbeiter"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -22663,7 +22697,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Benutzername As String, ByVal Original_Name As String, ByVal Original_Passwort As String, ByVal Original_Geburtsdatum As Global.System.Nullable(Of Date), ByVal Original_Z_Schule As String, ByVal Original_Z_Psycho As String, ByVal Original_Zusatzqualifikation As String, ByVal Original_Projekt As String, ByVal Original_Fortbildung As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Benutzername As String, ByVal Original_Passwort As String, ByVal Original_Geburtsdatum As Global.System.Nullable(Of Date), ByVal Original_Z_Schule As String, ByVal Original_Z_Psycho As String, ByVal Original_Zusatzqualifikation As String, ByVal Original_Projekt As String, ByVal Original_Fortbildung As String, ByVal Original_Nachname As String, ByVal Original_Vorname As String) As Integer
             If (Original_Benutzername Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(1).Value = Global.System.DBNull.Value
@@ -22671,59 +22705,64 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_Benutzername,String)
             End If
-            If (Original_Name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Name")
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Name,String)
-            End If
             If (Original_Passwort Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Passwort,String)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Passwort,String)
             End If
             If (Original_Geburtsdatum.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Geburtsdatum.Value,Date)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Geburtsdatum.Value,Date)
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
             If (Original_Z_Schule Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(Original_Z_Schule,String)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Z_Schule,String)
             End If
             If (Original_Z_Psycho Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Z_Psycho,String)
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Z_Psycho,String)
             End If
             If (Original_Zusatzqualifikation Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Zusatzqualifikation,String)
+                Me.Adapter.DeleteCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(11).Value = CType(Original_Zusatzqualifikation,String)
             End If
             If (Original_Projekt Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Projekt,String)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(13).Value = CType(Original_Projekt,String)
             End If
             If (Original_Fortbildung Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Fortbildung,String)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(15).Value = CType(Original_Fortbildung,String)
+            End If
+            If (Original_Nachname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_Nachname")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Nachname,String)
+            End If
+            If (Original_Vorname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_Vorname")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(17).Value = CType(Original_Vorname,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -22744,51 +22783,56 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Benutzername As String, ByVal Name As String, ByVal Passwort As String, ByVal Geburtsdatum As Global.System.Nullable(Of Date), ByVal Z_Schule As String, ByVal Z_Psycho As String, ByVal Zusatzqualifikation As String, ByVal Projekt As String, ByVal Fortbildung As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Benutzername As String, ByVal Passwort As String, ByVal Geburtsdatum As Global.System.Nullable(Of Date), ByVal Z_Schule As String, ByVal Z_Psycho As String, ByVal Zusatzqualifikation As String, ByVal Projekt As String, ByVal Fortbildung As String, ByVal Nachname As String, ByVal Vorname As String) As Integer
             If (Benutzername Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(Benutzername,String)
             End If
-            If (Name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Name")
-            Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Name,String)
-            End If
             If (Passwort Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Passwort,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Passwort,String)
             End If
             If (Geburtsdatum.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Geburtsdatum.Value,Date)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Geburtsdatum.Value,Date)
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Z_Schule Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Z_Schule,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Z_Schule,String)
             End If
             If (Z_Psycho Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Z_Psycho,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Z_Psycho,String)
             End If
             If (Zusatzqualifikation Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Zusatzqualifikation,String)
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Zusatzqualifikation,String)
             End If
             If (Projekt Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Projekt,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Projekt,String)
             End If
             If (Fortbildung Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Fortbildung,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Fortbildung,String)
+            End If
+            If (Nachname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nachname")
+            Else
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Nachname,String)
+            End If
+            If (Vorname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Vorname")
+            Else
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Vorname,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -22811,7 +22855,6 @@ Namespace DataSet1TableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
         Public Overloads Overridable Function Update( _
                     ByVal Benutzername As String,  _
-                    ByVal Name As String,  _
                     ByVal Passwort As String,  _
                     ByVal Geburtsdatum As Global.System.Nullable(Of Date),  _
                     ByVal Z_Schule As String,  _
@@ -22819,71 +22862,74 @@ Namespace DataSet1TableAdapters
                     ByVal Zusatzqualifikation As String,  _
                     ByVal Projekt As String,  _
                     ByVal Fortbildung As String,  _
+                    ByVal Nachname As String,  _
+                    ByVal Vorname As String,  _
                     ByVal Original_Benutzername As String,  _
-                    ByVal Original_Name As String,  _
                     ByVal Original_Passwort As String,  _
                     ByVal Original_Geburtsdatum As Global.System.Nullable(Of Date),  _
                     ByVal Original_Z_Schule As String,  _
                     ByVal Original_Z_Psycho As String,  _
                     ByVal Original_Zusatzqualifikation As String,  _
                     ByVal Original_Projekt As String,  _
-                    ByVal Original_Fortbildung As String) As Integer
+                    ByVal Original_Fortbildung As String,  _
+                    ByVal Original_Nachname As String,  _
+                    ByVal Original_Vorname As String) As Integer
             If (Benutzername Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Benutzername,String)
             End If
-            If (Name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Name")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Name,String)
-            End If
             If (Passwort Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Passwort,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Passwort,String)
             End If
             If (Geburtsdatum.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Geburtsdatum.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Geburtsdatum.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Z_Schule Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Z_Schule,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Z_Schule,String)
             End If
             If (Z_Psycho Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Z_Psycho,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Z_Psycho,String)
             End If
             If (Zusatzqualifikation Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Zusatzqualifikation,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Zusatzqualifikation,String)
             End If
             If (Projekt Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Projekt,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Projekt,String)
             End If
             If (Fortbildung Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Fortbildung,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Fortbildung,String)
+            End If
+            If (Nachname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nachname")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Nachname,String)
+            End If
+            If (Vorname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Vorname")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Vorname,String)
             End If
             If (Original_Benutzername Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Benutzername,String)
-            End If
-            If (Original_Name Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Name")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Benutzername,String)
             End If
             If (Original_Passwort Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
@@ -22934,6 +22980,16 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
                 Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Fortbildung,String)
             End If
+            If (Original_Nachname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_Nachname")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Nachname,String)
+            End If
+            If (Original_Vorname Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_Vorname")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Vorname,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -22963,15 +23019,16 @@ Namespace DataSet1TableAdapters
                     ByVal Projekt As String,  _
                     ByVal Fortbildung As String,  _
                     ByVal Original_Benutzername As String,  _
-                    ByVal Original_Name As String,  _
                     ByVal Original_Passwort As String,  _
                     ByVal Original_Geburtsdatum As Global.System.Nullable(Of Date),  _
                     ByVal Original_Z_Schule As String,  _
                     ByVal Original_Z_Psycho As String,  _
                     ByVal Original_Zusatzqualifikation As String,  _
                     ByVal Original_Projekt As String,  _
-                    ByVal Original_Fortbildung As String) As Integer
-            Return Me.Update(Benutzername, Original_Name, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt, Fortbildung, Original_Benutzername, Original_Name, Original_Passwort, Original_Geburtsdatum, Original_Z_Schule, Original_Z_Psycho, Original_Zusatzqualifikation, Original_Projekt, Original_Fortbildung)
+                    ByVal Original_Fortbildung As String,  _
+                    ByVal Original_Nachname As String,  _
+                    ByVal Original_Vorname As String) As Integer
+            Return Me.Update(Benutzername, Passwort, Geburtsdatum, Z_Schule, Z_Psycho, Zusatzqualifikation, Projekt, Fortbildung, Original_Nachname, Original_Vorname, Original_Benutzername, Original_Passwort, Original_Geburtsdatum, Original_Z_Schule, Original_Z_Psycho, Original_Zusatzqualifikation, Original_Projekt, Original_Fortbildung, Original_Nachname, Original_Vorname)
         End Function
     End Class
     

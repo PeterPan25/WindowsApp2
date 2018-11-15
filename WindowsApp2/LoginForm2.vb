@@ -21,10 +21,10 @@ Public Class LoginForm2
 
     Private Sub ProfilAnlegen()
         Dim a As DataRow = Me.DataSet1.Mitarbeiter.NewRow()
-        Dim b As String = PlatzhalterText1.Text + " " + PlatzhalterText2.Text
 
         Try
-            a("Name") = b
+            a("Nachname") = PlatzhalterText2.Text
+            a("Vorname") = PlatzhalterText1.Text
             a("Benutzername") = UsernameTextBox.Text
             a("Passwort") = PasswordTextBox.Text
 
