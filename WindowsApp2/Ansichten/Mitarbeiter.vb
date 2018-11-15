@@ -3,6 +3,10 @@
         DatenAendern()
     End Sub
 
+    Public Sub Daten_Load()
+        Me.TableAdapterManager.MitarbeiterTableAdapter.Fill(DataSet1.Mitarbeiter)
+    End Sub
+
     Private Sub DatenAendern()
         Dim a As DataSet1.MitarbeiterRow
         a = Me.DataSet1.Mitarbeiter.FindByNachnameVorname(PlatzhalterText2.Text, PlatzhalterText1.Text)

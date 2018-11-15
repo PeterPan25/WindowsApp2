@@ -84,6 +84,7 @@ Partial Class Form1
         Me.Formulare1 = New WindowsApp2.Formulare()
         Me.Psycho1 = New WindowsApp2.Psycho()
         Me.Stammdaten1 = New WindowsApp2.Stammdaten()
+        Me.Mitarbeiter1 = New WindowsApp2.Mitarbeiter()
         Me.Schule1 = New WindowsApp2.Schule()
         Me.Krankenhaus1 = New WindowsApp2.Krankenhaus()
         Me.Kontakte1 = New WindowsApp2.Kontakte()
@@ -408,6 +409,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Hilfen1)
         Me.Panel1.Controls.Add(Me.Eltern1)
         Me.Panel1.Controls.Add(Me.Doku1)
+        Me.Panel1.Controls.Add(Me.Mitarbeiter1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -579,6 +581,17 @@ Partial Class Form1
         Me.Hilfen1.Size = New System.Drawing.Size(1335, 453)
         Me.Hilfen1.TabIndex = 7
         Me.Hilfen1.Visible = False
+        '
+        'Mitarbeiter1
+        '
+        Me.Mitarbeiter1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Mitarbeiter1.Location = New System.Drawing.Point(0, 0)
+        Me.Mitarbeiter1.Name = "Mitarbeiter1"
+        Me.Mitarbeiter1.Size = New System.Drawing.Size(1335, 453)
+        Me.Mitarbeiter1.TabIndex = 20
+        Me.Mitarbeiter1.Visible = False
+
+
         '
         'Eltern1
         '
@@ -793,6 +806,7 @@ Partial Class Form1
     Friend WithEvents Hilfen1 As Hilfen
     Friend WithEvents Eltern1 As Eltern
     Friend WithEvents Doku1 As Doku
+    Friend WithEvents Mitarbeiter1 As Mitarbeiter
 
     Friend WithEvents DataSet11 As DataSet1
     Friend WithEvents Tagesbericht1 As Tagesbericht

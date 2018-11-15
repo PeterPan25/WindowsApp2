@@ -13,7 +13,7 @@ speziellere Sachen kommen dort hinein: a la haben an einer Scheune gezündelt
 Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepläne vorhanden sein, neu: hilfeplan bericht in der neuen ansicht schreiben --> Statusanzeige im Datagridview (schreiben, in bearbeitung usw.)
  kann damit man in der listview einen älteren öffnen kann weil man einen neuen schreiben muss und so einfach ein paar alte sachen gegebenfalls übernommen werden
  Design, Farbe etc. 
- ? einbauen mit msg boxen für Instruktionen
+ '''''schule in dataset nochmal komplett neu bearbeiten
 ''''schule und eltern anlegen (nicht die berichte) überlegen wo 
  ''''--> Eltern anlegen braucht man denke ich nicht, da die ja nunmal für jedes Kind fix sind und nich bei mehreren Kindern zutreffen können 
  ''''imagebox oder so für ein bild des jeweiligen kindes in Stammdaten, neben das panel bei der form 1 combobox
@@ -22,8 +22,8 @@ Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepl�
  ''''arztbericht anlegen anpassung der größe der felder und label
  Alle Ansichten zum Anlegen und Verwalten der Daten (Ärzte, Schulen, Psychologen) unter admin zugängig machen und nur die bearbeitungsseiten für die Mitarbeiter öffentlich
  Datagridview mit Übersicht über alle Einträge in der gesamten Kinderakte. Je nach Kategorie Schriftfarbe anders. bspw. alle Arztberichte in roter Schrift
- Mitarbeiter Ansicht weitere Daten anlegen, bisher nur Benutzername, Name, Vorname
- Möglichkeit zum Passwort ändern
+'''' Mitarbeiter Ansicht weitere Daten anlegen, bisher nur Benutzername, Name, Vorname
+ ''''Möglichkeit zum Passwort ändern
 ''' Nachrichten der Mitarbeiter untereinander, Nachrichten Tabelle und MitarbeiterNachrichten in DB, Ansicht mit Textbox, Combobox mit Mitarbeiternamen und Sende Button
  '''''Nach Login Benachrichtigung (Zahl o.ä.) wenn neue Nachricht, in DB Möglichkeit diese als gelesen zu markieren einbauen
 '''' Nachrichten nur als gelesen markieren wenn diese noch ungelesen sind
@@ -33,6 +33,7 @@ Schriftgröße Überschriften	= 22
 			 Textfeldertext = 12
 			 Treeview		= 14
 			 Platzhalter	= 12
-			 
+			
+? einbauen mit msg boxen für Instruktionen
 Tooltip(Info wenn Zeiger über der Fläche) Beispiel in Eltern.vb
-'''''schule in dataset nochmal komplett neu bearbeiten
+

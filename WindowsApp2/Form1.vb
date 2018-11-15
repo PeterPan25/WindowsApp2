@@ -27,7 +27,8 @@ Public Class Form1
         "Arzt Übersicht",
         "hinzufügen",
         "bearbeiten",
-        "Übersicht"
+        "Übersicht",
+        "Mitarbeiter"
         }
 
 
@@ -59,7 +60,7 @@ Public Class Form1
         Dim ab As New AktuellerBenutzer
         Dim b As String
 
-        For i = 0 To 18
+        For i = 0 To 19
 
 
 
@@ -202,6 +203,12 @@ Public Class Form1
                         Übersicht1.Daten_laden()
                         Übersicht1.Visible = True
                         Übersicht1.BringToFront()
+
+                    Case 19
+                        Mitarbeiter1.Daten_Load()
+                        Mitarbeiter1.Visible = True
+                        Mitarbeiter1.BringToFront()
+
 
                         ' For Each case In TreeView1
                         'TreeView1.Nodes(i).BackColor = Color.DarkRed

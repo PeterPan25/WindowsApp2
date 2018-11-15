@@ -47,6 +47,15 @@ Public Class LoginForm2
     Private Sub LoginForm2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Mitarbeiter". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.MitarbeiterTableAdapter.Fill(Me.DataSet1.Mitarbeiter)
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet1.Mitarbeiter". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.MitarbeiterTableAdapter.Fill(Me.DataSet1.Mitarbeiter)
+
+    End Sub
+
+    Private Sub MitarbeiterBindingNavigatorSaveItem_Click_1(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.MitarbeiterBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DataSet1)
 
     End Sub
 End Class
