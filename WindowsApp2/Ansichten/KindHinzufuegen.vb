@@ -19,7 +19,7 @@
             a("Geburtsdatum") = DateTimePicker1.Value
             a("Jugendamt") = PlatzhalterText6.Text
             a("Aufnahmedatum") = DateTimePicker2.Value
-            a("Schule") = PlatzhalterText9.Text
+
             a("Besonderheiten") = PlatzhalterText11.Text
             a("Geburtsort") = PlatzhalterText3.Text
             a("Konfession") = PlatzhalterText5.Text
@@ -65,7 +65,6 @@
         PlatzhalterText6.Clear()
         PlatzhalterText7.Clear()
         PlatzhalterText8.Clear()
-        PlatzhalterText9.Clear()
 
         PlatzhalterText10.Clear()
         PlatzhalterText11.Clear()
@@ -82,7 +81,6 @@
         PlatzhalterText6.PlatzHalterText = PlatzhalterText6.PlatzHalterText
         PlatzhalterText7.PlatzHalterText = PlatzhalterText7.PlatzHalterText
         PlatzhalterText8.PlatzHalterText = PlatzhalterText8.PlatzHalterText
-        PlatzhalterText9.PlatzHalterText = PlatzhalterText9.PlatzHalterText
         PlatzhalterText10.PlatzHalterText = PlatzhalterText10.PlatzHalterText
         PlatzhalterText11.PlatzHalterText = PlatzhalterText11.PlatzHalterText
         PlatzhalterText12.PlatzHalterText = PlatzhalterText12.PlatzHalterText

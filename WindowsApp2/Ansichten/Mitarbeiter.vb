@@ -16,7 +16,7 @@
             a.Vorname = PlatzhalterText1.Text
             a.Nachname = PlatzhalterText2.Text
             a.Passwort = PlatzhalterText4.Text
-
+            'so auch mit den weiteren Eigenschaften
             Me.MitarbeiterTableAdapter.Update(Me.DataSet1.Mitarbeiter)
 
             MsgBox("Jou")

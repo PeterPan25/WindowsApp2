@@ -3535,8 +3535,6 @@ Partial Public Class DataSet1
         
         Private columnKonfession As Global.System.Data.DataColumn
         
-        Private columnSchule As Global.System.Data.DataColumn
-        
         Private columnKrankenversicherung As Global.System.Data.DataColumn
         
         Private columnGeburtsort As Global.System.Data.DataColumn
@@ -3635,14 +3633,6 @@ Partial Public Class DataSet1
         Public ReadOnly Property KonfessionColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnKonfession
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property SchuleColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnSchule
             End Get
         End Property
         
@@ -3755,25 +3745,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddKindRow( _
-                    ByVal Name As String,  _
-                    ByVal Geburtsdatum As Date,  _
-                    ByVal Aufnahmedatum As Date,  _
-                    ByVal Sorgerechtsstatus As String,  _
-                    ByVal Nationalität As String,  _
-                    ByVal Konfession As String,  _
-                    ByVal Schule As String,  _
-                    ByVal Krankenversicherung As String,  _
-                    ByVal Geburtsort As String,  _
-                    ByVal Hilfe_nach As String,  _
-                    ByVal Besonderheiten As String,  _
-                    ByVal Jugendamt As String,  _
-                    ByVal Bild As String,  _
-                    ByVal Vater As String,  _
-                    ByVal Mutter As String,  _
-                    ByVal Erziehungsberechtigter As String) As KindRow
+        Public Overloads Function AddKindRow(ByVal Name As String, ByVal Geburtsdatum As Date, ByVal Aufnahmedatum As Date, ByVal Sorgerechtsstatus As String, ByVal Nationalität As String, ByVal Konfession As String, ByVal Krankenversicherung As String, ByVal Geburtsort As String, ByVal Hilfe_nach As String, ByVal Besonderheiten As String, ByVal Jugendamt As String, ByVal Bild As String, ByVal Vater As String, ByVal Mutter As String, ByVal Erziehungsberechtigter As String) As KindRow
             Dim rowKindRow As KindRow = CType(Me.NewRow,KindRow)
-            Dim columnValuesArray() As Object = New Object() {Name, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfession, Schule, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bild, Vater, Mutter, Erziehungsberechtigter}
+            Dim columnValuesArray() As Object = New Object() {Name, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfession, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bild, Vater, Mutter, Erziehungsberechtigter}
             rowKindRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowKindRow)
             Return rowKindRow
@@ -3808,7 +3782,6 @@ Partial Public Class DataSet1
             Me.columnSorgerechtsstatus = MyBase.Columns("Sorgerechtsstatus")
             Me.columnNationalität = MyBase.Columns("Nationalität")
             Me.columnKonfession = MyBase.Columns("Konfession")
-            Me.columnSchule = MyBase.Columns("Schule")
             Me.columnKrankenversicherung = MyBase.Columns("Krankenversicherung")
             Me.columnGeburtsort = MyBase.Columns("Geburtsort")
             Me.columnHilfe_nach = MyBase.Columns("Hilfe_nach")
@@ -3835,8 +3808,6 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnNationalität)
             Me.columnKonfession = New Global.System.Data.DataColumn("Konfession", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnKonfession)
-            Me.columnSchule = New Global.System.Data.DataColumn("Schule", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnSchule)
             Me.columnKrankenversicherung = New Global.System.Data.DataColumn("Krankenversicherung", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnKrankenversicherung)
             Me.columnGeburtsort = New Global.System.Data.DataColumn("Geburtsort", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3862,7 +3833,6 @@ Partial Public Class DataSet1
             Me.columnSorgerechtsstatus.MaxLength = 50
             Me.columnNationalität.MaxLength = 50
             Me.columnKonfession.MaxLength = 50
-            Me.columnSchule.MaxLength = 50
             Me.columnKrankenversicherung.MaxLength = 50
             Me.columnGeburtsort.MaxLength = 50
             Me.columnHilfe_nach.MaxLength = 50
@@ -12996,21 +12966,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Schule() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableKind.SchuleColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Schule in Tabelle Kind ist DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableKind.SchuleColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Krankenversicherung() As String
             Get
                 Try 
@@ -13202,18 +13157,6 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetKonfessionNull()
             Me(Me.tableKind.KonfessionColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsSchuleNull() As Boolean
-            Return Me.IsNull(Me.tableKind.SchuleColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetSchuleNull()
-            Me(Me.tableKind.SchuleColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -20639,7 +20582,6 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("Sorgerechtsstatus", "Sorgerechtsstatus")
             tableMapping.ColumnMappings.Add("Nationalität", "Nationalität")
             tableMapping.ColumnMappings.Add("Konfession", "Konfession")
-            tableMapping.ColumnMappings.Add("Schule", "Schule")
             tableMapping.ColumnMappings.Add("Krankenversicherung", "Krankenversicherung")
             tableMapping.ColumnMappings.Add("Geburtsort", "Geburtsort")
             tableMapping.ColumnMappings.Add("Hilfe_nach", "Hilfe_nach")
@@ -20659,19 +20601,18 @@ Namespace DataSet1TableAdapters
                 "tus] IS NULL) OR ([Sorgerechtsstatus] = @Original_Sorgerechtsstatus)) AND ((@IsN"& _ 
                 "ull_Nationalität = 1 AND [Nationalität] IS NULL) OR ([Nationalität] = @Original_"& _ 
                 "Nationalität)) AND ((@IsNull_Konfession = 1 AND [Konfession] IS NULL) OR ([Konfe"& _ 
-                "ssion] = @Original_Konfession)) AND ((@IsNull_Schule = 1 AND [Schule] IS NULL) O"& _ 
-                "R ([Schule] = @Original_Schule)) AND ((@IsNull_Krankenversicherung = 1 AND [Kran"& _ 
-                "kenversicherung] IS NULL) OR ([Krankenversicherung] = @Original_Krankenversicher"& _ 
-                "ung)) AND ((@IsNull_Geburtsort = 1 AND [Geburtsort] IS NULL) OR ([Geburtsort] = "& _ 
-                "@Original_Geburtsort)) AND ((@IsNull_Hilfe_nach = 1 AND [Hilfe_nach] IS NULL) OR"& _ 
-                " ([Hilfe_nach] = @Original_Hilfe_nach)) AND ((@IsNull_Besonderheiten = 1 AND [Be"& _ 
-                "sonderheiten] IS NULL) OR ([Besonderheiten] = @Original_Besonderheiten)) AND ((@"& _ 
-                "IsNull_Jugendamt = 1 AND [Jugendamt] IS NULL) OR ([Jugendamt] = @Original_Jugend"& _ 
-                "amt)) AND ((@IsNull_Bild = 1 AND [Bild] IS NULL) OR ([Bild] = @Original_Bild)) A"& _ 
-                "ND ((@IsNull_Erziehungsberechtigter = 1 AND [Erziehungsberechtigter] IS NULL) OR"& _ 
-                " ([Erziehungsberechtigter] = @Original_Erziehungsberechtigter)) AND ((@IsNull_Mu"& _ 
-                "tter = 1 AND [Mutter] IS NULL) OR ([Mutter] = @Original_Mutter)) AND ((@IsNull_V"& _ 
-                "ater = 1 AND [Vater] IS NULL) OR ([Vater] = @Original_Vater)))"
+                "ssion] = @Original_Konfession)) AND ((@IsNull_Krankenversicherung = 1 AND [Krank"& _ 
+                "enversicherung] IS NULL) OR ([Krankenversicherung] = @Original_Krankenversicheru"& _ 
+                "ng)) AND ((@IsNull_Geburtsort = 1 AND [Geburtsort] IS NULL) OR ([Geburtsort] = @"& _ 
+                "Original_Geburtsort)) AND ((@IsNull_Hilfe_nach = 1 AND [Hilfe_nach] IS NULL) OR "& _ 
+                "([Hilfe_nach] = @Original_Hilfe_nach)) AND ((@IsNull_Besonderheiten = 1 AND [Bes"& _ 
+                "onderheiten] IS NULL) OR ([Besonderheiten] = @Original_Besonderheiten)) AND ((@I"& _ 
+                "sNull_Jugendamt = 1 AND [Jugendamt] IS NULL) OR ([Jugendamt] = @Original_Jugenda"& _ 
+                "mt)) AND ((@IsNull_Bild = 1 AND [Bild] IS NULL) OR ([Bild] = @Original_Bild)) AN"& _ 
+                "D ((@IsNull_Erziehungsberechtigter = 1 AND [Erziehungsberechtigter] IS NULL) OR "& _ 
+                "([Erziehungsberechtigter] = @Original_Erziehungsberechtigter)) AND ((@IsNull_Mut"& _ 
+                "ter = 1 AND [Mutter] IS NULL) OR ([Mutter] = @Original_Mutter)) AND ((@IsNull_Va"& _ 
+                "ter = 1 AND [Vater] IS NULL) OR ([Vater] = @Original_Vater)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Geburtsdatum", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -20684,8 +20625,6 @@ Namespace DataSet1TableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nationalität", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nationalität", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Konfession", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Konfession", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Konfession", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Konfession", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Schule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Schule", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Schule", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Schule", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Krankenversicherung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Krankenversicherung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Krankenversicherung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Krankenversicherung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Geburtsort", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsort", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -20707,15 +20646,14 @@ Namespace DataSet1TableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [Kind] ([Name], [Geburtsdatum], [Aufnahmedatum], [Sorgerechtsstatus],"& _ 
-                " [Nationalität], [Konfession], [Schule], [Krankenversicherung], [Geburtsort], [H"& _ 
-                "ilfe_nach], [Besonderheiten], [Jugendamt], [Bild], [Erziehungsberechtigter], [Mu"& _ 
-                "tter], [Vater]) VALUES (@Name, @Geburtsdatum, @Aufnahmedatum, @Sorgerechtsstatus"& _ 
-                ", @Nationalität, @Konfession, @Schule, @Krankenversicherung, @Geburtsort, @Hilfe"& _ 
-                "_nach, @Besonderheiten, @Jugendamt, @Bild, @Erziehungsberechtigter, @Mutter, @Va"& _ 
-                "ter);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität"& _ 
-                ", Konfession, Schule, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheite"& _ 
-                "n, Jugendamt, Bild, Erziehungsberechtigter, Mutter, Vater FROM Kind WHERE (Name "& _ 
-                "= @Name)"
+                " [Nationalität], [Konfession], [Krankenversicherung], [Geburtsort], [Hilfe_nach]"& _ 
+                ", [Besonderheiten], [Jugendamt], [Bild], [Erziehungsberechtigter], [Mutter], [Va"& _ 
+                "ter]) VALUES (@Name, @Geburtsdatum, @Aufnahmedatum, @Sorgerechtsstatus, @Nationa"& _ 
+                "lität, @Konfession, @Krankenversicherung, @Geburtsort, @Hilfe_nach, @Besonderhei"& _ 
+                "ten, @Jugendamt, @Bild, @Erziehungsberechtigter, @Mutter, @Vater);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name,"& _ 
+                " Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfession, Krank"& _ 
+                "enversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bild, Erziehu"& _ 
+                "ngsberechtigter, Mutter, Vater FROM Kind WHERE (Name = @Name)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Geburtsdatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -20723,7 +20661,6 @@ Namespace DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sorgerechtsstatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sorgerechtsstatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nationalität", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nationalität", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Konfession", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Konfession", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Schule", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Schule", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Krankenversicherung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Krankenversicherung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Geburtsort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hilfe_nach", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hilfe_nach", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -20737,33 +20674,32 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [Kind] SET [Name] = @Name, [Geburtsdatum] = @Geburtsdatum, [Aufnahmedatum]"& _ 
                 " = @Aufnahmedatum, [Sorgerechtsstatus] = @Sorgerechtsstatus, [Nationalität] = @N"& _ 
-                "ationalität, [Konfession] = @Konfession, [Schule] = @Schule, [Krankenversicherun"& _ 
-                "g] = @Krankenversicherung, [Geburtsort] = @Geburtsort, [Hilfe_nach] = @Hilfe_nac"& _ 
-                "h, [Besonderheiten] = @Besonderheiten, [Jugendamt] = @Jugendamt, [Bild] = @Bild,"& _ 
-                " [Erziehungsberechtigter] = @Erziehungsberechtigter, [Mutter] = @Mutter, [Vater]"& _ 
-                " = @Vater WHERE (([Name] = @Original_Name) AND ((@IsNull_Geburtsdatum = 1 AND [G"& _ 
-                "eburtsdatum] IS NULL) OR ([Geburtsdatum] = @Original_Geburtsdatum)) AND ((@IsNul"& _ 
-                "l_Aufnahmedatum = 1 AND [Aufnahmedatum] IS NULL) OR ([Aufnahmedatum] = @Original"& _ 
-                "_Aufnahmedatum)) AND ((@IsNull_Sorgerechtsstatus = 1 AND [Sorgerechtsstatus] IS "& _ 
-                "NULL) OR ([Sorgerechtsstatus] = @Original_Sorgerechtsstatus)) AND ((@IsNull_Nati"& _ 
-                "onalität = 1 AND [Nationalität] IS NULL) OR ([Nationalität] = @Original_National"& _ 
-                "ität)) AND ((@IsNull_Konfession = 1 AND [Konfession] IS NULL) OR ([Konfession] ="& _ 
-                " @Original_Konfession)) AND ((@IsNull_Schule = 1 AND [Schule] IS NULL) OR ([Schu"& _ 
-                "le] = @Original_Schule)) AND ((@IsNull_Krankenversicherung = 1 AND [Krankenversi"& _ 
-                "cherung] IS NULL) OR ([Krankenversicherung] = @Original_Krankenversicherung)) AN"& _ 
-                "D ((@IsNull_Geburtsort = 1 AND [Geburtsort] IS NULL) OR ([Geburtsort] = @Origina"& _ 
-                "l_Geburtsort)) AND ((@IsNull_Hilfe_nach = 1 AND [Hilfe_nach] IS NULL) OR ([Hilfe"& _ 
-                "_nach] = @Original_Hilfe_nach)) AND ((@IsNull_Besonderheiten = 1 AND [Besonderhe"& _ 
-                "iten] IS NULL) OR ([Besonderheiten] = @Original_Besonderheiten)) AND ((@IsNull_J"& _ 
-                "ugendamt = 1 AND [Jugendamt] IS NULL) OR ([Jugendamt] = @Original_Jugendamt)) AN"& _ 
-                "D ((@IsNull_Bild = 1 AND [Bild] IS NULL) OR ([Bild] = @Original_Bild)) AND ((@Is"& _ 
-                "Null_Erziehungsberechtigter = 1 AND [Erziehungsberechtigter] IS NULL) OR ([Erzie"& _ 
-                "hungsberechtigter] = @Original_Erziehungsberechtigter)) AND ((@IsNull_Mutter = 1"& _ 
-                " AND [Mutter] IS NULL) OR ([Mutter] = @Original_Mutter)) AND ((@IsNull_Vater = 1"& _ 
-                " AND [Vater] IS NULL) OR ([Vater] = @Original_Vater)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, Geburtsdat"& _ 
-                "um, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfession, Schule, Krankenv"& _ 
-                "ersicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bild, Erziehungs"& _ 
-                "berechtigter, Mutter, Vater FROM Kind WHERE (Name = @Name)"
+                "ationalität, [Konfession] = @Konfession, [Krankenversicherung] = @Krankenversich"& _ 
+                "erung, [Geburtsort] = @Geburtsort, [Hilfe_nach] = @Hilfe_nach, [Besonderheiten] "& _ 
+                "= @Besonderheiten, [Jugendamt] = @Jugendamt, [Bild] = @Bild, [Erziehungsberechti"& _ 
+                "gter] = @Erziehungsberechtigter, [Mutter] = @Mutter, [Vater] = @Vater WHERE (([N"& _ 
+                "ame] = @Original_Name) AND ((@IsNull_Geburtsdatum = 1 AND [Geburtsdatum] IS NULL"& _ 
+                ") OR ([Geburtsdatum] = @Original_Geburtsdatum)) AND ((@IsNull_Aufnahmedatum = 1 "& _ 
+                "AND [Aufnahmedatum] IS NULL) OR ([Aufnahmedatum] = @Original_Aufnahmedatum)) AND"& _ 
+                " ((@IsNull_Sorgerechtsstatus = 1 AND [Sorgerechtsstatus] IS NULL) OR ([Sorgerech"& _ 
+                "tsstatus] = @Original_Sorgerechtsstatus)) AND ((@IsNull_Nationalität = 1 AND [Na"& _ 
+                "tionalität] IS NULL) OR ([Nationalität] = @Original_Nationalität)) AND ((@IsNull"& _ 
+                "_Konfession = 1 AND [Konfession] IS NULL) OR ([Konfession] = @Original_Konfessio"& _ 
+                "n)) AND ((@IsNull_Krankenversicherung = 1 AND [Krankenversicherung] IS NULL) OR "& _ 
+                "([Krankenversicherung] = @Original_Krankenversicherung)) AND ((@IsNull_Geburtsor"& _ 
+                "t = 1 AND [Geburtsort] IS NULL) OR ([Geburtsort] = @Original_Geburtsort)) AND (("& _ 
+                "@IsNull_Hilfe_nach = 1 AND [Hilfe_nach] IS NULL) OR ([Hilfe_nach] = @Original_Hi"& _ 
+                "lfe_nach)) AND ((@IsNull_Besonderheiten = 1 AND [Besonderheiten] IS NULL) OR ([B"& _ 
+                "esonderheiten] = @Original_Besonderheiten)) AND ((@IsNull_Jugendamt = 1 AND [Jug"& _ 
+                "endamt] IS NULL) OR ([Jugendamt] = @Original_Jugendamt)) AND ((@IsNull_Bild = 1 "& _ 
+                "AND [Bild] IS NULL) OR ([Bild] = @Original_Bild)) AND ((@IsNull_Erziehungsberech"& _ 
+                "tigter = 1 AND [Erziehungsberechtigter] IS NULL) OR ([Erziehungsberechtigter] = "& _ 
+                "@Original_Erziehungsberechtigter)) AND ((@IsNull_Mutter = 1 AND [Mutter] IS NULL"& _ 
+                ") OR ([Mutter] = @Original_Mutter)) AND ((@IsNull_Vater = 1 AND [Vater] IS NULL)"& _ 
+                " OR ([Vater] = @Original_Vater)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, Geburtsdatum, Aufnahmedatum, So"& _ 
+                "rgerechtsstatus, Nationalität, Konfession, Krankenversicherung, Geburtsort, Hilf"& _ 
+                "e_nach, Besonderheiten, Jugendamt, Bild, Erziehungsberechtigter, Mutter, Vater F"& _ 
+                "ROM Kind WHERE (Name = @Name)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Geburtsdatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsdatum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -20771,7 +20707,6 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Sorgerechtsstatus", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Sorgerechtsstatus", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nationalität", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nationalität", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Konfession", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Konfession", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Schule", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Schule", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Krankenversicherung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Krankenversicherung", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Geburtsort", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsort", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Hilfe_nach", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Hilfe_nach", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -20792,8 +20727,6 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Nationalität", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Nationalität", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Konfession", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Konfession", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Konfession", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Konfession", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Schule", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Schule", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Schule", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Schule", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Krankenversicherung", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Krankenversicherung", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Krankenversicherung", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Krankenversicherung", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Geburtsort", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Geburtsort", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
@@ -20828,8 +20761,8 @@ Namespace DataSet1TableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Name, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfes"& _ 
-                "sion, Schule, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugen"& _ 
-                "damt, Bild, Erziehungsberechtigter, Mutter, Vater FROM Kind"
+                "sion, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bi"& _ 
+                "ld, Erziehungsberechtigter, Mutter, Vater FROM Kind"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -20889,23 +20822,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete( _
-                    ByVal Original_Name As String,  _
-                    ByVal Original_Geburtsdatum As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Aufnahmedatum As Global.System.Nullable(Of Date),  _
-                    ByVal Original_Sorgerechtsstatus As String,  _
-                    ByVal Original_Nationalität As String,  _
-                    ByVal Original_Konfession As String,  _
-                    ByVal Original_Schule As String,  _
-                    ByVal Original_Krankenversicherung As String,  _
-                    ByVal Original_Geburtsort As String,  _
-                    ByVal Original_Hilfe_nach As String,  _
-                    ByVal Original_Besonderheiten As String,  _
-                    ByVal Original_Jugendamt As String,  _
-                    ByVal Original_Bild As String,  _
-                    ByVal Original_Erziehungsberechtigter As String,  _
-                    ByVal Original_Mutter As String,  _
-                    ByVal Original_Vater As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Name As String, ByVal Original_Geburtsdatum As Global.System.Nullable(Of Date), ByVal Original_Aufnahmedatum As Global.System.Nullable(Of Date), ByVal Original_Sorgerechtsstatus As String, ByVal Original_Nationalität As String, ByVal Original_Konfession As String, ByVal Original_Krankenversicherung As String, ByVal Original_Geburtsort As String, ByVal Original_Hilfe_nach As String, ByVal Original_Besonderheiten As String, ByVal Original_Jugendamt As String, ByVal Original_Bild As String, ByVal Original_Erziehungsberechtigter As String, ByVal Original_Mutter As String, ByVal Original_Vater As String) As Integer
             If (Original_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Name")
             Else
@@ -20946,75 +20863,68 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.DeleteCommand.Parameters(9).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(10).Value = CType(Original_Konfession,String)
             End If
-            If (Original_Schule Is Nothing) Then
+            If (Original_Krankenversicherung Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(11).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Schule,String)
+                Me.Adapter.DeleteCommand.Parameters(12).Value = CType(Original_Krankenversicherung,String)
             End If
-            If (Original_Krankenversicherung Is Nothing) Then
+            If (Original_Geburtsort Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(13).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Krankenversicherung,String)
+                Me.Adapter.DeleteCommand.Parameters(14).Value = CType(Original_Geburtsort,String)
             End If
-            If (Original_Geburtsort Is Nothing) Then
+            If (Original_Hilfe_nach Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(16).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(15).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Geburtsort,String)
+                Me.Adapter.DeleteCommand.Parameters(16).Value = CType(Original_Hilfe_nach,String)
             End If
-            If (Original_Hilfe_nach Is Nothing) Then
+            If (Original_Besonderheiten Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(18).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Hilfe_nach,String)
+                Me.Adapter.DeleteCommand.Parameters(18).Value = CType(Original_Besonderheiten,String)
             End If
-            If (Original_Besonderheiten Is Nothing) Then
+            If (Original_Jugendamt Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(20).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Besonderheiten,String)
+                Me.Adapter.DeleteCommand.Parameters(20).Value = CType(Original_Jugendamt,String)
             End If
-            If (Original_Jugendamt Is Nothing) Then
+            If (Original_Bild Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(22).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Jugendamt,String)
+                Me.Adapter.DeleteCommand.Parameters(22).Value = CType(Original_Bild,String)
             End If
-            If (Original_Bild Is Nothing) Then
+            If (Original_Erziehungsberechtigter Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(23).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(24).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Bild,String)
+                Me.Adapter.DeleteCommand.Parameters(24).Value = CType(Original_Erziehungsberechtigter,String)
             End If
-            If (Original_Erziehungsberechtigter Is Nothing) Then
+            If (Original_Mutter Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(25).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(26).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_Erziehungsberechtigter,String)
+                Me.Adapter.DeleteCommand.Parameters(26).Value = CType(Original_Mutter,String)
             End If
-            If (Original_Mutter Is Nothing) Then
+            If (Original_Vater Is Nothing) Then
                 Me.Adapter.DeleteCommand.Parameters(27).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(28).Value = Global.System.DBNull.Value
             Else
                 Me.Adapter.DeleteCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_Mutter,String)
-            End If
-            If (Original_Vater Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(30).Value = CType(Original_Vater,String)
+                Me.Adapter.DeleteCommand.Parameters(28).Value = CType(Original_Vater,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -21035,23 +20945,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert( _
-                    ByVal Name As String,  _
-                    ByVal Geburtsdatum As Global.System.Nullable(Of Date),  _
-                    ByVal Aufnahmedatum As Global.System.Nullable(Of Date),  _
-                    ByVal Sorgerechtsstatus As String,  _
-                    ByVal Nationalität As String,  _
-                    ByVal Konfession As String,  _
-                    ByVal Schule As String,  _
-                    ByVal Krankenversicherung As String,  _
-                    ByVal Geburtsort As String,  _
-                    ByVal Hilfe_nach As String,  _
-                    ByVal Besonderheiten As String,  _
-                    ByVal Jugendamt As String,  _
-                    ByVal Bild As String,  _
-                    ByVal Erziehungsberechtigter As String,  _
-                    ByVal Mutter As String,  _
-                    ByVal Vater As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Name As String, ByVal Geburtsdatum As Global.System.Nullable(Of Date), ByVal Aufnahmedatum As Global.System.Nullable(Of Date), ByVal Sorgerechtsstatus As String, ByVal Nationalität As String, ByVal Konfession As String, ByVal Krankenversicherung As String, ByVal Geburtsort As String, ByVal Hilfe_nach As String, ByVal Besonderheiten As String, ByVal Jugendamt As String, ByVal Bild As String, ByVal Erziehungsberechtigter As String, ByVal Mutter As String, ByVal Vater As String) As Integer
             If (Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Name")
             Else
@@ -21082,55 +20976,50 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = CType(Konfession,String)
             End If
-            If (Schule Is Nothing) Then
+            If (Krankenversicherung Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Schule,String)
-            End If
-            If (Krankenversicherung Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Krankenversicherung,String)
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Krankenversicherung,String)
             End If
             If (Geburtsort Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Geburtsort,String)
+                Me.Adapter.InsertCommand.Parameters(7).Value = CType(Geburtsort,String)
             End If
             If (Hilfe_nach Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Hilfe_nach,String)
+                Me.Adapter.InsertCommand.Parameters(8).Value = CType(Hilfe_nach,String)
             End If
             If (Besonderheiten Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Besonderheiten,String)
+                Me.Adapter.InsertCommand.Parameters(9).Value = CType(Besonderheiten,String)
             End If
             If (Jugendamt Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Jugendamt,String)
+                Me.Adapter.InsertCommand.Parameters(10).Value = CType(Jugendamt,String)
             End If
             If (Bild Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Bild,String)
+                Me.Adapter.InsertCommand.Parameters(11).Value = CType(Bild,String)
             End If
             If (Erziehungsberechtigter Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(13).Value = CType(Erziehungsberechtigter,String)
+                Me.Adapter.InsertCommand.Parameters(12).Value = CType(Erziehungsberechtigter,String)
             End If
             If (Mutter Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(14).Value = CType(Mutter,String)
+                Me.Adapter.InsertCommand.Parameters(13).Value = CType(Mutter,String)
             End If
             If (Vater Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(15).Value = CType(Vater,String)
+                Me.Adapter.InsertCommand.Parameters(14).Value = CType(Vater,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -21158,7 +21047,6 @@ Namespace DataSet1TableAdapters
                     ByVal Sorgerechtsstatus As String,  _
                     ByVal Nationalität As String,  _
                     ByVal Konfession As String,  _
-                    ByVal Schule As String,  _
                     ByVal Krankenversicherung As String,  _
                     ByVal Geburtsort As String,  _
                     ByVal Hilfe_nach As String,  _
@@ -21174,7 +21062,6 @@ Namespace DataSet1TableAdapters
                     ByVal Original_Sorgerechtsstatus As String,  _
                     ByVal Original_Nationalität As String,  _
                     ByVal Original_Konfession As String,  _
-                    ByVal Original_Schule As String,  _
                     ByVal Original_Krankenversicherung As String,  _
                     ByVal Original_Geburtsort As String,  _
                     ByVal Original_Hilfe_nach As String,  _
@@ -21214,165 +21101,153 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Konfession,String)
             End If
-            If (Schule Is Nothing) Then
+            If (Krankenversicherung Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Schule,String)
-            End If
-            If (Krankenversicherung Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Krankenversicherung,String)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Krankenversicherung,String)
             End If
             If (Geburtsort Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Geburtsort,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Geburtsort,String)
             End If
             If (Hilfe_nach Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Hilfe_nach,String)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Hilfe_nach,String)
             End If
             If (Besonderheiten Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Besonderheiten,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Besonderheiten,String)
             End If
             If (Jugendamt Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Jugendamt,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Jugendamt,String)
             End If
             If (Bild Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Bild,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Bild,String)
             End If
             If (Erziehungsberechtigter Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Erziehungsberechtigter,String)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Erziehungsberechtigter,String)
             End If
             If (Mutter Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Mutter,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Mutter,String)
             End If
             If (Vater Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(15).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Vater,String)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Vater,String)
             End If
             If (Original_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(Original_Name,String)
             End If
             If (Original_Geburtsdatum.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(Original_Geburtsdatum.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(Original_Geburtsdatum.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(17).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(18).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(17).Value = Global.System.DBNull.Value
             End If
             If (Original_Aufnahmedatum.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(Original_Aufnahmedatum.Value,Date)
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(Original_Aufnahmedatum.Value,Date)
             Else
-                Me.Adapter.UpdateCommand.Parameters(19).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(20).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(18).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(19).Value = Global.System.DBNull.Value
             End If
             If (Original_Sorgerechtsstatus Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(Original_Sorgerechtsstatus,String)
+                Me.Adapter.UpdateCommand.Parameters(20).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(21).Value = CType(Original_Sorgerechtsstatus,String)
             End If
             If (Original_Nationalität Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(Original_Nationalität,String)
+                Me.Adapter.UpdateCommand.Parameters(22).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(23).Value = CType(Original_Nationalität,String)
             End If
             If (Original_Konfession Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(Original_Konfession,String)
-            End If
-            If (Original_Schule Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(Original_Schule,String)
+                Me.Adapter.UpdateCommand.Parameters(24).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(25).Value = CType(Original_Konfession,String)
             End If
             If (Original_Krankenversicherung Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(Original_Krankenversicherung,String)
+                Me.Adapter.UpdateCommand.Parameters(26).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(27).Value = CType(Original_Krankenversicherung,String)
             End If
             If (Original_Geburtsort Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(Original_Geburtsort,String)
+                Me.Adapter.UpdateCommand.Parameters(28).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(29).Value = CType(Original_Geburtsort,String)
             End If
             If (Original_Hilfe_nach Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(Original_Hilfe_nach,String)
+                Me.Adapter.UpdateCommand.Parameters(30).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(31).Value = CType(Original_Hilfe_nach,String)
             End If
             If (Original_Besonderheiten Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(Original_Besonderheiten,String)
+                Me.Adapter.UpdateCommand.Parameters(32).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(33).Value = CType(Original_Besonderheiten,String)
             End If
             If (Original_Jugendamt Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(38).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(Original_Jugendamt,String)
+                Me.Adapter.UpdateCommand.Parameters(34).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(35).Value = CType(Original_Jugendamt,String)
             End If
             If (Original_Bild Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(Original_Bild,String)
+                Me.Adapter.UpdateCommand.Parameters(36).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(37).Value = CType(Original_Bild,String)
             End If
             If (Original_Erziehungsberechtigter Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(Original_Erziehungsberechtigter,String)
+                Me.Adapter.UpdateCommand.Parameters(38).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(39).Value = CType(Original_Erziehungsberechtigter,String)
             End If
             If (Original_Mutter Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(44).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(44).Value = CType(Original_Mutter,String)
+                Me.Adapter.UpdateCommand.Parameters(40).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(41).Value = CType(Original_Mutter,String)
             End If
             If (Original_Vater Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(46).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(45).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(46).Value = CType(Original_Vater,String)
+                Me.Adapter.UpdateCommand.Parameters(42).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(43).Value = CType(Original_Vater,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -21399,7 +21274,6 @@ Namespace DataSet1TableAdapters
                     ByVal Sorgerechtsstatus As String,  _
                     ByVal Nationalität As String,  _
                     ByVal Konfession As String,  _
-                    ByVal Schule As String,  _
                     ByVal Krankenversicherung As String,  _
                     ByVal Geburtsort As String,  _
                     ByVal Hilfe_nach As String,  _
@@ -21415,7 +21289,6 @@ Namespace DataSet1TableAdapters
                     ByVal Original_Sorgerechtsstatus As String,  _
                     ByVal Original_Nationalität As String,  _
                     ByVal Original_Konfession As String,  _
-                    ByVal Original_Schule As String,  _
                     ByVal Original_Krankenversicherung As String,  _
                     ByVal Original_Geburtsort As String,  _
                     ByVal Original_Hilfe_nach As String,  _
@@ -21425,7 +21298,7 @@ Namespace DataSet1TableAdapters
                     ByVal Original_Erziehungsberechtigter As String,  _
                     ByVal Original_Mutter As String,  _
                     ByVal Original_Vater As String) As Integer
-            Return Me.Update(Original_Name, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfession, Schule, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bild, Erziehungsberechtigter, Mutter, Vater, Original_Name, Original_Geburtsdatum, Original_Aufnahmedatum, Original_Sorgerechtsstatus, Original_Nationalität, Original_Konfession, Original_Schule, Original_Krankenversicherung, Original_Geburtsort, Original_Hilfe_nach, Original_Besonderheiten, Original_Jugendamt, Original_Bild, Original_Erziehungsberechtigter, Original_Mutter, Original_Vater)
+            Return Me.Update(Original_Name, Geburtsdatum, Aufnahmedatum, Sorgerechtsstatus, Nationalität, Konfession, Krankenversicherung, Geburtsort, Hilfe_nach, Besonderheiten, Jugendamt, Bild, Erziehungsberechtigter, Mutter, Vater, Original_Name, Original_Geburtsdatum, Original_Aufnahmedatum, Original_Sorgerechtsstatus, Original_Nationalität, Original_Konfession, Original_Krankenversicherung, Original_Geburtsort, Original_Hilfe_nach, Original_Besonderheiten, Original_Jugendamt, Original_Bild, Original_Erziehungsberechtigter, Original_Mutter, Original_Vater)
         End Function
     End Class
     

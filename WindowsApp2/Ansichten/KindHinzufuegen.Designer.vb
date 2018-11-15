@@ -31,7 +31,6 @@ Partial Class KindHinzufuegen
         Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText8 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText9 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText10 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText11 = New WindowsApp2.PlatzhalterText()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -149,18 +148,6 @@ Partial Class KindHinzufuegen
         Me.PlatzhalterText8.TabIndex = 7
         Me.PlatzhalterText8.Text = "Sorgerechtsstatus"
         '
-        'PlatzhalterText9
-        '
-        Me.PlatzhalterText9.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText9.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText9.Location = New System.Drawing.Point(269, 305)
-        Me.PlatzhalterText9.Name = "PlatzhalterText9"
-        Me.PlatzhalterText9.PlatzHalterText = "Schule"
-        Me.PlatzhalterText9.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText9.TabIndex = 8
-        Me.PlatzhalterText9.Text = "Schule"
-        '
         'PlatzhalterText10
         '
         Me.PlatzhalterText10.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -178,7 +165,7 @@ Partial Class KindHinzufuegen
         Me.PlatzhalterText11.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PlatzhalterText11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText11.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText11.Location = New System.Drawing.Point(269, 369)
+        Me.PlatzhalterText11.Location = New System.Drawing.Point(269, 305)
         Me.PlatzhalterText11.Name = "PlatzhalterText11"
         Me.PlatzhalterText11.PlatzHalterText = "Besonderheiten"
         Me.PlatzhalterText11.Size = New System.Drawing.Size(251, 26)
@@ -283,6 +270,7 @@ Partial Class KindHinzufuegen
         Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -356,7 +344,6 @@ Partial Class KindHinzufuegen
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.PlatzhalterText11)
         Me.Controls.Add(Me.PlatzhalterText10)
-        Me.Controls.Add(Me.PlatzhalterText9)
         Me.Controls.Add(Me.PlatzhalterText8)
         Me.Controls.Add(Me.PlatzhalterText7)
         Me.Controls.Add(Me.PlatzhalterText6)
@@ -383,7 +370,6 @@ Partial Class KindHinzufuegen
     Friend WithEvents PlatzhalterText6 As PlatzhalterText
     Friend WithEvents PlatzhalterText7 As PlatzhalterText
     Friend WithEvents PlatzhalterText8 As PlatzhalterText
-    Friend WithEvents PlatzhalterText9 As PlatzhalterText
     Friend WithEvents PlatzhalterText10 As PlatzhalterText
     Friend WithEvents PlatzhalterText11 As PlatzhalterText
     Friend WithEvents DateTimePicker1 As DateTimePicker
