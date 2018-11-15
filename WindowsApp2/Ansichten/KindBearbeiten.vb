@@ -173,6 +173,12 @@
             a("vDatum") = DateTimePicker1.Value
             a("bDatum") = DateTimePicker2.Value
 
+            If CheckBox1.Checked = True Then
+                a("Aktuell") = "Ja"
+            Else
+                a("Aktuell") = "Nein"
+            End If
+
             Me.DataSet1.SchulDaten.AddSchulDatenRow(a)
             Me.SchulDatenTableAdapter.Update(Me.DataSet1.SchulDaten)
             Me.TableAdapterManager.UpdateAll(Me.DataSet1)

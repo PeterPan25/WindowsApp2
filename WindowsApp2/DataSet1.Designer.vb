@@ -11461,6 +11461,8 @@ Partial Public Class DataSet1
         
         Private columnKlassenlehrer As Global.System.Data.DataColumn
         
+        Private columnAktuell As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub New()
@@ -11545,6 +11547,14 @@ Partial Public Class DataSet1
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property AktuellColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnAktuell
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -11581,9 +11591,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddSchulDatenRow(ByVal parentKindRowByFK_SchulDaten_Kind As KindRow, ByVal vDatum As Date, ByVal bDatum As Date, ByVal parentSchuleRowByFK_SchulDaten_Schule As SchuleRow, ByVal Klasse As String, ByVal Klassenlehrer As String) As SchulDatenRow
+        Public Overloads Function AddSchulDatenRow(ByVal parentKindRowByFK_SchulDaten_Kind As KindRow, ByVal vDatum As Date, ByVal bDatum As Date, ByVal parentSchuleRowByFK_SchulDaten_Schule As SchuleRow, ByVal Klasse As String, ByVal Klassenlehrer As String, ByVal Aktuell As String) As SchulDatenRow
             Dim rowSchulDatenRow As SchulDatenRow = CType(Me.NewRow,SchulDatenRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, vDatum, bDatum, Nothing, Klasse, Klassenlehrer}
+            Dim columnValuesArray() As Object = New Object() {Nothing, vDatum, bDatum, Nothing, Klasse, Klassenlehrer, Aktuell}
             If (Not (parentKindRowByFK_SchulDaten_Kind) Is Nothing) Then
                 columnValuesArray(0) = parentKindRowByFK_SchulDaten_Kind(0)
             End If
@@ -11624,6 +11634,7 @@ Partial Public Class DataSet1
             Me.columnS_Name = MyBase.Columns("S_Name")
             Me.columnKlasse = MyBase.Columns("Klasse")
             Me.columnKlassenlehrer = MyBase.Columns("Klassenlehrer")
+            Me.columnAktuell = MyBase.Columns("Aktuell")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11641,6 +11652,8 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnKlasse)
             Me.columnKlassenlehrer = New Global.System.Data.DataColumn("Klassenlehrer", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnKlassenlehrer)
+            Me.columnAktuell = New Global.System.Data.DataColumn("Aktuell", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnAktuell)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnName, Me.columnS_Name}, true))
             Me.columnName.AllowDBNull = false
             Me.columnName.MaxLength = 50
@@ -11650,6 +11663,7 @@ Partial Public Class DataSet1
             Me.columnS_Name.MaxLength = 50
             Me.columnKlasse.MaxLength = 50
             Me.columnKlassenlehrer.MaxLength = 50
+            Me.columnAktuell.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -16301,6 +16315,21 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Property Aktuell() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableSchulDaten.AktuellColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Aktuell in Tabelle SchulDaten ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableSchulDaten.AktuellColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property KindRow() As KindRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_SchulDaten_Kind")),KindRow)
@@ -16343,6 +16372,18 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetKlassenlehrerNull()
             Me(Me.tableSchulDaten.KlassenlehrerColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsAktuellNull() As Boolean
+            Return Me.IsNull(Me.tableSchulDaten.AktuellColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetAktuellNull()
+            Me(Me.tableSchulDaten.AktuellColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -31321,6 +31362,7 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("S_Name", "S_Name")
             tableMapping.ColumnMappings.Add("Klasse", "Klasse")
             tableMapping.ColumnMappings.Add("Klassenlehrer", "Klassenlehrer")
+            tableMapping.ColumnMappings.Add("Aktuell", "Aktuell")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -31328,7 +31370,8 @@ Namespace DataSet1TableAdapters
                 "al_vDatum) AND ([bDatum] = @Original_bDatum) AND ([S_Name] = @Original_S_Name) A"& _ 
                 "ND ((@IsNull_Klasse = 1 AND [Klasse] IS NULL) OR ([Klasse] = @Original_Klasse)) "& _ 
                 "AND ((@IsNull_Klassenlehrer = 1 AND [Klassenlehrer] IS NULL) OR ([Klassenlehrer]"& _ 
-                " = @Original_Klassenlehrer)))"
+                " = @Original_Klassenlehrer)) AND ((@IsNull_Aktuell = 1 AND [Aktuell] IS NULL) OR"& _ 
+                " ([Aktuell] = @Original_Aktuell)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_vDatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vDatum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -31338,12 +31381,14 @@ Namespace DataSet1TableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Klasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klasse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Klassenlehrer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klassenlehrer", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Klassenlehrer", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klassenlehrer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Aktuell", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Aktuell", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Aktuell", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Aktuell", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO [SchulDaten] ([Name], [vDatum], [bDatum], [S_Name], [Klasse], [Klasse"& _ 
-                "nlehrer]) VALUES (@Name, @vDatum, @bDatum, @S_Name, @Klasse, @Klassenlehrer);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"S"& _ 
-                "ELECT Name, vDatum, bDatum, S_Name, Klasse, Klassenlehrer FROM SchulDaten WHERE "& _ 
-                "(Name = @Name) AND (S_Name = @S_Name)"
+                "nlehrer], [Aktuell]) VALUES (@Name, @vDatum, @bDatum, @S_Name, @Klasse, @Klassen"& _ 
+                "lehrer, @Aktuell);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, vDatum, bDatum, S_Name, Klasse, Klassenlehrer, "& _ 
+                "Aktuell FROM SchulDaten WHERE (Name = @Name) AND (S_Name = @S_Name)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@vDatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vDatum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -31351,16 +31396,18 @@ Namespace DataSet1TableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@S_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "S_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Klasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klasse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Klassenlehrer", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klassenlehrer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Aktuell", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Aktuell", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE [SchulDaten] SET [Name] = @Name, [vDatum] = @vDatum, [bDatum] = @bDatum, ["& _ 
-                "S_Name] = @S_Name, [Klasse] = @Klasse, [Klassenlehrer] = @Klassenlehrer WHERE (("& _ 
-                "[Name] = @Original_Name) AND ([vDatum] = @Original_vDatum) AND ([bDatum] = @Orig"& _ 
-                "inal_bDatum) AND ([S_Name] = @Original_S_Name) AND ((@IsNull_Klasse = 1 AND [Kla"& _ 
-                "sse] IS NULL) OR ([Klasse] = @Original_Klasse)) AND ((@IsNull_Klassenlehrer = 1 "& _ 
-                "AND [Klassenlehrer] IS NULL) OR ([Klassenlehrer] = @Original_Klassenlehrer)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
-                "SELECT Name, vDatum, bDatum, S_Name, Klasse, Klassenlehrer FROM SchulDaten WHERE"& _ 
-                " (Name = @Name) AND (S_Name = @S_Name)"
+                "S_Name] = @S_Name, [Klasse] = @Klasse, [Klassenlehrer] = @Klassenlehrer, [Aktuel"& _ 
+                "l] = @Aktuell WHERE (([Name] = @Original_Name) AND ([vDatum] = @Original_vDatum)"& _ 
+                " AND ([bDatum] = @Original_bDatum) AND ([S_Name] = @Original_S_Name) AND ((@IsNu"& _ 
+                "ll_Klasse = 1 AND [Klasse] IS NULL) OR ([Klasse] = @Original_Klasse)) AND ((@IsN"& _ 
+                "ull_Klassenlehrer = 1 AND [Klassenlehrer] IS NULL) OR ([Klassenlehrer] = @Origin"& _ 
+                "al_Klassenlehrer)) AND ((@IsNull_Aktuell = 1 AND [Aktuell] IS NULL) OR ([Aktuell"& _ 
+                "] = @Original_Aktuell)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Name, vDatum, bDatum, S_Name, Klasse, Klassenl"& _ 
+                "ehrer, Aktuell FROM SchulDaten WHERE (Name = @Name) AND (S_Name = @S_Name)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@vDatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vDatum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
@@ -31368,6 +31415,7 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@S_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "S_Name", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Klasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klasse", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Klassenlehrer", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klassenlehrer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Aktuell", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Aktuell", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Name", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Name", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_vDatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "vDatum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_bDatum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "bDatum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -31376,6 +31424,8 @@ Namespace DataSet1TableAdapters
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Klasse", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klasse", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Klassenlehrer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klassenlehrer", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Klassenlehrer", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Klassenlehrer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Aktuell", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Aktuell", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Aktuell", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Aktuell", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -31391,7 +31441,8 @@ Namespace DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Name, vDatum, bDatum, S_Name, Klasse, Klassenlehrer FROM SchulDaten"
+            Me._commandCollection(0).CommandText = "SELECT Name, vDatum, bDatum, S_Name, Klasse, Klassenlehrer, Aktuell FROM SchulDat"& _ 
+                "en"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -31451,7 +31502,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Name As String, ByVal Original_vDatum As Date, ByVal Original_bDatum As Date, ByVal Original_S_Name As String, ByVal Original_Klasse As String, ByVal Original_Klassenlehrer As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Name As String, ByVal Original_vDatum As Date, ByVal Original_bDatum As Date, ByVal Original_S_Name As String, ByVal Original_Klasse As String, ByVal Original_Klassenlehrer As String, ByVal Original_Aktuell As String) As Integer
             If (Original_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Name")
             Else
@@ -31478,6 +31529,13 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.DeleteCommand.Parameters(6).Value = CType(0,Object)
                 Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Klassenlehrer,String)
             End If
+            If (Original_Aktuell Is Nothing) Then
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(1,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.DeleteCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(9).Value = CType(Original_Aktuell,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -31497,7 +31555,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Name As String, ByVal vDatum As Date, ByVal bDatum As Date, ByVal S_Name As String, ByVal Klasse As String, ByVal Klassenlehrer As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Name As String, ByVal vDatum As Date, ByVal bDatum As Date, ByVal S_Name As String, ByVal Klasse As String, ByVal Klassenlehrer As String, ByVal Aktuell As String) As Integer
             If (Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Name")
             Else
@@ -31520,6 +31578,11 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(5).Value = CType(Klassenlehrer,String)
             End If
+            If (Aktuell Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(6).Value = CType(Aktuell,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -31539,7 +31602,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Name As String, ByVal vDatum As Date, ByVal bDatum As Date, ByVal S_Name As String, ByVal Klasse As String, ByVal Klassenlehrer As String, ByVal Original_Name As String, ByVal Original_vDatum As Date, ByVal Original_bDatum As Date, ByVal Original_S_Name As String, ByVal Original_Klasse As String, ByVal Original_Klassenlehrer As String) As Integer
+        Public Overloads Overridable Function Update(ByVal Name As String, ByVal vDatum As Date, ByVal bDatum As Date, ByVal S_Name As String, ByVal Klasse As String, ByVal Klassenlehrer As String, ByVal Aktuell As String, ByVal Original_Name As String, ByVal Original_vDatum As Date, ByVal Original_bDatum As Date, ByVal Original_S_Name As String, ByVal Original_Klasse As String, ByVal Original_Klassenlehrer As String, ByVal Original_Aktuell As String) As Integer
             If (Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Name")
             Else
@@ -31562,31 +31625,43 @@ Namespace DataSet1TableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Klassenlehrer,String)
             End If
+            If (Aktuell Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Aktuell,String)
+            End If
             If (Original_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Name,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_vDatum,Date)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_bDatum,Date)
+            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_vDatum,Date)
+            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_bDatum,Date)
             If (Original_S_Name Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_S_Name")
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_S_Name,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_S_Name,String)
             End If
             If (Original_Klasse Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Klasse,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Klasse,String)
             End If
             If (Original_Klassenlehrer Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Klassenlehrer,String)
+                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(14).Value = CType(Original_Klassenlehrer,String)
+            End If
+            If (Original_Aktuell Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(15).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(16).Value = CType(Original_Aktuell,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -31607,8 +31682,8 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal vDatum As Date, ByVal bDatum As Date, ByVal Klasse As String, ByVal Klassenlehrer As String, ByVal Original_Name As String, ByVal Original_vDatum As Date, ByVal Original_bDatum As Date, ByVal Original_S_Name As String, ByVal Original_Klasse As String, ByVal Original_Klassenlehrer As String) As Integer
-            Return Me.Update(Original_Name, vDatum, bDatum, Original_S_Name, Klasse, Klassenlehrer, Original_Name, Original_vDatum, Original_bDatum, Original_S_Name, Original_Klasse, Original_Klassenlehrer)
+        Public Overloads Overridable Function Update(ByVal vDatum As Date, ByVal bDatum As Date, ByVal Klasse As String, ByVal Klassenlehrer As String, ByVal Aktuell As String, ByVal Original_Name As String, ByVal Original_vDatum As Date, ByVal Original_bDatum As Date, ByVal Original_S_Name As String, ByVal Original_Klasse As String, ByVal Original_Klassenlehrer As String, ByVal Original_Aktuell As String) As Integer
+            Return Me.Update(Original_Name, vDatum, bDatum, Original_S_Name, Klasse, Klassenlehrer, Aktuell, Original_Name, Original_vDatum, Original_bDatum, Original_S_Name, Original_Klasse, Original_Klassenlehrer, Original_Aktuell)
         End Function
     End Class
     

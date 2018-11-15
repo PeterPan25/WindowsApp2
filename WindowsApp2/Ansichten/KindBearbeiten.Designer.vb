@@ -41,18 +41,17 @@ Partial Class KindBearbeiten
         Me.NeuesBildButton = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SchulDatenDataGridView = New System.Windows.Forms.DataGridView()
+        Me.Klassenlehrer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SchulDatenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
@@ -60,12 +59,13 @@ Partial Class KindBearbeiten
         Me.SchulDatenTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulDatenTableAdapter()
         Me.KindSchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindSchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindSchuleTableAdapter()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Klassenlehrer = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -242,12 +242,13 @@ Partial Class KindBearbeiten
         '
         'CheckBox1
         '
+        Me.CheckBox1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(1062, 230)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(58, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(100, 17)
         Me.CheckBox1.TabIndex = 24
-        Me.CheckBox1.Text = "Aktuell"
+        Me.CheckBox1.Text = "Aktuelle Schule"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'SchulDatenDataGridView
@@ -260,6 +261,42 @@ Partial Class KindBearbeiten
         Me.SchulDatenDataGridView.Name = "SchulDatenDataGridView"
         Me.SchulDatenDataGridView.Size = New System.Drawing.Size(206, 129)
         Me.SchulDatenDataGridView.TabIndex = 24
+        '
+        'Klassenlehrer
+        '
+        Me.Klassenlehrer.DataPropertyName = "Klassenlehrer"
+        Me.Klassenlehrer.HeaderText = "Klassenlehrer"
+        Me.Klassenlehrer.Name = "Klassenlehrer"
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "vDatum"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "vDatum"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "bDatum"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "bDatum"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "S_Name"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "S_Name"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Klasse"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Klasse"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
         'SchulDatenBindingSource
         '
@@ -287,6 +324,69 @@ Partial Class KindBearbeiten
         '
         Me.SchuleBindingSource.DataMember = "Schule"
         Me.SchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet1
+        '
+        'KindTableAdapter
+        '
+        Me.KindTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'SchuleTableAdapter
+        '
+        Me.SchuleTableAdapter.ClearBeforeFill = True
+        '
+        'SchulDatenTableAdapter
+        '
+        Me.SchulDatenTableAdapter.ClearBeforeFill = True
+        '
+        'KindSchuleBindingSource
+        '
+        Me.KindSchuleBindingSource.DataMember = "KindSchule"
+        Me.KindSchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'KindSchuleTableAdapter
+        '
+        Me.KindSchuleTableAdapter.ClearBeforeFill = True
         '
         'PlatzhalterText7
         '
@@ -371,105 +471,6 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText2.Size = New System.Drawing.Size(195, 26)
         Me.PlatzhalterText2.TabIndex = 8
         Me.PlatzhalterText2.Text = "Straße & Hausnummer"
-        '
-        'KindBindingSource
-        '
-        Me.KindBindingSource.DataMember = "Kind"
-        Me.KindBindingSource.DataSource = Me.DataSet1
-        '
-        'KindTableAdapter
-        '
-        Me.KindTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.BerichtTableAdapter = Nothing
-        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
-        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.HautarztTableAdapter = Nothing
-        Me.TableAdapterManager.HilfenTableAdapter = Nothing
-        Me.TableAdapterManager.HNOTableAdapter = Nothing
-        Me.TableAdapterManager.HobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
-        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
-        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
-        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
-        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
-        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
-        Me.TableAdapterManager.KontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
-        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
-        Me.TableAdapterManager.PsychoTableAdapter = Nothing
-        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
-        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
-        Me.TableAdapterManager.SchuleTableAdapter = Nothing
-        Me.TableAdapterManager.TableTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
-        '
-        'SchuleTableAdapter
-        '
-        Me.SchuleTableAdapter.ClearBeforeFill = True
-        '
-        'SchulDatenTableAdapter
-        '
-        Me.SchulDatenTableAdapter.ClearBeforeFill = True
-        '
-        'KindSchuleBindingSource
-        '
-        Me.KindSchuleBindingSource.DataMember = "KindSchule"
-        Me.KindSchuleBindingSource.DataSource = Me.DataSet1
-        '
-        'KindSchuleTableAdapter
-        '
-        Me.KindSchuleTableAdapter.ClearBeforeFill = True
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'Klassenlehrer
-        '
-        Me.Klassenlehrer.DataPropertyName = "Klassenlehrer"
-        Me.Klassenlehrer.HeaderText = "Klassenlehrer"
-        Me.Klassenlehrer.Name = "Klassenlehrer"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "vDatum"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "vDatum"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "bDatum"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "bDatum"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "S_Name"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "S_Name"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        '
-        'DataGridViewTextBoxColumn7
-        '
-        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Klasse"
-        Me.DataGridViewTextBoxColumn7.HeaderText = "Klasse"
-        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         '
         'KindBearbeiten
         '
