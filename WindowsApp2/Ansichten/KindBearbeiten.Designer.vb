@@ -23,10 +23,6 @@ Partial Class KindBearbeiten
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.DataSet1 = New WindowsApp2.DataSet1()
-        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
-        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -36,81 +32,49 @@ Partial Class KindBearbeiten
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
-        Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.SchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchuleTableAdapter()
         Me.SchuleDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.NeuesBildButton = New System.Windows.Forms.Button()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.SchulDatenDataGridView = New System.Windows.Forms.DataGridView()
+        Me.SchulDatenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
+        Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.SchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchuleTableAdapter()
+        Me.SchulDatenTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulDatenTableAdapter()
+        Me.KindSchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KindSchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindSchuleTableAdapter()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Klassenlehrer = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchulDatenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'KindBindingSource
-        '
-        Me.KindBindingSource.DataMember = "Kind"
-        Me.KindBindingSource.DataSource = Me.DataSet1
-        '
-        'KindTableAdapter
-        '
-        Me.KindTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.BerichtTableAdapter = Nothing
-        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
-        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.HautarztTableAdapter = Nothing
-        Me.TableAdapterManager.HilfenTableAdapter = Nothing
-        Me.TableAdapterManager.HNOTableAdapter = Nothing
-        Me.TableAdapterManager.HobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
-        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
-        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
-        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
-        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
-        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
-        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
-        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
-        Me.TableAdapterManager.KontakteTableAdapter = Nothing
-        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
-        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
-        Me.TableAdapterManager.PsychoTableAdapter = Nothing
-        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
-        Me.TableAdapterManager.SchuleTableAdapter = Nothing
-        Me.TableAdapterManager.TableTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
         'Button1
         '
@@ -202,66 +166,6 @@ Partial Class KindBearbeiten
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Label4"
         '
-        'PlatzhalterText1
-        '
-        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(595, 55)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = Nothing
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(218, 26)
-        Me.PlatzhalterText1.TabIndex = 21
-        Me.PlatzhalterText1.Text = "Schule"
-        '
-        'PlatzhalterText2
-        '
-        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(595, 123)
-        Me.PlatzhalterText2.Name = "PlatzhalterText2"
-        Me.PlatzhalterText2.PlatzHalterText = "Straße & Hausnummer"
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(195, 26)
-        Me.PlatzhalterText2.TabIndex = 8
-        Me.PlatzhalterText2.Text = "Straße & Hausnummer"
-        '
-        'PlatzhalterText3
-        '
-        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(796, 123)
-        Me.PlatzhalterText3.Name = "PlatzhalterText3"
-        Me.PlatzhalterText3.PlatzHalterText = "Postleitzahl"
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 26)
-        Me.PlatzhalterText3.TabIndex = 9
-        Me.PlatzhalterText3.Text = "Postleitzahl"
-        '
-        'PlatzhalterText4
-        '
-        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(902, 55)
-        Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = "Schulart"
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(218, 26)
-        Me.PlatzhalterText4.TabIndex = 7
-        Me.PlatzhalterText4.Text = "Schulart"
-        '
-        'PlatzhalterText5
-        '
-        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(902, 123)
-        Me.PlatzhalterText5.Name = "PlatzhalterText5"
-        Me.PlatzhalterText5.PlatzHalterText = "Ort"
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(218, 26)
-        Me.PlatzhalterText5.TabIndex = 10
-        Me.PlatzhalterText5.Text = "Ort"
-        '
         'Label1
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -305,74 +209,17 @@ Partial Class KindBearbeiten
         Me.DateTimePicker2.Size = New System.Drawing.Size(181, 22)
         Me.DateTimePicker2.TabIndex = 17
         '
-        'PlatzhalterText6
-        '
-        Me.PlatzhalterText6.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText6.Location = New System.Drawing.Point(595, 221)
-        Me.PlatzhalterText6.Name = "PlatzhalterText6"
-        Me.PlatzhalterText6.PlatzHalterText = "Klasse"
-        Me.PlatzhalterText6.Size = New System.Drawing.Size(102, 26)
-        Me.PlatzhalterText6.TabIndex = 11
-        Me.PlatzhalterText6.Text = "Klasse"
-        '
-        'PlatzhalterText7
-        '
-        Me.PlatzhalterText7.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText7.Location = New System.Drawing.Point(730, 221)
-        Me.PlatzhalterText7.Name = "PlatzhalterText7"
-        Me.PlatzhalterText7.PlatzHalterText = "Klassenlehrer/-in"
-        Me.PlatzhalterText7.Size = New System.Drawing.Size(193, 26)
-        Me.PlatzhalterText7.TabIndex = 12
-        Me.PlatzhalterText7.Text = "Klassenlehrer/-in"
-        '
-        'SchuleBindingSource
-        '
-        Me.SchuleBindingSource.DataMember = "Schule"
-        Me.SchuleBindingSource.DataSource = Me.DataSet1
-        '
-        'SchuleTableAdapter
-        '
-        Me.SchuleTableAdapter.ClearBeforeFill = True
-        '
         'SchuleDataGridView
         '
         Me.SchuleDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.SchuleDataGridView.AutoGenerateColumns = False
         Me.SchuleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.SchuleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn9})
+        Me.SchuleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5})
         Me.SchuleDataGridView.DataSource = Me.SchuleBindingSource
         Me.SchuleDataGridView.Location = New System.Drawing.Point(595, 294)
         Me.SchuleDataGridView.Name = "SchuleDataGridView"
-        Me.SchuleDataGridView.Size = New System.Drawing.Size(440, 220)
+        Me.SchuleDataGridView.Size = New System.Drawing.Size(440, 129)
         Me.SchuleDataGridView.TabIndex = 21
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "S_Name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "S_Name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Schulart"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Schulart"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn8
-        '
-        Me.DataGridViewTextBoxColumn8.DataPropertyName = "vDatum"
-        Me.DataGridViewTextBoxColumn8.HeaderText = "vDatum"
-        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
-        '
-        'DataGridViewTextBoxColumn9
-        '
-        Me.DataGridViewTextBoxColumn9.DataPropertyName = "bDatum"
-        Me.DataGridViewTextBoxColumn9.HeaderText = "bDatum"
-        Me.DataGridViewTextBoxColumn9.Name = "DataGridViewTextBoxColumn9"
         '
         'Button3
         '
@@ -393,10 +240,243 @@ Partial Class KindBearbeiten
         Me.NeuesBildButton.Text = "Neues Bild"
         Me.NeuesBildButton.UseVisualStyleBackColor = True
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(1062, 230)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(58, 17)
+        Me.CheckBox1.TabIndex = 24
+        Me.CheckBox1.Text = "Aktuell"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'SchulDatenDataGridView
+        '
+        Me.SchulDatenDataGridView.AutoGenerateColumns = False
+        Me.SchulDatenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SchulDatenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.Klassenlehrer, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
+        Me.SchulDatenDataGridView.DataSource = Me.SchulDatenBindingSource
+        Me.SchulDatenDataGridView.Location = New System.Drawing.Point(570, 443)
+        Me.SchulDatenDataGridView.Name = "SchulDatenDataGridView"
+        Me.SchulDatenDataGridView.Size = New System.Drawing.Size(206, 129)
+        Me.SchulDatenDataGridView.TabIndex = 24
+        '
+        'SchulDatenBindingSource
+        '
+        Me.SchulDatenBindingSource.DataMember = "SchulDaten"
+        Me.SchulDatenBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "S_Name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "S_Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Schulart"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Schulart"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'SchuleBindingSource
+        '
+        Me.SchuleBindingSource.DataMember = "Schule"
+        Me.SchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'PlatzhalterText7
+        '
+        Me.PlatzhalterText7.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText7.Location = New System.Drawing.Point(730, 221)
+        Me.PlatzhalterText7.Name = "PlatzhalterText7"
+        Me.PlatzhalterText7.PlatzHalterText = "Klassenlehrer/-in"
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(193, 26)
+        Me.PlatzhalterText7.TabIndex = 12
+        Me.PlatzhalterText7.Text = "Klassenlehrer/-in"
+        '
+        'PlatzhalterText6
+        '
+        Me.PlatzhalterText6.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(595, 221)
+        Me.PlatzhalterText6.Name = "PlatzhalterText6"
+        Me.PlatzhalterText6.PlatzHalterText = "Klasse"
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(102, 26)
+        Me.PlatzhalterText6.TabIndex = 11
+        Me.PlatzhalterText6.Text = "Klasse"
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(595, 55)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = Nothing
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText1.TabIndex = 21
+        Me.PlatzhalterText1.Text = "Schule"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(902, 55)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = "Schulart"
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText4.TabIndex = 7
+        Me.PlatzhalterText4.Text = "Schulart"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(902, 123)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Ort"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText5.TabIndex = 10
+        Me.PlatzhalterText5.Text = "Ort"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(796, 123)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = "Postleitzahl"
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(100, 26)
+        Me.PlatzhalterText3.TabIndex = 9
+        Me.PlatzhalterText3.Text = "Postleitzahl"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(595, 123)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Straße & Hausnummer"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(195, 26)
+        Me.PlatzhalterText2.TabIndex = 8
+        Me.PlatzhalterText2.Text = "Straße & Hausnummer"
+        '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet1
+        '
+        'KindTableAdapter
+        '
+        Me.KindTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.HautarztTableAdapter = Nothing
+        Me.TableAdapterManager.HilfenTableAdapter = Nothing
+        Me.TableAdapterManager.HNOTableAdapter = Nothing
+        Me.TableAdapterManager.HobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindAugenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindFrauenarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHautarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindHilfenTableAdapter = Nothing
+        Me.TableAdapterManager.KindHNOTableAdapter = Nothing
+        Me.TableAdapterManager.KindHobbyTableAdapter = Nothing
+        Me.TableAdapterManager.KindKinderarztTableAdapter = Nothing
+        Me.TableAdapterManager.KindKontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
+        Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
+        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
+        Me.TableAdapterManager.KontakteTableAdapter = Nothing
+        Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
+        Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
+        Me.TableAdapterManager.PsychoTableAdapter = Nothing
+        Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
+        Me.TableAdapterManager.SchuleTableAdapter = Nothing
+        Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'SchuleTableAdapter
+        '
+        Me.SchuleTableAdapter.ClearBeforeFill = True
+        '
+        'SchulDatenTableAdapter
+        '
+        Me.SchulDatenTableAdapter.ClearBeforeFill = True
+        '
+        'KindSchuleBindingSource
+        '
+        Me.KindSchuleBindingSource.DataMember = "KindSchule"
+        Me.KindSchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'KindSchuleTableAdapter
+        '
+        Me.KindSchuleTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'Klassenlehrer
+        '
+        Me.Klassenlehrer.DataPropertyName = "Klassenlehrer"
+        Me.Klassenlehrer.HeaderText = "Klassenlehrer"
+        Me.Klassenlehrer.Name = "Klassenlehrer"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "vDatum"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "vDatum"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "bDatum"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "bDatum"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "S_Name"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "S_Name"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        '
+        'DataGridViewTextBoxColumn7
+        '
+        Me.DataGridViewTextBoxColumn7.DataPropertyName = "Klasse"
+        Me.DataGridViewTextBoxColumn7.HeaderText = "Klasse"
+        Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
+        '
         'KindBearbeiten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.SchulDatenDataGridView)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.NeuesBildButton)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.SchuleDataGridView)
@@ -422,11 +502,14 @@ Partial Class KindBearbeiten
         Me.Controls.Add(Me.Button1)
         Me.Name = "KindBearbeiten"
         Me.Size = New System.Drawing.Size(1231, 600)
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchulDatenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -465,4 +548,17 @@ Partial Class KindBearbeiten
     Friend WithEvents DataGridViewTextBoxColumn9 As DataGridViewTextBoxColumn
     Friend WithEvents Button3 As Button
     Friend WithEvents NeuesBildButton As Button
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents SchulDatenBindingSource As BindingSource
+    Friend WithEvents SchulDatenTableAdapter As DataSet1TableAdapters.SchulDatenTableAdapter
+    Friend WithEvents SchulDatenDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn10 As DataGridViewTextBoxColumn
+    Friend WithEvents KindSchuleBindingSource As BindingSource
+    Friend WithEvents KindSchuleTableAdapter As DataSet1TableAdapters.KindSchuleTableAdapter
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents Klassenlehrer As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
 End Class
