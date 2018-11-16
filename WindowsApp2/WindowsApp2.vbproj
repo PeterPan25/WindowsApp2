@@ -111,6 +111,12 @@
     <Compile Include="Ansichten\ArztUebersicht.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Ansichten\Benutzer.Designer.vb">
+      <DependentUpon>Benutzer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ansichten\Benutzer.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ansichten\Bericht.Designer.vb">
       <DependentUpon>Bericht.vb</DependentUpon>
     </Compile>
@@ -354,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\ArztUebersicht.resx">
       <DependentUpon>ArztUebersicht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ansichten\Benutzer.resx">
+      <DependentUpon>Benutzer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ansichten\Bericht.resx">
       <DependentUpon>Bericht.vb</DependentUpon>

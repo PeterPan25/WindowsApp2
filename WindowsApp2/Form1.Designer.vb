@@ -28,10 +28,10 @@ Partial Class Form1
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
         Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
         Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode2, TreeNode3, TreeNode4})
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode6, TreeNode7, TreeNode8})
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Verwaltung")
+        '  Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
+        '   Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode6})
         Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
         Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt Übersicht")
         Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
@@ -84,7 +84,6 @@ Partial Class Form1
         Me.Formulare1 = New WindowsApp2.Formulare()
         Me.Psycho1 = New WindowsApp2.Psycho()
         Me.Stammdaten1 = New WindowsApp2.Stammdaten()
-        Me.Mitarbeiter1 = New WindowsApp2.Mitarbeiter()
         Me.Schule1 = New WindowsApp2.Schule()
         Me.Krankenhaus1 = New WindowsApp2.Krankenhaus()
         Me.Kontakte1 = New WindowsApp2.Kontakte()
@@ -92,6 +91,7 @@ Partial Class Form1
         Me.Hilfen1 = New WindowsApp2.Hilfen()
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
+        Me.Mitarbeiter1 = New WindowsApp2.Mitarbeiter()
         Me.LogoutButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -103,6 +103,7 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.Benutzer1 = New WindowsApp2.Benutzer()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -174,11 +175,11 @@ Partial Class Form1
         TreeNode5.Name = "Knoten29"
         TreeNode5.Text = "Kinder"
         TreeNode6.Name = "Knoten34"
-        TreeNode6.Text = "hinzufügen"
-        TreeNode7.Name = "Knoten35"
-        TreeNode7.Text = "bearbeiten"
-        TreeNode8.Name = "Knoten36"
-        TreeNode8.Text = "entfernen"
+        TreeNode6.Text = "Verwaltung"
+        '  TreeNode7.Name = "Knoten35"
+        ' TreeNode7.Text = "bearbeiten"
+        'TreeNode8.Name = "Knoten36"
+        'TreeNode8.Text = "entfernen"
         TreeNode9.Name = "Knoten30"
         TreeNode9.Text = "Benutzer"
         TreeNode10.Name = "Knoten1"
@@ -391,6 +392,7 @@ Partial Class Form1
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel1.Controls.Add(Me.Übersicht1)
         Me.Panel1.Controls.Add(Me.BerichtAnlegen1)
+        Me.Panel1.Controls.Add(Me.Benutzer1)
         Me.Panel1.Controls.Add(Me.KindBearbeiten1)
         Me.Panel1.Controls.Add(Me.KindHinzufuegen1)
         Me.Panel1.Controls.Add(Me.ArztUebersicht1)
@@ -582,17 +584,6 @@ Partial Class Form1
         Me.Hilfen1.TabIndex = 7
         Me.Hilfen1.Visible = False
         '
-        'Mitarbeiter1
-        '
-        Me.Mitarbeiter1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Mitarbeiter1.Location = New System.Drawing.Point(0, 0)
-        Me.Mitarbeiter1.Name = "Mitarbeiter1"
-        Me.Mitarbeiter1.Size = New System.Drawing.Size(1335, 453)
-        Me.Mitarbeiter1.TabIndex = 20
-        Me.Mitarbeiter1.Visible = False
-
-
-        '
         'Eltern1
         '
         Me.Eltern1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -610,6 +601,15 @@ Partial Class Form1
         Me.Doku1.Size = New System.Drawing.Size(1335, 453)
         Me.Doku1.TabIndex = 2
         Me.Doku1.Visible = False
+        '
+        'Mitarbeiter1
+        '
+        Me.Mitarbeiter1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Mitarbeiter1.Location = New System.Drawing.Point(0, 0)
+        Me.Mitarbeiter1.Name = "Mitarbeiter1"
+        Me.Mitarbeiter1.Size = New System.Drawing.Size(1335, 453)
+        Me.Mitarbeiter1.TabIndex = 20
+        Me.Mitarbeiter1.Visible = False
         '
         'LogoutButton
         '
@@ -749,10 +749,19 @@ Partial Class Form1
         Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'Benutzer1
+        '
+        Me.Benutzer1.Location = New System.Drawing.Point(38, 3)
+        Me.Benutzer1.Name = "Benutzer1"
+        Me.Benutzer1.Size = New System.Drawing.Size(875, 532)
+        Me.Benutzer1.TabIndex = 27
+        Me.Benutzer1.Visible = False
         '
         'Form1
         '
@@ -841,4 +850,5 @@ Partial Class Form1
     Friend WithEvents LogoutButton As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Übersicht1 As Übersicht
+    Friend WithEvents Benutzer1 As Benutzer
 End Class

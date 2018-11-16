@@ -28,7 +28,8 @@ Public Class Form1
         "hinzufügen",
         "bearbeiten",
         "Übersicht",
-        "Mitarbeiter"
+        "Mitarbeiter",
+        "Verwaltung"
         }
 
 
@@ -60,7 +61,7 @@ Public Class Form1
         Dim ab As New AktuellerBenutzer
         Dim b As String
 
-        For i = 0 To 19
+        For i = 0 To 20
 
 
 
@@ -208,6 +209,11 @@ Public Class Form1
                         Mitarbeiter1.Daten_Load()
                         Mitarbeiter1.Visible = True
                         Mitarbeiter1.BringToFront()
+
+                    Case 20
+                        Benutzer1.Daten_Load()
+                        Benutzer1.Visible = True
+                        Benutzer1.BringToFront()
 
 
                         ' For Each case In TreeView1
