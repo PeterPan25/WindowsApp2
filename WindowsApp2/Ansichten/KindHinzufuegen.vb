@@ -94,13 +94,21 @@
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Dim a As New OpenFileDialog
         Dim b As String = ""
+        Dim bg As New BildGroesse
+
 
         a.InitialDirectory = "C:"
         a.ShowDialog()
 
         b = a.FileName
+        Dim abc As New Bitmap(b)
 
-        PictureBox1.ImageLocation = b
+        With PictureBox1
+            .Image = bg.AutoSizeImage(abc, 151, 158)
+
+        End With
+
+        'PictureBox1.ImageLocation = b
 
         Pfad = b
 
@@ -109,13 +117,22 @@
     Private Sub BildWahlButton_Click(sender As Object, e As EventArgs) Handles BildWahlButton.Click
         Dim a As New OpenFileDialog
         Dim b As String = ""
+        Dim bg As New BildGroesse
+
 
         a.InitialDirectory = "C:"
         a.ShowDialog()
 
         b = a.FileName
 
-        PictureBox1.ImageLocation = b
+        Dim abc As New Bitmap(b)
+
+        With PictureBox1
+            .Image = bg.AutoSizeImage(abc, 151, 158)
+
+        End With
+
+
 
         Pfad = b
     End Sub

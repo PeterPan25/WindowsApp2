@@ -303,6 +303,8 @@ Public Class Form1
     Private Sub KinderDaten()
         Dim Kind As String = NameKind
         Dim Pfad As String
+        Dim bg As New BildGroesse
+
 
         Try
 
@@ -316,7 +318,13 @@ Public Class Form1
                     Pfad = DataSet11.Kind.Rows(z)("Bild")
 
                     If Pfad IsNot "" Then
-                        PictureBox1.ImageLocation = Pfad
+
+                        Dim abc As New Bitmap(Pfad)
+
+                        With PictureBox1
+                            .Image = bg.AutoSizeImage(abc, 150, 160)
+                        End With
+                        ' PictureBox1.ImageLocation = Pfad
 
                     ElseIf Pfad Is "" Then
 

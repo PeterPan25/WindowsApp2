@@ -177,6 +177,7 @@
     <Compile Include="BerichtAnzeigen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BildGroesse.vb" />
     <Compile Include="Class1.vb" />
     <Compile Include="Form5.Designer.vb">
       <DependentUpon>Form5.vb</DependentUpon>
@@ -482,6 +483,7 @@
     <None Include="Resources\mulleimer_size.jpg" />
     <None Include="Resources\neu_size.jpg" />
     <None Include="Resources\stift_size.jpg" />
+    <Content Include="Image1.jpg" />
     <Content Include="ToDo.txt" />
     <None Include="Resources\Ämterplan.jpg" />
     <None Include="DataSet1.xsc">

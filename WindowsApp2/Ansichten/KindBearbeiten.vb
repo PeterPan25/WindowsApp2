@@ -51,6 +51,7 @@
     Public Sub DatenAnzeigen()
         Dim name As String = Form1.CB_name.Text
         Dim Pfad As String
+        Dim bg As New BildGroesse
         '   Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
 
         ReDim name3(DataSet1.Kind.Rows.Count - 1)
@@ -62,7 +63,18 @@
                     Pfad = DataSet1.Kind.Rows(z)("Bild")
                     If Pfad IsNot "" Then
 
-                        PictureBox1.ImageLocation = Pfad
+                        '   PictureBox1.ImageLocation = Pfad
+                        Dim abc As New Bitmap(Pfad)
+
+
+                        With PictureBox1
+                            .Image = bg.AutoSizeImage(abc, 151, 158)
+
+                        End With
+
+
+
+                        nBild = Pfad
                     Else
 
                         PictureBox1.Image = Nothing
@@ -218,13 +230,28 @@
     Private Sub BildÄndernButton_Click(sender As Object, e As EventArgs) Handles NeuesBildButton.Click
         Dim a As New OpenFileDialog
         Dim b As String = ""
+        Dim bg As New BildGroesse
+
 
         a.InitialDirectory = "C:"
         a.ShowDialog()
 
         b = a.FileName
+        Dim abc As New Bitmap(b)
 
-        PictureBox1.ImageLocation = b
+        With PictureBox1
+            .Image = bg.AutoSizeImage(abc, 151, 158)
+
+        End With
+
+
+
+
+
+
+
+        ' PictureBox1.Image = abc
+        ' PictureBox1.ImageLocation = b
 
         nBild = b
     End Sub

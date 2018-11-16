@@ -37,21 +37,21 @@ Partial Class KindBearbeiten
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.SchuleDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.NeuesBildButton = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.SchulDatenDataGridView = New System.Windows.Forms.DataGridView()
-        Me.Klassenlehrer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Klassenlehrer = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SchulDatenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DataSet1 = New WindowsApp2.DataSet1()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
@@ -68,10 +68,10 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchulDatenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -103,6 +103,7 @@ Partial Class KindBearbeiten
         Me.PictureBox1.Location = New System.Drawing.Point(38, 89)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(151, 158)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
@@ -221,6 +222,28 @@ Partial Class KindBearbeiten
         Me.SchuleDataGridView.Size = New System.Drawing.Size(440, 129)
         Me.SchuleDataGridView.TabIndex = 21
         '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "S_Name"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "S_Name"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Schulart"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Schulart"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'SchuleBindingSource
+        '
+        Me.SchuleBindingSource.DataMember = "Schule"
+        Me.SchuleBindingSource.DataSource = Me.DataSet1
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "DataSet1"
+        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -262,17 +285,17 @@ Partial Class KindBearbeiten
         Me.SchulDatenDataGridView.Size = New System.Drawing.Size(206, 129)
         Me.SchulDatenDataGridView.TabIndex = 24
         '
-        'Klassenlehrer
-        '
-        Me.Klassenlehrer.DataPropertyName = "Klassenlehrer"
-        Me.Klassenlehrer.HeaderText = "Klassenlehrer"
-        Me.Klassenlehrer.Name = "Klassenlehrer"
-        '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "Name"
         Me.DataGridViewTextBoxColumn2.HeaderText = "Name"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'Klassenlehrer
+        '
+        Me.Klassenlehrer.DataPropertyName = "Klassenlehrer"
+        Me.Klassenlehrer.HeaderText = "Klassenlehrer"
+        Me.Klassenlehrer.Name = "Klassenlehrer"
         '
         'DataGridViewTextBoxColumn3
         '
@@ -302,28 +325,6 @@ Partial Class KindBearbeiten
         '
         Me.SchulDatenBindingSource.DataMember = "SchulDaten"
         Me.SchulDatenBindingSource.DataSource = Me.DataSet1
-        '
-        'DataSet1
-        '
-        Me.DataSet1.DataSetName = "DataSet1"
-        Me.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "S_Name"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "S_Name"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "Schulart"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Schulart"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'SchuleBindingSource
-        '
-        Me.SchuleBindingSource.DataMember = "Schule"
-        Me.SchuleBindingSource.DataSource = Me.DataSet1
         '
         'KindBindingSource
         '
@@ -505,10 +506,10 @@ Partial Class KindBearbeiten
         Me.Size = New System.Drawing.Size(1231, 600)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SchulDatenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
