@@ -98,7 +98,7 @@
         r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
 
             For k = 0 To r2.GetUpperBound(0)
-            BenutzerName = r2(k)(1)
+            BenutzerName = r2(k)(9) + " " + r2(k)(8)
         Next
 
             NachrichtTableAdapter.Fill(DataSet1.Nachricht)

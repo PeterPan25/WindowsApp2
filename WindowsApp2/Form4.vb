@@ -48,11 +48,15 @@
 
     Private Sub Empfänger()
         Dim EmpfängerArray As String()
+        Dim EmpfängerArray1(DataSet11.Mitarbeiter.Rows.Count - 1) As String
+        Dim EmpfängerArray2(DataSet11.Mitarbeiter.Rows.Count - 1) As String
         ReDim EmpfängerArray(Me.DataSet11.Mitarbeiter.Rows.Count - 1)
         Dim AbsenderInfo As New AktuellerBenutzer
 
         For a = 0 To (DataSet11.Mitarbeiter.Rows.Count - 1)
-            EmpfängerArray(a) = DataSet11.Mitarbeiter.Rows(a)("Name")
+            EmpfängerArray1(a) = DataSet11.Mitarbeiter.Rows(a)("Vorname")
+            EmpfängerArray2(a) = DataSet11.Mitarbeiter.Rows(a)("Nachname")
+            EmpfängerArray(a) = EmpfängerArray1(a) + " " + EmpfängerArray2(a)
         Next
 
         ComboBox1.DataSource = EmpfängerArray
