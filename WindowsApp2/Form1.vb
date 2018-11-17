@@ -243,12 +243,14 @@ Public Class Form1
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
 
-
+        Me.Splitcontainer2.Panel1Collapsed = True
         ' Me.LogoutButton.Visible = False
 
     End Sub
 
     Public Sub Anmelden_erfolgreich()
+
+        Me.Splitcontainer2.Panel1Collapsed = False
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
         Me.LogoutButton.Visible = True

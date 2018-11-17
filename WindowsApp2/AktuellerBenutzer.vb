@@ -15,6 +15,7 @@
         Benutzer = ""
         Form1.CB_name.Enabled = False
         Form1.TreeView1.Enabled = False
+        Form1.Splitcontainer2.Panel1Collapsed = True
         Form1.LogoutButton.Visible = False
         Form1.UserControl11.Visible = True
         Form1.UserControl11.BringToFront()
