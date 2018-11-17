@@ -60,9 +60,23 @@
         MsgBox("Speichern erfolgreich")
 
 
+        Reset()
 
 
 
+
+    End Sub
+
+    Private Sub Reset()
+        DateTimePicker1.Value = Date.Now
+        RichTextBox1.ResetText()
+
+        TextBox1.ResetText()
+        TextBox2.ResetText()
+        TextBox3.ResetText()
+        TextBox4.ResetText()
+        ArztArtComboBox.ResetText()
+        ArztNameCombobox.ResetText()
 
     End Sub
 

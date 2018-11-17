@@ -26,8 +26,8 @@ Partial Class Form1
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Übersicht")
         Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
         Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode2, TreeNode3, TreeNode4})
+        '  Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode2, TreeNode3})
         Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Verwaltung")
         '  Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
         '   Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("entfernen")
@@ -170,8 +170,8 @@ Partial Class Form1
         TreeNode2.Text = "hinzufügen"
         TreeNode3.Name = "Knoten32"
         TreeNode3.Text = "bearbeiten"
-        TreeNode4.Name = "Knoten33"
-        TreeNode4.Text = "entfernen"
+        '   TreeNode4.Name = "Knoten33"
+        '  TreeNode4.Text = "entfernen"
         TreeNode5.Name = "Knoten29"
         TreeNode5.Text = "Kinder"
         TreeNode6.Name = "Knoten34"
