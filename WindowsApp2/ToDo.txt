@@ -28,8 +28,9 @@ Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepl�
  '''''Nach Login Benachrichtigung (Zahl o.ä.) wenn neue Nachricht, in DB Möglichkeit diese als gelesen zu markieren einbauen
 '''' Nachrichten nur als gelesen markieren wenn diese noch ungelesen sind
 picturebox größen einheitlich
-
-
+registrieren neuer benutzer frei oder nur in eingeloggtem zustand
+alles durchgehen und bei button clicks,laden, speichern etc überall auf try block achten und ggf ergänzen
+form1 splitcontainer neu sortieren für design
 
 
 
