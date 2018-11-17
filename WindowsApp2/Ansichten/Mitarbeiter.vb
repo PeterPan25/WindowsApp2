@@ -26,5 +26,20 @@
         End Try
 
     End Sub
+    Public Sub First()
+        Dim a As DataRow
+        a = DataSet1.Mitarbeiter.NewRow()
+
+        Try
+            a("Benutzername") = "a"
+            a("Passwort") = "a"
+            a("Vorname") = "Peter"
+            a("Nachname") = "Hans"
+            DataSet1.Mitarbeiter.AddMitarbeiterRow(a)
+            Me.MitarbeiterTableAdapter.Update(Me.DataSet1.Mitarbeiter)
+        Catch ex As Exception
+            MsgBox("n")
+        End Try
+    End Sub
 
 End Class

@@ -240,10 +240,12 @@ Public Class Form1
         Me.StartPosition = FormStartPosition.CenterScreen
 
 
+
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
 
         Me.Splitcontainer2.Panel1Collapsed = True
+        Mitarbeiter1.First()
         ' Me.LogoutButton.Visible = False
 
     End Sub

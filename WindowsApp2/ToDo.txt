@@ -27,6 +27,12 @@ Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepl�
 ''' Nachrichten der Mitarbeiter untereinander, Nachrichten Tabelle und MitarbeiterNachrichten in DB, Ansicht mit Textbox, Combobox mit Mitarbeiternamen und Sende Button
  '''''Nach Login Benachrichtigung (Zahl o.ä.) wenn neue Nachricht, in DB Möglichkeit diese als gelesen zu markieren einbauen
 '''' Nachrichten nur als gelesen markieren wenn diese noch ungelesen sind
+picturebox größen einheitlich
+
+
+
+
+
 Buttongröße = 42;42
 Schriftgröße Überschriften	= 22
 			 Buttontext		= 12
