@@ -306,9 +306,9 @@ Public Class Form1
 
     End Sub
 
-    Private Sub SplitContainer3_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel1.Paint
+    'Private Sub SplitContainer3_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer3.Panel1.Paint
 
-    End Sub
+    'End Sub
 
     Private Sub KinderDaten()
         Dim Kind As String = NameKind
@@ -321,10 +321,10 @@ Public Class Form1
 
             For z = 0 To (DataSet11.Kind.Rows.Count - 1)
                 If Kind = DataSet11.Kind.Rows(z)("Name") Then
-                    Label1.Text = DataSet11.Kind.Rows(z)("Geburtsdatum")
-                    Label2.Text = DataSet11.Kind.Rows(z)("Sorgerechtsstatus")
-                    Label4.Text = DataSet11.Kind.Rows(z)("Jugendamt")
-                    Label5.Text = DataSet11.Kind.Rows(z)("Aufnahmedatum")
+                    'Label1.Text = DataSet11.Kind.Rows(z)("Geburtsdatum")
+                    'Label2.Text = DataSet11.Kind.Rows(z)("Sorgerechtsstatus")
+                    'Label4.Text = DataSet11.Kind.Rows(z)("Jugendamt")
+                    'Label5.Text = DataSet11.Kind.Rows(z)("Aufnahmedatum")
                     Pfad = DataSet11.Kind.Rows(z)("Bild")
 
                     If Pfad IsNot "" Then
@@ -364,7 +364,7 @@ Public Class Form1
 
 
         name = ab.Benutzer_nennen()
-        Me.Label6.Text = name
+        'Me.Label6.Text = name
 
     End Sub
 
