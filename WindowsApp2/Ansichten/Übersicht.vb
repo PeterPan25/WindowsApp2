@@ -54,6 +54,7 @@
 
                 NotifyIcon1.Icon = SystemIcons.Exclamation
 
+
                 NotifyIcon1.BalloonTipText = "Sie haben ungelesene Nachrichten!"
                 NotifyIcon1.ShowBalloonTip(3)
 

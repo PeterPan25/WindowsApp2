@@ -49,21 +49,23 @@ Partial Class Form1
         Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztberichte", New System.Windows.Forms.TreeNode() {TreeNode22, TreeNode23})
         Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
         Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Formulare")
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
         Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CB_name = New System.Windows.Forms.ComboBox()
         Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New WindowsApp2.DataSet1()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LogoutButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
@@ -90,16 +92,15 @@ Partial Class Form1
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
         Me.Mitarbeiter1 = New WindowsApp2.Mitarbeiter()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
         Me.Splitcontainer2.SuspendLayout()
         Me.Panel15.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -205,6 +206,37 @@ Partial Class Form1
         Me.TreeView1.Size = New System.Drawing.Size(145, 573)
         Me.TreeView1.TabIndex = 1
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.Controls.Add(Me.Übersicht1)
+        Me.Panel1.Controls.Add(Me.BerichtAnlegen1)
+        Me.Panel1.Controls.Add(Me.Benutzer1)
+        Me.Panel1.Controls.Add(Me.KindBearbeiten1)
+        Me.Panel1.Controls.Add(Me.KindHinzufuegen1)
+        Me.Panel1.Controls.Add(Me.ArztUebersicht1)
+        Me.Panel1.Controls.Add(Me.ArztAnlegen1)
+        Me.Panel1.Controls.Add(Me.UserControl11)
+        Me.Panel1.Controls.Add(Me.Bericht1)
+        Me.Panel1.Controls.Add(Me.Arztbericht1)
+        Me.Panel1.Controls.Add(Me.Tagesbericht1)
+        Me.Panel1.Controls.Add(Me.Formulare1)
+        Me.Panel1.Controls.Add(Me.Psycho1)
+        Me.Panel1.Controls.Add(Me.Stammdaten1)
+        Me.Panel1.Controls.Add(Me.Schule1)
+        Me.Panel1.Controls.Add(Me.Krankenhaus1)
+        Me.Panel1.Controls.Add(Me.Kontakte1)
+        Me.Panel1.Controls.Add(Me.Hobby1)
+        Me.Panel1.Controls.Add(Me.Hilfen1)
+        Me.Panel1.Controls.Add(Me.Eltern1)
+        Me.Panel1.Controls.Add(Me.Doku1)
+        Me.Panel1.Controls.Add(Me.Mitarbeiter1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1335, 573)
+        Me.Panel1.TabIndex = 0
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(1193, 51)
@@ -241,37 +273,6 @@ Partial Class Form1
         '
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Panel1.Controls.Add(Me.Übersicht1)
-        Me.Panel1.Controls.Add(Me.BerichtAnlegen1)
-        Me.Panel1.Controls.Add(Me.Benutzer1)
-        Me.Panel1.Controls.Add(Me.KindBearbeiten1)
-        Me.Panel1.Controls.Add(Me.KindHinzufuegen1)
-        Me.Panel1.Controls.Add(Me.ArztUebersicht1)
-        Me.Panel1.Controls.Add(Me.ArztAnlegen1)
-        Me.Panel1.Controls.Add(Me.UserControl11)
-        Me.Panel1.Controls.Add(Me.Bericht1)
-        Me.Panel1.Controls.Add(Me.Arztbericht1)
-        Me.Panel1.Controls.Add(Me.Tagesbericht1)
-        Me.Panel1.Controls.Add(Me.Formulare1)
-        Me.Panel1.Controls.Add(Me.Psycho1)
-        Me.Panel1.Controls.Add(Me.Stammdaten1)
-        Me.Panel1.Controls.Add(Me.Schule1)
-        Me.Panel1.Controls.Add(Me.Krankenhaus1)
-        Me.Panel1.Controls.Add(Me.Kontakte1)
-        Me.Panel1.Controls.Add(Me.Hobby1)
-        Me.Panel1.Controls.Add(Me.Hilfen1)
-        Me.Panel1.Controls.Add(Me.Eltern1)
-        Me.Panel1.Controls.Add(Me.Doku1)
-        Me.Panel1.Controls.Add(Me.Mitarbeiter1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1335, 573)
-        Me.Panel1.TabIndex = 0
         '
         'LogoutButton
         '
@@ -349,6 +350,16 @@ Partial Class Form1
         Me.MonthCalendar1.Location = New System.Drawing.Point(197, 45)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.WindowsApp2.My.Resources.Resources.Logo
+        Me.PictureBox2.Location = New System.Drawing.Point(496, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(349, 118)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
         '
         'Label11
         '
@@ -612,24 +623,15 @@ Partial Class Form1
         Me.Mitarbeiter1.TabIndex = 20
         Me.Mitarbeiter1.Visible = False
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.WindowsApp2.My.Resources.Resources.Logo
-        Me.PictureBox2.Location = New System.Drawing.Point(496, 0)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(349, 118)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(1484, 812)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "Start"
@@ -638,11 +640,11 @@ Partial Class Form1
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Splitcontainer2.ResumeLayout(False)
         Me.Panel15.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
