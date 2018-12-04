@@ -92,6 +92,12 @@ Partial Class Form1
         Me.Eltern1 = New WindowsApp2.Eltern()
         Me.Doku1 = New WindowsApp2.Doku()
         Me.Mitarbeiter1 = New WindowsApp2.Mitarbeiter()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.Splitcontainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Splitcontainer2.Panel1.SuspendLayout()
         Me.Splitcontainer2.Panel2.SuspendLayout()
@@ -239,7 +245,7 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(1193, 51)
+        Me.TextBox1.Location = New System.Drawing.Point(3, 114)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(168, 113)
@@ -247,9 +253,9 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 39)
+        Me.PictureBox1.Location = New System.Drawing.Point(1340, 53)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 108)
+        Me.PictureBox1.Size = New System.Drawing.Size(132, 152)
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
@@ -259,7 +265,7 @@ Partial Class Form1
         Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
         Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CB_name.FormattingEnabled = True
-        Me.CB_name.Location = New System.Drawing.Point(516, 170)
+        Me.CB_name.Location = New System.Drawing.Point(1048, 53)
         Me.CB_name.Name = "CB_name"
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
         Me.CB_name.TabIndex = 8
@@ -278,7 +284,7 @@ Partial Class Form1
         '
         Me.LogoutButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LogoutButton.AutoSize = True
-        Me.LogoutButton.Location = New System.Drawing.Point(1112, 51)
+        Me.LogoutButton.Location = New System.Drawing.Point(16, 56)
         Me.LogoutButton.Name = "LogoutButton"
         Me.LogoutButton.Size = New System.Drawing.Size(75, 23)
         Me.LogoutButton.TabIndex = 14
@@ -316,6 +322,12 @@ Partial Class Form1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label6)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label5)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label4)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.CB_name)
@@ -337,7 +349,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(1112, 96)
+        Me.Button2.Location = New System.Drawing.Point(16, 85)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 15
@@ -347,14 +359,14 @@ Partial Class Form1
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(197, 45)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(183, 65)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.WindowsApp2.My.Resources.Resources.Logo
-        Me.PictureBox2.Location = New System.Drawing.Point(496, 0)
+        Me.PictureBox2.Location = New System.Drawing.Point(444, 3)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(349, 118)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -365,7 +377,7 @@ Partial Class Form1
         '
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(1208, 14)
+        Me.Label11.Location = New System.Drawing.Point(131, 19)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(0, 13)
         Me.Label11.TabIndex = 1
@@ -375,7 +387,7 @@ Partial Class Form1
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1074, 9)
+        Me.Label10.Location = New System.Drawing.Point(12, 14)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(113, 20)
         Me.Label10.TabIndex = 0
@@ -623,6 +635,60 @@ Partial Class Form1
         Me.Mitarbeiter1.TabIndex = 20
         Me.Mitarbeiter1.Visible = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(1071, 114)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Label1"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(1196, 108)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Label2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(1071, 146)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Label3"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1196, 146)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Label4"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(1071, 179)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "Label5"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(1196, 179)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "Label6"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -697,4 +763,10 @@ Partial Class Form1
     Friend WithEvents Benutzer1 As Benutzer
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
 End Class
