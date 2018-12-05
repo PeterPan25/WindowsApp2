@@ -23,8 +23,9 @@ Partial Class Schule
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.SchulBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -44,6 +45,14 @@ Partial Class Schule
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.KindSchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindSchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindSchuleTableAdapter()
+        Me.SchulDatenBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.SchulDatenTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulDatenTableAdapter()
+        Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.SchulDatenDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchulBerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +66,12 @@ Partial Class Schule
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
         CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SchulDatenBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer3.Panel1.SuspendLayout()
+        Me.SplitContainer3.Panel2.SuspendLayout()
+        Me.SplitContainer3.SuspendLayout()
+        CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SchuleBindingSource
@@ -147,28 +162,27 @@ Partial Class Schule
         Me.SchulBerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchulBerichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn7})
         Me.SchulBerichtDataGridView.DataSource = Me.SchulBerichtBindingSource
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.SchulBerichtDataGridView.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SchulBerichtDataGridView.DefaultCellStyle = DataGridViewCellStyle7
         Me.SchulBerichtDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SchulBerichtDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.SchulBerichtDataGridView.Name = "SchulBerichtDataGridView"
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SchulBerichtDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
-        Me.SchulBerichtDataGridView.RowHeadersWidth = 40
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SchulBerichtDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle8
         Me.SchulBerichtDataGridView.RowTemplate.Height = 40
-        Me.SchulBerichtDataGridView.Size = New System.Drawing.Size(921, 487)
+        Me.SchulBerichtDataGridView.Size = New System.Drawing.Size(785, 487)
         Me.SchulBerichtDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -214,30 +228,33 @@ Partial Class Schule
         '
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer1.IsSplitterFixed = True
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
         Me.SplitContainer1.Name = "SplitContainer1"
         '
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.AutoScroll = True
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.SplitContainer3)
         '
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.AutoScroll = True
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
         Me.SplitContainer1.Size = New System.Drawing.Size(1208, 655)
-        Me.SplitContainer1.SplitterDistance = 283
+        Me.SplitContainer1.SplitterDistance = 419
         Me.SplitContainer1.TabIndex = 13
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(54, 161)
+        Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(85, 55)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 13)
+        Me.Label1.Size = New System.Drawing.Size(177, 29)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Hier die Schullaufbahn anzeigen"
+        Me.Label1.Text = "Schullaufbahn"
         '
         'SplitContainer2
         '
@@ -255,7 +272,7 @@ Partial Class Schule
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SchulBerichtDataGridView)
-        Me.SplitContainer2.Size = New System.Drawing.Size(921, 655)
+        Me.SplitContainer2.Size = New System.Drawing.Size(785, 655)
         Me.SplitContainer2.SplitterDistance = 164
         Me.SplitContainer2.TabIndex = 3
         '
@@ -267,6 +284,99 @@ Partial Class Schule
         'KindSchuleTableAdapter
         '
         Me.KindSchuleTableAdapter.ClearBeforeFill = True
+        '
+        'SchulDatenBindingSource
+        '
+        Me.SchulDatenBindingSource.DataMember = "SchulDaten"
+        Me.SchulDatenBindingSource.DataSource = Me.DataSet1
+        '
+        'SchulDatenTableAdapter
+        '
+        Me.SchulDatenTableAdapter.ClearBeforeFill = True
+        '
+        'SplitContainer3
+        '
+        Me.SplitContainer3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer3.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
+        Me.SplitContainer3.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer3.Name = "SplitContainer3"
+        Me.SplitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer3.Panel1
+        '
+        Me.SplitContainer3.Panel1.Controls.Add(Me.Label1)
+        '
+        'SplitContainer3.Panel2
+        '
+        Me.SplitContainer3.Panel2.Controls.Add(Me.SchulDatenDataGridView)
+        Me.SplitContainer3.Size = New System.Drawing.Size(419, 655)
+        Me.SplitContainer3.SplitterDistance = 164
+        Me.SplitContainer3.TabIndex = 2
+        '
+        'SchulDatenDataGridView
+        '
+        Me.SchulDatenDataGridView.AutoGenerateColumns = False
+        Me.SchulDatenDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SchulDatenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SchulDatenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.SchulDatenDataGridView.DataSource = Me.SchulDatenBindingSource
+        Me.SchulDatenDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SchulDatenDataGridView.Location = New System.Drawing.Point(0, 0)
+        Me.SchulDatenDataGridView.MultiSelect = False
+        Me.SchulDatenDataGridView.Name = "SchulDatenDataGridView"
+        Me.SchulDatenDataGridView.ReadOnly = True
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SchulDatenDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        Me.SchulDatenDataGridView.RowHeadersVisible = False
+        Me.SchulDatenDataGridView.RowTemplate.Height = 40
+        Me.SchulDatenDataGridView.Size = New System.Drawing.Size(419, 487)
+        Me.SchulDatenDataGridView.TabIndex = 2
+        '
+        'DataGridViewTextBoxColumn8
+        '
+        Me.DataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn8.DataPropertyName = "S_Name"
+        Me.DataGridViewTextBoxColumn8.FillWeight = 216.8437!
+        Me.DataGridViewTextBoxColumn8.HeaderText = "S_Name"
+        Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
+        Me.DataGridViewTextBoxColumn8.ReadOnly = True
+        Me.DataGridViewTextBoxColumn8.Width = 147
+        '
+        'DataGridViewTextBoxColumn11
+        '
+        Me.DataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn11.DataPropertyName = "Aktuell"
+        Me.DataGridViewTextBoxColumn11.FillWeight = 129.9492!
+        Me.DataGridViewTextBoxColumn11.HeaderText = "Aktuell"
+        Me.DataGridViewTextBoxColumn11.Name = "DataGridViewTextBoxColumn11"
+        Me.DataGridViewTextBoxColumn11.ReadOnly = True
+        Me.DataGridViewTextBoxColumn11.Width = 64
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "vDatum"
+        Me.DataGridViewTextBoxColumn5.FillWeight = 26.60352!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "von"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Width = 104
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "bDatum"
+        Me.DataGridViewTextBoxColumn6.FillWeight = 26.60352!
+        Me.DataGridViewTextBoxColumn6.HeaderText = "bis"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 104
         '
         'Schule
         '
@@ -282,7 +392,6 @@ Partial Class Schule
         CType(Me.SchulBerichtBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SchulBerichtDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -292,6 +401,13 @@ Partial Class Schule
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         CType(Me.KindSchuleBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SchulDatenBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer3.Panel1.ResumeLayout(False)
+        Me.SplitContainer3.Panel1.PerformLayout()
+        Me.SplitContainer3.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer3.ResumeLayout(False)
+        CType(Me.SchulDatenDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -314,4 +430,12 @@ Partial Class Schule
     Friend WithEvents Label1 As Label
     Friend WithEvents KindSchuleBindingSource As BindingSource
     Friend WithEvents KindSchuleTableAdapter As DataSet1TableAdapters.KindSchuleTableAdapter
+    Friend WithEvents SchulDatenBindingSource As BindingSource
+    Friend WithEvents SchulDatenTableAdapter As DataSet1TableAdapters.SchulDatenTableAdapter
+    Friend WithEvents SplitContainer3 As SplitContainer
+    Friend WithEvents SchulDatenDataGridView As DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn8 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn11 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
 End Class

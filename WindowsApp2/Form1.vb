@@ -243,7 +243,7 @@ Public Class Form1
 
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
-
+        Me.ToolStrip1.Visible = False
         Me.Splitcontainer2.Panel1Collapsed = True
         Mitarbeiter1.First()
         ' Me.LogoutButton.Visible = False
@@ -260,6 +260,7 @@ Public Class Form1
         Übersicht1.Visible = True
         Übersicht1.BringToFront()
         Me.Button2.Visible = True
+        Me.ToolStrip1.Visible = True
     End Sub
 
 
@@ -405,6 +406,16 @@ Public Class Form1
 
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
 
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Dim ab As New AktuellerBenutzer
+        Dim name As String
+
+        ab.Benutzer_abgemeldet()
+
+
+        name = ab.Benutzer_nennen()
     End Sub
 
 

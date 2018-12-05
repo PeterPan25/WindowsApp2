@@ -30,8 +30,8 @@ Hilfen: ebenfalls so wie bericht anlegen, hier sollen die angefertigten Hilfepl�
 picturebox größen einheitlich
 registrieren neuer benutzer frei oder nur in eingeloggtem zustand
 alles durchgehen und bei button clicks,laden, speichern etc überall auf try block achten und ggf ergänzen
-form1 splitcontainer neu sortieren für design
-
+''''form1 splitcontainer neu sortieren für design
+''''schulhistorie unter schule anzeigen
 
 
 Buttongröße = 42;42

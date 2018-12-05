@@ -6,6 +6,7 @@
     Public Sub Benutzer_angemeldet(AB As String)
         Benutzer = AB
         Form1.Label11.Text = Benutzer
+        Form1.ToolStripLabel1.Text = "Eingeloggt als:" + " " + Benutzer
     End Sub
 
     ' Meldet den Benutzer ab, sperrt die relevanten Bereiche und wechselt auf die Login Ansicht
