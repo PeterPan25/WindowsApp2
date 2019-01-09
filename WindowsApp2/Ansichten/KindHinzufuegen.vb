@@ -97,20 +97,34 @@
         Dim bg As New BildGroesse
 
 
+        Dim ds As DialogResult = a.ShowDialog()
+
+
+
         a.InitialDirectory = "C:"
-        a.ShowDialog()
 
-        b = a.FileName
-        Dim abc As New Bitmap(b)
 
-        With PictureBox1
-            .Image = bg.AutoSizeImage(abc, 151, 158)
+        If ds = DialogResult.OK Then
 
-        End With
 
-        'PictureBox1.ImageLocation = b
 
-        Pfad = b
+            b = a.FileName
+
+            Dim abc As New Bitmap(b)
+
+            With PictureBox1
+                .Image = bg.AutoSizeImage(abc, 151, 158)
+
+            End With
+
+        ElseIf ds = DialogResult.Cancel Then
+            Pfad = b
+
+
+
+        End If
+
+
 
     End Sub
 
@@ -119,24 +133,35 @@
         Dim b As String = ""
         Dim bg As New BildGroesse
 
+        Dim ds As DialogResult = a.ShowDialog()
+
+
 
         a.InitialDirectory = "C:"
-        a.ShowDialog()
 
-        b = a.FileName
 
-        Dim abc As New Bitmap(b)
-
-        With PictureBox1
-            .Image = bg.AutoSizeImage(abc, 151, 158)
-
-        End With
+        If ds = DialogResult.OK Then
 
 
 
-        Pfad = b
+            b = a.FileName
+
+            Dim abc As New Bitmap(b)
+
+            With PictureBox1
+                .Image = bg.AutoSizeImage(abc, 151, 158)
+
+            End With
+
+        ElseIf ds = DialogResult.Cancel Then
+            Pfad = b
+
+
+
+        End If
+
+
     End Sub
-
 
     'Private Sub KindBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
     '    Me.Validate()
