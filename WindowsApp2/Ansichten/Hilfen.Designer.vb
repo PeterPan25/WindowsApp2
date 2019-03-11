@@ -25,6 +25,7 @@ Partial Class Hilfen
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Überschrift = New System.Windows.Forms.Label()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -39,7 +40,6 @@ Partial Class Hilfen
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -76,7 +76,7 @@ Partial Class Hilfen
         'Überschrift
         '
         Me.Überschrift.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
         Me.Überschrift.Size = New System.Drawing.Size(829, 35)
@@ -104,6 +104,17 @@ Partial Class Hilfen
         Me.SplitContainer2.Size = New System.Drawing.Size(829, 487)
         Me.SplitContainer2.SplitterDistance = 276
         Me.SplitContainer2.TabIndex = 7
+        '
+        'Button4
+        '
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(96, 237)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Button4"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
@@ -231,15 +242,6 @@ Partial Class Hilfen
         '
         Me.ColumnHeader5.Text = "Mitarbeiter"
         Me.ColumnHeader5.Width = 128
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(96, 237)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'Hilfen
         '

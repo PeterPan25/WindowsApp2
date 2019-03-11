@@ -156,7 +156,9 @@ Partial Class F_Peter
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.Button1.BackColor = System.Drawing.Color.SkyBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(317, 316)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(160, 40)
@@ -229,7 +231,7 @@ Partial Class F_Peter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.ClientSize = New System.Drawing.Size(516, 406)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)

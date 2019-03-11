@@ -49,9 +49,11 @@ Partial Class F_Aaliyah
         '
         'Button1
         '
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(292, 262)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 49)
+        Me.Button1.Size = New System.Drawing.Size(93, 45)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Kontakt hinzufügen"
         Me.Button1.UseVisualStyleBackColor = True
@@ -241,6 +243,7 @@ Partial Class F_Aaliyah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.ClientSize = New System.Drawing.Size(440, 382)
         Me.Controls.Add(Me.PlatzhalterText11)
         Me.Controls.Add(Me.PlatzhalterText10)

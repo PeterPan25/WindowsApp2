@@ -21,13 +21,18 @@
         Benutzer = ""
         Form1.CB_name.Enabled = False
         Form1.Label11.Visible = False
+        Form1.Label10.Visible = False
+        Form1.CB_name.Visible = False
         Form1.Label1.Visible = False
         Form1.Label2.Visible = False
         Form1.Label3.Visible = False
+        Form1.MonthCalendar1.Visible = False
 
-        Form1.Label4.Visible = False
+        Form1.TextBox1.Visible = False
+
+        '   Form1.Label4.Visible = False
         Form1.Label5.Visible = False
-        Form1.Label6.Visible = False
+        'Form1.Label6.Visible = False
         Form1.Button2.Visible = False
         Form1.TreeView1.Enabled = False
         Form1.Splitcontainer2.Panel1Collapsed = True

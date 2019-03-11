@@ -67,7 +67,8 @@ Partial Class Tagesbericht
         'Button4
         '
         Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.Location = New System.Drawing.Point(561, 49)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(160, 40)
@@ -78,7 +79,8 @@ Partial Class Tagesbericht
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(386, 49)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(160, 40)
@@ -89,7 +91,8 @@ Partial Class Tagesbericht
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(211, 49)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(160, 40)
@@ -100,7 +103,8 @@ Partial Class Tagesbericht
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(35, 49)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(160, 40)
@@ -119,7 +123,7 @@ Partial Class Tagesbericht
         'Überschrift
         '
         Me.Überschrift.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Überschrift.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Überschrift.Location = New System.Drawing.Point(0, 0)
         Me.Überschrift.Name = "Überschrift"
         Me.Überschrift.Size = New System.Drawing.Size(782, 46)

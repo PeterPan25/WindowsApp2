@@ -23,16 +23,6 @@ Partial Class KindHinzufuegen
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText8 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText10 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText11 = New WindowsApp2.PlatzhalterText()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -44,133 +34,23 @@ Partial Class KindHinzufuegen
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BildWahlButton = New System.Windows.Forms.Button()
-        Me.PlatzhalterText12 = New WindowsApp2.PlatzhalterText()
-        Me.PlatzhalterText13 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText14 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText13 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText12 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText11 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText10 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText8 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText4 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
+        Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PlatzhalterText1
-        '
-        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(269, 56)
-        Me.PlatzhalterText1.Name = "PlatzhalterText1"
-        Me.PlatzhalterText1.PlatzHalterText = "Vorname"
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText1.TabIndex = 0
-        Me.PlatzhalterText1.Text = "Vorname"
-        '
-        'PlatzhalterText2
-        '
-        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText2.Location = New System.Drawing.Point(551, 56)
-        Me.PlatzhalterText2.Name = "PlatzhalterText2"
-        Me.PlatzhalterText2.PlatzHalterText = "Name"
-        Me.PlatzhalterText2.Size = New System.Drawing.Size(261, 26)
-        Me.PlatzhalterText2.TabIndex = 1
-        Me.PlatzhalterText2.Text = "Name"
-        '
-        'PlatzhalterText3
-        '
-        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText3.Location = New System.Drawing.Point(551, 108)
-        Me.PlatzhalterText3.Name = "PlatzhalterText3"
-        Me.PlatzhalterText3.PlatzHalterText = "Geburtsort"
-        Me.PlatzhalterText3.Size = New System.Drawing.Size(261, 26)
-        Me.PlatzhalterText3.TabIndex = 2
-        Me.PlatzhalterText3.Text = "Geburtsort"
-        '
-        'PlatzhalterText4
-        '
-        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(269, 152)
-        Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = "Nationalität"
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText4.TabIndex = 3
-        Me.PlatzhalterText4.Text = "Nationalität"
-        '
-        'PlatzhalterText5
-        '
-        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText5.Location = New System.Drawing.Point(551, 152)
-        Me.PlatzhalterText5.Name = "PlatzhalterText5"
-        Me.PlatzhalterText5.PlatzHalterText = "Konfession"
-        Me.PlatzhalterText5.Size = New System.Drawing.Size(261, 26)
-        Me.PlatzhalterText5.TabIndex = 4
-        Me.PlatzhalterText5.Text = "Konfession"
-        '
-        'PlatzhalterText6
-        '
-        Me.PlatzhalterText6.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText6.Location = New System.Drawing.Point(269, 198)
-        Me.PlatzhalterText6.Name = "PlatzhalterText6"
-        Me.PlatzhalterText6.PlatzHalterText = "Jugendamt"
-        Me.PlatzhalterText6.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText6.TabIndex = 5
-        Me.PlatzhalterText6.Text = "Jugendamt"
-        '
-        'PlatzhalterText7
-        '
-        Me.PlatzhalterText7.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText7.Location = New System.Drawing.Point(551, 198)
-        Me.PlatzhalterText7.Name = "PlatzhalterText7"
-        Me.PlatzhalterText7.PlatzHalterText = "Hilfe nach"
-        Me.PlatzhalterText7.Size = New System.Drawing.Size(261, 26)
-        Me.PlatzhalterText7.TabIndex = 6
-        Me.PlatzhalterText7.Text = "Hilfe nach"
-        '
-        'PlatzhalterText8
-        '
-        Me.PlatzhalterText8.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText8.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText8.Location = New System.Drawing.Point(551, 250)
-        Me.PlatzhalterText8.Name = "PlatzhalterText8"
-        Me.PlatzhalterText8.PlatzHalterText = "Sorgerechtsstatus"
-        Me.PlatzhalterText8.Size = New System.Drawing.Size(261, 26)
-        Me.PlatzhalterText8.TabIndex = 7
-        Me.PlatzhalterText8.Text = "Sorgerechtsstatus"
-        '
-        'PlatzhalterText10
-        '
-        Me.PlatzhalterText10.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText10.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText10.Location = New System.Drawing.Point(551, 305)
-        Me.PlatzhalterText10.Name = "PlatzhalterText10"
-        Me.PlatzhalterText10.PlatzHalterText = "Krankenversicherung"
-        Me.PlatzhalterText10.Size = New System.Drawing.Size(261, 26)
-        Me.PlatzhalterText10.TabIndex = 9
-        Me.PlatzhalterText10.Text = "Krankenversicherung"
-        '
-        'PlatzhalterText11
-        '
-        Me.PlatzhalterText11.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.PlatzhalterText11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText11.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText11.Location = New System.Drawing.Point(269, 305)
-        Me.PlatzhalterText11.Name = "PlatzhalterText11"
-        Me.PlatzhalterText11.PlatzHalterText = "Besonderheiten"
-        Me.PlatzhalterText11.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText11.TabIndex = 10
-        Me.PlatzhalterText11.Text = "Besonderheiten"
         '
         'DateTimePicker1
         '
@@ -196,10 +76,10 @@ Partial Class KindHinzufuegen
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(98, 108)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 20)
+        Me.Label1.Size = New System.Drawing.Size(124, 20)
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Geburtsdatum"
         '
@@ -207,17 +87,18 @@ Partial Class KindHinzufuegen
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(98, 250)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 20)
+        Me.Label2.Size = New System.Drawing.Size(141, 20)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Aufnahmedatum"
         '
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(737, 369)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(160, 40)
@@ -287,6 +168,8 @@ Partial Class KindHinzufuegen
         '
         'BildWahlButton
         '
+        Me.BildWahlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BildWahlButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BildWahlButton.Location = New System.Drawing.Point(49, 445)
         Me.BildWahlButton.Name = "BildWahlButton"
         Me.BildWahlButton.Size = New System.Drawing.Size(104, 23)
@@ -294,16 +177,16 @@ Partial Class KindHinzufuegen
         Me.BildWahlButton.Text = "Bild auswählen"
         Me.BildWahlButton.UseVisualStyleBackColor = True
         '
-        'PlatzhalterText12
+        'PlatzhalterText14
         '
-        Me.PlatzhalterText12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText12.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText12.Location = New System.Drawing.Point(269, 419)
-        Me.PlatzhalterText12.Name = "PlatzhalterText12"
-        Me.PlatzhalterText12.PlatzHalterText = "Vater"
-        Me.PlatzhalterText12.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText12.TabIndex = 18
-        Me.PlatzhalterText12.Text = "Vater"
+        Me.PlatzhalterText14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText14.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText14.Location = New System.Drawing.Point(269, 494)
+        Me.PlatzhalterText14.Name = "PlatzhalterText14"
+        Me.PlatzhalterText14.PlatzHalterText = "Erziehungsberechtigte /-r"
+        Me.PlatzhalterText14.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText14.TabIndex = 20
+        Me.PlatzhalterText14.Text = "Erziehungsberechtigte /-r"
         '
         'PlatzhalterText13
         '
@@ -316,16 +199,136 @@ Partial Class KindHinzufuegen
         Me.PlatzhalterText13.TabIndex = 19
         Me.PlatzhalterText13.Text = "Mutter"
         '
-        'PlatzhalterText14
+        'PlatzhalterText12
         '
-        Me.PlatzhalterText14.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
-        Me.PlatzhalterText14.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText14.Location = New System.Drawing.Point(269, 494)
-        Me.PlatzhalterText14.Name = "PlatzhalterText14"
-        Me.PlatzhalterText14.PlatzHalterText = "Erziehungsberechtigte /-r"
-        Me.PlatzhalterText14.Size = New System.Drawing.Size(251, 26)
-        Me.PlatzhalterText14.TabIndex = 20
-        Me.PlatzhalterText14.Text = "Erziehungsberechtigte /-r"
+        Me.PlatzhalterText12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText12.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText12.Location = New System.Drawing.Point(269, 419)
+        Me.PlatzhalterText12.Name = "PlatzhalterText12"
+        Me.PlatzhalterText12.PlatzHalterText = "Vater"
+        Me.PlatzhalterText12.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText12.TabIndex = 18
+        Me.PlatzhalterText12.Text = "Vater"
+        '
+        'PlatzhalterText11
+        '
+        Me.PlatzhalterText11.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText11.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText11.Location = New System.Drawing.Point(269, 305)
+        Me.PlatzhalterText11.Name = "PlatzhalterText11"
+        Me.PlatzhalterText11.PlatzHalterText = "Besonderheiten"
+        Me.PlatzhalterText11.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText11.TabIndex = 10
+        Me.PlatzhalterText11.Text = "Besonderheiten"
+        '
+        'PlatzhalterText10
+        '
+        Me.PlatzhalterText10.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText10.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText10.Location = New System.Drawing.Point(551, 305)
+        Me.PlatzhalterText10.Name = "PlatzhalterText10"
+        Me.PlatzhalterText10.PlatzHalterText = "Krankenversicherung"
+        Me.PlatzhalterText10.Size = New System.Drawing.Size(261, 26)
+        Me.PlatzhalterText10.TabIndex = 9
+        Me.PlatzhalterText10.Text = "Krankenversicherung"
+        '
+        'PlatzhalterText8
+        '
+        Me.PlatzhalterText8.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText8.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText8.Location = New System.Drawing.Point(551, 250)
+        Me.PlatzhalterText8.Name = "PlatzhalterText8"
+        Me.PlatzhalterText8.PlatzHalterText = "Sorgerechtsstatus"
+        Me.PlatzhalterText8.Size = New System.Drawing.Size(261, 26)
+        Me.PlatzhalterText8.TabIndex = 7
+        Me.PlatzhalterText8.Text = "Sorgerechtsstatus"
+        '
+        'PlatzhalterText7
+        '
+        Me.PlatzhalterText7.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText7.Location = New System.Drawing.Point(551, 198)
+        Me.PlatzhalterText7.Name = "PlatzhalterText7"
+        Me.PlatzhalterText7.PlatzHalterText = "Hilfe nach"
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(261, 26)
+        Me.PlatzhalterText7.TabIndex = 6
+        Me.PlatzhalterText7.Text = "Hilfe nach"
+        '
+        'PlatzhalterText6
+        '
+        Me.PlatzhalterText6.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText6.Location = New System.Drawing.Point(269, 198)
+        Me.PlatzhalterText6.Name = "PlatzhalterText6"
+        Me.PlatzhalterText6.PlatzHalterText = "Jugendamt"
+        Me.PlatzhalterText6.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText6.TabIndex = 5
+        Me.PlatzhalterText6.Text = "Jugendamt"
+        '
+        'PlatzhalterText5
+        '
+        Me.PlatzhalterText5.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText5.Location = New System.Drawing.Point(551, 152)
+        Me.PlatzhalterText5.Name = "PlatzhalterText5"
+        Me.PlatzhalterText5.PlatzHalterText = "Konfession"
+        Me.PlatzhalterText5.Size = New System.Drawing.Size(261, 26)
+        Me.PlatzhalterText5.TabIndex = 4
+        Me.PlatzhalterText5.Text = "Konfession"
+        '
+        'PlatzhalterText4
+        '
+        Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(269, 152)
+        Me.PlatzhalterText4.Name = "PlatzhalterText4"
+        Me.PlatzhalterText4.PlatzHalterText = "Nationalität"
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText4.TabIndex = 3
+        Me.PlatzhalterText4.Text = "Nationalität"
+        '
+        'PlatzhalterText3
+        '
+        Me.PlatzhalterText3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText3.Location = New System.Drawing.Point(551, 108)
+        Me.PlatzhalterText3.Name = "PlatzhalterText3"
+        Me.PlatzhalterText3.PlatzHalterText = "Geburtsort"
+        Me.PlatzhalterText3.Size = New System.Drawing.Size(261, 26)
+        Me.PlatzhalterText3.TabIndex = 2
+        Me.PlatzhalterText3.Text = "Geburtsort"
+        '
+        'PlatzhalterText2
+        '
+        Me.PlatzhalterText2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText2.Location = New System.Drawing.Point(551, 56)
+        Me.PlatzhalterText2.Name = "PlatzhalterText2"
+        Me.PlatzhalterText2.PlatzHalterText = "Name"
+        Me.PlatzhalterText2.Size = New System.Drawing.Size(261, 26)
+        Me.PlatzhalterText2.TabIndex = 1
+        Me.PlatzhalterText2.Text = "Name"
+        '
+        'PlatzhalterText1
+        '
+        Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
+        Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(269, 56)
+        Me.PlatzhalterText1.Name = "PlatzhalterText1"
+        Me.PlatzhalterText1.PlatzHalterText = "Vorname"
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(251, 26)
+        Me.PlatzhalterText1.TabIndex = 0
+        Me.PlatzhalterText1.Text = "Vorname"
         '
         'KindHinzufuegen
         '

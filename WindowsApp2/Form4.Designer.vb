@@ -43,30 +43,31 @@ Partial Class Nachrichten
         'AbsenderLabel
         '
         Me.AbsenderLabel.AutoSize = True
+        Me.AbsenderLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AbsenderLabel.Location = New System.Drawing.Point(9, 9)
         Me.AbsenderLabel.Name = "AbsenderLabel"
-        Me.AbsenderLabel.Size = New System.Drawing.Size(39, 13)
+        Me.AbsenderLabel.Size = New System.Drawing.Size(45, 13)
         Me.AbsenderLabel.TabIndex = 0
         Me.AbsenderLabel.Text = "Label1"
         '
         'SendenButton
         '
-        Me.SendenButton.FlatAppearance.BorderColor = System.Drawing.Color.Red
-        Me.SendenButton.FlatAppearance.BorderSize = 2
-        Me.SendenButton.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.SendenButton.Font = New System.Drawing.Font("Sitka Small", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SendenButton.Location = New System.Drawing.Point(433, 348)
+        Me.SendenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SendenButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SendenButton.Location = New System.Drawing.Point(427, 348)
         Me.SendenButton.Name = "SendenButton"
-        Me.SendenButton.Size = New System.Drawing.Size(75, 23)
+        Me.SendenButton.Size = New System.Drawing.Size(81, 23)
         Me.SendenButton.TabIndex = 5
         Me.SendenButton.Text = "Senden"
         Me.SendenButton.UseVisualStyleBackColor = True
         '
         'AbbruchButton
         '
-        Me.AbbruchButton.Location = New System.Drawing.Point(340, 348)
+        Me.AbbruchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AbbruchButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AbbruchButton.Location = New System.Drawing.Point(334, 348)
         Me.AbbruchButton.Name = "AbbruchButton"
-        Me.AbbruchButton.Size = New System.Drawing.Size(75, 23)
+        Me.AbbruchButton.Size = New System.Drawing.Size(81, 23)
         Me.AbbruchButton.TabIndex = 6
         Me.AbbruchButton.Text = "Abbrechen"
         Me.AbbruchButton.UseVisualStyleBackColor = True

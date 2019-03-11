@@ -254,19 +254,23 @@ Public Class Form1
     Public Sub Anmelden_erfolgreich()
         Me.CB_name.Visible = True
 
+        Me.TextBox1.Visible = True
 
         Me.Splitcontainer2.Panel1Collapsed = False
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
         Me.LogoutButton.Visible = True
         Me.Label11.Visible = True
+        Me.Label10.Visible = True
+
         Me.Label1.Visible = True
         Me.Label2.Visible = True
         Me.Label3.Visible = True
+        Me.MonthCalendar1.Visible = True
 
-        Me.Label4.Visible = True
+        '  Me.Label4.Visible = True
         Me.Label5.Visible = True
-        Me.Label6.Visible = True
+        '  Me.Label6.Visible = True
         Übersicht1.Daten_laden()
         Übersicht1.Visible = True
         Übersicht1.BringToFront()
@@ -333,10 +337,10 @@ Public Class Form1
 
             For z = 0 To (DataSet11.Kind.Rows.Count - 1)
                 If Kind = DataSet11.Kind.Rows(z)("Name") Then
-                    Label2.Text = DataSet11.Kind.Rows(z)("Geburtsdatum")
-                    'Label2.Text = DataSet11.Kind.Rows(z)("Sorgerechtsstatus")
+                    Label2.Text = "Geboren am " + DataSet11.Kind.Rows(z)("Geburtsdatum")
+                    Label3.Text = "Sorgerechtsstatus: " + DataSet11.Kind.Rows(z)("Sorgerechtsstatus")
                     'Label4.Text = DataSet11.Kind.Rows(z)("Jugendamt")
-                    'Label5.Text = DataSet11.Kind.Rows(z)("Aufnahmedatum")
+                    Label5.Text = "Aufnahmedatum: " + DataSet11.Kind.Rows(z)("Aufnahmedatum")
                     Pfad = DataSet11.Kind.Rows(z)("Bild")
 
                     If Pfad IsNot "" Then
@@ -415,7 +419,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
     End Sub
 

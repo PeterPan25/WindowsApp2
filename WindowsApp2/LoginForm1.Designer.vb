@@ -85,7 +85,7 @@ Partial Class LoginForm1
         '
         'OK
         '
-        Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.OK.Location = New System.Drawing.Point(197, 161)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(94, 23)
@@ -95,7 +95,7 @@ Partial Class LoginForm1
         'Cancel
         '
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Cancel.Location = New System.Drawing.Point(300, 161)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(94, 23)

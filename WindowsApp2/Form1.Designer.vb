@@ -63,9 +63,7 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -250,6 +248,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(168, 113)
         Me.TextBox1.TabIndex = 11
+        Me.TextBox1.Visible = False
         '
         'PictureBox1
         '
@@ -326,9 +325,7 @@ Partial Class Form1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label6)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label5)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.Label4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label3)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
@@ -350,64 +347,43 @@ Partial Class Form1
         Me.SplitContainer1.SplitterDistance = 235
         Me.SplitContainer1.TabIndex = 9
         '
-        'Label6
-        '
-        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(1196, 179)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 13)
-        Me.Label6.TabIndex = 21
-        Me.Label6.Text = "Label6"
-        '
         'Label5
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(1071, 179)
+        Me.Label5.Location = New System.Drawing.Point(1046, 179)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 13)
         Me.Label5.TabIndex = 20
         Me.Label5.Text = "Label5"
-        '
-        'Label4
-        '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(1196, 146)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
-        Me.Label4.TabIndex = 19
-        Me.Label4.Text = "Label4"
+        Me.Label5.Visible = False
         '
         'Label3
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(1071, 146)
+        Me.Label3.Location = New System.Drawing.Point(1046, 146)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Label3"
+        Me.Label3.Visible = False
         '
         'Label2
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(1196, 108)
+        Me.Label2.Location = New System.Drawing.Point(1046, 114)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 17
-        Me.Label2.Text = "Label2"
         '
         'Label1
         '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(1045, 21)
@@ -435,6 +411,7 @@ Partial Class Form1
         Me.MonthCalendar1.Location = New System.Drawing.Point(187, 65)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
+        Me.MonthCalendar1.Visible = False
         '
         'PictureBox2
         '
@@ -464,6 +441,7 @@ Partial Class Form1
         Me.Label10.Size = New System.Drawing.Size(128, 20)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Eingeloggt als:"
+        Me.Label10.Visible = False
         '
         'KindTableAdapter
         '
@@ -530,9 +508,10 @@ Partial Class Form1
         'Benutzer1
         '
         Me.Benutzer1.BackColor = System.Drawing.Color.SkyBlue
-        Me.Benutzer1.Location = New System.Drawing.Point(38, 3)
+        Me.Benutzer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Benutzer1.Location = New System.Drawing.Point(0, 0)
         Me.Benutzer1.Name = "Benutzer1"
-        Me.Benutzer1.Size = New System.Drawing.Size(875, 532)
+        Me.Benutzer1.Size = New System.Drawing.Size(1335, 573)
         Me.Benutzer1.TabIndex = 27
         Me.Benutzer1.Visible = False
         '
@@ -548,7 +527,7 @@ Partial Class Form1
         '
         'KindHinzufuegen1
         '
-        Me.KindHinzufuegen1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.KindHinzufuegen1.BackColor = System.Drawing.Color.SkyBlue
         Me.KindHinzufuegen1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.KindHinzufuegen1.Location = New System.Drawing.Point(0, 0)
         Me.KindHinzufuegen1.Name = "KindHinzufuegen1"
@@ -567,7 +546,7 @@ Partial Class Form1
         '
         'ArztAnlegen1
         '
-        Me.ArztAnlegen1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ArztAnlegen1.BackColor = System.Drawing.Color.SkyBlue
         Me.ArztAnlegen1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ArztAnlegen1.Location = New System.Drawing.Point(0, 0)
         Me.ArztAnlegen1.Name = "ArztAnlegen1"
@@ -626,7 +605,7 @@ Partial Class Form1
         '
         'Psycho1
         '
-        Me.Psycho1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Psycho1.BackColor = System.Drawing.Color.SkyBlue
         Me.Psycho1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Psycho1.Location = New System.Drawing.Point(0, 0)
         Me.Psycho1.Name = "Psycho1"
@@ -799,9 +778,7 @@ Partial Class Form1
     Friend WithEvents Benutzer1 As Benutzer
     Friend WithEvents Panel1 As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
