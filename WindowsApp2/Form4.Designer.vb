@@ -23,10 +23,10 @@ Partial Class Nachrichten
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Nachrichten))
         Me.AbsenderLabel = New System.Windows.Forms.Label()
         Me.SendenButton = New System.Windows.Forms.Button()
         Me.AbbruchButton = New System.Windows.Forms.Button()
-        Me.BetreffTextbox = New WindowsApp2.PlatzhalterText()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MitarbeiterTableAdapter = New WindowsApp2.DataSet1TableAdapters.MitarbeiterTableAdapter()
@@ -35,6 +35,7 @@ Partial Class Nachrichten
         Me.DataSet11 = New WindowsApp2.DataSet1()
         Me.NachrichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.BetreffTextbox = New WindowsApp2.PlatzhalterText()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,6 +51,10 @@ Partial Class Nachrichten
         '
         'SendenButton
         '
+        Me.SendenButton.FlatAppearance.BorderColor = System.Drawing.Color.Red
+        Me.SendenButton.FlatAppearance.BorderSize = 2
+        Me.SendenButton.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.SendenButton.Font = New System.Drawing.Font("Sitka Small", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SendenButton.Location = New System.Drawing.Point(433, 348)
         Me.SendenButton.Name = "SendenButton"
         Me.SendenButton.Size = New System.Drawing.Size(75, 23)
@@ -65,17 +70,6 @@ Partial Class Nachrichten
         Me.AbbruchButton.TabIndex = 6
         Me.AbbruchButton.Text = "Abbrechen"
         Me.AbbruchButton.UseVisualStyleBackColor = True
-        '
-        'BetreffTextbox
-        '
-        Me.BetreffTextbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
-        Me.BetreffTextbox.ForeColor = System.Drawing.Color.Gray
-        Me.BetreffTextbox.Location = New System.Drawing.Point(12, 105)
-        Me.BetreffTextbox.Name = "BetreffTextbox"
-        Me.BetreffTextbox.PlatzHalterText = "Betreff"
-        Me.BetreffTextbox.Size = New System.Drawing.Size(271, 20)
-        Me.BetreffTextbox.TabIndex = 7
-        Me.BetreffTextbox.Text = "Betreff"
         '
         'ComboBox1
         '
@@ -128,6 +122,7 @@ Partial Class Nachrichten
         Me.TableAdapterManager.NachrichtTableAdapter = Me.NachrichtTableAdapter
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -156,10 +151,22 @@ Partial Class Nachrichten
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 10
         '
+        'BetreffTextbox
+        '
+        Me.BetreffTextbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic)
+        Me.BetreffTextbox.ForeColor = System.Drawing.Color.Gray
+        Me.BetreffTextbox.Location = New System.Drawing.Point(12, 105)
+        Me.BetreffTextbox.Name = "BetreffTextbox"
+        Me.BetreffTextbox.PlatzHalterText = "Betreff"
+        Me.BetreffTextbox.Size = New System.Drawing.Size(271, 20)
+        Me.BetreffTextbox.TabIndex = 7
+        Me.BetreffTextbox.Text = "Betreff"
+        '
         'Nachrichten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.ForestGreen
         Me.ClientSize = New System.Drawing.Size(536, 391)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.RichTextBox1)
@@ -168,7 +175,8 @@ Partial Class Nachrichten
         Me.Controls.Add(Me.AbbruchButton)
         Me.Controls.Add(Me.SendenButton)
         Me.Controls.Add(Me.AbsenderLabel)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Nachrichten"
         Me.Text = "Nachricht"
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()

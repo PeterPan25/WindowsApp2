@@ -23,6 +23,7 @@ Partial Class F_Peter
     '<System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Peter))
         Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
@@ -46,7 +47,7 @@ Partial Class F_Peter
         'PlatzhalterText1
         '
         Me.PlatzhalterText1.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText1.Location = New System.Drawing.Point(55, 93)
         Me.PlatzhalterText1.Name = "PlatzhalterText1"
@@ -57,7 +58,7 @@ Partial Class F_Peter
         'PlatzhalterText2
         '
         Me.PlatzhalterText2.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText2.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText2.Location = New System.Drawing.Point(292, 93)
         Me.PlatzhalterText2.Name = "PlatzhalterText2"
@@ -68,7 +69,7 @@ Partial Class F_Peter
         'PlatzhalterText3
         '
         Me.PlatzhalterText3.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText3.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText3.Location = New System.Drawing.Point(55, 125)
         Me.PlatzhalterText3.Name = "PlatzhalterText3"
@@ -79,7 +80,7 @@ Partial Class F_Peter
         'PlatzhalterText4
         '
         Me.PlatzhalterText4.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText4.Location = New System.Drawing.Point(292, 125)
         Me.PlatzhalterText4.Name = "PlatzhalterText4"
@@ -90,7 +91,7 @@ Partial Class F_Peter
         'PlatzhalterText5
         '
         Me.PlatzhalterText5.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText5.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText5.Location = New System.Drawing.Point(55, 157)
         Me.PlatzhalterText5.Name = "PlatzhalterText5"
@@ -101,7 +102,7 @@ Partial Class F_Peter
         'PlatzhalterText6
         '
         Me.PlatzhalterText6.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText6.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText6.Location = New System.Drawing.Point(292, 157)
         Me.PlatzhalterText6.Name = "PlatzhalterText6"
@@ -112,7 +113,7 @@ Partial Class F_Peter
         'PlatzhalterText7
         '
         Me.PlatzhalterText7.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText7.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText7.Location = New System.Drawing.Point(55, 189)
         Me.PlatzhalterText7.Name = "PlatzhalterText7"
@@ -123,7 +124,7 @@ Partial Class F_Peter
         'PlatzhalterText8
         '
         Me.PlatzhalterText8.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText8.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText8.Location = New System.Drawing.Point(55, 221)
         Me.PlatzhalterText8.Name = "PlatzhalterText8"
@@ -134,7 +135,7 @@ Partial Class F_Peter
         'PlatzhalterText9
         '
         Me.PlatzhalterText9.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText9.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText9.Location = New System.Drawing.Point(55, 253)
         Me.PlatzhalterText9.Name = "PlatzhalterText9"
@@ -145,7 +146,7 @@ Partial Class F_Peter
         'PlatzhalterText10
         '
         Me.PlatzhalterText10.BackColor = System.Drawing.SystemColors.Window
-        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PlatzhalterText10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText10.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText10.Location = New System.Drawing.Point(55, 285)
         Me.PlatzhalterText10.Name = "PlatzhalterText10"
@@ -215,8 +216,10 @@ Partial Class F_Peter
         Me.TableAdapterManager.KontakteTableAdapter = Me.KontakteTableAdapter
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -227,7 +230,7 @@ Partial Class F_Peter
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(693, 593)
+        Me.ClientSize = New System.Drawing.Size(516, 406)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PlatzhalterText10)
@@ -240,6 +243,8 @@ Partial Class F_Peter
         Me.Controls.Add(Me.PlatzhalterText3)
         Me.Controls.Add(Me.PlatzhalterText2)
         Me.Controls.Add(Me.PlatzhalterText1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Peter"
         Me.Text = "Peter"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()

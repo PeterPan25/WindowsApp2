@@ -23,6 +23,7 @@ Partial Class F_Aaliyah
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(F_Aaliyah))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.KindKontakteBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -97,8 +98,10 @@ Partial Class F_Aaliyah
         Me.TableAdapterManager.KontakteTableAdapter = Me.KontakteTableAdapter
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -238,7 +241,7 @@ Partial Class F_Aaliyah
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(867, 428)
+        Me.ClientSize = New System.Drawing.Size(440, 382)
         Me.Controls.Add(Me.PlatzhalterText11)
         Me.Controls.Add(Me.PlatzhalterText10)
         Me.Controls.Add(Me.PlatzhalterText9)
@@ -251,6 +254,8 @@ Partial Class F_Aaliyah
         Me.Controls.Add(Me.PlatzhalterText2)
         Me.Controls.Add(Me.PlatzhalterText1)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "F_Aaliyah"
         Me.Text = "neuer Kontakt"
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
