@@ -71,6 +71,7 @@ Partial Class Schuleanlegen
         '
         'SchuleDataGridView
         '
+        Me.SchuleDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.SchuleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchuleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SchuleDataGridView.Location = New System.Drawing.Point(0, 0)
@@ -120,8 +121,10 @@ Partial Class Schuleanlegen
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Me.SchuleTableAdapter
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -131,6 +134,7 @@ Partial Class Schuleanlegen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.Controls.Add(Me.SplitContainer2)
         Me.Name = "Schuleanlegen"
         Me.Size = New System.Drawing.Size(1044, 740)

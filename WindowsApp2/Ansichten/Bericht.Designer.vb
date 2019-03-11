@@ -29,10 +29,10 @@ Partial Class Bericht
         Me.BerichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.BerichtTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
         Me.BerichtDataGridView = New System.Windows.Forms.DataGridView()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BerichtDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,8 +83,10 @@ Partial Class Bericht
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Nothing
+        Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -93,7 +95,7 @@ Partial Class Bericht
         'BerichtDataGridView
         '
         Me.BerichtDataGridView.AutoGenerateColumns = False
-        Me.BerichtDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BerichtDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.BerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.BerichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3})
         Me.BerichtDataGridView.DataSource = Me.BerichtBindingSource
@@ -102,20 +104,6 @@ Partial Class Bericht
         Me.BerichtDataGridView.Name = "BerichtDataGridView"
         Me.BerichtDataGridView.Size = New System.Drawing.Size(759, 358)
         Me.BerichtDataGridView.TabIndex = 2
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.BerichtDataGridView)
-        Me.SplitContainer1.Size = New System.Drawing.Size(759, 453)
-        Me.SplitContainer1.SplitterDistance = 91
-        Me.SplitContainer1.TabIndex = 3
         '
         'DataGridViewTextBoxColumn1
         '
@@ -138,10 +126,25 @@ Partial Class Bericht
         Me.DataGridViewTextBoxColumn3.HeaderText = "Art"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        Me.SplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.BerichtDataGridView)
+        Me.SplitContainer1.Size = New System.Drawing.Size(759, 453)
+        Me.SplitContainer1.SplitterDistance = 91
+        Me.SplitContainer1.TabIndex = 3
+        '
         'Bericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Bericht"
         Me.Size = New System.Drawing.Size(759, 453)

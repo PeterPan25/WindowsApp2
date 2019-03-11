@@ -48,7 +48,7 @@ Partial Class Formulare
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SplitContainer1.BackColor = System.Drawing.Color.SkyBlue
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
@@ -202,6 +202,7 @@ Partial Class Formulare
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Formulare"
         Me.Size = New System.Drawing.Size(654, 434)

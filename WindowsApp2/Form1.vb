@@ -256,6 +256,14 @@ Public Class Form1
         Me.TreeView1.Enabled = True
         Me.CB_name.Enabled = True
         Me.LogoutButton.Visible = True
+        Me.Label11.Visible = True
+        Me.Label1.Visible = True
+        Me.Label2.Visible = True
+        Me.Label3.Visible = True
+
+        Me.Label4.Visible = True
+        Me.Label5.Visible = True
+        Me.Label6.Visible = True
         Übersicht1.Daten_laden()
         Übersicht1.Visible = True
         Übersicht1.BringToFront()

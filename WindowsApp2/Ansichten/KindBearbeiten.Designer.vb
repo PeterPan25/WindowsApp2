@@ -79,10 +79,11 @@ Partial Class KindBearbeiten
         'Button1
         '
         Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(18, 460)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(202, 40)
+        Me.Button1.Size = New System.Drawing.Size(202, 68)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Änderungen Speichern"
         Me.Button1.UseVisualStyleBackColor = True
@@ -90,10 +91,11 @@ Partial Class KindBearbeiten
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(254, 460)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(213, 40)
+        Me.Button2.Size = New System.Drawing.Size(213, 68)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Kind entfernen"
         Me.Button2.UseVisualStyleBackColor = True
@@ -214,6 +216,7 @@ Partial Class KindBearbeiten
         '
         Me.SchuleDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.SchuleDataGridView.AutoGenerateColumns = False
+        Me.SchuleDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.SchuleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchuleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5})
         Me.SchuleDataGridView.DataSource = Me.SchuleBindingSource
@@ -247,6 +250,8 @@ Partial Class KindBearbeiten
         'Button3
         '
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(1070, 443)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
@@ -256,6 +261,8 @@ Partial Class KindBearbeiten
         '
         'NeuesBildButton
         '
+        Me.NeuesBildButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.NeuesBildButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NeuesBildButton.Location = New System.Drawing.Point(254, 143)
         Me.NeuesBildButton.Name = "NeuesBildButton"
         Me.NeuesBildButton.Size = New System.Drawing.Size(104, 23)
@@ -277,6 +284,7 @@ Partial Class KindBearbeiten
         'SchulDatenDataGridView
         '
         Me.SchulDatenDataGridView.AutoGenerateColumns = False
+        Me.SchulDatenDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.SchulDatenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchulDatenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.Klassenlehrer, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.SchulDatenDataGridView.DataSource = Me.SchulDatenBindingSource
@@ -477,6 +485,7 @@ Partial Class KindBearbeiten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.Controls.Add(Me.SchulDatenDataGridView)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.NeuesBildButton)

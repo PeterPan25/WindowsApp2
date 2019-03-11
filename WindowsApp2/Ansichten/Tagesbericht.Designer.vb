@@ -40,7 +40,7 @@ Partial Class Tagesbericht
         '
         'SplitContainer1
         '
-        Me.SplitContainer1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.SplitContainer1.BackColor = System.Drawing.Color.SkyBlue
         Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
@@ -49,7 +49,7 @@ Partial Class Tagesbericht
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.SkyBlue
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button3)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button2)
@@ -129,7 +129,7 @@ Partial Class Tagesbericht
         '
         'ListView1
         '
-        Me.ListView1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ListView1.BackColor = System.Drawing.Color.SkyBlue
         Me.ListView1.CheckBoxes = True
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.ListView1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -154,6 +154,7 @@ Partial Class Tagesbericht
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Tagesbericht"
         Me.Size = New System.Drawing.Size(782, 519)

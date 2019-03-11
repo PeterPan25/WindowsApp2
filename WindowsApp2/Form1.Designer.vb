@@ -23,32 +23,32 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim TreeNode53 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Übersicht")
-        Dim TreeNode54 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
-        Dim TreeNode55 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
-        Dim TreeNode56 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode54, TreeNode55})
-        Dim TreeNode57 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Verwaltung")
-        Dim TreeNode58 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode57})
-        Dim TreeNode59 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
-        Dim TreeNode60 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt Übersicht")
-        Dim TreeNode61 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
-        Dim TreeNode62 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt anlegen")
-        Dim TreeNode63 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode60, TreeNode61, TreeNode62})
-        Dim TreeNode64 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode56, TreeNode58, TreeNode59, TreeNode63})
-        Dim TreeNode65 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
-        Dim TreeNode66 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
-        Dim TreeNode67 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
-        Dim TreeNode68 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode66, TreeNode67})
-        Dim TreeNode69 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
-        Dim TreeNode70 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
-        Dim TreeNode71 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
-        Dim TreeNode72 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho")
-        Dim TreeNode73 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
-        Dim TreeNode74 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Berichte")
-        Dim TreeNode75 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztbericht anlegen")
-        Dim TreeNode76 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztberichte", New System.Windows.Forms.TreeNode() {TreeNode74, TreeNode75})
-        Dim TreeNode77 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
-        Dim TreeNode78 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Formulare")
+        Dim TreeNode261 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Übersicht")
+        Dim TreeNode262 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("hinzufügen")
+        Dim TreeNode263 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("bearbeiten")
+        Dim TreeNode264 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kinder", New System.Windows.Forms.TreeNode() {TreeNode262, TreeNode263})
+        Dim TreeNode265 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Verwaltung")
+        Dim TreeNode266 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Benutzer", New System.Windows.Forms.TreeNode() {TreeNode265})
+        Dim TreeNode267 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Mitarbeiter")
+        Dim TreeNode268 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt Übersicht")
+        Dim TreeNode269 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Krankenhaus")
+        Dim TreeNode270 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arzt anlegen")
+        Dim TreeNode271 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Ärzte", New System.Windows.Forms.TreeNode() {TreeNode268, TreeNode269, TreeNode270})
+        Dim TreeNode272 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("admin", New System.Windows.Forms.TreeNode() {TreeNode264, TreeNode266, TreeNode267, TreeNode271})
+        Dim TreeNode273 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Tagesbericht")
+        Dim TreeNode274 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Stammdaten")
+        Dim TreeNode275 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Kontakte")
+        Dim TreeNode276 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("allgemeine Daten", New System.Windows.Forms.TreeNode() {TreeNode274, TreeNode275})
+        Dim TreeNode277 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hilfen")
+        Dim TreeNode278 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Doku")
+        Dim TreeNode279 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Schule")
+        Dim TreeNode280 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Psycho")
+        Dim TreeNode281 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eltern")
+        Dim TreeNode282 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Berichte")
+        Dim TreeNode283 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztbericht anlegen")
+        Dim TreeNode284 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Arztberichte", New System.Windows.Forms.TreeNode() {TreeNode282, TreeNode283})
+        Dim TreeNode285 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Hobby")
+        Dim TreeNode286 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Formulare")
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Splitcontainer2 = New System.Windows.Forms.SplitContainer()
         Me.Panel15 = New System.Windows.Forms.Panel()
@@ -63,6 +63,9 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -76,9 +79,6 @@ Partial Class Form1
         Me.Label10 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Übersicht1 = New WindowsApp2.Übersicht()
         Me.BerichtAnlegen1 = New WindowsApp2.BerichtAnlegen()
         Me.Benutzer1 = New WindowsApp2.Benutzer()
@@ -114,13 +114,13 @@ Partial Class Form1
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Splitcontainer2
         '
-        Me.Splitcontainer2.BackColor = System.Drawing.SystemColors.Control
+        Me.Splitcontainer2.BackColor = System.Drawing.Color.SkyBlue
         Me.Splitcontainer2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Splitcontainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1
         Me.Splitcontainer2.Location = New System.Drawing.Point(0, 0)
@@ -139,7 +139,7 @@ Partial Class Form1
         '
         'Panel15
         '
-        Me.Panel15.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel15.BackColor = System.Drawing.Color.SkyBlue
         Me.Panel15.Controls.Add(Me.TreeView1)
         Me.Panel15.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel15.Location = New System.Drawing.Point(0, 0)
@@ -157,68 +157,68 @@ Partial Class Form1
         Me.TreeView1.LineColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.TreeView1.Location = New System.Drawing.Point(0, 0)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode53.Name = "Knoten40"
-        TreeNode53.Text = "Übersicht"
-        TreeNode53.ToolTipText = "Startseite"
-        TreeNode54.Name = "Knoten31"
-        TreeNode54.Text = "hinzufügen"
-        TreeNode55.Name = "Knoten32"
-        TreeNode55.Text = "bearbeiten"
-        TreeNode56.Name = "Knoten29"
-        TreeNode56.Text = "Kinder"
-        TreeNode57.Name = "Knoten34"
-        TreeNode57.Text = "Verwaltung"
-        TreeNode58.Name = "Knoten30"
-        TreeNode58.Text = "Benutzer"
-        TreeNode59.Name = "Knoten1"
-        TreeNode59.Text = "Mitarbeiter"
-        TreeNode60.Name = "Knoten16"
-        TreeNode60.Text = "Arzt Übersicht"
-        TreeNode61.Name = "Knoten19"
-        TreeNode61.Text = "Krankenhaus"
-        TreeNode62.Name = "Knoten20"
-        TreeNode62.Text = "Arzt anlegen"
-        TreeNode63.Name = "Knoten33"
-        TreeNode63.Text = "Ärzte"
-        TreeNode64.Checked = True
-        TreeNode64.Name = "Knoten27"
-        TreeNode64.Text = "admin"
-        TreeNode65.Checked = True
-        TreeNode65.Name = "Knoten28"
-        TreeNode65.Text = "Tagesbericht"
-        TreeNode66.Name = "Knoten10"
-        TreeNode66.Text = "Stammdaten"
-        TreeNode67.Name = "Knoten11"
-        TreeNode67.Text = "Kontakte"
-        TreeNode68.Name = "Knoten9"
-        TreeNode68.Text = "allgemeine Daten"
-        TreeNode69.Name = "Knoten2"
-        TreeNode69.Text = "Hilfen"
-        TreeNode70.Name = "Knoten6"
-        TreeNode70.Text = "Doku"
-        TreeNode71.Name = "Knoten3"
-        TreeNode71.Text = "Schule"
-        TreeNode72.Name = "Knoten4"
-        TreeNode72.Text = "Psycho"
-        TreeNode73.Name = "Knoten5"
-        TreeNode73.Text = "Eltern"
-        TreeNode74.Name = ""
-        TreeNode74.Text = "Berichte"
-        TreeNode75.Name = "Knoten32"
-        TreeNode75.Text = "Arztbericht anlegen"
-        TreeNode76.Name = "Knoten8"
-        TreeNode76.Text = "Arztberichte"
-        TreeNode77.Name = "Knoten7"
-        TreeNode77.Text = "Hobby"
-        TreeNode78.Name = "Knoten0"
-        TreeNode78.Text = "Formulare"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode53, TreeNode64, TreeNode65, TreeNode68, TreeNode69, TreeNode70, TreeNode71, TreeNode72, TreeNode73, TreeNode76, TreeNode77, TreeNode78})
+        TreeNode261.Name = "Knoten40"
+        TreeNode261.Text = "Übersicht"
+        TreeNode261.ToolTipText = "Startseite"
+        TreeNode262.Name = "Knoten31"
+        TreeNode262.Text = "hinzufügen"
+        TreeNode263.Name = "Knoten32"
+        TreeNode263.Text = "bearbeiten"
+        TreeNode264.Name = "Knoten29"
+        TreeNode264.Text = "Kinder"
+        TreeNode265.Name = "Knoten34"
+        TreeNode265.Text = "Verwaltung"
+        TreeNode266.Name = "Knoten30"
+        TreeNode266.Text = "Benutzer"
+        TreeNode267.Name = "Knoten1"
+        TreeNode267.Text = "Mitarbeiter"
+        TreeNode268.Name = "Knoten16"
+        TreeNode268.Text = "Arzt Übersicht"
+        TreeNode269.Name = "Knoten19"
+        TreeNode269.Text = "Krankenhaus"
+        TreeNode270.Name = "Knoten20"
+        TreeNode270.Text = "Arzt anlegen"
+        TreeNode271.Name = "Knoten33"
+        TreeNode271.Text = "Ärzte"
+        TreeNode272.Checked = True
+        TreeNode272.Name = "Knoten27"
+        TreeNode272.Text = "admin"
+        TreeNode273.Checked = True
+        TreeNode273.Name = "Knoten28"
+        TreeNode273.Text = "Tagesbericht"
+        TreeNode274.Name = "Knoten10"
+        TreeNode274.Text = "Stammdaten"
+        TreeNode275.Name = "Knoten11"
+        TreeNode275.Text = "Kontakte"
+        TreeNode276.Name = "Knoten9"
+        TreeNode276.Text = "allgemeine Daten"
+        TreeNode277.Name = "Knoten2"
+        TreeNode277.Text = "Hilfen"
+        TreeNode278.Name = "Knoten6"
+        TreeNode278.Text = "Doku"
+        TreeNode279.Name = "Knoten3"
+        TreeNode279.Text = "Schule"
+        TreeNode280.Name = "Knoten4"
+        TreeNode280.Text = "Psycho"
+        TreeNode281.Name = "Knoten5"
+        TreeNode281.Text = "Eltern"
+        TreeNode282.Name = ""
+        TreeNode282.Text = "Berichte"
+        TreeNode283.Name = "Knoten32"
+        TreeNode283.Text = "Arztbericht anlegen"
+        TreeNode284.Name = "Knoten8"
+        TreeNode284.Text = "Arztberichte"
+        TreeNode285.Name = "Knoten7"
+        TreeNode285.Text = "Hobby"
+        TreeNode286.Name = "Knoten0"
+        TreeNode286.Text = "Formulare"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode261, TreeNode272, TreeNode273, TreeNode276, TreeNode277, TreeNode278, TreeNode279, TreeNode280, TreeNode281, TreeNode284, TreeNode285, TreeNode286})
         Me.TreeView1.Size = New System.Drawing.Size(145, 573)
         Me.TreeView1.TabIndex = 1
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BackColor = System.Drawing.Color.SkyBlue
         Me.Panel1.Controls.Add(Me.Übersicht1)
         Me.Panel1.Controls.Add(Me.BerichtAnlegen1)
         Me.Panel1.Controls.Add(Me.Benutzer1)
@@ -268,6 +268,7 @@ Partial Class Form1
         Me.CB_name.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.CB_name.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.KindBindingSource, "Name", True))
         Me.CB_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CB_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CB_name.FormattingEnabled = True
         Me.CB_name.Location = New System.Drawing.Point(1048, 53)
         Me.CB_name.Name = "CB_name"
@@ -288,9 +289,11 @@ Partial Class Form1
         '
         Me.LogoutButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LogoutButton.AutoSize = True
+        Me.LogoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LogoutButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutButton.Location = New System.Drawing.Point(16, 56)
         Me.LogoutButton.Name = "LogoutButton"
-        Me.LogoutButton.Size = New System.Drawing.Size(75, 23)
+        Me.LogoutButton.Size = New System.Drawing.Size(75, 25)
         Me.LogoutButton.TabIndex = 14
         Me.LogoutButton.Text = "Abmelden"
         Me.LogoutButton.UseVisualStyleBackColor = True
@@ -324,7 +327,7 @@ Partial Class Form1
         '
         'SplitContainer1.Panel1
         '
-        Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.SplitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.SplitContainer1.Panel1.Controls.Add(Me.ToolStrip1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label6)
@@ -345,11 +348,35 @@ Partial Class Form1
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.SplitContainer1.Panel2.BackColor = System.Drawing.Color.SkyBlue
         Me.SplitContainer1.Panel2.Controls.Add(Me.Splitcontainer2)
         Me.SplitContainer1.Size = New System.Drawing.Size(1484, 812)
         Me.SplitContainer1.SplitterDistance = 235
         Me.SplitContainer1.TabIndex = 9
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripButton1})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1484, 25)
+        Me.ToolStrip1.TabIndex = 22
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(88, 22)
+        Me.ToolStripLabel1.Text = "ToolStripLabel1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Abmelden"
         '
         'Label6
         '
@@ -408,6 +435,8 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(16, 85)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -418,6 +447,7 @@ Partial Class Form1
         '
         'MonthCalendar1
         '
+        Me.MonthCalendar1.BackColor = System.Drawing.Color.SkyBlue
         Me.MonthCalendar1.Location = New System.Drawing.Point(183, 65)
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
@@ -436,6 +466,7 @@ Partial Class Form1
         '
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(582, 184)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(0, 13)
@@ -445,10 +476,10 @@ Partial Class Form1
         '
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(440, 179)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(113, 20)
+        Me.Label10.Size = New System.Drawing.Size(128, 20)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Eingeloggt als:"
         '
@@ -493,33 +524,11 @@ Partial Class Form1
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripButton1})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1484, 25)
-        Me.ToolStrip1.TabIndex = 22
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(88, 22)
-        Me.ToolStripLabel1.Text = "ToolStripLabel1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "Abmelden"
-        '
         'Übersicht1
         '
+        Me.Übersicht1.BackColor = System.Drawing.Color.SkyBlue
         Me.Übersicht1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Übersicht1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Übersicht1.Location = New System.Drawing.Point(0, 0)
         Me.Übersicht1.Name = "Übersicht1"
         Me.Übersicht1.Size = New System.Drawing.Size(1335, 573)
@@ -583,7 +592,7 @@ Partial Class Form1
         '
         'UserControl11
         '
-        Me.UserControl11.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.UserControl11.BackColor = System.Drawing.Color.SkyBlue
         Me.UserControl11.Dock = System.Windows.Forms.DockStyle.Fill
         Me.UserControl11.Location = New System.Drawing.Point(0, 0)
         Me.UserControl11.Name = "UserControl11"
@@ -723,7 +732,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.ClientSize = New System.Drawing.Size(1484, 812)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -745,9 +754,9 @@ Partial Class Form1
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

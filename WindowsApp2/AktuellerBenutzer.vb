@@ -6,6 +6,11 @@
     Public Sub Benutzer_angemeldet(AB As String)
         Benutzer = AB
         Form1.Label11.Text = Benutzer
+
+
+
+
+
         Form1.ToolStripLabel1.Text = "Eingeloggt als:" + " " + Benutzer
     End Sub
 
@@ -15,6 +20,15 @@
 
         Benutzer = ""
         Form1.CB_name.Enabled = False
+        Form1.Label11.Visible = False
+        Form1.Label1.Visible = False
+        Form1.Label2.Visible = False
+        Form1.Label3.Visible = False
+
+        Form1.Label4.Visible = False
+        Form1.Label5.Visible = False
+        Form1.Label6.Visible = False
+        Form1.Button2.Visible = False
         Form1.TreeView1.Enabled = False
         Form1.Splitcontainer2.Panel1Collapsed = True
         Form1.LogoutButton.Visible = False

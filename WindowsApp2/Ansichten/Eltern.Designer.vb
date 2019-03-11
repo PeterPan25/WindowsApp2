@@ -233,7 +233,7 @@ Partial Class Eltern
         'ElternBerichtDataGridView
         '
         Me.ElternBerichtDataGridView.AutoGenerateColumns = False
-        Me.ElternBerichtDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ElternBerichtDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.ElternBerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ElternBerichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.ElternBerichtDataGridView.DataSource = Me.ElternBerichtBindingSource
@@ -316,6 +316,7 @@ Partial Class Eltern
         Me.TableAdapterManager.NachrichtTableAdapter = Nothing
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
+        Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
@@ -353,6 +354,7 @@ Partial Class Eltern
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.SkyBlue
         Me.Controls.Add(Me.SplitContainer3)
         Me.Name = "Eltern"
         Me.Size = New System.Drawing.Size(846, 485)
