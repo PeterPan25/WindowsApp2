@@ -11,7 +11,7 @@
 
 
 
-        Form1.ToolStripLabel1.Text = "Eingeloggt als:" + " " + Benutzer
+        '  Form1.ToolStripLabel1.Text = "Eingeloggt als:" + " " + Benutzer
     End Sub
 
     ' Meldet den Benutzer ab, sperrt die relevanten Bereiche und wechselt auf die Login Ansicht

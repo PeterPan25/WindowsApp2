@@ -243,7 +243,8 @@ Public Class Form1
 
         Me.TreeView1.Enabled = False
         Me.CB_name.Enabled = False
-        Me.ToolStrip1.Visible = False
+        Me.CB_name.Visible = False
+        ' Me.ToolStrip1.Visible = False
         Me.Splitcontainer2.Panel1Collapsed = True
         Mitarbeiter1.First()
         ' Me.LogoutButton.Visible = False
@@ -251,6 +252,8 @@ Public Class Form1
     End Sub
 
     Public Sub Anmelden_erfolgreich()
+        Me.CB_name.Visible = True
+
 
         Me.Splitcontainer2.Panel1Collapsed = False
         Me.TreeView1.Enabled = True
@@ -268,7 +271,7 @@ Public Class Form1
         Übersicht1.Visible = True
         Übersicht1.BringToFront()
         Me.Button2.Visible = True
-        Me.ToolStrip1.Visible = True
+        '   Me.ToolStrip1.Visible = True
     End Sub
 
 
@@ -330,7 +333,7 @@ Public Class Form1
 
             For z = 0 To (DataSet11.Kind.Rows.Count - 1)
                 If Kind = DataSet11.Kind.Rows(z)("Name") Then
-                    'Label1.Text = DataSet11.Kind.Rows(z)("Geburtsdatum")
+                    Label2.Text = DataSet11.Kind.Rows(z)("Geburtsdatum")
                     'Label2.Text = DataSet11.Kind.Rows(z)("Sorgerechtsstatus")
                     'Label4.Text = DataSet11.Kind.Rows(z)("Jugendamt")
                     'Label5.Text = DataSet11.Kind.Rows(z)("Aufnahmedatum")
@@ -416,7 +419,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs)
         Dim ab As New AktuellerBenutzer
         Dim name As String
 
@@ -425,6 +428,11 @@ Public Class Form1
 
         name = ab.Benutzer_nennen()
     End Sub
+
+    Private Sub MonthCalendar1_DateSelected(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateSelected
+        LoginForm2.Show()
+    End Sub
+
 
 
 
