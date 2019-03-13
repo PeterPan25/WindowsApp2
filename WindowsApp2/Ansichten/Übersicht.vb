@@ -98,11 +98,11 @@
 
         r2 = DataSet1.Mitarbeiter.Select("Benutzername = '" & Empfänger & "'")
 
-            For k = 0 To r2.GetUpperBound(0)
+        For k = 0 To r2.GetUpperBound(0)
             BenutzerName = r2(k)(9) + " " + r2(k)(8)
         Next
 
-            NachrichtTableAdapter.Fill(DataSet1.Nachricht)
+        NachrichtTableAdapter.Fill(DataSet1.Nachricht)
 
         NachrichtBindingSource.Filter = "Empfänger = '" & BenutzerName & "' AND Gelesen = '" & 0 & "'"
         NachrichtDataGridView.Update()
@@ -121,6 +121,24 @@
 
     Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
         Filtern()
+
+    End Sub
+
+    Private Sub TerminDataGridView_RowHeaderMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles TerminDataGridView.RowHeaderMouseClick
+        Dim str As String
+        Dim str1 As String
+        Dim str3 As Date
+
+
+
+        '  Me.BerichtDataGridView.Rows(e.RowIndex).Selected = True
+
+        str = Me.TerminDataGridView.Rows(e.RowIndex).Cells(5).Value
+        str1 = Me.TerminDataGridView.Rows(e.RowIndex).Cells(4).Value
+        str3 = Me.TerminDataGridView.Rows(e.RowIndex).Cells(1).Value
+
+        Form6TerminDetail.Show()
+        Form6TerminDetail.Termin_laden(str, str1, str3)
 
     End Sub
 End Class
