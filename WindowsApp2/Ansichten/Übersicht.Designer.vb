@@ -23,6 +23,8 @@ Partial Class Übersicht
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.MitarbeiterBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -118,11 +120,29 @@ Partial Class Übersicht
         'NachrichtDataGridView
         '
         Me.NachrichtDataGridView.AllowUserToAddRows = False
+        Me.NachrichtDataGridView.AllowUserToDeleteRows = False
         Me.NachrichtDataGridView.AutoGenerateColumns = False
         Me.NachrichtDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.DeepSkyBlue
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.NachrichtDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.NachrichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.NachrichtDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.NachrichtDataGridView.DataSource = Me.NachrichtBindingSource
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.NachrichtDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.NachrichtDataGridView.GridColor = System.Drawing.Color.LightSkyBlue
         Me.NachrichtDataGridView.Location = New System.Drawing.Point(103, 244)
         Me.NachrichtDataGridView.Name = "NachrichtDataGridView"
         Me.NachrichtDataGridView.Size = New System.Drawing.Size(639, 220)
@@ -167,9 +187,10 @@ Partial Class Übersicht
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton1.Location = New System.Drawing.Point(177, 142)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(82, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(92, 17)
         Me.RadioButton1.TabIndex = 2
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Ungelesene"
@@ -178,9 +199,10 @@ Partial Class Übersicht
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButton2.Location = New System.Drawing.Point(177, 165)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(103, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(119, 17)
         Me.RadioButton2.TabIndex = 0
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Alle Nachrichten"
