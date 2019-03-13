@@ -314,6 +314,7 @@ Public Class Form1
         Schule1.SBDaten_laden()
 
 
+        Übersicht1.Filtern2()
 
         KinderDaten()
 
@@ -434,7 +435,11 @@ Public Class Form1
     End Sub
 
     Private Sub MonthCalendar1_DateSelected(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateSelected
-        LoginForm2.Show()
+        Form7TerminEintragen.KalenderDatum(MonthCalendar1.SelectionStart)
+
+        Form7TerminEintragen.Show()
+
+
     End Sub
 
 

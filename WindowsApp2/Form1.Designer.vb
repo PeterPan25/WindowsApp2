@@ -55,9 +55,7 @@ Partial Class Form1
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CB_name = New System.Windows.Forms.ComboBox()
-        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet11 = New WindowsApp2.DataSet1()
         Me.LogoutButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -69,11 +67,13 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.KindTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindTableAdapter()
+        Me.KindBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Übersicht1 = New WindowsApp2.Übersicht()
         Me.BerichtAnlegen1 = New WindowsApp2.BerichtAnlegen()
         Me.Benutzer1 = New WindowsApp2.Benutzer()
@@ -102,13 +102,13 @@ Partial Class Form1
         Me.Splitcontainer2.SuspendLayout()
         Me.Panel15.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -250,15 +250,6 @@ Partial Class Form1
         Me.TextBox1.TabIndex = 11
         Me.TextBox1.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Location = New System.Drawing.Point(1340, 53)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(132, 152)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
-        '
         'CB_name
         '
         Me.CB_name.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -271,11 +262,6 @@ Partial Class Form1
         Me.CB_name.Name = "CB_name"
         Me.CB_name.Size = New System.Drawing.Size(262, 21)
         Me.CB_name.TabIndex = 8
-        '
-        'KindBindingSource
-        '
-        Me.KindBindingSource.DataMember = "Kind"
-        Me.KindBindingSource.DataSource = Me.DataSet11
         '
         'DataSet11
         '
@@ -409,19 +395,10 @@ Partial Class Form1
         '
         Me.MonthCalendar1.BackColor = System.Drawing.Color.SkyBlue
         Me.MonthCalendar1.Location = New System.Drawing.Point(187, 65)
+        Me.MonthCalendar1.MaxSelectionCount = 1
         Me.MonthCalendar1.Name = "MonthCalendar1"
         Me.MonthCalendar1.TabIndex = 3
         Me.MonthCalendar1.Visible = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox2.Image = Global.WindowsApp2.My.Resources.Resources.Logo
-        Me.PictureBox2.Location = New System.Drawing.Point(444, 3)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(349, 90)
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
         '
         'Label11
         '
@@ -447,11 +424,17 @@ Partial Class Form1
         '
         Me.KindTableAdapter.ClearBeforeFill = True
         '
+        'KindBindingSource
+        '
+        Me.KindBindingSource.DataMember = "Kind"
+        Me.KindBindingSource.DataSource = Me.DataSet11
+        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.AugenarztTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.BerichtTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
         Me.TableAdapterManager.ElternBerichtTableAdapter = Nothing
         Me.TableAdapterManager.FrauenarztTableAdapter = Nothing
         Me.TableAdapterManager.HautarztTableAdapter = Nothing
@@ -470,7 +453,7 @@ Partial Class Form1
         Me.TableAdapterManager.KindKrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.KindPsychoTableAdapter = Nothing
         Me.TableAdapterManager.KindSchuleTableAdapter = Nothing
-        Me.TableAdapterManager.KindTableAdapter = Me.KindTableAdapter
+        Me.TableAdapterManager.KindTableAdapter = Nothing
         Me.TableAdapterManager.KindZahnarztTableAdapter = Nothing
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
@@ -481,8 +464,28 @@ Partial Class Form1
         Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.TerminTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Location = New System.Drawing.Point(1340, 53)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(132, 152)
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox2.Image = Global.WindowsApp2.My.Resources.Resources.Logo
+        Me.PictureBox2.Location = New System.Drawing.Point(444, 3)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(349, 90)
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
         '
         'Übersicht1
         '
@@ -723,14 +726,14 @@ Partial Class Form1
         Me.Panel15.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.KindBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

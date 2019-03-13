@@ -37,6 +37,8 @@
     Private Sub Nachrichten_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Nachricht". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.NachrichtTableAdapter.Fill(Me.DataSet11.Nachricht)
+        'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Nachricht". Sie können sie bei Bedarf verschieben oder entfernen.
+        Me.NachrichtTableAdapter.Fill(Me.DataSet11.Nachricht)
         'TODO: Diese Codezeile lädt Daten in die Tabelle "DataSet11.Mitarbeiter". Sie können sie bei Bedarf verschieben oder entfernen.
         Me.MitarbeiterTableAdapter.Fill(Me.DataSet11.Mitarbeiter)
 
@@ -66,4 +68,10 @@
 
     End Sub
 
+    Private Sub NachrichtBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
+        Me.Validate()
+        Me.NachrichtBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.DataSet11)
+
+    End Sub
 End Class

@@ -31,11 +31,11 @@ Partial Class Nachrichten
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MitarbeiterTableAdapter = New WindowsApp2.DataSet1TableAdapters.MitarbeiterTableAdapter()
         Me.TableAdapterManager = New WindowsApp2.DataSet1TableAdapters.TableAdapterManager()
-        Me.NachrichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.NachrichtTableAdapter()
         Me.DataSet11 = New WindowsApp2.DataSet1()
-        Me.NachrichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.BetreffTextbox = New WindowsApp2.PlatzhalterText()
+        Me.NachrichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.NachrichtTableAdapter = New WindowsApp2.DataSet1TableAdapters.NachrichtTableAdapter()
         CType(Me.DataSet11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NachrichtBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -120,28 +120,19 @@ Partial Class Nachrichten
         Me.TableAdapterManager.KontakteTableAdapter = Nothing
         Me.TableAdapterManager.KrankenhausTableAdapter = Nothing
         Me.TableAdapterManager.MitarbeiterTableAdapter = Me.MitarbeiterTableAdapter
-        Me.TableAdapterManager.NachrichtTableAdapter = Me.NachrichtTableAdapter
         Me.TableAdapterManager.PsychoTableAdapter = Nothing
         Me.TableAdapterManager.SchulBerichtTableAdapter = Nothing
         Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.TerminTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
-        '
-        'NachrichtTableAdapter
-        '
-        Me.NachrichtTableAdapter.ClearBeforeFill = True
         '
         'DataSet11
         '
         Me.DataSet11.DataSetName = "DataSet1"
         Me.DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'NachrichtBindingSource
-        '
-        Me.NachrichtBindingSource.DataMember = "Nachricht"
-        Me.NachrichtBindingSource.DataSource = Me.DataSet11
         '
         'DateTimePicker1
         '
@@ -163,12 +154,21 @@ Partial Class Nachrichten
         Me.BetreffTextbox.TabIndex = 7
         Me.BetreffTextbox.Text = "Betreff"
         '
+        'NachrichtBindingSource
+        '
+        Me.NachrichtBindingSource.DataMember = "Nachricht"
+        Me.NachrichtBindingSource.DataSource = Me.DataSet11
+        '
+        'NachrichtTableAdapter
+        '
+        Me.NachrichtTableAdapter.ClearBeforeFill = True
+        '
         'Nachrichten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SkyBlue
-        Me.ClientSize = New System.Drawing.Size(536, 391)
+        Me.ClientSize = New System.Drawing.Size(536, 396)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.ComboBox1)
@@ -195,8 +195,8 @@ Partial Class Nachrichten
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents MitarbeiterTableAdapter As DataSet1TableAdapters.MitarbeiterTableAdapter
     Friend WithEvents TableAdapterManager As DataSet1TableAdapters.TableAdapterManager
-    Friend WithEvents NachrichtTableAdapter As DataSet1TableAdapters.NachrichtTableAdapter
     Friend WithEvents DataSet11 As DataSet1
-    Friend WithEvents NachrichtBindingSource As BindingSource
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents NachrichtBindingSource As BindingSource
+    Friend WithEvents NachrichtTableAdapter As DataSet1TableAdapters.NachrichtTableAdapter
 End Class

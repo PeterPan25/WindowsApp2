@@ -16,8 +16,8 @@
 
         '  Me.BerichtDataGridView.Rows(e.RowIndex).Selected = True
 
-        str = Me.NachrichtDataGridView.Rows(e.RowIndex).Cells(5).Value
-        str1 = Me.NachrichtDataGridView.Rows(e.RowIndex).Cells(4).Value
+        str = BenutzerName
+        str1 = Me.NachrichtDataGridView.Rows(e.RowIndex).Cells(2).Value
         str2 = Me.NachrichtDataGridView.Rows(e.RowIndex).Cells(0).Value
         str3 = Me.NachrichtDataGridView.Rows(e.RowIndex).Cells(1).Value
 
@@ -81,6 +81,19 @@
 
     End Sub
 
+    Public Sub Filtern2()
+        TerminTableAdapter.Fill(DataSet1.Termin)
+        Try
+            TerminBindingSource.Filter = "Name = '" & Form1.CB_name.Text & "'" ' AND Gelesen = '" & 0 & "'"
+            TerminDataGridView.Update()
+
+        Catch ex As Exception
+
+        End Try
+
+
+    End Sub
+
     Public Sub Daten_laden()
         Dim EmpfängerInfo As New AktuellerBenutzer
         'Dim Empfänger As String
@@ -88,6 +101,8 @@
         ' Dim Name As String = ""
 
         ' Dim r2() As DataRow
+        TerminTableAdapter.Fill(DataSet1.Termin)
+        TerminDataGridView.Update()
 
         MitarbeiterTableAdapter.Fill(DataSet1.Mitarbeiter)
 
@@ -133,9 +148,9 @@
 
         '  Me.BerichtDataGridView.Rows(e.RowIndex).Selected = True
 
-        str = Me.TerminDataGridView.Rows(e.RowIndex).Cells(5).Value
-        str1 = Me.TerminDataGridView.Rows(e.RowIndex).Cells(4).Value
-        str3 = Me.TerminDataGridView.Rows(e.RowIndex).Cells(1).Value
+        str = Me.TerminDataGridView.Rows(e.RowIndex).Cells(0).Value
+        str1 = Me.TerminDataGridView.Rows(e.RowIndex).Cells(1).Value
+        str3 = Me.TerminDataGridView.Rows(e.RowIndex).Cells(2).Value
 
         Form6TerminDetail.Show()
         Form6TerminDetail.Termin_laden(str, str1, str3)

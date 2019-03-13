@@ -30,7 +30,7 @@
                 TextBox1.Text = NachrichtRow(k)(0) 'Betreff
                 RichTextBox1.Text = NachrichtRow(k)(2)
 
-                If NachrichtRow(k)(3) = 0 Then
+                If NachrichtRow(k)(2) = 0 Then
                     Gelesen_Markieren(a, b, c, d)
 
                 End If

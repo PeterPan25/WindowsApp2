@@ -11140,13 +11140,13 @@ Partial Public Class DataSet1
         
         Private columnDatum As Global.System.Data.DataColumn
         
-        Private columnText As Global.System.Data.DataColumn
-        
         Private columnGelesen As Global.System.Data.DataColumn
         
         Private columnVerfasser As Global.System.Data.DataColumn
         
         Private columnEmpfänger As Global.System.Data.DataColumn
+        
+        Private columnText As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -11201,14 +11201,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public ReadOnly Property TextColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnText
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public ReadOnly Property GelesenColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnGelesen
@@ -11228,6 +11220,14 @@ Partial Public Class DataSet1
         Public ReadOnly Property EmpfängerColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnEmpfänger
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public ReadOnly Property TextColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnText
             End Get
         End Property
         
@@ -11268,9 +11268,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Overloads Function AddNachrichtRow(ByVal Betreff As String, ByVal Datum As Date, ByVal Text As String, ByVal Gelesen As Integer, ByVal Verfasser As String, ByVal Empfänger As String) As NachrichtRow
+        Public Overloads Function AddNachrichtRow(ByVal Betreff As String, ByVal Datum As Date, ByVal Gelesen As Integer, ByVal Verfasser As String, ByVal Empfänger As String, ByVal Text As String) As NachrichtRow
             Dim rowNachrichtRow As NachrichtRow = CType(Me.NewRow,NachrichtRow)
-            Dim columnValuesArray() As Object = New Object() {Betreff, Datum, Text, Gelesen, Verfasser, Empfänger}
+            Dim columnValuesArray() As Object = New Object() {Betreff, Datum, Gelesen, Verfasser, Empfänger, Text}
             rowNachrichtRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowNachrichtRow)
             Return rowNachrichtRow
@@ -11301,10 +11301,10 @@ Partial Public Class DataSet1
         Friend Sub InitVars()
             Me.columnBetreff = MyBase.Columns("Betreff")
             Me.columnDatum = MyBase.Columns("Datum")
-            Me.columnText = MyBase.Columns("Text")
             Me.columnGelesen = MyBase.Columns("Gelesen")
             Me.columnVerfasser = MyBase.Columns("Verfasser")
             Me.columnEmpfänger = MyBase.Columns("Empfänger")
+            Me.columnText = MyBase.Columns("Text")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -11314,23 +11314,23 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnBetreff)
             Me.columnDatum = New Global.System.Data.DataColumn("Datum", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnDatum)
-            Me.columnText = New Global.System.Data.DataColumn("Text", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnText)
             Me.columnGelesen = New Global.System.Data.DataColumn("Gelesen", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnGelesen)
             Me.columnVerfasser = New Global.System.Data.DataColumn("Verfasser", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnVerfasser)
             Me.columnEmpfänger = New Global.System.Data.DataColumn("Empfänger", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnEmpfänger)
+            Me.columnText = New Global.System.Data.DataColumn("Text", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnText)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnBetreff, Me.columnDatum, Me.columnVerfasser, Me.columnEmpfänger}, true))
             Me.columnBetreff.AllowDBNull = false
             Me.columnBetreff.MaxLength = 50
             Me.columnDatum.AllowDBNull = false
-            Me.columnText.MaxLength = 50
             Me.columnVerfasser.AllowDBNull = false
             Me.columnVerfasser.MaxLength = 50
             Me.columnEmpfänger.AllowDBNull = false
             Me.columnEmpfänger.MaxLength = 50
+            Me.columnText.MaxLength = 2147483647
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -16470,21 +16470,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Property Text() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableNachricht.TextColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Text in Tabelle Nachricht ist DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableNachricht.TextColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Property Gelesen() As Integer
             Get
                 Try 
@@ -16522,15 +16507,18 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Function IsTextNull() As Boolean
-            Return Me.IsNull(Me.tableNachricht.TextColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
-        Public Sub SetTextNull()
-            Me(Me.tableNachricht.TextColumn) = Global.System.Convert.DBNull
-        End Sub
+        Public Property Text() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableNachricht.TextColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("Der Wert für Spalte Text in Tabelle Nachricht ist DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableNachricht.TextColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
@@ -16542,6 +16530,18 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
         Public Sub SetGelesenNull()
             Me(Me.tableNachricht.GelesenColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Function IsTextNull() As Boolean
+            Return Me.IsNull(Me.tableNachricht.TextColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")>  _
+        Public Sub SetTextNull()
+            Me(Me.tableNachricht.TextColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -31338,63 +31338,57 @@ Namespace DataSet1TableAdapters
             tableMapping.DataSetTable = "Nachricht"
             tableMapping.ColumnMappings.Add("Betreff", "Betreff")
             tableMapping.ColumnMappings.Add("Datum", "Datum")
-            tableMapping.ColumnMappings.Add("Text", "Text")
             tableMapping.ColumnMappings.Add("Gelesen", "Gelesen")
             tableMapping.ColumnMappings.Add("Verfasser", "Verfasser")
             tableMapping.ColumnMappings.Add("Empfänger", "Empfänger")
+            tableMapping.ColumnMappings.Add("Text", "Text")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Nachricht] WHERE (([Betreff] = @Original_Betreff) AND ([Datum]"& _ 
-                " = @Original_Datum) AND ((@IsNull_Text = 1 AND [Text] IS NULL) OR ([Text] = @Ori"& _ 
-                "ginal_Text)) AND ((@IsNull_Gelesen = 1 AND [Gelesen] IS NULL) OR ([Gelesen] = @O"& _ 
-                "riginal_Gelesen)) AND ([Verfasser] = @Original_Verfasser) AND ([Empfänger] = @Or"& _ 
-                "iginal_Empfänger))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Nachricht] WHERE (([Betreff] = @Original_Betreff) AND ([Datum] = @Or"& _ 
+                "iginal_Datum) AND ((@IsNull_Gelesen = 1 AND [Gelesen] IS NULL) OR ([Gelesen] = @"& _ 
+                "Original_Gelesen)) AND ([Verfasser] = @Original_Verfasser) AND ([Empfänger] = @O"& _ 
+                "riginal_Empfänger))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Betreff", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Betreff", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Text", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Text", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Gelesen", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gelesen", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Gelesen", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gelesen", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Verfasser", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Verfasser", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Empfänger", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empfänger", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Nachricht] ([Betreff], [Datum], [Text], [Gelesen], [Verfasser]"& _ 
-                ", [Empfänger]) VALUES (@Betreff, @Datum, @Text, @Gelesen, @Verfasser, @Empfänger"& _ 
-                ");"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Betreff, Datum, Text, Gelesen, Verfasser, Empfänger FROM Nachricht WH"& _ 
-                "ERE (Betreff = @Betreff) AND (Datum = @Datum) AND (Empfänger = @Empfänger) AND ("& _ 
-                "Verfasser = @Verfasser)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Nachricht] ([Betreff], [Datum], [Gelesen], [Verfasser], [Empfänger],"& _ 
+                " [Text]) VALUES (@Betreff, @Datum, @Gelesen, @Verfasser, @Empfänger, @Text);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SE"& _ 
+                "LECT Betreff, Datum, Gelesen, Verfasser, Empfänger, Text FROM Nachricht WHERE (B"& _ 
+                "etreff = @Betreff) AND (Datum = @Datum) AND (Empfänger = @Empfänger) AND (Verfas"& _ 
+                "ser = @Verfasser)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Betreff", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Betreff", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Text", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Gelesen", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gelesen", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Verfasser", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Verfasser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Empfänger", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empfänger", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Text", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Nachricht] SET [Betreff] = @Betreff, [Datum] = @Datum, [Text] = @Te"& _ 
-                "xt, [Gelesen] = @Gelesen, [Verfasser] = @Verfasser, [Empfänger] = @Empfänger WHE"& _ 
-                "RE (([Betreff] = @Original_Betreff) AND ([Datum] = @Original_Datum) AND ((@IsNul"& _ 
-                "l_Text = 1 AND [Text] IS NULL) OR ([Text] = @Original_Text)) AND ((@IsNull_Geles"& _ 
-                "en = 1 AND [Gelesen] IS NULL) OR ([Gelesen] = @Original_Gelesen)) AND ([Verfasse"& _ 
-                "r] = @Original_Verfasser) AND ([Empfänger] = @Original_Empfänger));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Betr"& _ 
-                "eff, Datum, Text, Gelesen, Verfasser, Empfänger FROM Nachricht WHERE (Betreff = "& _ 
-                "@Betreff) AND (Datum = @Datum) AND (Empfänger = @Empfänger) AND (Verfasser = @Ve"& _ 
-                "rfasser)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Nachricht] SET [Betreff] = @Betreff, [Datum] = @Datum, [Gelesen] = @Geles"& _ 
+                "en, [Verfasser] = @Verfasser, [Empfänger] = @Empfänger, [Text] = @Text WHERE ((["& _ 
+                "Betreff] = @Original_Betreff) AND ([Datum] = @Original_Datum) AND ((@IsNull_Gele"& _ 
+                "sen = 1 AND [Gelesen] IS NULL) OR ([Gelesen] = @Original_Gelesen)) AND ([Verfass"& _ 
+                "er] = @Original_Verfasser) AND ([Empfänger] = @Original_Empfänger));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Bet"& _ 
+                "reff, Datum, Gelesen, Verfasser, Empfänger, Text FROM Nachricht WHERE (Betreff ="& _ 
+                " @Betreff) AND (Datum = @Datum) AND (Empfänger = @Empfänger) AND (Verfasser = @V"& _ 
+                "erfasser)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Betreff", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Betreff", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Text", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Gelesen", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gelesen", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Verfasser", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Verfasser", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Empfänger", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Empfänger", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Text", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Betreff", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Betreff", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Datum", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Datum", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Text", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Text", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Text", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_Gelesen", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gelesen", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Gelesen", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Gelesen", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Verfasser", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Verfasser", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
@@ -31414,7 +31408,7 @@ Namespace DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Betreff, Datum, Text, Gelesen, Verfasser, Empfänger FROM dbo.Nachricht"
+            Me._commandCollection(0).CommandText = "SELECT Betreff, Datum, Gelesen, Verfasser, Empfänger, Text FROM Nachricht"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -31474,36 +31468,29 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Betreff As String, ByVal Original_Datum As Date, ByVal Original_Text As String, ByVal Original_Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Verfasser As String, ByVal Original_Empfänger As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Betreff As String, ByVal Original_Datum As Date, ByVal Original_Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Verfasser As String, ByVal Original_Empfänger As String) As Integer
             If (Original_Betreff Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Betreff")
             Else
                 Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Betreff,String)
             End If
             Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_Datum,Date)
-            If (Original_Text Is Nothing) Then
+            If (Original_Gelesen.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Gelesen.Value,Integer)
+            Else
                 Me.Adapter.DeleteCommand.Parameters(2).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(3).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_Text,String)
-            End If
-            If (Original_Gelesen.HasValue = true) Then
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Gelesen.Value,Integer)
-            Else
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(5).Value = Global.System.DBNull.Value
             End If
             If (Original_Verfasser Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Verfasser")
             Else
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Verfasser,String)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Verfasser,String)
             End If
             If (Original_Empfänger Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Empfänger")
             Else
-                Me.Adapter.DeleteCommand.Parameters(7).Value = CType(Original_Empfänger,String)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(Original_Empfänger,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -31524,32 +31511,32 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Betreff As String, ByVal Datum As Date, ByVal Text As String, ByVal Gelesen As Global.System.Nullable(Of Integer), ByVal Verfasser As String, ByVal Empfänger As String) As Integer
+        Public Overloads Overridable Function Insert(ByVal Betreff As String, ByVal Datum As Date, ByVal Gelesen As Global.System.Nullable(Of Integer), ByVal Verfasser As String, ByVal Empfänger As String, ByVal Text As String) As Integer
             If (Betreff Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Betreff")
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(Betreff,String)
             End If
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(Datum,Date)
-            If (Text Is Nothing) Then
-                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Text,String)
-            End If
             If (Gelesen.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Gelesen.Value,Integer)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Gelesen.Value,Integer)
             Else
-                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Verfasser Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Verfasser")
             Else
-                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Verfasser,String)
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Verfasser,String)
             End If
             If (Empfänger Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Empfänger")
             Else
-                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Empfänger,String)
+                Me.Adapter.InsertCommand.Parameters(4).Value = CType(Empfänger,String)
+            End If
+            If (Text Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Text,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -31570,32 +31557,32 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Betreff As String, ByVal Datum As Date, ByVal Text As String, ByVal Gelesen As Global.System.Nullable(Of Integer), ByVal Verfasser As String, ByVal Empfänger As String, ByVal Original_Betreff As String, ByVal Original_Datum As Date, ByVal Original_Text As String, ByVal Original_Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Verfasser As String, ByVal Original_Empfänger As String) As Integer
+        Public Overloads Overridable Function Update(ByVal Betreff As String, ByVal Datum As Date, ByVal Gelesen As Global.System.Nullable(Of Integer), ByVal Verfasser As String, ByVal Empfänger As String, ByVal Text As String, ByVal Original_Betreff As String, ByVal Original_Datum As Date, ByVal Original_Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Verfasser As String, ByVal Original_Empfänger As String) As Integer
             If (Betreff Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Betreff")
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Betreff,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Datum,Date)
-            If (Text Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Text,String)
-            End If
             If (Gelesen.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Gelesen.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Gelesen.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Verfasser Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Verfasser")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Verfasser,String)
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Verfasser,String)
             End If
             If (Empfänger Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Empfänger")
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Empfänger,String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Empfänger,String)
+            End If
+            If (Text Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Text,String)
             End If
             If (Original_Betreff Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Betreff")
@@ -31603,29 +31590,22 @@ Namespace DataSet1TableAdapters
                 Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Betreff,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Datum,Date)
-            If (Original_Text Is Nothing) Then
+            If (Original_Gelesen.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Gelesen.Value,Integer)
+            Else
                 Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Text,String)
-            End If
-            If (Original_Gelesen.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Gelesen.Value,Integer)
-            Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
             End If
             If (Original_Verfasser Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Verfasser")
             Else
-                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Verfasser,String)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Verfasser,String)
             End If
             If (Original_Empfänger Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Empfänger")
             Else
-                Me.Adapter.UpdateCommand.Parameters(13).Value = CType(Original_Empfänger,String)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Empfänger,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -31646,8 +31626,8 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Text As String, ByVal Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Betreff As String, ByVal Original_Datum As Date, ByVal Original_Text As String, ByVal Original_Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Verfasser As String, ByVal Original_Empfänger As String) As Integer
-            Return Me.Update(Original_Betreff, Original_Datum, Text, Gelesen, Original_Verfasser, Original_Empfänger, Original_Betreff, Original_Datum, Original_Text, Original_Gelesen, Original_Verfasser, Original_Empfänger)
+        Public Overloads Overridable Function Update(ByVal Gelesen As Global.System.Nullable(Of Integer), ByVal Text As String, ByVal Original_Betreff As String, ByVal Original_Datum As Date, ByVal Original_Gelesen As Global.System.Nullable(Of Integer), ByVal Original_Verfasser As String, ByVal Original_Empfänger As String) As Integer
+            Return Me.Update(Original_Betreff, Original_Datum, Gelesen, Original_Verfasser, Original_Empfänger, Text, Original_Betreff, Original_Datum, Original_Gelesen, Original_Verfasser, Original_Empfänger)
         End Function
     End Class
     
