@@ -10,6 +10,7 @@
     'End Sub
     Public Sub Daten_Load()
         Me.TableAdapterManager.KindTableAdapter.Fill(DataSet1.Kind)
+        VorhandeneSchulen()
 
         DatenAnzeigen()
 
@@ -17,6 +18,26 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DatenÄndern()
+
+    End Sub
+
+    Private Sub VorhandeneSchulen()
+
+        ReDim name3(DataSet1.Schule.Rows.Count - 1)
+
+
+        For z = 0 To (DataSet1.Schule.Rows.Count - 1)
+            name3(z) = DataSet1.Schule.Rows(z)("S_Name")
+        Next
+
+        ComboBox1.DataSource = name3
+
+        'If name3.Count > 0 Then
+        '    NameKind = name3.ElementAt(0)
+
+        '    CB_name.DataSource = name3
+        '    '  NameKind = name3(0)
+        'End If
 
     End Sub
 
@@ -130,6 +151,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         SchuleAnlegen()
+        VorhandeneSchulen()
 
         '  KindSchuleAnlegen()
 
@@ -268,5 +290,33 @@
         ' PictureBox1.Image = abc
         ' PictureBox1.ImageLocation = b
 
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        SchuldatenAnzeigen()
+
+    End Sub
+
+    Private Sub SchuldatenAnzeigen()
+        Dim Sname As String = ComboBox1.Text
+        Try
+
+
+            For z = 0 To (DataSet1.Schule.Rows.Count - 1)
+                If Sname = DataSet1.Schule.Rows(z)("S_Name") Then
+                    PlatzhalterText1.Text = DataSet1.Schule.Rows(z)("S_Name")
+                    PlatzhalterText4.Text = DataSet1.Schule.Rows(z)("Schulart")
+
+
+
+
+
+                End If
+
+            Next
+        Catch ex As Exception
+            MsgBox("nenene")
+
+        End Try
     End Sub
 End Class

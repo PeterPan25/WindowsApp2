@@ -91,6 +91,7 @@ Partial Class Mitarbeiter
         Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.TerminTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
@@ -179,9 +180,10 @@ Partial Class Mitarbeiter
         Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
         Me.PlatzhalterText4.Location = New System.Drawing.Point(371, 187)
         Me.PlatzhalterText4.Name = "PlatzhalterText4"
-        Me.PlatzhalterText4.PlatzHalterText = ""
+        Me.PlatzhalterText4.PlatzHalterText = "Passwort"
         Me.PlatzhalterText4.Size = New System.Drawing.Size(100, 20)
         Me.PlatzhalterText4.TabIndex = 3
+        Me.PlatzhalterText4.Text = "Passwort"
         Me.PlatzhalterText4.UseSystemPasswordChar = True
         '
         'PlatzhalterText3

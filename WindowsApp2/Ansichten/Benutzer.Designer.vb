@@ -91,6 +91,7 @@ Partial Class Benutzer
         Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.TerminTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
@@ -101,7 +102,7 @@ Partial Class Benutzer
         Me.MitarbeiterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.MitarbeiterDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.MitarbeiterDataGridView.DataSource = Me.MitarbeiterBindingSource
-        Me.MitarbeiterDataGridView.Location = New System.Drawing.Point(0, 90)
+        Me.MitarbeiterDataGridView.Location = New System.Drawing.Point(0, 82)
         Me.MitarbeiterDataGridView.Name = "MitarbeiterDataGridView"
         Me.MitarbeiterDataGridView.Size = New System.Drawing.Size(875, 387)
         Me.MitarbeiterDataGridView.TabIndex = 1
