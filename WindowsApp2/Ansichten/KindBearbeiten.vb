@@ -231,18 +231,33 @@
         Dim a As New OpenFileDialog
         Dim b As String = ""
         Dim bg As New BildGroesse
+        Dim ds As DialogResult = a.ShowDialog()
+
 
 
         a.InitialDirectory = "C:"
-        a.ShowDialog()
 
-        b = a.FileName
-        Dim abc As New Bitmap(b)
 
-        With PictureBox1
-            .Image = bg.AutoSizeImage(abc, 151, 158)
+        If ds = DialogResult.OK Then
 
-        End With
+
+
+            b = a.FileName
+
+            Dim abc As New Bitmap(b)
+
+            With PictureBox1
+                .Image = bg.AutoSizeImage(abc, 151, 158)
+
+            End With
+            nBild = b
+        ElseIf ds = DialogResult.Cancel Then
+            nBild = b
+
+
+
+        End If
+
 
 
 
@@ -253,6 +268,5 @@
         ' PictureBox1.Image = abc
         ' PictureBox1.ImageLocation = b
 
-        nBild = b
     End Sub
 End Class

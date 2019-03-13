@@ -1,6 +1,6 @@
 ﻿Public Class KindHinzufuegen
 
-    Public Shared Property Pfad As String = ""
+    Public Shared Property Pfad = ""
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -152,7 +152,7 @@
                 .Image = bg.AutoSizeImage(abc, 151, 158)
 
             End With
-
+            Pfad = b
         ElseIf ds = DialogResult.Cancel Then
             Pfad = b
 

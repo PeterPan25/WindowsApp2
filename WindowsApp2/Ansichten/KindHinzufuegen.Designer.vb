@@ -154,6 +154,7 @@ Partial Class KindHinzufuegen
         Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Nothing
         Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.TerminTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
@@ -162,7 +163,8 @@ Partial Class KindHinzufuegen
         Me.PictureBox1.BackgroundImage = Global.WindowsApp2.My.Resources.Resources.stift_size
         Me.PictureBox1.Location = New System.Drawing.Point(23, 295)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(172, 124)
+        Me.PictureBox1.Size = New System.Drawing.Size(151, 158)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 16
         Me.PictureBox1.TabStop = False
         '
@@ -170,7 +172,7 @@ Partial Class KindHinzufuegen
         '
         Me.BildWahlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BildWahlButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BildWahlButton.Location = New System.Drawing.Point(49, 445)
+        Me.BildWahlButton.Location = New System.Drawing.Point(45, 462)
         Me.BildWahlButton.Name = "BildWahlButton"
         Me.BildWahlButton.Size = New System.Drawing.Size(104, 23)
         Me.BildWahlButton.TabIndex = 17
