@@ -75,6 +75,8 @@
 
 
         ElseIf Label2.Text = "Elternbericht" Then
+
+            Me.TableAdapterManager.ElternBerichtTableAdapter.Fill(DataSet1.ElternBericht)
             a = Me.DataSet1.ElternBericht.NewRow()
 
             Try
@@ -85,18 +87,36 @@
                 a("Bericht") = RichTextBox1.Text
 
                 Me.DataSet1.ElternBericht.AddElternBerichtRow(a)
-                Me.ElternBerichtTableAdapter.Update(DataSet1.ElternBericht)
-                Me.TableAdapterManager.UpdateAll(DataSet1)
+                Me.ElternBerichtTableAdapter.Update(DataSet1)
+                '  Me.TableAdapterManager.UpdateAll(DataSet1)
                 Form1.Eltern1.EBDaten_laden()
 
             Catch ex As Exception
+
                 MsgBox("Fehler")
             End Try
 
+
+            Me.Validate()
             Me.Visible = False
 
         End If
 
+        setzeZurueck()
 
     End Sub
+
+    Private Sub setzeZurueck()
+        Label1.Text = Form1.CB_name.Text
+        Label2.Text = "Elternbericht"
+        PlatzhalterText1.ResetText()
+        PlatzhalterText2.ResetText()
+        PlatzhalterText3.ResetText()
+        PlatzhalterText4.ResetText()
+        PlatzhalterText5.ResetText()
+        ComboBox1.Refresh()
+        DateTimePicker1.ResetText()
+
+    End Sub
+
 End Class

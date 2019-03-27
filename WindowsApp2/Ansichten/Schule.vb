@@ -42,56 +42,22 @@
     Public Sub SBDaten_laden()
         Me.SchuleTableAdapter.Fill(DataSet1.Schule)
         Me.KindSchuleTableAdapter.Fill(DataSet1.KindSchule)
+        Me.SchulDatenTableAdapter.Fill(DataSet1.SchulDaten)
+
         Me.SchulBerichtTableAdapter.Fill(DataSet1.SchulBericht)
         Me.SchulBerichtBindingSource.Filter = "Kind = '" & Form1.CB_name.Text & "'"
         Me.SchulBerichtDataGridView.Update()
+        Me.SchulDatenBindingSource.Filter = "Name = '" & Form1.CB_name.Text & "'"
 
+        SchulDatenDataGridView.Sort(SchulDatenDataGridView.Columns(2), System.ComponentModel.ListSortDirection.Ascending)
 
-    End Sub
-
-    Private Sub SchulDaten()
-        Dim dr1 As DataSet1.KindSchuleRow
-        Dim dr2() As DataRow
-        Dim dr3() As String = {}
-        Dim dr4 As String = Form1.CB_name.Text
-
-        For z = 0 To (DataSet1.KindSchule.Count - 1)
-            If dr4 = (DataSet1.KindSchule.Rows(z)("Name")) Then
-
-                ReDim Preserve dr3(0)
-
-                dr3(0) = DataSet1.KindSchule.Rows(z)("S_Name")
-
-                For Each e In dr3
-
-                    dr2 = DataSet1.Schule.Select("S_Name = '" & e & "'")
-
-                Next
-
-                'SchuleDataGridView.DataSource = dr2
-
-                'If name4.Count = 0 Then
-
-
-                '    name4.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), 0)
-
-                'Else
-                '    Dim anzahl As Integer = name4.Count
-                '    name4.SetValue(DataSet1.KindAugenarzt.Rows(z)("A_Name"), anzahl)
-
-
-                'End If
-
-            End If
-        Next
-
+        Me.SchulDatenDataGridView.Update()
 
 
     End Sub
 
 
 
-    Private Sub SplitContainer2_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer2.Panel1.Paint
 
-    End Sub
+
 End Class
