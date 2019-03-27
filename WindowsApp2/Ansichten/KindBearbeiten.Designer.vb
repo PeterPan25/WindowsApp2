@@ -59,6 +59,7 @@ Partial Class KindBearbeiten
         Me.SchulDatenTableAdapter = New WindowsApp2.DataSet1TableAdapters.SchulDatenTableAdapter()
         Me.KindSchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KindSchuleTableAdapter = New WindowsApp2.DataSet1TableAdapters.KindSchuleTableAdapter()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.PlatzhalterText7 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText6 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText1 = New WindowsApp2.PlatzhalterText()
@@ -66,7 +67,7 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText5 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText3 = New WindowsApp2.PlatzhalterText()
         Me.PlatzhalterText2 = New WindowsApp2.PlatzhalterText()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchuleDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SchuleBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -175,11 +176,12 @@ Partial Class KindBearbeiten
         '
         Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(582, 181)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(28, 13)
+        Me.Label1.Size = New System.Drawing.Size(34, 13)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "von:"
+        Me.Label1.Text = "vom:"
         '
         'DateTimePicker1
         '
@@ -187,7 +189,7 @@ Partial Class KindBearbeiten
         Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(616, 174)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(630, 174)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(150, 22)
         Me.DateTimePicker1.TabIndex = 16
@@ -196,12 +198,12 @@ Partial Class KindBearbeiten
         '
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(808, 174)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(889, 181)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(35, 20)
+        Me.Label5.Size = New System.Drawing.Size(27, 13)
         Me.Label5.TabIndex = 19
-        Me.Label5.Text = "Bis:"
+        Me.Label5.Text = "bis:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DateTimePicker2
@@ -209,7 +211,7 @@ Partial Class KindBearbeiten
         Me.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.DateTimePicker2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(892, 174)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(929, 174)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(181, 22)
         Me.DateTimePicker2.TabIndex = 17
@@ -222,7 +224,7 @@ Partial Class KindBearbeiten
         Me.SchuleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchuleDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn5})
         Me.SchuleDataGridView.DataSource = Me.SchuleBindingSource
-        Me.SchuleDataGridView.Location = New System.Drawing.Point(597, 429)
+        Me.SchuleDataGridView.Location = New System.Drawing.Point(562, 439)
         Me.SchuleDataGridView.Name = "SchuleDataGridView"
         Me.SchuleDataGridView.Size = New System.Drawing.Size(258, 129)
         Me.SchuleDataGridView.TabIndex = 21
@@ -254,7 +256,7 @@ Partial Class KindBearbeiten
         Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1060, 443)
+        Me.Button3.Location = New System.Drawing.Point(1077, 505)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 22
@@ -291,7 +293,7 @@ Partial Class KindBearbeiten
         Me.SchulDatenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchulDatenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn2, Me.Klassenlehrer, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7})
         Me.SchulDatenDataGridView.DataSource = Me.SchulDatenBindingSource
-        Me.SchulDatenDataGridView.Location = New System.Drawing.Point(562, 294)
+        Me.SchulDatenDataGridView.Location = New System.Drawing.Point(562, 284)
         Me.SchulDatenDataGridView.Name = "SchulDatenDataGridView"
         Me.SchulDatenDataGridView.Size = New System.Drawing.Size(548, 129)
         Me.SchulDatenDataGridView.TabIndex = 24
@@ -401,6 +403,15 @@ Partial Class KindBearbeiten
         '
         Me.KindSchuleTableAdapter.ClearBeforeFill = True
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(976, 22)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(134, 21)
+        Me.ComboBox1.TabIndex = 25
+        '
         'PlatzhalterText7
         '
         Me.PlatzhalterText7.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -409,7 +420,7 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText7.Location = New System.Drawing.Point(720, 221)
         Me.PlatzhalterText7.Name = "PlatzhalterText7"
         Me.PlatzhalterText7.PlatzHalterText = "Klassenlehrer/-in"
-        Me.PlatzhalterText7.Size = New System.Drawing.Size(193, 26)
+        Me.PlatzhalterText7.Size = New System.Drawing.Size(304, 26)
         Me.PlatzhalterText7.TabIndex = 12
         Me.PlatzhalterText7.Text = "Klassenlehrer/-in"
         '
@@ -430,10 +441,10 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText1.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PlatzhalterText1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText1.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText1.Location = New System.Drawing.Point(585, 55)
+        Me.PlatzhalterText1.Location = New System.Drawing.Point(585, 91)
         Me.PlatzhalterText1.Name = "PlatzhalterText1"
         Me.PlatzhalterText1.PlatzHalterText = Nothing
-        Me.PlatzhalterText1.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText1.Size = New System.Drawing.Size(258, 26)
         Me.PlatzhalterText1.TabIndex = 21
         Me.PlatzhalterText1.Text = "Schule"
         '
@@ -442,10 +453,10 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.PlatzhalterText4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Italic)
         Me.PlatzhalterText4.ForeColor = System.Drawing.Color.Gray
-        Me.PlatzhalterText4.Location = New System.Drawing.Point(892, 55)
+        Me.PlatzhalterText4.Location = New System.Drawing.Point(849, 91)
         Me.PlatzhalterText4.Name = "PlatzhalterText4"
         Me.PlatzhalterText4.PlatzHalterText = "Schulart"
-        Me.PlatzhalterText4.Size = New System.Drawing.Size(218, 26)
+        Me.PlatzhalterText4.Size = New System.Drawing.Size(261, 26)
         Me.PlatzhalterText4.TabIndex = 7
         Me.PlatzhalterText4.Text = "Schulart"
         '
@@ -485,19 +496,22 @@ Partial Class KindBearbeiten
         Me.PlatzhalterText2.TabIndex = 8
         Me.PlatzhalterText2.Text = "Straße & Hausnummer"
         '
-        'ComboBox1
+        'Label6
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(585, 23)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 25
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(582, 22)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(388, 18)
+        Me.Label6.TabIndex = 26
+        Me.Label6.Text = "Schule aus Liste wählen oder neue Schule anlegen"
         '
         'KindBearbeiten
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SkyBlue
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.SchulDatenDataGridView)
         Me.Controls.Add(Me.CheckBox1)
@@ -586,4 +600,5 @@ Partial Class KindBearbeiten
     Friend WithEvents DataGridViewTextBoxColumn6 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As DataGridViewTextBoxColumn
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label6 As Label
 End Class

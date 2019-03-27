@@ -26,6 +26,7 @@ Partial Class Schule
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SchuleBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataSet1 = New WindowsApp2.DataSet1()
         Me.SchulBerichtBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -138,6 +139,7 @@ Partial Class Schule
         Me.TableAdapterManager.SchulDatenTableAdapter = Nothing
         Me.TableAdapterManager.SchuleTableAdapter = Me.SchuleTableAdapter
         Me.TableAdapterManager.TableTableAdapter = Nothing
+        Me.TableAdapterManager.TerminTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = WindowsApp2.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.ZahnarztTableAdapter = Nothing
         '
@@ -158,6 +160,7 @@ Partial Class Schule
         '
         'SchulBerichtDataGridView
         '
+        Me.SchulBerichtDataGridView.AllowUserToAddRows = False
         Me.SchulBerichtDataGridView.AutoGenerateColumns = False
         Me.SchulBerichtDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.SchulBerichtDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -279,26 +282,36 @@ Partial Class Schule
         '
         'SchulDatenDataGridView
         '
+        Me.SchulDatenDataGridView.AllowUserToAddRows = False
         Me.SchulDatenDataGridView.AutoGenerateColumns = False
         Me.SchulDatenDataGridView.BackgroundColor = System.Drawing.Color.LightSkyBlue
         Me.SchulDatenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SchulDatenDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn8, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.SchulDatenDataGridView.DataSource = Me.SchulDatenBindingSource
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.SchulDatenDataGridView.DefaultCellStyle = DataGridViewCellStyle3
         Me.SchulDatenDataGridView.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SchulDatenDataGridView.Location = New System.Drawing.Point(0, 0)
         Me.SchulDatenDataGridView.MultiSelect = False
         Me.SchulDatenDataGridView.Name = "SchulDatenDataGridView"
         Me.SchulDatenDataGridView.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SchulDatenDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.SchulDatenDataGridView.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.SchulDatenDataGridView.RowHeadersVisible = False
         Me.SchulDatenDataGridView.RowTemplate.Height = 40
+        Me.SchulDatenDataGridView.RowTemplate.ReadOnly = True
         Me.SchulDatenDataGridView.Size = New System.Drawing.Size(419, 487)
         Me.SchulDatenDataGridView.TabIndex = 2
         '
